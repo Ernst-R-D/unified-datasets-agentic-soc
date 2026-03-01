@@ -1,0 +1,17 @@
+# Data files (too large for git, re-generate with parse_all.py)
+datasets/parsed/
+datasets/normal_logs/
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights
+*.pt
+*.bin
