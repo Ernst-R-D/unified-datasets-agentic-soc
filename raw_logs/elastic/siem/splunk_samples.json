@@ -1,0 +1,634 @@
+{
+  "package": "splunk",
+  "description": "Splunk event samples",
+  "events": [
+    {
+      "data_stream": "alert",
+      "package": "splunk",
+      "sample_event": {
+        "@timestamp": "2025-02-10T06:20:16.000Z",
+        "agent": {
+          "ephemeral_id": "03b5b12c-bdc1-4771-995a-e661b2fce477",
+          "id": "971b8243-30b3-48b5-ad95-c64b40daf24f",
+          "name": "elastic-agent-17375",
+          "type": "filebeat",
+          "version": "8.18.0"
+        },
+        "data_stream": {
+          "dataset": "splunk.alert",
+          "namespace": "93730",
+          "type": "logs"
+        },
+        "destination": {
+          "ip": [
+            "127.0.0.1"
+          ]
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "elastic_agent": {
+          "id": "971b8243-30b3-48b5-ad95-c64b40daf24f",
+          "snapshot": true,
+          "version": "8.18.0"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "dataset": "splunk.alert",
+          "ingested": "2025-04-10T12:39:50Z",
+          "kind": "alert",
+          "original": "{\"_bkt\":\"notable~70~E10E99CE-2B29-4D28-B797-57BEABF6E876\",\"_cd\":\"70:13771\",\"_indextime\":\"1739168416\",\"_raw\":\"1739168412, search_name=\\\"Access - Excessive Failed Logins - Rule\\\", app=\\\"ssl-web\\\", count=\\\"5\\\", ip=\\\"127.0.0.1\\\", dest_count=\\\"1\\\", info_max_time=\\\"1739168100.000000000\\\", info_min_time=\\\"1739164500.000000000\\\", info_search_time=\\\"1739168403.176027000\\\", src=\\\"89.160.20.112\\\", orig_tag=\\\"authentication\\\", orig_tag=\\\"default\\\", orig_tag=\\\"error\\\", orig_tag=\\\"failure\\\", user_count=\\\"1\\\"\",\"_serial\":\"476\",\"_si\":[\"89.160.20.156\",\"notable\"],\"_sourcetype\":\"stash\",\"_time\":\"2025-02-10T11:50:16.000+05:30\",\"host\":\"89.160.20.156\",\"index\":\"notable\",\"linecount\":\"1\",\"source\":\"Access - Excessive Failed Logins - Rule\",\"sourcetype\":\"stash\",\"splunk_server\":\"89.160.20.156\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "host": {
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": [
+            "89.160.20.156"
+          ]
+        },
+        "input": {
+          "type": "cel"
+        },
+        "message": "1739168412, search_name=\"Access - Excessive Failed Logins - Rule\", app=\"ssl-web\", count=\"5\", ip=\"127.0.0.1\", dest_count=\"1\", info_max_time=\"1739168100.000000000\", info_min_time=\"1739164500.000000000\", info_search_time=\"1739168403.176027000\", src=\"89.160.20.112\", orig_tag=\"authentication\", orig_tag=\"default\", orig_tag=\"error\", orig_tag=\"failure\", user_count=\"1\"",
+        "related": {
+          "ip": [
+            "89.160.20.156",
+            "89.160.20.112"
+          ]
+        },
+        "rule": {
+          "name": "Access - Excessive Failed Logins - Rule"
+        },
+        "source": {
+          "address": "89.160.20.112",
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": [
+            "89.160.20.112"
+          ]
+        },
+        "splunk": {
+          "alert": {
+            "_bkt": "notable~70~E10E99CE-2B29-4D28-B797-57BEABF6E876",
+            "_cd": "70:13771",
+            "_indextime": "2025-02-10T06:20:16.000Z",
+            "_raw": "1739168412, search_name=\"Access - Excessive Failed Logins - Rule\", app=\"ssl-web\", count=\"5\", ip=\"127.0.0.1\", dest_count=\"1\", info_max_time=\"1739168100.000000000\", info_min_time=\"1739164500.000000000\", info_search_time=\"1739168403.176027000\", src=\"89.160.20.112\", orig_tag=\"authentication\", orig_tag=\"default\", orig_tag=\"error\", orig_tag=\"failure\", user_count=\"1\"",
+            "_serial": "476",
+            "_si": [
+              "89.160.20.156",
+              "notable"
+            ],
+            "_sourcetype": "stash",
+            "_time": "2025-02-10T06:20:16.000Z",
+            "app": "ssl-web",
+            "count": 5,
+            "dest_count": 1,
+            "friendly_name": "Access - Excessive Failed Logins - Rule",
+            "host": "89.160.20.156",
+            "index": "notable",
+            "info_max_time": "2025-02-10T06:15:00.000Z",
+            "info_min_time": "2025-02-10T05:15:00.000Z",
+            "info_search_time": "2025-02-10T06:20:03.176Z",
+            "ip": "127.0.0.1",
+            "linecount": 1,
+            "orig_tag": [
+              "authentication",
+              "default",
+              "error",
+              "failure"
+            ],
+            "raw_timestamp": "2025-02-10T06:20:12.000Z",
+            "search_name": "Access - Excessive Failed Logins - Rule",
+            "source": "Access - Excessive Failed Logins - Rule",
+            "sourcetype": "stash",
+            "splunk_server": "89.160.20.156",
+            "src": "89.160.20.112",
+            "user_count": 1
+          }
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields",
+          "forwarded",
+          "splunk-alert"
+        ]
+      }
+    },
+    {
+      "data_stream": "search",
+      "package": "splunk",
+      "sample_event": {
+        "@timestamp": "2025-02-21T14:26:56.000+00:00",
+        "agent": {
+          "ephemeral_id": "bee267d7-2bc0-4bf7-baa9-b52128d9d52d",
+          "id": "3f7e31dc-0c9c-4976-8c83-96d370f2de7b",
+          "name": "elastic-agent-17049",
+          "type": "filebeat",
+          "version": "8.19.0"
+        },
+        "data_stream": {
+          "dataset": "splunk.search",
+          "namespace": "99066",
+          "type": "logs"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "elastic_agent": {
+          "id": "3f7e31dc-0c9c-4976-8c83-96d370f2de7b",
+          "snapshot": false,
+          "version": "8.19.0"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "dataset": "splunk.search",
+          "ingested": "2025-08-27T23:07:53Z",
+          "module": "splunk",
+          "original": "{\"author\":\"search_user\",\"ecs_result\":{\"event\":{\"module\":\"splunk\"},\"host.name\":\"ip-186-86-82-48\",\"splunk.search.result.important_user_field\":\"test\"},\"mapping\":{\"field1\":\"splunk.search.result.important_user_field\",\"host\":\"host.name\"},\"query\":\"search *\",\"result\":{\"_bkt\":\"main~0~266C23A8-75B5-4A00-8732-4A6065281018\",\"_cd\":\"0:10\",\"_indextime\":\"1740148016\",\"_raw\":\"02/21/2025 14:26:56 +0000, info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test\",\"_serial\":\"0\",\"_si\":[\"ip-186-86-82-48\",\"main\"],\"_sourcetype\":\"stash\",\"_time\":\"2025-02-21T14:26:56.000+00:00\",\"index\":\"main\",\"linecount\":\"1\",\"source\":\"/opt/splunk/var/spool/splunk/cafc46ad8c914957_a9876ea14cfe7ac8_events.stash_new\",\"sourcetype\":\"stash\",\"splunk_server\":\"ip-186-86-82-49\"}}"
+        },
+        "host": {
+          "name": "ip-186-86-82-48"
+        },
+        "input": {
+          "type": "cel"
+        },
+        "message": "info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test",
+        "related": {
+          "hosts": [
+            "ip-186-86-82-48",
+            "ip-186-86-82-49"
+          ],
+          "user": [
+            "search_user"
+          ]
+        },
+        "splunk": {
+          "search": {
+            "author": "search_user",
+            "mapping": {
+              "field1": "splunk.search.result.important_user_field",
+              "host": "host.name"
+            },
+            "query": "search *",
+            "result": {
+              "_bkt": "main~0~266C23A8-75B5-4A00-8732-4A6065281018",
+              "_cd": "0:10",
+              "_indextime": "1740148016",
+              "_raw": "02/21/2025 14:26:56 +0000, info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test",
+              "_serial": "0",
+              "_si": [
+                "ip-186-86-82-48",
+                "main"
+              ],
+              "_sourcetype": "stash",
+              "_time": "2025-02-21T14:26:56.000+00:00",
+              "important_user_field": "test",
+              "index": "main",
+              "linecount": "1",
+              "source": "/opt/splunk/var/spool/splunk/cafc46ad8c914957_a9876ea14cfe7ac8_events.stash_new",
+              "sourcetype": "stash",
+              "splunk_server": "ip-186-86-82-49"
+            }
+          }
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields",
+          "forwarded",
+          "splunk-search"
+        ]
+      }
+    },
+    {
+      "data_stream": "alert",
+      "package": "splunk",
+      "source": "test/test-alert.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-02-10T06:20:16.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": [
+            "89.160.20.156"
+          ]
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "kind": "alert",
+          "original": "{ \"_bkt\": \"notable~70~E10E99CE-2B29-4D28-B797-57BEABF6E876\", \"_cd\": \"70:13771\", \"_indextime\": \"1739168416\", \"_raw\": \"1739168412, search_name=\\\"Access - Excessive Failed Logins - Rule\\\", app=\\\"ssl-web\\\", craction=\\\"4\\\", count=\\\"5\\\", ip=\\\"89.160.20.156\\\", tz=\\\"555\\\", time=\\\"10/01/24 18:57:12\\\", vd=\\\"avc\\\", annotations.mitre_attack.mitre_tactic_id=\\\"mite\\\", annotations.mitre_attack.mitre_tactic=\\\"mite\\\", annotations.mitre_attack.mitre_technique_id=\\\"mite\\\", annotations.mitre_attack.mitre_technique=\\\"mite\\\", dest_count=\\\"1\\\", info_max_time=\\\"1739168100.000000000\\\", info_min_time=\\\"1739164500.000000000\\\", info_search_time=\\\"1739168403.176027000\\\", src=\\\"89.160.20.112\\\", orig_tag=\\\"authentication\\\", orig_tag=\\\"default\\\", orig_tag=\\\"error\\\", orig_tag=\\\"failure\\\", user_count=\\\"1\\\"\", \"_serial\": \"476\", \"_si\": [ \"89.160.20.156\", \"notable\" ], \"_sourcetype\": \"stash\", \"_time\": \"2025-02-10T11:50:16.000+05:30\", \"host\": \"89.160.20.156\", \"index\": \"notable\", \"linecount\": \"1\", \"source\": \"Access - Excessive Failed Logins - Rule\", \"sourcetype\": \"stash\", \"splunk_server\": \"89.160.20.156\" }",
+          "type": [
+            "info"
+          ]
+        },
+        "host": {
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": [
+            "89.160.20.156"
+          ]
+        },
+        "message": "1739168412, search_name=\"Access - Excessive Failed Logins - Rule\", app=\"ssl-web\", craction=\"4\", count=\"5\", ip=\"89.160.20.156\", tz=\"555\", time=\"10/01/24 18:57:12\", vd=\"avc\", annotations.mitre_attack.mitre_tactic_id=\"mite\", annotations.mitre_attack.mitre_tactic=\"mite\", annotations.mitre_attack.mitre_technique_id=\"mite\", annotations.mitre_attack.mitre_technique=\"mite\", dest_count=\"1\", info_max_time=\"1739168100.000000000\", info_min_time=\"1739164500.000000000\", info_search_time=\"1739168403.176027000\", src=\"89.160.20.112\", orig_tag=\"authentication\", orig_tag=\"default\", orig_tag=\"error\", orig_tag=\"failure\", user_count=\"1\"",
+        "related": {
+          "ip": [
+            "89.160.20.156",
+            "89.160.20.112"
+          ]
+        },
+        "rule": {
+          "name": "Access - Excessive Failed Logins - Rule"
+        },
+        "source": {
+          "address": "89.160.20.112",
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": [
+            "89.160.20.112"
+          ]
+        },
+        "splunk": {
+          "alert": {
+            "_bkt": "notable~70~E10E99CE-2B29-4D28-B797-57BEABF6E876",
+            "_cd": "70:13771",
+            "_indextime": "2025-02-10T06:20:16.000Z",
+            "_raw": "1739168412, search_name=\"Access - Excessive Failed Logins - Rule\", app=\"ssl-web\", craction=\"4\", count=\"5\", ip=\"89.160.20.156\", tz=\"555\", time=\"10/01/24 18:57:12\", vd=\"avc\", annotations.mitre_attack.mitre_tactic_id=\"mite\", annotations.mitre_attack.mitre_tactic=\"mite\", annotations.mitre_attack.mitre_technique_id=\"mite\", annotations.mitre_attack.mitre_technique=\"mite\", dest_count=\"1\", info_max_time=\"1739168100.000000000\", info_min_time=\"1739164500.000000000\", info_search_time=\"1739168403.176027000\", src=\"89.160.20.112\", orig_tag=\"authentication\", orig_tag=\"default\", orig_tag=\"error\", orig_tag=\"failure\", user_count=\"1\"",
+            "_serial": "476",
+            "_si": [
+              "89.160.20.156",
+              "notable"
+            ],
+            "_sourcetype": "stash",
+            "_time": "2025-02-10T06:20:16.000Z",
+            "annotations": {
+              "mitre_attack": {
+                "mitre_tactic": "mite",
+                "mitre_tactic_id": "mite",
+                "mitre_technique": "mite",
+                "mitre_technique_id": "mite"
+              }
+            },
+            "app": "ssl-web",
+            "count": 5.0,
+            "craction": 4,
+            "dest_count": 1,
+            "friendly_name": "Access - Excessive Failed Logins - Rule",
+            "host": "89.160.20.156",
+            "index": "notable",
+            "info_max_time": "2025-02-10T06:15:00.000Z",
+            "info_min_time": "2025-02-10T05:15:00.000Z",
+            "info_search_time": "2025-02-10T06:20:03.176Z",
+            "ip": "89.160.20.156",
+            "linecount": 1,
+            "orig_tag": [
+              "authentication",
+              "default",
+              "error",
+              "failure"
+            ],
+            "raw_timestamp": "2025-02-10T06:20:12.000Z",
+            "search_name": "Access - Excessive Failed Logins - Rule",
+            "source": "Access - Excessive Failed Logins - Rule",
+            "sourcetype": "stash",
+            "splunk_server": "89.160.20.156",
+            "src": "89.160.20.112",
+            "time": "2024-10-01T18:57:12.000Z",
+            "tz": 555,
+            "user_count": 1,
+            "vd": "avc"
+          }
+        },
+        "tags": [
+          "preserve_duplicate_custom_fields"
+        ],
+        "threat": {
+          "tactic": {
+            "id": [
+              "mite"
+            ],
+            "name": [
+              "mite"
+            ]
+          },
+          "technique": {
+            "id": [
+              "mite"
+            ],
+            "name": [
+              "mite"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "data_stream": "alert",
+      "package": "splunk",
+      "source": "test/test-alert.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-02-11T08:07:05.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "blocked",
+          "kind": "alert",
+          "original": "{ \"_bkt\": \"notable~70~E10E99CE-2B29-4D28-B797-57BEABF6E876\", \"_cd\": \"70:13771\", \"_indextime\": \"1739168416\", \"_raw\": \"1739259266.000, search_name=\\\"Threat - Crowdstrike - Detection Found - Rule\\\", orig_time=\\\"1739259266.000\\\", action=\\\"blocked\\\", event.SeverityName=\\\"Low\\\", event.UserName=\\\"keval.sabhani\\\", file_hash=\\\"b9ef39e591886f5ea06521952ece1320e14928ddf4db440365babe3d410298c1\\\", file_name=\\\"go.exe\\\", file_path=\\\"\\\\\\\\Device\\\\\\\\HarddiskVolume3\\\\\\\\Program Files\\\\\\\\Go\\\\\\\\bin\\\\\\\\go.exe\\\", info_max_time=\\\"1739260620.000000000\\\", info_min_time=\\\"1739258820.000000000\\\", info_search_time=\\\"1739261221.082071000\\\"\", \"_serial\": \"476\", \"_si\": [ \"89.160.20.156\", \"notable\" ], \"_sourcetype\": \"stash\", \"_time\": \"2025-02-11T13:37:05.000+05:30\", \"host\": \"89.160.20.156\", \"index\": \"notable\", \"linecount\": \"1\", \"source\": \"Threat - Crowdstrike - Detection Found - Rule\", \"sourcetype\": \"stash\", \"splunk_server\": \"89.160.20.156\"  }",
+          "severity": 21,
+          "type": [
+            "info"
+          ]
+        },
+        "file": {
+          "hash": {
+            "sha256": [
+              "b9ef39e591886f5ea06521952ece1320e14928ddf4db440365babe3d410298c1"
+            ]
+          },
+          "name": "go.exe",
+          "path": "Device\\\\HarddiskVolume3\\\\Program Files\\\\Go\\\\bin\\\\go.exe"
+        },
+        "host": {
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": [
+            "89.160.20.156"
+          ]
+        },
+        "message": "1739259266.000, search_name=\"Threat - Crowdstrike - Detection Found - Rule\", orig_time=\"1739259266.000\", action=\"blocked\", event.SeverityName=\"Low\", event.UserName=\"keval.sabhani\", file_hash=\"b9ef39e591886f5ea06521952ece1320e14928ddf4db440365babe3d410298c1\", file_name=\"go.exe\", file_path=\"\\\\Device\\\\HarddiskVolume3\\\\Program Files\\\\Go\\\\bin\\\\go.exe\", info_max_time=\"1739260620.000000000\", info_min_time=\"1739258820.000000000\", info_search_time=\"1739261221.082071000\"",
+        "related": {
+          "hash": [
+            "b9ef39e591886f5ea06521952ece1320e14928ddf4db440365babe3d410298c1"
+          ],
+          "ip": [
+            "89.160.20.156"
+          ],
+          "user": [
+            "keval.sabhani"
+          ]
+        },
+        "rule": {
+          "name": "Threat - Crowdstrike - Detection Found - Rule"
+        },
+        "source": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          }
+        },
+        "splunk": {
+          "alert": {
+            "_bkt": "notable~70~E10E99CE-2B29-4D28-B797-57BEABF6E876",
+            "_cd": "70:13771",
+            "_indextime": "2025-02-10T06:20:16.000Z",
+            "_raw": "1739259266.000, search_name=\"Threat - Crowdstrike - Detection Found - Rule\", orig_time=\"1739259266.000\", action=\"blocked\", event.SeverityName=\"Low\", event.UserName=\"keval.sabhani\", file_hash=\"b9ef39e591886f5ea06521952ece1320e14928ddf4db440365babe3d410298c1\", file_name=\"go.exe\", file_path=\"\\\\Device\\\\HarddiskVolume3\\\\Program Files\\\\Go\\\\bin\\\\go.exe\", info_max_time=\"1739260620.000000000\", info_min_time=\"1739258820.000000000\", info_search_time=\"1739261221.082071000\"",
+            "_serial": "476",
+            "_si": [
+              "89.160.20.156",
+              "notable"
+            ],
+            "_sourcetype": "stash",
+            "_time": "2025-02-11T08:07:05.000Z",
+            "action": "blocked",
+            "event": {
+              "SeverityName": "Low",
+              "UserName": "keval.sabhani"
+            },
+            "file_hash": "b9ef39e591886f5ea06521952ece1320e14928ddf4db440365babe3d410298c1",
+            "file_name": "go.exe",
+            "file_path": "Device\\\\HarddiskVolume3\\\\Program Files\\\\Go\\\\bin\\\\go.exe",
+            "friendly_name": "Threat - Crowdstrike - Detection Found - Rule",
+            "host": "89.160.20.156",
+            "index": "notable",
+            "info_max_time": "2025-02-11T07:57:00.000Z",
+            "info_min_time": "2025-02-11T07:27:00.000Z",
+            "info_search_time": "2025-02-11T08:07:01.082Z",
+            "linecount": 1,
+            "orig_time": "2025-02-11T07:34:26.000Z",
+            "raw_timestamp": "2025-02-11T07:34:26.000Z",
+            "search_name": "Threat - Crowdstrike - Detection Found - Rule",
+            "source": "Threat - Crowdstrike - Detection Found - Rule",
+            "sourcetype": "stash",
+            "splunk_server": "89.160.20.156"
+          }
+        },
+        "tags": [
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "search",
+      "package": "splunk",
+      "source": "test/test-search.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-02-21T14:26:56.000+00:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "original": "{\"author\":\"author_mcauthorface\",\"query\":\"search *\",\"result\":{\"_bkt\":\"main~0~266C23A8-75B5-4A00-8732-4A6065281018\",\"_cd\":\"0:10\",\"_indextime\":\"1740148016\",\"_raw\":\"02/21/2025 14:26:56 +0000, info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test\",\"_serial\":\"0\",\"_si\":[\"ip-186-86-82-48\",\"main\"],\"_sourcetype\":\"stash\",\"_time\":\"2025-02-21T14:26:56.000+00:00\",\"host\":\"ip-186-86-82-48\",\"index\":\"main\",\"linecount\":\"1\",\"source\":\"/opt/splunk/var/spool/splunk/cafc46ad8c914957_a9876ea14cfe7ac8_events.stash_new\",\"sourcetype\":\"stash\",\"splunk_server\":\"ip-186-86-82-49\"}}"
+        },
+        "message": "info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test",
+        "related": {
+          "hosts": [
+            "ip-186-86-82-49"
+          ],
+          "user": [
+            "author_mcauthorface"
+          ]
+        },
+        "splunk": {
+          "search": {
+            "author": "author_mcauthorface",
+            "query": "search *",
+            "result": {
+              "_bkt": "main~0~266C23A8-75B5-4A00-8732-4A6065281018",
+              "_cd": "0:10",
+              "_indextime": "1740148016",
+              "_raw": "02/21/2025 14:26:56 +0000, info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test",
+              "_serial": "0",
+              "_si": [
+                "ip-186-86-82-48",
+                "main"
+              ],
+              "_sourcetype": "stash",
+              "_time": "2025-02-21T14:26:56.000+00:00",
+              "host": "ip-186-86-82-48",
+              "index": "main",
+              "linecount": "1",
+              "source": "/opt/splunk/var/spool/splunk/cafc46ad8c914957_a9876ea14cfe7ac8_events.stash_new",
+              "sourcetype": "stash",
+              "splunk_server": "ip-186-86-82-49"
+            }
+          }
+        },
+        "tags": [
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "search",
+      "package": "splunk",
+      "source": "test/test-search.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-02-21T14:26:56.000+00:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "module": "splunk",
+          "original": "{\"author\":\"author_mcauthorface\",\"ecs_result\":{\"event.module\":\"splunk\",\"host.name\":\"186-86-82-48\",\"splunk.search.result.important_user_field\":\"test\"},\"mapping\":{\"destination_ip\":\"destination.ip\",\"event_action\":\"event.action\",\"event_kind\":\"event.kind\",\"event_severity\":\"event.severity\",\"field1\":\"splunk.search.result.important_user_field\",\"host\":\"host.name\",\"signature\":\"rule.name\",\"source_ip\":\"source.ip\",\"username\":\"user.name\"},\"query\":\"search *\",\"result\":{\"_bkt\":\"main~0~266C23A8-75B5-4A00-8732-4A6065281018\",\"_cd\":\"0:10\",\"_indextime\":\"1740148016\",\"_raw\":\"02/21/2025 14:26:56 +0000, info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test\",\"_serial\":\"0\",\"_si\":[\"186-86-82-48\",\"main\"],\"_sourcetype\":\"stash\",\"_time\":\"2025-02-21T14:26:56.000+00:00\",\"index\":\"main\",\"linecount\":\"1\",\"source\":\"/opt/splunk/var/spool/splunk/bd1c86d7c7cdb0e1_c144c50e6577e7db_events.stash_new\",\"sourcetype\":\"stash\",\"splunk_server\":\"186-86-82-49\"}}"
+        },
+        "host": {
+          "name": "186-86-82-48"
+        },
+        "message": "info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test",
+        "related": {
+          "hosts": [
+            "186-86-82-48",
+            "186-86-82-49"
+          ],
+          "user": [
+            "author_mcauthorface"
+          ]
+        },
+        "splunk": {
+          "search": {
+            "author": "author_mcauthorface",
+            "mapping": {
+              "destination_ip": "destination.ip",
+              "event_action": "event.action",
+              "event_kind": "event.kind",
+              "event_severity": "event.severity",
+              "field1": "splunk.search.result.important_user_field",
+              "host": "host.name",
+              "signature": "rule.name",
+              "source_ip": "source.ip",
+              "username": "user.name"
+            },
+            "query": "search *",
+            "result": {
+              "_bkt": "main~0~266C23A8-75B5-4A00-8732-4A6065281018",
+              "_cd": "0:10",
+              "_indextime": "1740148016",
+              "_raw": "02/21/2025 14:26:56 +0000, info_min_time=1740060000.000, info_max_time=1740148015.000, info_search_time=1740148015.943, field1=test",
+              "_serial": "0",
+              "_si": [
+                "186-86-82-48",
+                "main"
+              ],
+              "_sourcetype": "stash",
+              "_time": "2025-02-21T14:26:56.000+00:00",
+              "important_user_field": "test",
+              "index": "main",
+              "linecount": "1",
+              "source": "/opt/splunk/var/spool/splunk/bd1c86d7c7cdb0e1_c144c50e6577e7db_events.stash_new",
+              "sourcetype": "stash",
+              "splunk_server": "186-86-82-49"
+            }
+          }
+        },
+        "tags": [
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    }
+  ]
+}

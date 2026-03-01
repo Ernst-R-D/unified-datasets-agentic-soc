@@ -1,0 +1,1215 @@
+{
+  "package": "microsoft_exchange_server",
+  "description": "Exchange Server message tracking logs",
+  "events": [
+    {
+      "data_stream": "httpproxy",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-httpproxy.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-24T15:26:47.957Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:57.445542815Z",
+          "original": "2024-01-24T15:26:47.957Z,3422ea93-768f-4cd4-8b0c-578038deb0b2,15,1,2507,35,R:{750498CA-0EBD-4E7F-B2F6-377AD1BDD198}:20373;RT:Execute;CI:{FF8D5880-5A7A-4AF7-8DDA-8F662BD6BCB6}:155680117;CID:{FF8D5880-5A7A-4AF7-8DDA-8F662BD6BCB6},Mapi,mail.domain.tld,/mapi/emsmdb/,,Negotiate,true,DOMAIN\\user,domain.tld,MailboxGuid~0aa89cf8-aa07-4103-8a1d-ca9e619f223e,Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.16731; Pro),10.12.13.14,Host123,200,200,,POST,Proxy,Host456.domain.tld,15.01.2507.000,CrossForest,MailboxGuidWithDomain,Database~a6c4dbb1-3265-4fbf-9dc6-754dffd67275~~2024-02-23T15:26:43,,,70,132,,,0,1,,0,,0,,0,0,,0,10,0,0,0,0,3,0,0,0,2,0,10,0,4,7,7,7,10,,?MailboxId=0e36a769-e2a9-4d1d-98df-80be2753326c@domain.tld,,BeginRequest=2024-01-24T15:26:47.947Z;CorrelationID=<empty>;ProxyState-Run=None;FEAuth=BEVersion-1942063563;BeginGetRequestStream=2024-01-24T15:26:47.953Z;OnRequestStreamReady=2024-01-24T15:26:47.953Z;BeginGetResponse=2024-01-24T15:26:47.953Z;OnResponseReady=2024-01-24T15:26:47.957Z;EndGetResponse=2024-01-24T15:26:47.957Z;ProxyState-Complete=ProxyResponseData;SharedCacheGuard=0;EndRequest=2024-01-24T15:26:47.957Z;,,,|RoutingDB:0cb2fd35-94c0-44de-9860-134d27654078,,,CafeV1"
+        },
+        "http": {
+          "request": {
+            "bytes": 70,
+            "method": "POST"
+          },
+          "response": {
+            "bytes": 132,
+            "status_code": 200
+          }
+        },
+        "message": "2024-01-24T15:26:47.957Z,3422ea93-768f-4cd4-8b0c-578038deb0b2,15,1,2507,35,R:{750498CA-0EBD-4E7F-B2F6-377AD1BDD198}:20373;RT:Execute;CI:{FF8D5880-5A7A-4AF7-8DDA-8F662BD6BCB6}:155680117;CID:{FF8D5880-5A7A-4AF7-8DDA-8F662BD6BCB6},Mapi,mail.domain.tld,/mapi/emsmdb/,,Negotiate,true,DOMAIN\\user,domain.tld,MailboxGuid~0aa89cf8-aa07-4103-8a1d-ca9e619f223e,Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.16731; Pro),10.12.13.14,Host123,200,200,,POST,Proxy,Host456.domain.tld,15.01.2507.000,CrossForest,MailboxGuidWithDomain,Database~a6c4dbb1-3265-4fbf-9dc6-754dffd67275~~2024-02-23T15:26:43,,,70,132,,,0,1,,0,,0,,0,0,,0,10,0,0,0,0,3,0,0,0,2,0,10,0,4,7,7,7,10,,?MailboxId=0e36a769-e2a9-4d1d-98df-80be2753326c@domain.tld,,BeginRequest=2024-01-24T15:26:47.947Z;CorrelationID=<empty>;ProxyState-Run=None;FEAuth=BEVersion-1942063563;BeginGetRequestStream=2024-01-24T15:26:47.953Z;OnRequestStreamReady=2024-01-24T15:26:47.953Z;BeginGetResponse=2024-01-24T15:26:47.953Z;OnResponseReady=2024-01-24T15:26:47.957Z;EndGetResponse=2024-01-24T15:26:47.957Z;ProxyState-Complete=ProxyResponseData;SharedCacheGuard=0;EndRequest=2024-01-24T15:26:47.957Z;,,,|RoutingDB:0cb2fd35-94c0-44de-9860-134d27654078,,,CafeV1",
+        "microsoft": {
+          "exchange": {
+            "activitycontextlifetime": 10,
+            "adlatency": 0,
+            "anchormailbox": "MailboxGuid~0aa89cf8-aa07-4103-8a1d-ca9e619f223e",
+            "authenticateduser": "DOMAIN\\user",
+            "authenticationtype": "Negotiate",
+            "backendcookie": "Database~a6c4dbb1-3265-4fbf-9dc6-754dffd67275~~2024-02-23T15:26:43",
+            "backendprocessinglatency": 3,
+            "backendreqinitlatency": 0,
+            "backendreqstreamlatency": 0,
+            "backendrespinitlatency": 0,
+            "backendrespstreamlatency": 0,
+            "backendstatus": 200,
+            "buildversion": 2507,
+            "calculatetargetbackendlatency": 1,
+            "clientipaddress": [
+              "10.12.13.14"
+            ],
+            "clientreqstreamlatency": 0,
+            "clientrequestid": "R:{750498CA-0EBD-4E7F-B2F6-377AD1BDD198}:20373;RT:Execute;CI:{FF8D5880-5A7A-4AF7-8DDA-8F662BD6BCB6}:155680117;CID:{FF8D5880-5A7A-4AF7-8DDA-8F662BD6BCB6}",
+            "clientrespstreamlatency": 0,
+            "corelatency": 7,
+            "databaseguid": "|RoutingDB:0cb2fd35-94c0-44de-9860-134d27654078",
+            "genericinfo": "BeginRequest=2024-01-24T15:26:47.947Z;CorrelationID=<empty>;ProxyState-Run=None;FEAuth=BEVersion-1942063563;BeginGetRequestStream=2024-01-24T15:26:47.953Z;OnRequestStreamReady=2024-01-24T15:26:47.953Z;BeginGetResponse=2024-01-24T15:26:47.953Z;OnResponseReady=2024-01-24T15:26:47.957Z;EndGetResponse=2024-01-24T15:26:47.957Z;ProxyState-Complete=ProxyResponseData;SharedCacheGuard=0;EndRequest=2024-01-24T15:26:47.957Z;",
+            "handlercompletionlatency": 0,
+            "handlertomoduleswitchinglatency": 0,
+            "httppipelinelatency": 0,
+            "httpproxyoverhead": 7,
+            "isauthenticated": "true",
+            "kerberosauthheaderlatency": 2,
+            "logtype": "httpproxy",
+            "majorversion": 15,
+            "minorversion": 1,
+            "moduletohandlerswitchinglatency": 0,
+            "organization": "domain.tld",
+            "protocol": "Mapi",
+            "proxyaction": "Proxy",
+            "proxytime": 4,
+            "requesthandlerlatency": 10,
+            "requestid": "3422ea93-768f-4cd4-8b0c-578038deb0b2",
+            "revisionversion": 35,
+            "routinghint": "MailboxGuidWithDomain",
+            "routinglatency": 7,
+            "routingstatus": "CafeV1",
+            "routingtype": "CrossForest",
+            "targetserver": "Host456.domain.tld",
+            "targetserverversion": "15.01.2507.000",
+            "totalaccountforestlatency": 0,
+            "totalglslatency": 0,
+            "totalrequesttime": 10,
+            "totalresourceforestlatency": 0,
+            "totalsharedcachelatency": 0,
+            "urlhost": "mail.domain.tld",
+            "urlstem": "/mapi/emsmdb/"
+          }
+        },
+        "observer": {
+          "hostname": "Host123"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "query": "?MailboxId=0e36a769-e2a9-4d1d-98df-80be2753326c@domain.tld"
+        },
+        "user": {
+          "name": "user"
+        },
+        "user_agent": {
+          "original": "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.16731; Pro)"
+        }
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "Pop3"
+          }
+        },
+        "message": "2024-01-24T15:31:51.231Z,00000000000ABC12,2,1.2.3.4:110,10.11.12.13:12345,ccw.altitude,163,10,34,pass,*****,\"R=OK;Msg=\"\"Proxy:Host123.domain.tld:1995:SSL;ProxySuccess\"\";ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078\","
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "Pop3"
+          }
+        },
+        "message": "2024-01-24T15:31:51.435Z,00000000000ABC12,1,1.2.3.4:110,10.11.12.13:12345,,0,0,0,CloseSession,,,"
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "Pop3"
+          }
+        },
+        "message": "2024-01-24T15:31:51.067Z,00000000000ABC12,1,1.2.3.4:110,10.11.12.13:12345,ccw.altitude,1,17,5,user,ccw.altitude,R=OK,"
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "Imap4"
+          }
+        },
+        "message": "2024-01-24T15:30:19.847Z,00000000000ABC12,2,1.2.3.4:143,10.11.12.13:65468,example123,118,31,34,authenticate,PLAIN,\"R=OK;Msg=\"\"Proxy:Host123.domain.tld:1993:SSL;ProxySuccess\"\";LiveIdAR=OK;ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078\","
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "Imap4"
+          }
+        },
+        "message": "2024-01-24T15:30:18.896Z,00000000000ABC12,4,1.2.3.4:1993,10.11.12.13:25882,example123,15,18,262,examine,INBOX,\"R=OK;Rows=0;Recent=0;UidValidity=14;UidNext=2644;ActivityContextData=\"\"Dbl:ST.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:RPC.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0.7692308,I32:RPC.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,Dbl:STCPU.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=15,I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=266,I32:ROP.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=827177561,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,Dbl:EXR.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:BudgUse.T[]=15.0116996765137\"\";Budget=\"\"Owner:Sid~S-1-2-34-1234567890-1234567890-123456789-123456~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599988,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_0e36a769-e2a9-4d1d-98df-80be2753326c,IsServiceAccount:False,LiveTime:00:04:30.6615435\"\"\","
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "Imap4"
+          }
+        },
+        "message": "2024-01-24T15:30:18.925Z,00000000000ABC12,5,1.2.3.4:1993,10.11.12.13:25882,example123,1,10,26,close,,\"R=OK;UidValidity=14;UidNext=2644;ActivityContextData=\"\"I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0\"\";Budget=\"\"Owner:Sid~S-1-2-34-5678910111-1213141516-171819202-212223~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599993,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_81f0fddf-6fcd-4e2e-9330-ca4a38f4057a,IsServiceAccount:False,LiveTime:00:04:30.6905655\"\"\","
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-24T15:31:51.231Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:57.859485583Z",
+          "original": "2024-01-24T15:31:51.231Z,00000000000ABC12,2,1.2.3.4:110,10.11.12.13:12345,ccw.altitude,163,10,34,pass,*****,\"R=OK;Msg=\"\"Proxy:Host123.domain.tld:1995:SSL;ProxySuccess\"\";ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078\","
+        },
+        "log": {
+          "file": {
+            "path": "Pop3"
+          }
+        },
+        "message": "2024-01-24T15:31:51.231Z,00000000000ABC12,2,1.2.3.4:110,10.11.12.13:12345,ccw.altitude,163,10,34,pass,*****,\"R=OK;Msg=\"\"Proxy:Host123.domain.tld:1995:SSL;ProxySuccess\"\";ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078\",",
+        "microsoft": {
+          "exchange": {
+            "cip": "10.11.12.13:12345",
+            "command": "pass",
+            "context": "R=OK;Msg=\"Proxy:Host123.domain.tld:1995:SSL;ProxySuccess\";ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078",
+            "duration": 163,
+            "logtype": "pop3",
+            "parameters": "*****",
+            "rpsize": 34,
+            "rqsize": 10,
+            "seqnumber": 2,
+            "sessionid": "00000000000ABC12",
+            "sip": "1.2.3.4:110",
+            "user": "ccw.altitude"
+          }
+        },
+        "source": {
+          "ip": "10.11.12.13"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-24T15:31:51.435Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:57.859533861Z",
+          "original": "2024-01-24T15:31:51.435Z,00000000000ABC12,1,1.2.3.4:110,10.11.12.13:12345,,0,0,0,CloseSession,,,"
+        },
+        "log": {
+          "file": {
+            "path": "Pop3"
+          }
+        },
+        "message": "2024-01-24T15:31:51.435Z,00000000000ABC12,1,1.2.3.4:110,10.11.12.13:12345,,0,0,0,CloseSession,,,",
+        "microsoft": {
+          "exchange": {
+            "cip": "10.11.12.13:12345",
+            "command": "CloseSession",
+            "duration": 0,
+            "logtype": "pop3",
+            "rpsize": 0,
+            "rqsize": 0,
+            "seqnumber": 1,
+            "sessionid": "00000000000ABC12",
+            "sip": "1.2.3.4:110"
+          }
+        },
+        "source": {
+          "ip": "10.11.12.13"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-24T15:31:51.067Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:57.85953608Z",
+          "original": "2024-01-24T15:31:51.067Z,00000000000ABC12,1,1.2.3.4:110,10.11.12.13:12345,ccw.altitude,1,17,5,user,ccw.altitude,R=OK,"
+        },
+        "log": {
+          "file": {
+            "path": "Pop3"
+          }
+        },
+        "message": "2024-01-24T15:31:51.067Z,00000000000ABC12,1,1.2.3.4:110,10.11.12.13:12345,ccw.altitude,1,17,5,user,ccw.altitude,R=OK,",
+        "microsoft": {
+          "exchange": {
+            "cip": "10.11.12.13:12345",
+            "command": "user",
+            "context": "R=OK",
+            "duration": 1,
+            "logtype": "pop3",
+            "parameters": "ccw.altitude",
+            "rpsize": 5,
+            "rqsize": 17,
+            "seqnumber": 1,
+            "sessionid": "00000000000ABC12",
+            "sip": "1.2.3.4:110",
+            "user": "ccw.altitude"
+          }
+        },
+        "source": {
+          "ip": "10.11.12.13"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-24T15:30:19.847Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:57.859537197Z",
+          "original": "2024-01-24T15:30:19.847Z,00000000000ABC12,2,1.2.3.4:143,10.11.12.13:65468,example123,118,31,34,authenticate,PLAIN,\"R=OK;Msg=\"\"Proxy:Host123.domain.tld:1993:SSL;ProxySuccess\"\";LiveIdAR=OK;ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078\","
+        },
+        "log": {
+          "file": {
+            "path": "Imap4"
+          }
+        },
+        "message": "2024-01-24T15:30:19.847Z,00000000000ABC12,2,1.2.3.4:143,10.11.12.13:65468,example123,118,31,34,authenticate,PLAIN,\"R=OK;Msg=\"\"Proxy:Host123.domain.tld:1993:SSL;ProxySuccess\"\";LiveIdAR=OK;ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078\",",
+        "microsoft": {
+          "exchange": {
+            "cip": "10.11.12.13:65468",
+            "command": "authenticate",
+            "context": "R=OK;Msg=\"Proxy:Host123.domain.tld:1993:SSL;ProxySuccess\";LiveIdAR=OK;ActivityContextData=0cb2fd35-94c0-44de-9860-134d27654078",
+            "duration": 118,
+            "logtype": "imap4",
+            "parameters": "PLAIN",
+            "rpsize": 34,
+            "rqsize": 31,
+            "seqnumber": 2,
+            "sessionid": "00000000000ABC12",
+            "sip": "1.2.3.4:143",
+            "user": "example123"
+          }
+        },
+        "source": {
+          "ip": "10.11.12.13"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-24T15:30:18.896Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:57.859538218Z",
+          "original": "2024-01-24T15:30:18.896Z,00000000000ABC12,4,1.2.3.4:1993,10.11.12.13:25882,example123,15,18,262,examine,INBOX,\"R=OK;Rows=0;Recent=0;UidValidity=14;UidNext=2644;ActivityContextData=\"\"Dbl:ST.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:RPC.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0.7692308,I32:RPC.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,Dbl:STCPU.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=15,I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=266,I32:ROP.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=827177561,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,Dbl:EXR.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:BudgUse.T[]=15.0116996765137\"\";Budget=\"\"Owner:Sid~S-1-2-34-1234567890-1234567890-123456789-123456~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599988,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_0e36a769-e2a9-4d1d-98df-80be2753326c,IsServiceAccount:False,LiveTime:00:04:30.6615435\"\"\","
+        },
+        "log": {
+          "file": {
+            "path": "Imap4"
+          }
+        },
+        "message": "2024-01-24T15:30:18.896Z,00000000000ABC12,4,1.2.3.4:1993,10.11.12.13:25882,example123,15,18,262,examine,INBOX,\"R=OK;Rows=0;Recent=0;UidValidity=14;UidNext=2644;ActivityContextData=\"\"Dbl:ST.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:RPC.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0.7692308,I32:RPC.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,Dbl:STCPU.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=15,I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=266,I32:ROP.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=827177561,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,Dbl:EXR.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:BudgUse.T[]=15.0116996765137\"\";Budget=\"\"Owner:Sid~S-1-2-34-1234567890-1234567890-123456789-123456~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599988,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_0e36a769-e2a9-4d1d-98df-80be2753326c,IsServiceAccount:False,LiveTime:00:04:30.6615435\"\"\",",
+        "microsoft": {
+          "exchange": {
+            "cip": "10.11.12.13:25882",
+            "command": "examine",
+            "context": "R=OK;Rows=0;Recent=0;UidValidity=14;UidNext=2644;ActivityContextData=\"Dbl:ST.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:RPC.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0.7692308,I32:RPC.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=13,Dbl:STCPU.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=15,I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=266,I32:ROP.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=827177561,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=10,Dbl:EXR.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,Dbl:BudgUse.T[]=15.0116996765137\";Budget=\"Owner:Sid~S-1-2-34-1234567890-1234567890-123456789-123456~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599988,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_0e36a769-e2a9-4d1d-98df-80be2753326c,IsServiceAccount:False,LiveTime:00:04:30.6615435\"",
+            "duration": 15,
+            "logtype": "imap4",
+            "parameters": "INBOX",
+            "rpsize": 262,
+            "rqsize": 18,
+            "seqnumber": 4,
+            "sessionid": "00000000000ABC12",
+            "sip": "1.2.3.4:1993",
+            "user": "example123"
+          }
+        },
+        "source": {
+          "ip": "10.11.12.13"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "imap4_pop3",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-imap4-pop3.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-24T15:30:18.925Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:57.859539246Z",
+          "original": "2024-01-24T15:30:18.925Z,00000000000ABC12,5,1.2.3.4:1993,10.11.12.13:25882,example123,1,10,26,close,,\"R=OK;UidValidity=14;UidNext=2644;ActivityContextData=\"\"I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0\"\";Budget=\"\"Owner:Sid~S-1-2-34-5678910111-1213141516-171819202-212223~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599993,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_81f0fddf-6fcd-4e2e-9330-ca4a38f4057a,IsServiceAccount:False,LiveTime:00:04:30.6905655\"\"\","
+        },
+        "log": {
+          "file": {
+            "path": "Imap4"
+          }
+        },
+        "message": "2024-01-24T15:30:18.925Z,00000000000ABC12,5,1.2.3.4:1993,10.11.12.13:25882,example123,1,10,26,close,,\"R=OK;UidValidity=14;UidNext=2644;ActivityContextData=\"\"I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0\"\";Budget=\"\"Owner:Sid~S-1-2-34-5678910111-1213141516-171819202-212223~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599993,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_81f0fddf-6fcd-4e2e-9330-ca4a38f4057a,IsServiceAccount:False,LiveTime:00:04:30.6905655\"\"\",",
+        "microsoft": {
+          "exchange": {
+            "cip": "10.11.12.13:25882",
+            "command": "close",
+            "context": "R=OK;UidValidity=14;UidNext=2644;ActivityContextData=\"I32:MAPI.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=3,I32:MB.C[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,F:MB.AL[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0,Dbl:MAPI.T[Host123.0e36a769-e2a9-4d1d-98df-80be2753326c]=0\";Budget=\"Owner:Sid~S-1-2-34-5678910111-1213141516-171819202-212223~Imap~false,Conn:1,MaxConn:Unlimited,MaxBurst:3600000,Balance:3599993,Cutoff:Unlimited,RechargeRate:600000,Policy:GlobalThrottlingPolicy_81f0fddf-6fcd-4e2e-9330-ca4a38f4057a,IsServiceAccount:False,LiveTime:00:04:30.6905655\"",
+            "duration": 1,
+            "logtype": "imap4",
+            "rpsize": 26,
+            "rqsize": 10,
+            "seqnumber": 5,
+            "sessionid": "00000000000ABC12",
+            "sip": "1.2.3.4:1993",
+            "user": "example123"
+          }
+        },
+        "source": {
+          "ip": "10.11.12.13"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "messagetracking",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-messagetracking.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:16:09.843Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "direction": "Incoming",
+          "from": {
+            "address": [
+              "root@host01.my.domain.com",
+              "MAILER-DAEMON@host01.my.domain.com"
+            ]
+          },
+          "local_id": "2fd37dca-1234-5bfb-175d-08dc1db88f52",
+          "message_id": "<20240124222112.B4AE1234EF@host01.my.domain.com>",
+          "sender": {
+            "address": [
+              "MAILER-DAEMON@host01.my.domain.com"
+            ]
+          },
+          "subject": "Undelivered Mail Returned to Sender",
+          "to": {
+            "address": [
+              "mailuser@my.domain.com"
+            ]
+          }
+        },
+        "event": {
+          "ingested": "2025-02-20T14:15:49.792664555Z",
+          "original": "2024-01-25T15:16:09.843Z,,,,exchange-mail,No suitable shadow servers,,SMTP,HAREDIRECTFAIL,70971234566456,<20240124222112.B4AE1234EF@host01.my.domain.com>,2fd37dca-1234-5bfb-175d-08dc1db88f52,mailuser@my.domain.com,,15054,1,,,Undelivered Mail Returned to Sender,MAILER-DAEMON@host01.my.domain.com,root@host01.my.domain.com,,Incoming,,,,S:DeliveryPriority=Normal;S:OriginalFromAddress=root@host01.my.domain.com;S:AccountForest=my.domain.com,Email,dc69df25-1234-564c-41c4-08dc1db88f7f,15.02.0330.005"
+        },
+        "message": "2024-01-25T15:16:09.843Z,,,,exchange-mail,No suitable shadow servers,,SMTP,HAREDIRECTFAIL,70971234566456,<20240124222112.B4AE1234EF@host01.my.domain.com>,2fd37dca-1234-5bfb-175d-08dc1db88f52,mailuser@my.domain.com,,15054,1,,,Undelivered Mail Returned to Sender,MAILER-DAEMON@host01.my.domain.com,root@host01.my.domain.com,,Incoming,,,,S:DeliveryPriority=Normal;S:OriginalFromAddress=root@host01.my.domain.com;S:AccountForest=my.domain.com,Email,dc69df25-1234-564c-41c4-08dc1db88f7f,15.02.0330.005",
+        "microsoft": {
+          "exchange": {
+            "customdata": "S:DeliveryPriority=Normal;S:OriginalFromAddress=root@host01.my.domain.com;S:AccountForest=my.domain.com",
+            "eventid": "HAREDIRECTFAIL",
+            "internalmessageid": "70971234566456",
+            "logid": "dc69df25-1234-564c-41c4-08dc1db88f7f",
+            "networkmessageid": "2fd37dca-1234-5bfb-175d-08dc1db88f52",
+            "recipientcount": 1,
+            "returnpath": "root@host01.my.domain.com",
+            "schemaversion": "15.02.0330.005",
+            "source": "SMTP",
+            "sourcecontext": "No suitable shadow servers",
+            "transporttraffictype": "Email"
+          }
+        },
+        "network": {
+          "bytes": 15054
+        },
+        "server": {
+          "domain": "exchange-mail"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "messagetracking",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-messagetracking.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:16:09.949Z",
+        "client": {
+          "domain": "exchange-mail.my.domain.com",
+          "ip": "10.11.12.14"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "direction": "Incoming",
+          "from": {
+            "address": [
+              "root@host01.my.domain.com"
+            ]
+          },
+          "local_id": "1e6eb197-c6b4-1234-1b69-56dc1db88f50",
+          "message_id": "<20240123200014.123F425E28@host01.my.domain.com>",
+          "sender": {
+            "address": [
+              "root@host01.my.domain.com"
+            ]
+          },
+          "subject": "vzdump backup status (host01.my.domain.com): backup successful",
+          "to": {
+            "address": [
+              "mailuser@my.domain.com"
+            ]
+          }
+        },
+        "event": {
+          "ingested": "2025-02-20T14:15:49.792775712Z",
+          "original": "2024-01-25T15:16:09.949Z,10.11.12.14,exchange-mail.my.domain.com,10.11.12.14,exchange-mail,08DC1DB12C345BE5;2024-01-25T15:16:09.544Z;0,exchange-mail\\Default exchange-mail,SMTP,RECEIVE,70912345566403,<20240123200014.123F425E28@host01.my.domain.com>,1e6eb197-c6b4-1234-1b69-56dc1db88f50,mailuser@my.domain.com,,7229,1,,,vzdump backup status (host01.my.domain.com): backup successful,root@host01.my.domain.com,root@host01.my.domain.com,0cA: ,Incoming,,10.11.12.13,10.11.12.14,S:ProxyHop1=exchange-mail.my.domain.com(10.11.12.14);S:MessageValue=MediumHigh;S:Replication=Failed;S:FirstForestHop=exchange-mail.my.domain.com;S:FromEntity=Internet;S:ProxiedClientIPAddress=10.11.12.13;S:ProxiedClientHostname=host01.my.domain.com;S:DeliveryPriority=Normal;S:AccountForest=my.domain.com,Email,05503123-c5b9-46fe-1234-56dc1db88f8f,15.02.0330.005"
+        },
+        "message": "2024-01-25T15:16:09.949Z,10.11.12.14,exchange-mail.my.domain.com,10.11.12.14,exchange-mail,08DC1DB12C345BE5;2024-01-25T15:16:09.544Z;0,exchange-mail\\Default exchange-mail,SMTP,RECEIVE,70912345566403,<20240123200014.123F425E28@host01.my.domain.com>,1e6eb197-c6b4-1234-1b69-56dc1db88f50,mailuser@my.domain.com,,7229,1,,,vzdump backup status (host01.my.domain.com): backup successful,root@host01.my.domain.com,root@host01.my.domain.com,0cA: ,Incoming,,10.11.12.13,10.11.12.14,S:ProxyHop1=exchange-mail.my.domain.com(10.11.12.14);S:MessageValue=MediumHigh;S:Replication=Failed;S:FirstForestHop=exchange-mail.my.domain.com;S:FromEntity=Internet;S:ProxiedClientIPAddress=10.11.12.13;S:ProxiedClientHostname=host01.my.domain.com;S:DeliveryPriority=Normal;S:AccountForest=my.domain.com,Email,05503123-c5b9-46fe-1234-56dc1db88f8f,15.02.0330.005",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "exchange-mail\\Default exchange-mail",
+            "customdata": "S:ProxyHop1=exchange-mail.my.domain.com(10.11.12.14);S:MessageValue=MediumHigh;S:Replication=Failed;S:FirstForestHop=exchange-mail.my.domain.com;S:FromEntity=Internet;S:ProxiedClientIPAddress=10.11.12.13;S:ProxiedClientHostname=host01.my.domain.com;S:DeliveryPriority=Normal;S:AccountForest=my.domain.com",
+            "eventid": "RECEIVE",
+            "internalmessageid": "70912345566403",
+            "logid": "05503123-c5b9-46fe-1234-56dc1db88f8f",
+            "messageinfo": "0cA: ",
+            "networkmessageid": "1e6eb197-c6b4-1234-1b69-56dc1db88f50",
+            "originalclientip": "10.11.12.13",
+            "originalserverip": "10.11.12.14",
+            "recipientcount": 1,
+            "returnpath": "root@host01.my.domain.com",
+            "schemaversion": "15.02.0330.005",
+            "source": "SMTP",
+            "sourcecontext": "08DC1DB12C345BE5;2024-01-25T15:16:09.544Z;0",
+            "transporttraffictype": "Email"
+          }
+        },
+        "network": {
+          "bytes": 7229
+        },
+        "server": {
+          "domain": "exchange-mail",
+          "ip": "10.11.12.14"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "messagetracking",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-messagetracking.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:16:14.415Z",
+        "client": {
+          "domain": "exchange-mail.my.domain.com",
+          "ip": "10.11.12.14"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "direction": "Incoming",
+          "from": {
+            "address": [
+              "root@pve-vhost01.my.domain.com"
+            ]
+          },
+          "local_id": "c95b5dd1-f520-1234-e6dc-56dc1db8914d",
+          "message_id": "<20240123200018.123C42553@pve-vhost01.my.domain.com>",
+          "sender": {
+            "address": [
+              "root@pve-vhost01.my.domain.com"
+            ]
+          },
+          "subject": "vzdump backup status (pve-vhost01.my.domain.com): backup successful",
+          "to": {
+            "address": [
+              "mailuser@my.domain.com"
+            ]
+          }
+        },
+        "event": {
+          "ingested": "2025-02-20T14:15:49.792786347Z",
+          "original": "2024-01-25T15:16:14.415Z,10.11.12.14,exchange-mail.my.domain.com,10.11.12.14,exchange-mail,08DC1DB12C345BE9;2024-01-25T15:16:12.885Z;0,exchange-mail\\Default exchange-mail,SMTP,RECEIVE,70912345566407,<20240123200018.123C42553@pve-vhost01.my.domain.com>,c95b5dd1-f520-1234-e6dc-56dc1db8914d,mailuser@my.domain.com,,8251,1,,,vzdump backup status (pve-vhost01.my.domain.com): backup successful,root@pve-vhost01.my.domain.com,root@pve-vhost01.my.domain.com,0cA: ,Incoming,,10.11.12.15,10.11.12.14,S:ProxyHop1=exchange-mail.my.domain.com(10.11.12.14);S:MessageValue=MediumHigh;S:Replication=Failed;S:FirstForestHop=exchange-mail.my.domain.com;S:FromEntity=Internet;S:ProxiedClientIPAddress=10.11.12.15;S:ProxiedClientHostname=pve-vhost01.my.domain.com;S:DeliveryPriority=Normal;S:AccountForest=my.domain.com,Email,d6aef52d-0e05-1234-e29b-56dc1db89238,15.02.0330.005"
+        },
+        "message": "2024-01-25T15:16:14.415Z,10.11.12.14,exchange-mail.my.domain.com,10.11.12.14,exchange-mail,08DC1DB12C345BE9;2024-01-25T15:16:12.885Z;0,exchange-mail\\Default exchange-mail,SMTP,RECEIVE,70912345566407,<20240123200018.123C42553@pve-vhost01.my.domain.com>,c95b5dd1-f520-1234-e6dc-56dc1db8914d,mailuser@my.domain.com,,8251,1,,,vzdump backup status (pve-vhost01.my.domain.com): backup successful,root@pve-vhost01.my.domain.com,root@pve-vhost01.my.domain.com,0cA: ,Incoming,,10.11.12.15,10.11.12.14,S:ProxyHop1=exchange-mail.my.domain.com(10.11.12.14);S:MessageValue=MediumHigh;S:Replication=Failed;S:FirstForestHop=exchange-mail.my.domain.com;S:FromEntity=Internet;S:ProxiedClientIPAddress=10.11.12.15;S:ProxiedClientHostname=pve-vhost01.my.domain.com;S:DeliveryPriority=Normal;S:AccountForest=my.domain.com,Email,d6aef52d-0e05-1234-e29b-56dc1db89238,15.02.0330.005",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "exchange-mail\\Default exchange-mail",
+            "customdata": "S:ProxyHop1=exchange-mail.my.domain.com(10.11.12.14);S:MessageValue=MediumHigh;S:Replication=Failed;S:FirstForestHop=exchange-mail.my.domain.com;S:FromEntity=Internet;S:ProxiedClientIPAddress=10.11.12.15;S:ProxiedClientHostname=pve-vhost01.my.domain.com;S:DeliveryPriority=Normal;S:AccountForest=my.domain.com",
+            "eventid": "RECEIVE",
+            "internalmessageid": "70912345566407",
+            "logid": "d6aef52d-0e05-1234-e29b-56dc1db89238",
+            "messageinfo": "0cA: ",
+            "networkmessageid": "c95b5dd1-f520-1234-e6dc-56dc1db8914d",
+            "originalclientip": "10.11.12.15",
+            "originalserverip": "10.11.12.14",
+            "recipientcount": 1,
+            "returnpath": "root@pve-vhost01.my.domain.com",
+            "schemaversion": "15.02.0330.005",
+            "source": "SMTP",
+            "sourcecontext": "08DC1DB12C345BE9;2024-01-25T15:16:12.885Z;0",
+            "transporttraffictype": "Email"
+          }
+        },
+        "network": {
+          "bytes": 8251
+        },
+        "server": {
+          "domain": "exchange-mail",
+          "ip": "10.11.12.14"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "messagetracking",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-messagetracking.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-07T00:00:07.463Z",
+        "client": {
+          "domain": "exchange",
+          "ip": "192.168.0.1"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "direction": "Originating",
+          "from": {
+            "address": [
+              "support@example.com"
+            ]
+          },
+          "local_id": "0b7099ea-cb95-1234-328e-08dc5f139ac8",
+          "message_id": "20240107001234.567E6224C8@monitor.example.com",
+          "sender": {
+            "address": [
+              "support@example.com"
+            ]
+          },
+          "subject": "ein Titel",
+          "to": {
+            "address": [
+              "uwe.musterman@example.com"
+            ]
+          }
+        },
+        "event": {
+          "ingested": "2025-02-20T14:15:49.792795207Z",
+          "original": "2024-01-07T00:00:07.463Z,192.168.0.1,exchange,192.168.0.2,exchange.example.com,;250 2.0.0OK20240107001234.567E6224C8@monitor.example.com[Hostname=exchange.example.com];ClientSubmitTime:,Intra-Organization SMTP Send Connector,SMTP,SEND,29519319995411,20240107001234.567E6224C8@monitor.example.com,0b7099ea-cb95-1234-328e-08dc5f139ac8,uwe.musterman@example.com,250 2.1.5Recipient OK,38663,1,,,ein Titel,support@example.com,support@example.com,2024-01-07T00:00:05.535Z;LSRV=exchange.example.com:TOTAL-HUB=1.921|SMR=0.127(SMRDE=0.002|SMRC=0.125(SMRCL=0.105|X-SMRCR=0.125))|CAT=1.698(CATOS=0.018(CATSM=0.017(CATSM-Malware Agent=0.017))|CATRESL=0.004|CATORES=1.567(CATRS=1.566(CATRS-ScanMail Routing Agent=0.117|CATRS-Transport Rule Agent=0.002(X-ETREX=0.002)|CATRS-Index Routing Agent=1.444))|CATORT=0.108(CATRT=0.107(CATRT-Journal Agent=0.107)))|QDM=0.010|SMSC=0.006(X-SMSDR=0.011)|SMS=0.076(SMSMBXD=0.071),Originating,,,,S:E2ELatency=1.928;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=Opportunistic;S:IsSmtpResponseFromExternalServer=False;S:DeliveryPriority=Normal;S:AccountForest=example.com,Email,a7ae9ef9-e10c-4111-19bf-08dc0f111bee,15.01.2507.035"
+        },
+        "message": "2024-01-07T00:00:07.463Z,192.168.0.1,exchange,192.168.0.2,exchange.example.com,;250 2.0.0OK20240107001234.567E6224C8@monitor.example.com[Hostname=exchange.example.com];ClientSubmitTime:,Intra-Organization SMTP Send Connector,SMTP,SEND,29519319995411,20240107001234.567E6224C8@monitor.example.com,0b7099ea-cb95-1234-328e-08dc5f139ac8,uwe.musterman@example.com,250 2.1.5Recipient OK,38663,1,,,ein Titel,support@example.com,support@example.com,2024-01-07T00:00:05.535Z;LSRV=exchange.example.com:TOTAL-HUB=1.921|SMR=0.127(SMRDE=0.002|SMRC=0.125(SMRCL=0.105|X-SMRCR=0.125))|CAT=1.698(CATOS=0.018(CATSM=0.017(CATSM-Malware Agent=0.017))|CATRESL=0.004|CATORES=1.567(CATRS=1.566(CATRS-ScanMail Routing Agent=0.117|CATRS-Transport Rule Agent=0.002(X-ETREX=0.002)|CATRS-Index Routing Agent=1.444))|CATORT=0.108(CATRT=0.107(CATRT-Journal Agent=0.107)))|QDM=0.010|SMSC=0.006(X-SMSDR=0.011)|SMS=0.076(SMSMBXD=0.071),Originating,,,,S:E2ELatency=1.928;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=Opportunistic;S:IsSmtpResponseFromExternalServer=False;S:DeliveryPriority=Normal;S:AccountForest=example.com,Email,a7ae9ef9-e10c-4111-19bf-08dc0f111bee,15.01.2507.035",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "Intra-Organization SMTP Send Connector",
+            "customdata": "S:E2ELatency=1.928;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=Opportunistic;S:IsSmtpResponseFromExternalServer=False;S:DeliveryPriority=Normal;S:AccountForest=example.com",
+            "eventid": "SEND",
+            "internalmessageid": "29519319995411",
+            "logid": "a7ae9ef9-e10c-4111-19bf-08dc0f111bee",
+            "messageinfo": "2024-01-07T00:00:05.535Z;LSRV=exchange.example.com:TOTAL-HUB=1.921|SMR=0.127(SMRDE=0.002|SMRC=0.125(SMRCL=0.105|X-SMRCR=0.125))|CAT=1.698(CATOS=0.018(CATSM=0.017(CATSM-Malware Agent=0.017))|CATRESL=0.004|CATORES=1.567(CATRS=1.566(CATRS-ScanMail Routing Agent=0.117|CATRS-Transport Rule Agent=0.002(X-ETREX=0.002)|CATRS-Index Routing Agent=1.444))|CATORT=0.108(CATRT=0.107(CATRT-Journal Agent=0.107)))|QDM=0.010|SMSC=0.006(X-SMSDR=0.011)|SMS=0.076(SMSMBXD=0.071)",
+            "networkmessageid": "0b7099ea-cb95-1234-328e-08dc5f139ac8",
+            "recipientcount": 1,
+            "recipientstatus": "250 2.1.5Recipient OK",
+            "returnpath": "support@example.com",
+            "schemaversion": "15.01.2507.035",
+            "source": "SMTP",
+            "sourcecontext": ";250 2.0.0OK20240107001234.567E6224C8@monitor.example.com[Hostname=exchange.example.com];ClientSubmitTime:",
+            "transporttraffictype": "Email"
+          }
+        },
+        "network": {
+          "bytes": 38663
+        },
+        "server": {
+          "domain": "exchange.example.com",
+          "ip": "192.168.0.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "messagetracking",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-messagetracking.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-01-14T09:29:05.327Z",
+        "client": {
+          "domain": "HELLOWORLD",
+          "ip": "216.160.83.56"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "direction": "Incoming",
+          "local_id": "cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202",
+          "message_id": "<1736846922.907742.2942@foo.bar.local>",
+          "sender": {
+            "address": [
+              ""
+            ]
+          },
+          "subject": "John Doe",
+          "to": {
+            "address": [
+              "email@email.com"
+            ]
+          }
+        },
+        "event": {
+          "ingested": "2025-02-20T14:15:49.792842183Z",
+          "original": "2025-01-14T09:29:05.327Z,216.160.83.56,HELLOWORLD,175.16.199.1,global-mail-onmicrosoft-com.mail.protection.outlook.com,\";250 2.6.0 <1736846922.907742.2942@foo.bar.local> [InternalId=5450313518243, Hostname=AAAAAAAAAAAAA.bbbbbbbb.prod.outlook.com] 141301 bytes in 0.101, 1361.827 KB/sec Queued mail for delivery;ClientSubmitTime:\",Outbound to Office 365 - cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202,SMTP,SENDEXTERNAL,8774618205228,<1736846922.907742.2942@foo.bar.local>,cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202,email@email.com,250 2.1.5 Recipient OK,136349,1,,,John Doe,,<>,2025-01-14T09:28:50.814Z;SRV=HELLOWORLD.foo.example.com:TOTAL-FE=0.074|SMR=0.072(SMRPI=0.002(SMRPI-FrontendProxyAgent=0.002))|SMS=0.002;SRV=HELLOWORLD.foo.example.com:TOTAL-HUB=14.439|SMR=0.279(SMRDE=0.174|SMRC=0.105(SMRCL=0.105|X-SMRCR=0.016))|CAT=0.046(CATOS=0.018(CATSM=0.018(CATSM-Malware Agent=0.017))|CATRESL=0.003|CATORES=0.021(CATRS=0.021(CATRS-Prioritization Agent=0.002|CATRS-Index Routing Agent=0.017))|CATORT=0.002(CATRT=0.002(CATRT-CodeTwo Exchange Rules Transport Agent=0.001)))|QDE=13.818|SMS=0.291,Incoming,,,,S:E2ELatency=14.513;S:ExternalSendLatency=0.402;S:ToEntity=Internet;S:FromEntity=Internet;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=DomainValidation;S:Microsoft.Exchange.Transport.MailRecipient.EffectiveTlsAuthLevel=DomainValidation;S:IsSmtpResponseFromExternalServer=True;S:DeliveryPriority=Normal;S:OriginalFromAddress=<>;S:AccountForest=wgs.wuerth.com,Email,82f8feae-ef9b-41bf-8500-1e10946655ae,15.01.2507.039"
+        },
+        "message": "2025-01-14T09:29:05.327Z,216.160.83.56,HELLOWORLD,175.16.199.1,global-mail-onmicrosoft-com.mail.protection.outlook.com,\";250 2.6.0 <1736846922.907742.2942@foo.bar.local> [InternalId=5450313518243, Hostname=AAAAAAAAAAAAA.bbbbbbbb.prod.outlook.com] 141301 bytes in 0.101, 1361.827 KB/sec Queued mail for delivery;ClientSubmitTime:\",Outbound to Office 365 - cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202,SMTP,SENDEXTERNAL,8774618205228,<1736846922.907742.2942@foo.bar.local>,cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202,email@email.com,250 2.1.5 Recipient OK,136349,1,,,John Doe,,<>,2025-01-14T09:28:50.814Z;SRV=HELLOWORLD.foo.example.com:TOTAL-FE=0.074|SMR=0.072(SMRPI=0.002(SMRPI-FrontendProxyAgent=0.002))|SMS=0.002;SRV=HELLOWORLD.foo.example.com:TOTAL-HUB=14.439|SMR=0.279(SMRDE=0.174|SMRC=0.105(SMRCL=0.105|X-SMRCR=0.016))|CAT=0.046(CATOS=0.018(CATSM=0.018(CATSM-Malware Agent=0.017))|CATRESL=0.003|CATORES=0.021(CATRS=0.021(CATRS-Prioritization Agent=0.002|CATRS-Index Routing Agent=0.017))|CATORT=0.002(CATRT=0.002(CATRT-CodeTwo Exchange Rules Transport Agent=0.001)))|QDE=13.818|SMS=0.291,Incoming,,,,S:E2ELatency=14.513;S:ExternalSendLatency=0.402;S:ToEntity=Internet;S:FromEntity=Internet;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=DomainValidation;S:Microsoft.Exchange.Transport.MailRecipient.EffectiveTlsAuthLevel=DomainValidation;S:IsSmtpResponseFromExternalServer=True;S:DeliveryPriority=Normal;S:OriginalFromAddress=<>;S:AccountForest=wgs.wuerth.com,Email,82f8feae-ef9b-41bf-8500-1e10946655ae,15.01.2507.039",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "Outbound to Office 365 - cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202",
+            "customdata": "S:E2ELatency=14.513;S:ExternalSendLatency=0.402;S:ToEntity=Internet;S:FromEntity=Internet;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=DomainValidation;S:Microsoft.Exchange.Transport.MailRecipient.EffectiveTlsAuthLevel=DomainValidation;S:IsSmtpResponseFromExternalServer=True;S:DeliveryPriority=Normal;S:OriginalFromAddress=<>;S:AccountForest=wgs.wuerth.com",
+            "eventid": "SENDEXTERNAL",
+            "internalmessageid": "8774618205228",
+            "logid": "82f8feae-ef9b-41bf-8500-1e10946655ae",
+            "messageinfo": "2025-01-14T09:28:50.814Z;SRV=HELLOWORLD.foo.example.com:TOTAL-FE=0.074|SMR=0.072(SMRPI=0.002(SMRPI-FrontendProxyAgent=0.002))|SMS=0.002;SRV=HELLOWORLD.foo.example.com:TOTAL-HUB=14.439|SMR=0.279(SMRDE=0.174|SMRC=0.105(SMRCL=0.105|X-SMRCR=0.016))|CAT=0.046(CATOS=0.018(CATSM=0.018(CATSM-Malware Agent=0.017))|CATRESL=0.003|CATORES=0.021(CATRS=0.021(CATRS-Prioritization Agent=0.002|CATRS-Index Routing Agent=0.017))|CATORT=0.002(CATRT=0.002(CATRT-CodeTwo Exchange Rules Transport Agent=0.001)))|QDE=13.818|SMS=0.291",
+            "networkmessageid": "cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202",
+            "recipientcount": 1,
+            "recipientstatus": "250 2.1.5 Recipient OK",
+            "returnpath": "<>",
+            "schemaversion": "15.01.2507.039",
+            "source": "SMTP",
+            "sourcecontext": ";250 2.6.0 <1736846922.907742.2942@foo.bar.local> [InternalId=5450313518243, Hostname=AAAAAAAAAAAAA.bbbbbbbb.prod.outlook.com] 141301 bytes in 0.101, 1361.827 KB/sec Queued mail for delivery;ClientSubmitTime:",
+            "transporttraffictype": "Email"
+          }
+        },
+        "network": {
+          "bytes": 136349
+        },
+        "server": {
+          "domain": "global-mail-onmicrosoft-com.mail.protection.outlook.com",
+          "ip": "175.16.199.1"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "messagetracking",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-messagetracking.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-01-14T09:28:39.334Z",
+        "client": {
+          "domain": "HELLOWORLD",
+          "ip": "2a02:cf40::0000:1234:5678:9abc"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "email@email.com"
+            ]
+          },
+          "sender": {
+            "address": [
+              "email@email.com"
+            ]
+          }
+        },
+        "event": {
+          "ingested": "2025-02-20T14:15:49.792849318Z",
+          "original": "2025-01-14T09:28:39.334Z,2a02:cf40::0000:1234:5678:9abc,HELLOWORLD,,,\"MDB:f4adaa08-ff49-4bca-ba70-68e9b80597b0, Mailbox:84dd42d9-8814-4758-a8bb-e8765d62ec90, Event:190620893, MessageClass:IPM.Note, CreationTime:2025-01-14T09:28:39.321Z, ClientType:MOMT, SubmissionAssistant:MailboxTransportSubmissionEmailAssistant\",,STOREDRIVER,NOTIFYMAPI,,,,,,,,,,,email@email.com,,2025-01-14T09:28:39.321Z;LSRV=HELLOWORLD.foo.example.com:TOTAL-SUB=0.013|SA=0.013|MTSS-PEN=0.000,,,,,S:ItemEntryId=00-00-00-00-39-E7-E4-05-8C-C2-08-4C-AC-96-9A-D0-DE-C4-85-EE-07-00-D8-00-A6-A0-EC-B2-39-4D-BD-2F-31-4C-F7-4F-3F-4C-00-00-00-14-1A-99-00-00-46-7D-7B-CD-1B-EA-FC-40-9C-37-A9-7E-B0-DD-4C-16-00-08-65-53-76-46-00-00,,74364e3b-32b7-4108-9a2c-6dda84007459,15.01.2507.039"
+        },
+        "message": "2025-01-14T09:28:39.334Z,2a02:cf40::0000:1234:5678:9abc,HELLOWORLD,,,\"MDB:f4adaa08-ff49-4bca-ba70-68e9b80597b0, Mailbox:84dd42d9-8814-4758-a8bb-e8765d62ec90, Event:190620893, MessageClass:IPM.Note, CreationTime:2025-01-14T09:28:39.321Z, ClientType:MOMT, SubmissionAssistant:MailboxTransportSubmissionEmailAssistant\",,STOREDRIVER,NOTIFYMAPI,,,,,,,,,,,email@email.com,,2025-01-14T09:28:39.321Z;LSRV=HELLOWORLD.foo.example.com:TOTAL-SUB=0.013|SA=0.013|MTSS-PEN=0.000,,,,,S:ItemEntryId=00-00-00-00-39-E7-E4-05-8C-C2-08-4C-AC-96-9A-D0-DE-C4-85-EE-07-00-D8-00-A6-A0-EC-B2-39-4D-BD-2F-31-4C-F7-4F-3F-4C-00-00-00-14-1A-99-00-00-46-7D-7B-CD-1B-EA-FC-40-9C-37-A9-7E-B0-DD-4C-16-00-08-65-53-76-46-00-00,,74364e3b-32b7-4108-9a2c-6dda84007459,15.01.2507.039",
+        "microsoft": {
+          "exchange": {
+            "customdata": "S:ItemEntryId=00-00-00-00-39-E7-E4-05-8C-C2-08-4C-AC-96-9A-D0-DE-C4-85-EE-07-00-D8-00-A6-A0-EC-B2-39-4D-BD-2F-31-4C-F7-4F-3F-4C-00-00-00-14-1A-99-00-00-46-7D-7B-CD-1B-EA-FC-40-9C-37-A9-7E-B0-DD-4C-16-00-08-65-53-76-46-00-00",
+            "eventid": "NOTIFYMAPI",
+            "logid": "74364e3b-32b7-4108-9a2c-6dda84007459",
+            "messageinfo": "2025-01-14T09:28:39.321Z;LSRV=HELLOWORLD.foo.example.com:TOTAL-SUB=0.013|SA=0.013|MTSS-PEN=0.000",
+            "schemaversion": "15.01.2507.039",
+            "source": "STOREDRIVER",
+            "sourcecontext": "MDB:f4adaa08-ff49-4bca-ba70-68e9b80597b0, Mailbox:84dd42d9-8814-4758-a8bb-e8765d62ec90, Event:190620893, MessageClass:IPM.Note, CreationTime:2025-01-14T09:28:39.321Z, ClientType:MOMT, SubmissionAssistant:MailboxTransportSubmissionEmailAssistant"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "messagetracking",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-messagetracking.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-01-14T09:29:05.327Z",
+        "client": {
+          "domain": "HELLOWORLD",
+          "ip": "216.160.83.56"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "direction": "Incoming",
+          "message_id": "<1736846922.907742.2942@foo.bar.local>",
+          "sender": {
+            "address": [
+              ""
+            ]
+          },
+          "subject": "John Doe",
+          "to": {
+            "address": [
+              "email@email.com"
+            ]
+          }
+        },
+        "event": {
+          "ingested": "2025-02-20T14:15:49.792854602Z",
+          "original": "2025-01-14T09:29:05.327Z,216.160.83.56,HELLOWORLD,175.16.199.1,global-mail-onmicrosoft-com.mail.protection.outlook.com,\";250 2.6.0 <1736846922.907742.2942@foo.bar.local> [InternalId=5450313518243, Hostname=AAAAAAAAAAAAA.bbbbbbbb.prod.outlook.com] 141301 bytes in 0.101, 1361.827 KB/sec Queued mail for delivery;ClientSubmitTime:\",Outbound to Office 365 - cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202,SMTP,SENDEXTERNAL,8774618205228,<1736846922.907742.2942@foo.bar.local>,,email@email.com,250 2.1.5 Recipient OK,136349,1,,,John Doe,,<>,2025-01-14T09:28:50.814Z;SRV=HELLOWORLD.foo.example.com:TOTAL-FE=0.074|SMR=0.072(SMRPI=0.002(SMRPI-FrontendProxyAgent=0.002))|SMS=0.002;SRV=HELLOWORLD.foo.example.com:TOTAL-HUB=14.439|SMR=0.279(SMRDE=0.174|SMRC=0.105(SMRCL=0.105|X-SMRCR=0.016))|CAT=0.046(CATOS=0.018(CATSM=0.018(CATSM-Malware Agent=0.017))|CATRESL=0.003|CATORES=0.021(CATRS=0.021(CATRS-Prioritization Agent=0.002|CATRS-Index Routing Agent=0.017))|CATORT=0.002(CATRT=0.002(CATRT-CodeTwo Exchange Rules Transport Agent=0.001)))|QDE=13.818|SMS=0.291,Incoming,,,,S:E2ELatency=14.513;S:ExternalSendLatency=0.402;S:ToEntity=Internet;S:FromEntity=Internet;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=DomainValidation;S:Microsoft.Exchange.Transport.MailRecipient.EffectiveTlsAuthLevel=DomainValidation;S:IsSmtpResponseFromExternalServer=True;S:DeliveryPriority=Normal;S:OriginalFromAddress=<>;S:AccountForest=wgs.wuerth.com,Email,82f8feae-ef9b-41bf-8500-1e10946655ae,15.01.2507.039"
+        },
+        "message": "2025-01-14T09:29:05.327Z,216.160.83.56,HELLOWORLD,175.16.199.1,global-mail-onmicrosoft-com.mail.protection.outlook.com,\";250 2.6.0 <1736846922.907742.2942@foo.bar.local> [InternalId=5450313518243, Hostname=AAAAAAAAAAAAA.bbbbbbbb.prod.outlook.com] 141301 bytes in 0.101, 1361.827 KB/sec Queued mail for delivery;ClientSubmitTime:\",Outbound to Office 365 - cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202,SMTP,SENDEXTERNAL,8774618205228,<1736846922.907742.2942@foo.bar.local>,,email@email.com,250 2.1.5 Recipient OK,136349,1,,,John Doe,,<>,2025-01-14T09:28:50.814Z;SRV=HELLOWORLD.foo.example.com:TOTAL-FE=0.074|SMR=0.072(SMRPI=0.002(SMRPI-FrontendProxyAgent=0.002))|SMS=0.002;SRV=HELLOWORLD.foo.example.com:TOTAL-HUB=14.439|SMR=0.279(SMRDE=0.174|SMRC=0.105(SMRCL=0.105|X-SMRCR=0.016))|CAT=0.046(CATOS=0.018(CATSM=0.018(CATSM-Malware Agent=0.017))|CATRESL=0.003|CATORES=0.021(CATRS=0.021(CATRS-Prioritization Agent=0.002|CATRS-Index Routing Agent=0.017))|CATORT=0.002(CATRT=0.002(CATRT-CodeTwo Exchange Rules Transport Agent=0.001)))|QDE=13.818|SMS=0.291,Incoming,,,,S:E2ELatency=14.513;S:ExternalSendLatency=0.402;S:ToEntity=Internet;S:FromEntity=Internet;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=DomainValidation;S:Microsoft.Exchange.Transport.MailRecipient.EffectiveTlsAuthLevel=DomainValidation;S:IsSmtpResponseFromExternalServer=True;S:DeliveryPriority=Normal;S:OriginalFromAddress=<>;S:AccountForest=wgs.wuerth.com,Email,82f8feae-ef9b-41bf-8500-1e10946655ae,15.01.2507.039",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "Outbound to Office 365 - cb1ce4e7-cbb6-46e8-8a4c-e1f2efbdd202",
+            "customdata": "S:E2ELatency=14.513;S:ExternalSendLatency=0.402;S:ToEntity=Internet;S:FromEntity=Internet;S:MsgRecipCount=1;S:IncludeInSla=True;S:Microsoft.Exchange.Transport.MailRecipient.RequiredTlsAuthLevel=DomainValidation;S:Microsoft.Exchange.Transport.MailRecipient.EffectiveTlsAuthLevel=DomainValidation;S:IsSmtpResponseFromExternalServer=True;S:DeliveryPriority=Normal;S:OriginalFromAddress=<>;S:AccountForest=wgs.wuerth.com",
+            "eventid": "SENDEXTERNAL",
+            "internalmessageid": "8774618205228",
+            "logid": "82f8feae-ef9b-41bf-8500-1e10946655ae",
+            "messageinfo": "2025-01-14T09:28:50.814Z;SRV=HELLOWORLD.foo.example.com:TOTAL-FE=0.074|SMR=0.072(SMRPI=0.002(SMRPI-FrontendProxyAgent=0.002))|SMS=0.002;SRV=HELLOWORLD.foo.example.com:TOTAL-HUB=14.439|SMR=0.279(SMRDE=0.174|SMRC=0.105(SMRCL=0.105|X-SMRCR=0.016))|CAT=0.046(CATOS=0.018(CATSM=0.018(CATSM-Malware Agent=0.017))|CATRESL=0.003|CATORES=0.021(CATRS=0.021(CATRS-Prioritization Agent=0.002|CATRS-Index Routing Agent=0.017))|CATORT=0.002(CATRT=0.002(CATRT-CodeTwo Exchange Rules Transport Agent=0.001)))|QDE=13.818|SMS=0.291",
+            "recipientcount": 1,
+            "recipientstatus": "250 2.1.5 Recipient OK",
+            "returnpath": "<>",
+            "schemaversion": "15.01.2507.039",
+            "source": "SMTP",
+            "sourcecontext": ";250 2.6.0 <1736846922.907742.2942@foo.bar.local> [InternalId=5450313518243, Hostname=AAAAAAAAAAAAA.bbbbbbbb.prod.outlook.com] 141301 bytes in 0.101, 1361.827 KB/sec Queued mail for delivery;ClientSubmitTime:",
+            "transporttraffictype": "Email"
+          }
+        },
+        "network": {
+          "bytes": 136349
+        },
+        "server": {
+          "domain": "global-mail-onmicrosoft-com.mail.protection.outlook.com",
+          "ip": "175.16.199.1"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "SmtpSend"
+          }
+        },
+        "message": "2024-01-25T15:14:39.460Z,Inbound Proxy Internal Send Connector,08DC1DB8591B22A0,0,,10.11.12.13:2525,*,None,Set Session Permissions"
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "SmtpSend"
+          }
+        },
+        "message": "2024-01-25T15:14:39.460Z,Inbound Proxy Internal Send Connector,08DC1DB8591B22A0,1,,10.11.12.13:2525,*,,attempting to connect"
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "SmtpSend"
+          }
+        },
+        "message": "2024-01-25T15:14:40.508Z,Inbound Proxy Internal Send Connector,08DC1DB8591B229F,2,,10.11.12.13:2525,*,,\"Failed to connect. Winsock error code: 10061, Win32 error code: 10061, Destination domain: internalproxy, Error Message: No connection could be made because the target machine actively refused it 10.11.12.13:2525.\""
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.026Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229A,1,10.11.12.13:25,10.11.12.14:53228,>,\"220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100\","
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.026Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229B,0,10.11.12.13:25,10.11.12.14:53230,+,,"
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.031Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229A,2,10.11.12.13:25,10.11.12.14:53228,<,EHLO mgt.my.domain.tld,"
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json",
+      "sample_event": {
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.066Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229B,1,10.11.12.13:25,10.11.12.14:53230,>,\"220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100\","
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:14:39.460Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:58.579015791Z",
+          "original": "2024-01-25T15:14:39.460Z,Inbound Proxy Internal Send Connector,08DC1DB8591B22A0,0,,10.11.12.13:2525,*,None,Set Session Permissions"
+        },
+        "log": {
+          "file": {
+            "path": "SmtpSend"
+          }
+        },
+        "message": "2024-01-25T15:14:39.460Z,Inbound Proxy Internal Send Connector,08DC1DB8591B22A0,0,,10.11.12.13:2525,*,None,Set Session Permissions",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "Inbound Proxy Internal Send Connector",
+            "context": "Set Session Permissions",
+            "data": "None",
+            "event": "*",
+            "logtype": "smtpsend",
+            "remoteendpoint": "10.11.12.13:2525",
+            "sequencenumber": 0,
+            "sessionid": "08DC1DB8591B22A0"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:14:39.460Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:58.57902548Z",
+          "original": "2024-01-25T15:14:39.460Z,Inbound Proxy Internal Send Connector,08DC1DB8591B22A0,1,,10.11.12.13:2525,*,,attempting to connect"
+        },
+        "log": {
+          "file": {
+            "path": "SmtpSend"
+          }
+        },
+        "message": "2024-01-25T15:14:39.460Z,Inbound Proxy Internal Send Connector,08DC1DB8591B22A0,1,,10.11.12.13:2525,*,,attempting to connect",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "Inbound Proxy Internal Send Connector",
+            "context": "attempting to connect",
+            "event": "*",
+            "logtype": "smtpsend",
+            "remoteendpoint": "10.11.12.13:2525",
+            "sequencenumber": 1,
+            "sessionid": "08DC1DB8591B22A0"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:14:40.508Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:58.579027025Z",
+          "original": "2024-01-25T15:14:40.508Z,Inbound Proxy Internal Send Connector,08DC1DB8591B229F,2,,10.11.12.13:2525,*,,\"Failed to connect. Winsock error code: 10061, Win32 error code: 10061, Destination domain: internalproxy, Error Message: No connection could be made because the target machine actively refused it 10.11.12.13:2525.\""
+        },
+        "log": {
+          "file": {
+            "path": "SmtpSend"
+          }
+        },
+        "message": "2024-01-25T15:14:40.508Z,Inbound Proxy Internal Send Connector,08DC1DB8591B229F,2,,10.11.12.13:2525,*,,\"Failed to connect. Winsock error code: 10061, Win32 error code: 10061, Destination domain: internalproxy, Error Message: No connection could be made because the target machine actively refused it 10.11.12.13:2525.\"",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "Inbound Proxy Internal Send Connector",
+            "context": "Failed to connect. Winsock error code: 10061, Win32 error code: 10061, Destination domain: internalproxy, Error Message: No connection could be made because the target machine actively refused it 10.11.12.13:2525.",
+            "event": "*",
+            "logtype": "smtpsend",
+            "remoteendpoint": "10.11.12.13:2525",
+            "sequencenumber": 2,
+            "sessionid": "08DC1DB8591B229F"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:14:39.026Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:58.579028152Z",
+          "original": "2024-01-25T15:14:39.026Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229A,1,10.11.12.13:25,10.11.12.14:53228,>,\"220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100\","
+        },
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.026Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229A,1,10.11.12.13:25,10.11.12.14:53228,>,\"220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100\",",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "NETBIOS\\Default Frontend NETBIOS",
+            "data": "220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100",
+            "event": ">",
+            "localendpoint": "10.11.12.13:25",
+            "remoteendpoint": "10.11.12.14:53228",
+            "sequencenumber": 1,
+            "sessionid": "08DC1DB8591B229A"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:14:39.026Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:58.579029167Z",
+          "original": "2024-01-25T15:14:39.026Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229B,0,10.11.12.13:25,10.11.12.14:53230,+,,"
+        },
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.026Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229B,0,10.11.12.13:25,10.11.12.14:53230,+,,",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "NETBIOS\\Default Frontend NETBIOS",
+            "event": "+",
+            "localendpoint": "10.11.12.13:25",
+            "remoteendpoint": "10.11.12.14:53230",
+            "sequencenumber": 0,
+            "sessionid": "08DC1DB8591B229B"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:14:39.031Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:58.579030159Z",
+          "original": "2024-01-25T15:14:39.031Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229A,2,10.11.12.13:25,10.11.12.14:53228,<,EHLO mgt.my.domain.tld,"
+        },
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.031Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229A,2,10.11.12.13:25,10.11.12.14:53228,<,EHLO mgt.my.domain.tld,",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "NETBIOS\\Default Frontend NETBIOS",
+            "data": "EHLO mgt.my.domain.tld",
+            "event": "<",
+            "localendpoint": "10.11.12.13:25",
+            "remoteendpoint": "10.11.12.14:53228",
+            "sequencenumber": 2,
+            "sessionid": "08DC1DB8591B229A"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "smtp",
+      "package": "microsoft_exchange_server",
+      "source": "test/test-smtp.json-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-01-25T15:14:39.066Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "ingested": "2025-02-06T10:59:58.57903114Z",
+          "original": "2024-01-25T15:14:39.066Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229B,1,10.11.12.13:25,10.11.12.14:53230,>,\"220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100\","
+        },
+        "log": {
+          "file": {
+            "path": "SmtpRecive"
+          }
+        },
+        "message": "2024-01-25T15:14:39.066Z,NETBIOS\\Default Frontend NETBIOS,08DC1DB8591B229B,1,10.11.12.13:25,10.11.12.14:53230,>,\"220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100\",",
+        "microsoft": {
+          "exchange": {
+            "connectorid": "NETBIOS\\Default Frontend NETBIOS",
+            "data": "220 my-mail.my.domain.tld Microsoft ESMTP MAIL Service ready at Thu, 25 Jan 2024 16:14:38 +0100",
+            "event": ">",
+            "localendpoint": "10.11.12.13:25",
+            "remoteendpoint": "10.11.12.14:53230",
+            "sequencenumber": 1,
+            "sessionid": "08DC1DB8591B229B"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    }
+  ]
+}

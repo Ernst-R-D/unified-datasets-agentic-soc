@@ -1,0 +1,2621 @@
+{
+  "package": "oracle",
+  "description": "Oracle Cloud Infrastructure logs",
+  "events": [
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "sample_event": {
+        "@timestamp": "2020-10-07T14:57:51.000Z",
+        "agent": {
+          "ephemeral_id": "c8ada4ef-14e4-462f-b998-dd8c711b4ec7",
+          "id": "50560b92-4232-4158-b79d-9e6be7098c58",
+          "name": "docker-fleet-agent",
+          "type": "filebeat",
+          "version": "8.10.2"
+        },
+        "client": {
+          "user": {
+            "name": "oracle"
+          }
+        },
+        "data_stream": {
+          "dataset": "oracle.database_audit",
+          "namespace": "ep",
+          "type": "logs"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "elastic_agent": {
+          "id": "50560b92-4232-4158-b79d-9e6be7098c58",
+          "snapshot": false,
+          "version": "8.10.2"
+        },
+        "event": {
+          "action": "database_audit",
+          "agent_id_status": "verified",
+          "category": [
+            "database"
+          ],
+          "dataset": "oracle.database_audit",
+          "ingested": "2023-10-05T12:18:05Z",
+          "kind": "event",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "host": {
+          "architecture": "x86_64",
+          "containerized": true,
+          "hostname": "docker-fleet-agent",
+          "id": "efe661d97f0c4d9883075c393da6b0d8",
+          "ip": [
+            "172.28.0.7"
+          ],
+          "mac": [
+            "02-42-AC-1C-00-07"
+          ],
+          "name": "docker-fleet-agent",
+          "os": {
+            "codename": "focal",
+            "family": "debian",
+            "kernel": "5.15.90.1-microsoft-standard-WSL2",
+            "name": "Ubuntu",
+            "platform": "ubuntu",
+            "type": "linux",
+            "version": "20.04.6 LTS (Focal Fossa)"
+          }
+        },
+        "input": {
+          "type": "filestream"
+        },
+        "log": {
+          "file": {
+            "device_id": 2080,
+            "inode": 827222,
+            "path": "/tmp/service_logs/ORCLCDB_ora_13765_20201007105751904399925443.aud.log"
+          },
+          "flags": [
+            "multiline"
+          ],
+          "offset": 858
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "CONNECT",
+            "action_number": "100",
+            "client": {
+              "terminal": "pts/0"
+            },
+            "length": 253,
+            "session_id": "4294967295",
+            "status": "0"
+          }
+        },
+        "process": {
+          "pid": 13765
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/",
+            "oracle"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "oracle-database_audit"
+        ],
+        "user": {
+          "roles": [
+            "SYSDBA"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "memory",
+      "package": "oracle",
+      "sample_event": {
+        "@timestamp": "2022-11-09T04:21:05.327Z",
+        "agent": {
+          "ephemeral_id": "df8a2ae5-c832-4b31-a31d-226a455aff19",
+          "id": "c2cd9bb5-503e-492f-b6b7-fd5c845a7574",
+          "name": "docker-custom-agent",
+          "type": "metricbeat",
+          "version": "8.4.3"
+        },
+        "cloud": {
+          "account": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "availability_zone": "asia-south1-c",
+          "instance": {
+            "id": "3010911784348669868",
+            "name": "service-integration-dev-idc-01"
+          },
+          "machine": {
+            "type": "n1-standard-8"
+          },
+          "project": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "provider": "gcp",
+          "service": {
+            "name": "GCE"
+          }
+        },
+        "data_stream": {
+          "dataset": "oracle.memory",
+          "namespace": "ep",
+          "type": "metrics"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "elastic_agent": {
+          "id": "c2cd9bb5-503e-492f-b6b7-fd5c845a7574",
+          "snapshot": false,
+          "version": "8.4.3"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "dataset": "oracle.memory",
+          "duration": 104106525,
+          "ingested": "2022-11-09T04:21:06Z",
+          "module": "sql"
+        },
+        "host": {
+          "architecture": "x86_64",
+          "containerized": true,
+          "hostname": "docker-custom-agent",
+          "id": "702b305d5bf3433b8efe81033888bd28",
+          "ip": [
+            "172.25.0.3",
+            "192.168.240.4"
+          ],
+          "mac": [
+            "02-42-AC-1F-00-07"
+          ],
+          "name": "docker-custom-agent",
+          "os": {
+            "codename": "focal",
+            "family": "debian",
+            "kernel": "5.4.0-1078-gcp",
+            "name": "Ubuntu",
+            "platform": "ubuntu",
+            "type": "linux",
+            "version": "20.04.5 LTS (Focal Fossa)"
+          }
+        },
+        "metricset": {
+          "name": "query",
+          "period": 60000
+        },
+        "oracle": {
+          "memory": {
+            "pga": {
+              "aggregate_auto_target": 593971200,
+              "aggregate_target_parameter": 805306368,
+              "cache_hit_pct": 100,
+              "global_memory_bound": 104857600,
+              "maximum_allocated": 361708544,
+              "total_allocated": 197623808,
+              "total_freeable_memory": 35061760,
+              "total_inuse": 147043328,
+              "total_used_for_auto_workareas": 0
+            },
+            "sga": {
+              "free_memory": 33630360,
+              "total_memory": 335544320
+            }
+          }
+        },
+        "service": {
+          "address": "oracle:1521",
+          "type": "sql"
+        }
+      }
+    },
+    {
+      "data_stream": "performance",
+      "package": "oracle",
+      "sample_event": {
+        "@timestamp": "2022-11-09T04:24:38.581Z",
+        "agent": {
+          "ephemeral_id": "622d8585-de9d-4fbf-8a16-0f16a7cc5429",
+          "id": "a7ec6f52-409e-4f25-80e6-a221e04812c7",
+          "name": "docker-custom-agent",
+          "type": "metricbeat",
+          "version": "8.4.3"
+        },
+        "cloud": {
+          "account": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "availability_zone": "asia-south1-c",
+          "instance": {
+            "id": "3010911784348669868",
+            "name": "service-integration-dev-idc-01"
+          },
+          "machine": {
+            "type": "n1-standard-8"
+          },
+          "project": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "provider": "gcp",
+          "service": {
+            "name": "GCE"
+          }
+        },
+        "data_stream": {
+          "dataset": "oracle.performance",
+          "namespace": "ep",
+          "type": "metrics"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "elastic_agent": {
+          "id": "a7ec6f52-409e-4f25-80e6-a221e04812c7",
+          "snapshot": false,
+          "version": "8.4.3"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "dataset": "oracle.performance",
+          "duration": 93046359,
+          "ingested": "2022-11-09T04:24:38Z",
+          "module": "sql"
+        },
+        "host": {
+          "architecture": "x86_64",
+          "containerized": true,
+          "hostname": "docker-custom-agent",
+          "id": "702b305d5bf3433b8efe81033888bd28",
+          "ip": [
+            "172.26.0.3",
+            "192.168.240.4"
+          ],
+          "mac": [
+            "02-42-AC-1F-00-07"
+          ],
+          "name": "docker-custom-agent",
+          "os": {
+            "codename": "focal",
+            "family": "debian",
+            "kernel": "5.4.0-1078-gcp",
+            "name": "Ubuntu",
+            "platform": "ubuntu",
+            "type": "linux",
+            "version": "20.04.5 LTS (Focal Fossa)"
+          }
+        },
+        "metricset": {
+          "name": "query",
+          "period": 60000
+        },
+        "oracle": {
+          "performance": {
+            "buffer_pool": "DEFAULT",
+            "cache": {
+              "buffer": {
+                "hit": {
+                  "pct": 0.952424765502866
+                }
+              },
+              "get": {
+                "consistent": 344187,
+                "db_blocks": 24261
+              },
+              "physical_reads": 17529
+            }
+          }
+        },
+        "service": {
+          "address": "oracle:1521",
+          "type": "sql"
+        }
+      }
+    },
+    {
+      "data_stream": "sysmetric",
+      "package": "oracle",
+      "sample_event": {
+        "@timestamp": "2022-11-09T04:28:12.009Z",
+        "agent": {
+          "ephemeral_id": "4d613e69-65ae-4c3a-9f60-8b600554574c",
+          "id": "f4169ed3-d5c6-4775-bcad-5f4c0cca8a9f",
+          "name": "docker-custom-agent",
+          "type": "metricbeat",
+          "version": "8.4.3"
+        },
+        "cloud": {
+          "account": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "availability_zone": "asia-south1-c",
+          "instance": {
+            "id": "3010911784348669868",
+            "name": "service-integration-dev-idc-01"
+          },
+          "machine": {
+            "type": "n1-standard-8"
+          },
+          "project": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "provider": "gcp",
+          "service": {
+            "name": "GCE"
+          }
+        },
+        "data_stream": {
+          "dataset": "oracle.sysmetric",
+          "namespace": "ep",
+          "type": "metrics"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "elastic_agent": {
+          "id": "f4169ed3-d5c6-4775-bcad-5f4c0cca8a9f",
+          "snapshot": false,
+          "version": "8.4.3"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "dataset": "oracle.sysmetric",
+          "duration": 81013699,
+          "ingested": "2022-11-09T04:28:12Z",
+          "module": "sql"
+        },
+        "host": {
+          "architecture": "x86_64",
+          "containerized": true,
+          "hostname": "docker-custom-agent",
+          "id": "702b305d5bf3433b8efe81033888bd28",
+          "ip": [
+            "172.27.0.3",
+            "192.168.240.4"
+          ],
+          "mac": [
+            "02-42-AC-1F-00-07"
+          ],
+          "name": "docker-custom-agent",
+          "os": {
+            "codename": "focal",
+            "family": "debian",
+            "kernel": "5.4.0-1078-gcp",
+            "name": "Ubuntu",
+            "platform": "ubuntu",
+            "type": "linux",
+            "version": "20.04.5 LTS (Focal Fossa)"
+          }
+        },
+        "metricset": {
+          "name": "query",
+          "period": 60000
+        },
+        "oracle": {
+          "sysmetric": {
+            "active_parallel_sessions": 0,
+            "active_serial_sessions": 1,
+            "average_active_sessions": 1.3158911021814,
+            "average_synchronous_single-block_read_latency": 2.48382983655964,
+            "background_checkpoints_per_sec": 0,
+            "background_cpu_usage_per_sec": 5.41525258323766,
+            "background_time_per_sec": 0.349192881745121,
+            "branch_node_splits_per_sec": 0,
+            "branch_node_splits_per_txn": 0,
+            "buffer_cache_hit_ratio": 95.3592643642205,
+            "captured_user_calls": 0,
+            "cell_physical_io_interconnect_bytes": 2304267631,
+            "consistent_read_changes_per_sec": 221.622655951014,
+            "consistent_read_changes_per_txn": 214.481481481481,
+            "consistent_read_gets_per_sec": 5360.58170685036,
+            "consistent_read_gets_per_txn": 5187.85185185185,
+            "cpu_usage_per_sec": 19.6512265595101,
+            "cpu_usage_per_txn": 19.0180203703704,
+            "cr_blocks_created_per_sec": 4.07577497129736,
+            "cr_blocks_created_per_txn": 3.94444444444444,
+            "cr_undo_records_applied_per_sec": 219.077688480674,
+            "cr_undo_records_applied_per_txn": 212.018518518519,
+            "current_logons_count": 58,
+            "current_open_cursors_count": 23,
+            "current_os_load": 2.939453125,
+            "cursor_cache_hit_ratio": 290.424008021773,
+            "database_cpu_time_ratio": 14.9337787351351,
+            "database_time_per_sec": 131.58911021814,
+            "database_wait_time_ratio": 85.0662212648649,
+            "db_block_changes_per_sec": 631.094527363184,
+            "db_block_changes_per_txn": 610.759259259259,
+            "db_block_changes_per_user_call": 85.0025773195876,
+            "db_block_gets_per_sec": 511.844623038653,
+            "db_block_gets_per_txn": 495.351851851852,
+            "db_block_gets_per_user_call": 68.9407216494845,
+            "dbwr_checkpoints_per_sec": 0.0574052812858783,
+            "ddl_statements_parallelized_per_sec": 0,
+            "disk_sort_per_sec": 0,
+            "disk_sort_per_txn": 0,
+            "dml_statements_parallelized_per_sec": 0,
+            "enqueue_deadlocks_per_sec": 0,
+            "enqueue_deadlocks_per_txn": 0,
+            "enqueue_requests_per_sec": 343.073096058171,
+            "enqueue_requests_per_txn": 332.018518518519,
+            "enqueue_timeouts_per_sec": 0.0765403750478377,
+            "enqueue_timeouts_per_txn": 0.0740740740740741,
+            "enqueue_waits_per_sec": 0.68886337543054,
+            "enqueue_waits_per_txn": 0.666666666666667,
+            "execute_without_parse_ratio": 57.5272325686462,
+            "executions_per_sec": 762.380405663988,
+            "executions_per_txn": 737.814814814815,
+            "executions_per_user_call": 102.685567010309,
+            "full_index_scans_per_sec": 13.4711060084194,
+            "full_index_scans_per_txn": 13.037037037037,
+            "gc_cr_block_received_per_second": 0,
+            "gc_cr_block_received_per_txn": 0,
+            "gc_current_block_received_per_second": 0,
+            "gc_current_block_received_per_txn": 0,
+            "global_cache_average_cr_get_time": 0,
+            "global_cache_average_current_get_time": 0,
+            "global_cache_blocks_corrupted": 0,
+            "global_cache_blocks_lost": 0,
+            "hard_parse_count_per_sec": 56.6398775353999,
+            "hard_parse_count_per_txn": 54.8148148148148,
+            "host_cpu_usage_per_sec": 118.637581324148,
+            "host_cpu_utilization_pct": 14.8453213293746,
+            "io_megabytes_per_second": 42.0398009950249,
+            "io_requests_per_second": 209.395331037122,
+            "leaf_node_splits_per_sec": 0.0765403750478377,
+            "leaf_node_splits_per_txn": 0.0740740740740741,
+            "library_cache_hit_ratio": 85.9758358371156,
+            "library_cache_miss_ratio": 14.0241641628844,
+            "logical_reads_per_sec": 5872.42632988902,
+            "logical_reads_per_txn": 5683.2037037037,
+            "logical_reads_per_user_call": 790.961340206186,
+            "logons_per_sec": 2.39188672024493,
+            "logons_per_txn": 2.31481481481481,
+            "long_table_scans_per_sec": 0,
+            "long_table_scans_per_txn": 0,
+            "memory_sorts_ratio": 100,
+            "network_traffic_volume_per_sec": 258.036739380023,
+            "open_cursors_per_sec": 662.456946039036,
+            "open_cursors_per_txn": 641.111111111111,
+            "parse_failure_count_per_sec": 0.516647531572905,
+            "parse_failure_count_per_txn": 0.5,
+            "pga_cache_hit_pct": 100,
+            "physical_read_bytes_per_sec": 2234538.07883659,
+            "physical_read_io_requests_per_sec": 154.994259471871,
+            "physical_read_total_bytes_per_sec": 23205621.1251435,
+            "physical_read_total_io_requests_per_sec": 196.19211634137,
+            "physical_reads_direct_lobs_per_sec": 0.0191350937619594,
+            "physical_reads_direct_lobs_per_txn": 0.0185185185185185,
+            "physical_reads_direct_per_sec": 0.248756218905473,
+            "physical_reads_direct_per_txn": 0.240740740740741,
+            "physical_reads_per_sec": 272.770761576732,
+            "physical_reads_per_txn": 263.981481481481,
+            "physical_write_bytes_per_sec": 3918.86720244929,
+            "physical_write_io_requests_per_sec": 0.478377344048986,
+            "physical_write_total_bytes_per_sec": 20886756.0466896,
+            "physical_write_total_io_requests_per_sec": 34.7110600841944,
+            "physical_writes_direct_lobs__per_txn": 0.0185185185185185,
+            "physical_writes_direct_lobs_per_sec": 0.0191350937619594,
+            "physical_writes_direct_per_sec": 0.191350937619594,
+            "physical_writes_direct_per_txn": 0.185185185185185,
+            "physical_writes_per_sec": 0.478377344048986,
+            "physical_writes_per_txn": 0.462962962962963,
+            "pq_qc_session_count": 0,
+            "pq_slave_session_count": 0,
+            "process_limit_pct": 32,
+            "px_downgraded_1_to_25pct_per_sec": 0,
+            "px_downgraded_25_to_50pct_per_sec": 0,
+            "px_downgraded_50_to_75pct_per_sec": 0,
+            "px_downgraded_75_to_99pct_per_sec": 0,
+            "px_downgraded_to_serial_per_sec": 0,
+            "px_operations_not_downgraded_per_sec": 0.114810562571757,
+            "queries_parallelized_per_sec": 0.0382701875239189,
+            "recursive_calls_per_sec": 3231.72598545733,
+            "recursive_calls_per_txn": 3127.59259259259,
+            "redo_allocation_hit_ratio": 99.9710060887214,
+            "redo_generated_per_sec": 89624.2632988902,
+            "redo_generated_per_txn": 86736.3703703704,
+            "redo_writes_per_sec": 6.29544584768465,
+            "redo_writes_per_txn": 6.09259259259259,
+            "replayed_user_calls": 0,
+            "response_time_per_txn": 127.349016666667,
+            "row_cache_hit_ratio": 92.9547727525281,
+            "row_cache_miss_ratio": 7.04522724747194,
+            "rows_per_sort": 16.1167552157574,
+            "run_queue_per_sec": 0,
+            "session_count": 69,
+            "session_limit_pct": 14.6186440677966,
+            "shared_pool_free_pct": 15.3352475166321,
+            "soft_parse_ratio": 82.5079777804042,
+            "sql_service_response_time": 0.0406245755502782,
+            "streams_pool_usage_percentage": 0,
+            "temp_space_used": 0,
+            "total_index_scans_per_sec": 732.548794489093,
+            "total_index_scans_per_txn": 708.944444444445,
+            "total_parse_count_per_sec": 323.804056639878,
+            "total_parse_count_per_txn": 313.37037037037,
+            "total_pga_allocated": 295197696,
+            "total_pga_used_by_sql_workareas": 0,
+            "total_sorts_per_user_call": 19.889175257732,
+            "total_table_scans_per_sec": 42.7860696517413,
+            "total_table_scans_per_txn": 41.4074074074074,
+            "total_table_scans_per_user_call": 5.76288659793814,
+            "txns_per_logon": 0.432,
+            "user_calls_per_sec": 7.42441637964026,
+            "user_calls_per_txn": 7.18518518518519,
+            "user_calls_ratio": 0.229208757192311,
+            "user_commits_per_sec": 1.01415996938385,
+            "user_commits_percentage": 98.1481481481482,
+            "user_limit_pct": 1.35041773350686e-06,
+            "user_rollback_undo_records_applied_per_txn": 25.7777777777778,
+            "user_rollback_undorec_applied_per_sec": 26.6360505166475,
+            "user_rollbacks_per_sec": 0.0191350937619594,
+            "user_rollbacks_percentage": 1.85185185185185,
+            "user_transaction_per_sec": 1.03329506314581,
+            "vm_in_bytes_per_sec": 0,
+            "vm_out_bytes_per_sec": 0,
+            "workload_capture_and_replay_status": 0
+          }
+        },
+        "service": {
+          "address": "oracle:1521",
+          "type": "sql"
+        }
+      }
+    },
+    {
+      "data_stream": "system_statistics",
+      "package": "oracle",
+      "sample_event": {
+        "@timestamp": "2022-11-09T04:31:54.386Z",
+        "agent": {
+          "ephemeral_id": "a4fc8cc8-ffc8-41ca-95c0-84e4f17bf1d1",
+          "id": "cb76e254-12e8-4c08-9044-4fe4255975da",
+          "name": "docker-custom-agent",
+          "type": "metricbeat",
+          "version": "8.4.3"
+        },
+        "cloud": {
+          "account": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "availability_zone": "asia-south1-c",
+          "instance": {
+            "id": "3010911784348669868",
+            "name": "service-integration-dev-idc-01"
+          },
+          "machine": {
+            "type": "n1-standard-8"
+          },
+          "project": {
+            "id": "elastic-obs-integrations-dev"
+          },
+          "provider": "gcp",
+          "service": {
+            "name": "GCE"
+          }
+        },
+        "data_stream": {
+          "dataset": "oracle.system_statistics",
+          "namespace": "ep",
+          "type": "metrics"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "elastic_agent": {
+          "id": "cb76e254-12e8-4c08-9044-4fe4255975da",
+          "snapshot": false,
+          "version": "8.4.3"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "dataset": "oracle.system_statistics",
+          "duration": 79970148,
+          "ingested": "2022-11-09T04:31:55Z",
+          "module": "sql"
+        },
+        "host": {
+          "architecture": "x86_64",
+          "containerized": true,
+          "hostname": "docker-custom-agent",
+          "id": "702b305d5bf3433b8efe81033888bd28",
+          "ip": [
+            "172.28.0.3",
+            "192.168.240.4"
+          ],
+          "mac": [
+            "02-42-AC-1F-00-07"
+          ],
+          "name": "docker-custom-agent",
+          "os": {
+            "codename": "focal",
+            "family": "debian",
+            "kernel": "5.4.0-1078-gcp",
+            "name": "Ubuntu",
+            "platform": "ubuntu",
+            "type": "linux",
+            "version": "20.04.5 LTS (Focal Fossa)"
+          }
+        },
+        "metricset": {
+          "name": "query",
+          "period": 60000
+        },
+        "oracle": {
+          "system_statistics": {
+            "bytes_received_via_sqlnet_from_client": 15982,
+            "bytes_received_via_sqlnet_from_dblink": 0,
+            "bytes_sent_via_sqlnet_to_client": 25891,
+            "bytes_sent_via_sqlnet_to_dblink": 0,
+            "cpu_used_by_this_session": 1794,
+            "db_block_changes": 31677,
+            "db_block_gets_from_cache": 27540,
+            "db_time": 64115,
+            "dbwr_checkpoint_buffers_written": 0,
+            "dbwr_checkpoints": 3,
+            "dml_statements_parallelized": 0,
+            "enqueue_conversions": 610,
+            "enqueue_deadlocks": 0,
+            "enqueue_releases": 28193,
+            "enqueue_requests": 28233,
+            "enqueue_timeouts": 9,
+            "enqueue_waits": 53,
+            "exchange_deadlocks": 0,
+            "execute_count": 53587,
+            "gc_current_block_receive_time": 0,
+            "index_fast_full_scans_direct_read": 0,
+            "index_fast_full_scans_full": 858,
+            "index_fast_full_scans_rowid_ranges": 0,
+            "java_call_heap_live_size": 0,
+            "java_call_heap_total_size": 0,
+            "java_call_heap_used_size": 0,
+            "lob_reads": 126,
+            "lob_writes": 206,
+            "logons_current": 41,
+            "opened_cursors_current": 25,
+            "os_system_time_used": 0,
+            "os_user_time_used": 0,
+            "parallel_operations_not_downgraded": 8,
+            "parse_count_hard": 4131,
+            "parse_count_total": 20224,
+            "parse_time_cpu": 560,
+            "parse_time_elapsed": 1338,
+            "physical_read_bytes": 143785984,
+            "physical_read_io_requests": 10758,
+            "physical_read_total_bytes": 1264044544,
+            "physical_read_total_io_requests": 13539,
+            "physical_reads": 17552,
+            "physical_write_bytes": 188416,
+            "physical_write_io_requests": 23,
+            "physical_write_total_bytes": 1094185289,
+            "physical_write_total_io_requests": 2209,
+            "physical_writes": 23,
+            "physical_writes_direct": 14,
+            "physical_writes_from_cache": 9,
+            "process_last_non_idle_time": 1667968313,
+            "queries_parallelized": 2,
+            "recovery_blocks_read": 0,
+            "recursive_calls": 220113,
+            "recursive_cpu_usage": 1462,
+            "redo_blocks_written": 9478,
+            "redo_buffer_allocation_retries": 4,
+            "redo_log_space_requests": 4,
+            "redo_log_space_wait_time": 2,
+            "redo_size": 4568196,
+            "redo_synch_time": 73,
+            "redo_write_time": 277,
+            "redo_writes": 476,
+            "session_cursor_cache_count": 4017,
+            "session_cursor_cache_hits": 52537,
+            "session_logical_reads": 371800,
+            "session_stored_procedure_space": 0,
+            "smon_posted_for_instance_recovery": 0,
+            "smon_posted_for_txn_recovery_for_other_instances": 0,
+            "sorts_disk": 0,
+            "sorts_memory": 11360,
+            "sorts_rows": 153397,
+            "table_scan_rows_gotten": 3049493,
+            "table_scans_direct_read": 0,
+            "table_scans_long_tables": 0,
+            "table_scans_rowid_ranges": 0,
+            "transaction_rollbacks": 6,
+            "user_calls": 564,
+            "user_commits": 62,
+            "user_rollbacks": 1
+          }
+        },
+        "service": {
+          "address": "oracle:1521",
+          "type": "sql"
+        }
+      }
+    },
+    {
+      "data_stream": "tablespace",
+      "package": "oracle",
+      "sample_event": {
+        "@timestamp": "2024-07-16T06:22:19.048Z",
+        "agent": {
+          "ephemeral_id": "08f5dbe3-f515-4c7f-ab2c-711c048f294a",
+          "id": "08b0c5bb-472a-42be-9e47-d06e205296b9",
+          "name": "docker-custom-agent",
+          "type": "metricbeat",
+          "version": "8.13.0"
+        },
+        "data_stream": {
+          "dataset": "oracle.tablespace",
+          "namespace": "69805",
+          "type": "metrics"
+        },
+        "ecs": {
+          "version": "8.0.0"
+        },
+        "elastic_agent": {
+          "id": "08b0c5bb-472a-42be-9e47-d06e205296b9",
+          "snapshot": false,
+          "version": "8.13.0"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "dataset": "oracle.tablespace",
+          "duration": 1980031830,
+          "ingested": "2024-07-16T06:22:31Z",
+          "module": "sql"
+        },
+        "host": {
+          "architecture": "x86_64",
+          "containerized": true,
+          "hostname": "docker-custom-agent",
+          "id": "8259e024976a406e8a54cdbffeb84fec",
+          "ip": [
+            "192.168.253.5",
+            "192.168.254.3"
+          ],
+          "mac": [
+            "02-42-C0-A8-FD-05",
+            "02-42-C0-A8-FE-03"
+          ],
+          "name": "docker-custom-agent",
+          "os": {
+            "codename": "focal",
+            "family": "debian",
+            "kernel": "4.18.0-348.7.1.el8_5.x86_64",
+            "name": "Ubuntu",
+            "platform": "ubuntu",
+            "type": "linux",
+            "version": "20.04.6 LTS (Focal Fossa)"
+          }
+        },
+        "metricset": {
+          "name": "query",
+          "period": 60000
+        },
+        "oracle": {
+          "tablespace": {
+            "extended_space": {
+              "free": {
+                "bytes": 32566738944
+              },
+              "total": {
+                "bytes": 32567787520
+              }
+            },
+            "name": "USERS",
+            "query_id": "0hxB8g4C+JnF8EuTG/7JQRJZ1oE="
+          }
+        },
+        "service": {
+          "address": "oracle:1521/ORCLCDB.localdomain",
+          "type": "sql"
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-21T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct 21 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "client": {
+          "address": "192.168.2.2",
+          "ip": "192.168.2.2"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] '192.168.2.2'\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "ip": [
+            "192.168.2.2"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "client": {
+          "address": "test.local",
+          "domain": "test.local"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] 'test.local'\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "test.local",
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T15:58:08.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 11:58:08 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '5q7ay9d08jgtf' and inst_id = 1 and child_address = hextoraw('00000000645509D0')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '392'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',\n                                   'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') EXEC_FROM_DBMS_XPLAN */ * from gv$all_sql_plan where 1=0",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 392,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-10-07T16:03:14.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Wed Oct  7 12:03:14 2020 -04:00\nLENGTH : '366'\nACTION :[125] 'SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')'\nDATABASE USER:[1] '/'\nPRIVILEGE :[4] 'NONE'\nCLIENT USER:[0] ''\nCLIENT TERMINAL:[7] 'UNKNOWN'\nSTATUS:[1] '0'\nDBID:[10] '2824230686'\nSESSIONID:[1] '0'\nUSERHOST:[13] 'testlab.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[1] '3'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM gv$all_sql_plan where sql_id = '3cmwr02yfw7ud' and inst_id = 1 and child_address = hextoraw('0000000064E538F8')",
+            "action_number": "3",
+            "client": {
+              "terminal": "UNKNOWN"
+            },
+            "database": {
+              "id": "2824230686"
+            },
+            "length": 366,
+            "session_id": "0",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testlab.local"
+          ],
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "address": "testlab.local",
+          "domain": "testlab.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "NONE"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-01-28T23:27:48.000Z",
+        "client": {
+          "user": {
+            "name": "oracle"
+          }
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Thu Jan 28 18:27:48 2021 -05:00\nLENGTH : '2462'\nACTION :[2192] 'DECLARE\n  link_failed boolean;\n\nBEGIN\n       FOR f IN (  SELECT *\n                     FROM test_db\n                   where field1 not in ('teststring')\n                     and field1 = upper('teststring2')\n                     and test_db = upper('test.domain')\n                 ORDER BY field, test_db)\n       LOOP\n           TEST.create_job (\n               job_name     => f.owner || '.TESTSTRING',\n               job_type     => 'TESTSTRING',\n               job_action   =>    'TESTSTRING '\n                               || '  TESTSTRING; '\n                               || 'TESTSTRING '\n                               || '  SELECT dummy into x from TEST@'\n                               || f.test3\n                               || '  ;'\n                               || '  TEST.put_line('''\n                               || f.test2\n                               || ' '\n                               || f.test\n                               || '     VALID !!!!!!!!!!!!!!!!!!'');'\n                               || 'END ; ');\n\n          BEGIN\n               TEST.run_job (f.owner || '.TESTSTRING ', TRUE);\n           EXCEPTION\n               WHEN OTHERS\n               THEN\n                   link_failed:=true;\n                   TEST.put_line (\n                          f.owner\n                       || ' '\n                       || f.db_link\n                       || ' INVALID (ORA'\n                       || SQLCODE\n                       || ')');\n           END;\n\n           TEST.job (f.owner || ' . TESTSTRING ');\n\n           if link_failed THEN\n              TEST.put_line (\n                     f.owner\n                  || ' '\n                  || f.TEST\n                  || ' TESTSTRING - TEST (ORA'\n                  || SQLCODE\n                  || ')');\n              insert into TEST.somestring\n                values (f.owner, f.test, 'INVALID', sysdate);\n              commit;\n           else\n              insert into TEST.somestring\n                values (f.owner, f.test, 'VALID', sysdate);\n              commit;\n           end if;\n\n       END LOOP;\nEND;'\nDATABASE USER:[1] '/'\nPRIVILEGE :[6] 'SYSDBA'\nCLIENT USER:[6] 'oracle'\nCLIENT TERMINAL:[5] 'pts/0'\nSTATUS:[1] '0'\nDBID:[10] '123'\nSESSIONID:[10] '123'\nUSERHOST:[24] 'testmachine.local'\nCLIENT ADDRESS:[0] ''\nACTION NUMBER:[2] '47'\n",
+          "outcome": "success",
+          "timezone": "-05:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "DECLARE link_failed boolean;BEGIN FOR f IN ( SELECT * FROM test_db where field1 not in ('teststring') and field1 = upper('teststring2') and test_db = upper('test.domain') ORDER BY field, test_db) LOOP TEST.create_job ( job_name => f.owner || '.TESTSTRING', job_type => 'TESTSTRING', job_action => 'TESTSTRING ' || ' TESTSTRING; ' || 'TESTSTRING ' || ' SELECT dummy into x from TEST@' || f.test3 || ' ;' || ' TEST.put_line(''' || f.test2 || ' ' || f.test || ' VALID !!!!!!!!!!!!!!!!!!'');' || 'END ; '); BEGIN TEST.run_job (f.owner || '.TESTSTRING ', TRUE); EXCEPTION WHEN OTHERS THEN link_failed:=true; TEST.put_line ( f.owner || ' ' || f.db_link || ' INVALID (ORA' || SQLCODE || ')'); END; TEST.job (f.owner || ' . TESTSTRING '); if link_failed THEN TEST.put_line ( f.owner || ' ' || f.TEST || ' TESTSTRING - TEST (ORA' || SQLCODE || ')'); insert into TEST.somestring values (f.owner, f.test, 'INVALID', sysdate); commit; else insert into TEST.somestring values (f.owner, f.test, 'VALID', sysdate); commit; end if; END LOOP;END;",
+            "action_number": "47",
+            "client": {
+              "terminal": "pts/0"
+            },
+            "database": {
+              "id": "123"
+            },
+            "length": 2462,
+            "session_id": "123",
+            "status": "0"
+          }
+        },
+        "related": {
+          "hosts": [
+            "testmachine.local"
+          ],
+          "user": [
+            "/",
+            "oracle"
+          ]
+        },
+        "server": {
+          "address": "testmachine.local",
+          "domain": "testmachine.local",
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            "SYSDBA"
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-05-14T03:20:32.000Z",
+        "client": {
+          "user": {
+            "id": "TEST_USER",
+            "name": "TEST_USR"
+          }
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Thu May 13 23:20:32 2021 -04:00\nLENGTH: \"385\"\nSESSIONID:[10] \"12354\" ENTRYID:[1] \"1\" STATEMENT:[1] \"9\" USERID:[11] \"TEST_USER\" USERHOST:[25] \"test.local\" TERMINAL:[7] \"unknown\" ACTION:[3] \"103\" RETURNCODE:[1] \"0\" OBJ$CREATOR:[11] \"TEST_OBJ\" OBJ$NAME:[10] \"ATTRIBUTES\" SES$ACTIONS:[16] \"---------S------\" SES$TID:[6] \"157827\" OS$USERID:[8] \"test_id\" DBID:[10] \"12345\" CURRENT_USER:[11] \"TEST_USR\"\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "103",
+            "database": {
+              "id": "12345"
+            },
+            "entry": {
+              "id": 1
+            },
+            "length": 385,
+            "obj_creator": "TEST_OBJ",
+            "obj_name": "ATTRIBUTES",
+            "os_userid": "test_id",
+            "returncode": "0",
+            "ses_actions": "---------S------",
+            "ses_tid": "157827",
+            "session_id": "12354",
+            "statement": "9",
+            "terminal": "unknown"
+          }
+        },
+        "related": {
+          "hosts": [
+            "test.local"
+          ],
+          "user": [
+            "TEST_USR"
+          ]
+        },
+        "server": {
+          "address": "test.local",
+          "domain": "test.local"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-08-17T09:25:25.000Z",
+        "client": {
+          "user": {
+            "id": "TEST_USER"
+          }
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Mon Aug 17 05:25:25 2020 -04:00\nLENGTH: \"361\"\nSESSIONID:[9] \"123456\" ENTRYID:[1] \"1\" STATEMENT:[1] \"1\" USERID:[14] \"TEST_USER\" USERHOST:[26] \"test.local\" TERMINAL:[7] \"unknown\" ACTION:[3] \"100\" RETURNCODE:[1] \"0\" COMMENT$TEXT:[99] \"TEST_COMMENT\" OS$USERID:[8] \"test_id\" DBID:[10] \"1123554\"\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "100",
+            "comment_text": "TEST_COMMENT",
+            "database": {
+              "id": "1123554"
+            },
+            "entry": {
+              "id": 1
+            },
+            "length": 361,
+            "os_userid": "test_id",
+            "returncode": "0",
+            "session_id": "123456",
+            "statement": "1",
+            "terminal": "unknown"
+          }
+        },
+        "related": {
+          "hosts": [
+            "test.local"
+          ]
+        },
+        "server": {
+          "address": "test.local",
+          "domain": "test.local"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-07-01T05:49:16.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Thu Jul  1 01:49:16 2021 -04:00\nLENGTH : '377'\nACTION :[125] 'SELECT * FROM test$testtest where sql_id = 'query_id' and inst_id = 1 and child_address = hextoraw('00000000000000')'\nDATABASE USER:[1] '/'\n",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "SELECT * FROM test$testtest where sql_id = 'query_id' and inst_id = 1 and child_address = hextoraw('00000000000000')",
+            "length": 377
+          }
+        },
+        "related": {
+          "user": [
+            "/"
+          ]
+        },
+        "server": {
+          "user": {
+            "name": "/"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "data_stream": "database_audit",
+      "package": "oracle",
+      "source": "test/test-oracle-database-audit.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-09-08T03:00:31.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "database_audit",
+          "category": [
+            "database"
+          ],
+          "kind": "event",
+          "original": "Tue Sep  7 23:00:31 2021 -04:00\nLENGTH : '403'\nACTION :[151] 'select /*+ opt_param('parallel_execution_enabled',                                'false') TESTSTRING */ * from test$query 1=0'",
+          "outcome": "success",
+          "timezone": "-04:00",
+          "type": [
+            "access"
+          ]
+        },
+        "oracle": {
+          "database_audit": {
+            "action": "select /*+ opt_param('parallel_execution_enabled', 'false') TESTSTRING */ * from test$query 1=0",
+            "length": 403
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "roles": [
+            ""
+          ]
+        }
+      }
+    }
+  ]
+}

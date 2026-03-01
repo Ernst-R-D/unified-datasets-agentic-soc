@@ -1,0 +1,1927 @@
+{
+  "package": "panw",
+  "description": "Palo Alto Networks PAN-OS logs",
+  "events": [
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "sample_event": {
+        "@timestamp": "2012-10-30T09:46:12.000Z",
+        "agent": {
+          "ephemeral_id": "df9cb56b-dbbb-4b0c-919d-cfab75836e80",
+          "id": "01cab955-0bdd-4b67-97d1-743fd31e19ea",
+          "name": "docker-fleet-agent",
+          "type": "filebeat",
+          "version": "8.14.1"
+        },
+        "data_stream": {
+          "dataset": "panw.panos",
+          "namespace": "65288",
+          "type": "logs"
+        },
+        "destination": {
+          "domain": "lorexx.cn",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "name": "United States",
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "elastic_agent": {
+          "id": "01cab955-0bdd-4b67-97d1-743fd31e19ea",
+          "snapshot": false,
+          "version": "8.14.1"
+        },
+        "event": {
+          "action": "url_filtering",
+          "agent_id_status": "verified",
+          "category": [
+            "intrusion_detection",
+            "threat",
+            "network"
+          ],
+          "created": "2024-08-15T19:31:00.703Z",
+          "dataset": "panw.panos",
+          "ingested": "2024-08-15T19:31:10Z",
+          "kind": "alert",
+          "original": "<14>Nov 30 16:09:08 PA-220 1,2012/10/30 09:46:12,01606001116,THREAT,url,1,2012/04/10 04:39:56,192.168.0.2,175.16.199.1,0.0.0.0,0.0.0.0,rule1,crusher,,web-browsing,vsys1,trust,untrust,ethernet1/2,ethernet1/1,forwardAll,2012/04/10 04:39:58,25149,1,59309,80,0,0,0x208000,tcp,alert,\"lorexx.cn/loader.exe\",(9999),not-resolved,informational,client-to-server,0,0x0,192.168.0.0-192.168.255.255,United States,0,text/html",
+          "outcome": "success",
+          "severity": 5,
+          "timezone": "+00:00",
+          "type": [
+            "allowed"
+          ]
+        },
+        "input": {
+          "type": "tcp"
+        },
+        "labels": {
+          "captive_portal": true,
+          "container_page": true
+        },
+        "log": {
+          "level": "informational",
+          "source": {
+            "address": "172.19.0.4:52222"
+          },
+          "syslog": {
+            "facility": {
+              "code": 1,
+              "name": "user-level"
+            },
+            "hostname": "PA-220",
+            "priority": 14,
+            "severity": {
+              "code": 6,
+              "name": "Informational"
+            }
+          }
+        },
+        "message": "192.168.0.2,175.16.199.1,0.0.0.0,0.0.0.0,rule1,crusher,,web-browsing,vsys1,trust,untrust,ethernet1/2,ethernet1/1,forwardAll,2012/04/10 04:39:58,25149,1,59309,80,0,0,0x208000,tcp,alert,\"lorexx.cn/loader.exe\",(9999),not-resolved,informational,client-to-server,0,0x0,192.168.0.0-192.168.255.255,United States,0,text/html",
+        "network": {
+          "application": "web-browsing",
+          "community_id": "1:CpnxxiYk2GolQXL1AiyOIq2jeIE=",
+          "direction": "inbound",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "egress": {
+            "interface": {
+              "name": "ethernet1/1"
+            },
+            "zone": "untrust"
+          },
+          "ingress": {
+            "interface": {
+              "name": "ethernet1/2"
+            },
+            "zone": "trust"
+          },
+          "product": "PAN-OS",
+          "serial_number": "01606001116",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action": "alert",
+            "action_flags": "0x0",
+            "flow_id": "25149",
+            "generated_time": "2012-04-10T04:39:56.000Z",
+            "http_content_type": "text/html",
+            "log_profile": "forwardAll",
+            "logged_time": "2012-04-10T04:39:58.000Z",
+            "received_time": "2012-10-30T09:46:12.000Z",
+            "repeat_count": 1,
+            "ruleset": "rule1",
+            "sequence_number": "0",
+            "sub_type": "url",
+            "threat": {
+              "id": "9999",
+              "name": "URL-filtering"
+            },
+            "type": "THREAT",
+            "url": {
+              "category": "not-resolved"
+            },
+            "virtual_sys": "vsys1"
+          }
+        },
+        "related": {
+          "ip": [
+            "192.168.0.2",
+            "175.16.199.1"
+          ],
+          "user": [
+            "crusher"
+          ]
+        },
+        "rule": {
+          "name": "rule1"
+        },
+        "source": {
+          "geo": {
+            "name": "192.168.0.0-192.168.255.255"
+          },
+          "ip": "192.168.0.2",
+          "port": 59309,
+          "user": {
+            "name": "crusher"
+          }
+        },
+        "tags": [
+          "preserve_original_event",
+          "panw-panos",
+          "forwarded"
+        ],
+        "url": {
+          "domain": "lorexx.cn",
+          "extension": "exe",
+          "original": "lorexx.cn/loader.exe",
+          "path": "/loader.exe"
+        },
+        "user": {
+          "name": "crusher"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-audit-sample.log-expected.json",
+      "sample_event": {
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "Apr 11 20:06:15 192.168.0.1 01111111111,2024/04/11 20:06:15,audit,2561,gui-op,suser,\"<debug><dataplane><packet-diag><show><setting/></show></packet-diag></dataplane></debug>\",success",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "observer": {
+          "hostname": "192.168.0.1",
+          "product": "PAN-OS",
+          "serial_number": "01111111111",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "cmd": "<debug><dataplane><packet-diag><show><setting/></show></packet-diag></dataplane></debug>",
+            "cmd_source": "gui-op",
+            "config_version": "2561",
+            "generated_time": "2024-04-11T20:06:15.000-04:00",
+            "type": "AUDIT"
+          }
+        },
+        "related": {
+          "hosts": [
+            "192.168.0.1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "name": "suser"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-audit-sample.log-expected.json",
+      "sample_event": {
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "Apr 18 18:35:20 10.1.1.1 003001000000,2024/04/18 18:35:20,audit,2561,gui-op,Mustang,\"<show><config-locks><vsys>all</vsys></config-locks></show>\",success",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "observer": {
+          "hostname": "10.1.1.1",
+          "product": "PAN-OS",
+          "serial_number": "003001000000",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "cmd": "<show><config-locks><vsys>all</vsys></config-locks></show>",
+            "cmd_source": "gui-op",
+            "config_version": "2561",
+            "generated_time": "2024-04-18T18:35:20.000-04:00",
+            "type": "AUDIT"
+          }
+        },
+        "related": {
+          "hosts": [
+            "10.1.1.1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "name": "Mustang"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-audit-sample.log-expected.json",
+      "sample_event": {
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "Apr 18 18:36:20 test-hostname 003001000000,2024/04/18 18:36:20,audit,2561,gui-op,Mustang,\"<show><config-locks><vsys>all</vsys></config-locks></show>\",success",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "observer": {
+          "hostname": "test-hostname",
+          "product": "PAN-OS",
+          "serial_number": "003001000000",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "cmd": "<show><config-locks><vsys>all</vsys></config-locks></show>",
+            "cmd_source": "gui-op",
+            "config_version": "2561",
+            "generated_time": "2024-04-18T18:36:20.000-04:00",
+            "type": "AUDIT"
+          }
+        },
+        "related": {
+          "hosts": [
+            "test-hostname"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "name": "Mustang"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-audit-sample.log-expected.json",
+      "sample_event": {
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "Apr 18 18:37:20 test-hostname.test.intra 003001000000,2024/04/18 18:37:20,audit,2561,gui-op,Mustang,\"<show><config-locks><vsys>all</vsys></config-locks></show>\",success",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "observer": {
+          "hostname": "test-hostname.test.intra",
+          "product": "PAN-OS",
+          "serial_number": "003001000000",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "cmd": "<show><config-locks><vsys>all</vsys></config-locks></show>",
+            "cmd_source": "gui-op",
+            "config_version": "2561",
+            "generated_time": "2024-04-18T18:37:20.000-04:00",
+            "type": "AUDIT"
+          }
+        },
+        "related": {
+          "hosts": [
+            "test-hostname.test.intra"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "name": "Mustang"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-audit-sample.log-expected.json",
+      "sample_event": {
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "<190>Aug 6 15:45:10 10.1.1.1 013101009361,2024/08/06 15:45:10,audit,2561,gui-op,redact,\"<debug><dataplane><packet-diag><show><setting/></show></packet-diag></dataplane></debug>\",success",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "observer": {
+          "hostname": "10.1.1.1",
+          "product": "PAN-OS",
+          "serial_number": "013101009361",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "cmd": "<debug><dataplane><packet-diag><show><setting/></show></packet-diag></dataplane></debug>",
+            "cmd_source": "gui-op",
+            "config_version": "2561",
+            "generated_time": "2024-08-06T15:45:10.000-04:00",
+            "type": "AUDIT"
+          }
+        },
+        "related": {
+          "hosts": [
+            "10.1.1.1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "name": "redact"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-audit-sample.log-expected.json",
+      "sample_event": {
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "<190>Aug 6 15:45:10 10.1.1.1 013101009361,2024/08/06 15:45:10,audit,2561,gui-op,redact,\"<debug><dataplane><packet-diag><show><setting/></show></packet-diag></dataplane></debug>\",success",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "observer": {
+          "hostname": "10.1.1.1",
+          "product": "PAN-OS",
+          "serial_number": "013101009361",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "cmd": "<debug><dataplane><packet-diag><show><setting/></show></packet-diag></dataplane></debug>",
+            "cmd_source": "gui-op",
+            "config_version": "2561",
+            "generated_time": "2024-08-06T15:45:10.000-04:00",
+            "type": "AUDIT"
+          }
+        },
+        "related": {
+          "hosts": [
+            "10.1.1.1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "user": {
+          "name": "redact"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-authentication-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-11-23T04:33:05.498-04:30",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "authentication"
+          ],
+          "kind": "event",
+          "original": "1,2019/11/23 00:44:44,01234567890,AUTHENTICATION,login,2561,2019/11/23 00:44:44,vsys1,fe80::4e7:1ab2:f6aa:82fa,user,normalize-user,object,auth-policy,12345,auth-id,vendor,log-action,server-profile,description,client-type,event-type,10,20,action-flag,0,0,0,0,vsys-name,device-name,vsys-id,auth-protocol,uuid,2021-11-23T01:03:05.498-08:00,src-category,src-profile,src-model,src-vendor,src-os-family,src-os-version,src-hostname,aa:aa:aa:aa:aa:aa,region,,\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36\",session-id",
+          "outcome": "success",
+          "timezone": "-04:30"
+        },
+        "network": {
+          "type": "ipv6"
+        },
+        "observer": {
+          "hostname": "device-name",
+          "product": "PAN-OS",
+          "serial_number": "01234567890",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "action-flag",
+            "authentication": {
+              "id": "auth-id",
+              "policy": "auth-policy",
+              "protocol": "auth-protocol"
+            },
+            "client_type": "client-type",
+            "description": "description",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_name": "device-name",
+            "event": {
+              "result": "event-type"
+            },
+            "factorno": 10,
+            "flow_id": "session-id",
+            "generated_time": "2019-11-23T00:44:44.000-04:30",
+            "high_resolution_timestamp": "2021-11-23T04:33:05.498-04:30",
+            "log_profile": "log-action",
+            "normalize_user": "normalize-user",
+            "object": {
+              "id": "object"
+            },
+            "observer": {
+              "serial_number": "01234567890"
+            },
+            "received_time": "2019-11-23T00:44:44.000-04:30",
+            "region": "region",
+            "repeat_count": 12345,
+            "rule_uuid": "uuid",
+            "sequence_number": "20",
+            "server_profile": "server-profile",
+            "source": {
+              "ip": "fe80::4e7:1ab2:f6aa:82fa",
+              "user": [
+                "user",
+                "normalize-user"
+              ]
+            },
+            "src": {
+              "category": "src-category",
+              "host": "src-hostname",
+              "mac": "AA-AA-AA-AA-AA-AA",
+              "model": "src-model",
+              "os": {
+                "family": "src-os-family",
+                "version": "src-os-version"
+              },
+              "profile": "src-profile",
+              "vendor": "src-vendor"
+            },
+            "sub_type": "login",
+            "type": "AUTHENTICATION",
+            "user": "user",
+            "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36",
+            "vendor": "vendor",
+            "virtual_sys": "vsys1",
+            "vsys_id": "vsys-id",
+            "vsys_name": "vsys-name"
+          }
+        },
+        "related": {
+          "hosts": [
+            "device-name",
+            "src-hostname"
+          ],
+          "ip": [
+            "fe80::4e7:1ab2:f6aa:82fa"
+          ],
+          "user": [
+            "user",
+            "normalize-user"
+          ]
+        },
+        "rule": {
+          "uuid": "uuid"
+        },
+        "source": {
+          "ip": "fe80::4e7:1ab2:f6aa:82fa",
+          "user": {
+            "name": [
+              "user",
+              "normalize-user"
+            ]
+          }
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "user": {
+          "name": [
+            "user",
+            "normalize-user"
+          ]
+        },
+        "user_agent": {
+          "device": {
+            "name": "Mac"
+          },
+          "name": "Chrome",
+          "original": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36",
+          "os": {
+            "full": "Mac OS X 10.10.5",
+            "name": "Mac OS X",
+            "version": "10.10.5"
+          },
+          "version": "51.0.2704.103"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-authentication-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-08-27T04:33:10.861-04:30",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "authentication"
+          ],
+          "kind": "event",
+          "original": "1,2024/08/27 11:03:10,123456789012,AUTH,Unknown,2816,2024/08/27 11:03:10,vsys1,10.20.30.40,,,AD-LDAP-MFA,MFA-Policy,1,123456789,,log-action,,No user activity after prompted for credentials from AUTH-PORTAL.,Authentication Portal,Authentication Timeout,1,9876543210,action-flag,1,0,0,0,,PA-850,1,,rule-uuid,2024-08-27T11:03:10.861+02:00,,,,,,,,,,,,0,",
+          "outcome": "success",
+          "timezone": "-04:30"
+        },
+        "network": {
+          "type": "ipv4"
+        },
+        "observer": {
+          "hostname": "PA-850",
+          "product": "PAN-OS",
+          "serial_number": "123456789012",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "action-flag",
+            "authentication": {
+              "id": "123456789",
+              "policy": "MFA-Policy"
+            },
+            "client_type": "Authentication Portal",
+            "description": "No user activity after prompted for credentials from AUTH-PORTAL.",
+            "device_group_hierarchy1": "1",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_name": "PA-850",
+            "event": {
+              "result": "Authentication Timeout"
+            },
+            "factorno": 1,
+            "flow_id": "0",
+            "generated_time": "2024-08-27T11:03:10.000-04:30",
+            "high_resolution_timestamp": "2024-08-27T04:33:10.861-04:30",
+            "log_profile": "log-action",
+            "object": {
+              "id": "AD-LDAP-MFA"
+            },
+            "observer": {
+              "serial_number": "123456789012"
+            },
+            "received_time": "2024-08-27T11:03:10.000-04:30",
+            "repeat_count": 1,
+            "rule_uuid": "rule-uuid",
+            "sequence_number": "9876543210",
+            "source": {
+              "ip": "10.20.30.40"
+            },
+            "sub_type": "Unknown",
+            "type": "AUTH",
+            "virtual_sys": "vsys1",
+            "vsys_id": "1"
+          }
+        },
+        "related": {
+          "hosts": [
+            "PA-850"
+          ],
+          "ip": [
+            "10.20.30.40"
+          ]
+        },
+        "rule": {
+          "uuid": "rule-uuid"
+        },
+        "source": {
+          "ip": "10.20.30.40"
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-config-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-10-25T20:25:39.000-04:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "cmd-set",
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "1,2021/10/25 20:25:39,,CONFIG,0,2561,2021/10/25 20:25:39,81.2.69.193,,set,admin,Web,Succeeded, config shared log-settings iptag match-list  ip-tag,,\"iptag { match-list { ip-tag  { send-syslog [ SYSLOG-1 ]; filter \"\"All Logs\"\"; } } } \",1234567890,0x0,0,0,0,0,,PA-VM,0,",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "host": {
+          "ip": [
+            "81.2.69.193"
+          ]
+        },
+        "observer": {
+          "hostname": "PA-VM",
+          "product": "PAN-OS",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "0x0",
+            "admin": "admin",
+            "after_change_detail": "iptag { match-list { ip-tag  { send-syslog [ SYSLOG-1 ]; filter \"All Logs\"; } } } ",
+            "client_type": "Web",
+            "cmd": "set",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_group_id": "0",
+            "generated_time": "2021-10-25T20:25:39.000-04:00",
+            "path": "config shared log-settings iptag match-list  ip-tag",
+            "received_time": "2021-10-25T20:25:39.000-04:00",
+            "result": "Succeeded",
+            "sequence_number": "1234567890",
+            "sub_type": "0",
+            "type": "CONFIG"
+          }
+        },
+        "related": {
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.193"
+          ],
+          "user": [
+            "admin"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-config-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-10-25T20:25:19.000-04:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "cmd-set",
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "1,2021/10/25 20:25:19,,CONFIG,0,2561,2021/10/25 20:25:19,81.2.69.193,,set,admin,Web,Succeeded, config shared log-settings globalprotect match-list  globalProtect,,\"globalprotect { match-list { globalProtect  { send-syslog [ SYSLOG-1 ]; filter \"\"All Logs\"\"; } } } \",1234567890,0x0,0,0,0,0,,PA-VM,0,",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "host": {
+          "ip": [
+            "81.2.69.193"
+          ]
+        },
+        "observer": {
+          "hostname": "PA-VM",
+          "product": "PAN-OS",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "0x0",
+            "admin": "admin",
+            "after_change_detail": "globalprotect { match-list { globalProtect  { send-syslog [ SYSLOG-1 ]; filter \"All Logs\"; } } } ",
+            "client_type": "Web",
+            "cmd": "set",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_group_id": "0",
+            "generated_time": "2021-10-25T20:25:19.000-04:00",
+            "path": "config shared log-settings globalprotect match-list  globalProtect",
+            "received_time": "2021-10-25T20:25:19.000-04:00",
+            "result": "Succeeded",
+            "sequence_number": "1234567890",
+            "sub_type": "0",
+            "type": "CONFIG"
+          }
+        },
+        "related": {
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.193"
+          ],
+          "user": [
+            "admin"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-config-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-10-04T08:52:10.000-04:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "cmd-set",
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "1,2023/10/04 08:52:10,007058000248010,CONFIG,0,2816,2023/10/04 08:52:10,81.2.69.193,,set,admin,Web,Succeeded, vsys  vsys1 rulebase security rules  reset-adult,,reset-adult 73a06abf-75ca-436f-9319-1a15b27fa692 { to [ public ]; from [ private ]; source [ any ]; destination [ any ]; source-user [ any ]; category [ adult ]; application [ any ]; service [ application-default ]; source-hip [ any ]; destination-hip [ any ]; action reset-client; icmp-unreachable yes; log-start yes; rule-type interzone; } ,7286123782408765488,0x0,0,0,0,0,,PA-VM,0,",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "host": {
+          "ip": [
+            "81.2.69.193"
+          ]
+        },
+        "observer": {
+          "hostname": "PA-VM",
+          "product": "PAN-OS",
+          "serial_number": "007058000248010",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "0x0",
+            "admin": "admin",
+            "after_change_detail": "reset-adult 73a06abf-75ca-436f-9319-1a15b27fa692 { to [ public ]; from [ private ]; source [ any ]; destination [ any ]; source-user [ any ]; category [ adult ]; application [ any ]; service [ application-default ]; source-hip [ any ]; destination-hip [ any ]; action reset-client; icmp-unreachable yes; log-start yes; rule-type interzone; }",
+            "client_type": "Web",
+            "cmd": "set",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_group_id": "0",
+            "generated_time": "2023-10-04T08:52:10.000-04:00",
+            "path": "vsys  vsys1 rulebase security rules  reset-adult",
+            "received_time": "2023-10-04T08:52:10.000-04:00",
+            "result": "Succeeded",
+            "sequence_number": "7286123782408765488",
+            "sub_type": "0",
+            "type": "CONFIG"
+          }
+        },
+        "related": {
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.193"
+          ],
+          "user": [
+            "admin"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-config-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-10-04T08:50:28.000-04:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "cmd-move",
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "1,2023/10/04 08:50:28,007058000248010,CONFIG,0,2816,2023/10/04 08:50:28,81.2.69.193,,move,admin,Web,Succeeded, vsys  vsys1 rulebase security rules  block-1.1.1.1,,,7286123782408765487,0x0,0,0,0,0,,PA-VM,0,",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "host": {
+          "ip": [
+            "81.2.69.193"
+          ]
+        },
+        "observer": {
+          "hostname": "PA-VM",
+          "product": "PAN-OS",
+          "serial_number": "007058000248010",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "0x0",
+            "admin": "admin",
+            "client_type": "Web",
+            "cmd": "move",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_group_id": "0",
+            "generated_time": "2023-10-04T08:50:28.000-04:00",
+            "path": "vsys  vsys1 rulebase security rules  block-1.1.1.1",
+            "received_time": "2023-10-04T08:50:28.000-04:00",
+            "result": "Succeeded",
+            "sequence_number": "7286123782408765487",
+            "sub_type": "0",
+            "type": "CONFIG"
+          }
+        },
+        "related": {
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.193"
+          ],
+          "user": [
+            "admin"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-config-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-10-04T08:27:38.000-04:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "1,2023/10/04 08:27:38,007058000248010,CONFIG,0,2816,2023/10/04 08:27:38,81.2.69.193,,override,admin,Web,Failed, deviceconfig system device-telemetry,,,7286123782408765440,0x0,0,0,0,0,,PA-VM,0,",
+          "outcome": "failure",
+          "timezone": "-04:00"
+        },
+        "host": {
+          "ip": [
+            "81.2.69.193"
+          ]
+        },
+        "observer": {
+          "hostname": "PA-VM",
+          "product": "PAN-OS",
+          "serial_number": "007058000248010",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "0x0",
+            "admin": "admin",
+            "client_type": "Web",
+            "cmd": "override",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_group_id": "0",
+            "generated_time": "2023-10-04T08:27:38.000-04:00",
+            "path": "deviceconfig system device-telemetry",
+            "received_time": "2023-10-04T08:27:38.000-04:00",
+            "result": "Failed",
+            "sequence_number": "7286123782408765440",
+            "sub_type": "0",
+            "type": "CONFIG"
+          }
+        },
+        "related": {
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.193"
+          ],
+          "user": [
+            "admin"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-config-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-02-29T11:59:40.421-04:00",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "cmd-edit",
+          "category": [
+            "configuration"
+          ],
+          "kind": "event",
+          "original": "1,2024/02/29 16:59:40,01234567890,CONFIG,0,2561,2024/02/29 16:59:40,81.2.69.193,,edit,admin,Web,Succeeded, vsys vsys1 address test123,\"test123 { description \"\"this, is a test. with, three comma, x4\"\"; } \",\"test123 { description \"\"this, is a test. with, three comma, x5\"\"; } \",7304387121517691189,0x0,0,0,0,0,,PA-VM,0,,0,2024-02-29T16:59:40.421+01:00",
+          "outcome": "success",
+          "timezone": "-04:00"
+        },
+        "host": {
+          "ip": [
+            "81.2.69.193"
+          ]
+        },
+        "observer": {
+          "hostname": "PA-VM",
+          "product": "PAN-OS",
+          "serial_number": "01234567890",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action_flags": "0x0",
+            "admin": "admin",
+            "after_change_detail": "test123 { description \"this, is a test. with, three comma, x5\"; } ",
+            "before_change_detail": "test123 { description \"this, is a test. with, three comma, x4\"; } ",
+            "client_type": "Web",
+            "cmd": "edit",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_group_id": "0",
+            "generated_time": "2024-02-29T16:59:40.000-04:00",
+            "high_resolution_timestamp": "2024-02-29T11:59:40.421-04:00",
+            "path": "vsys vsys1 address test123",
+            "received_time": "2024-02-29T16:59:40.000-04:00",
+            "result": "Succeeded",
+            "sequence_number": "7304387121517691189",
+            "sub_type": "0",
+            "type": "CONFIG"
+          }
+        },
+        "related": {
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.193"
+          ],
+          "user": [
+            "admin"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-correlated-events-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2019-10-09T10:20:15.000-02:30",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "Nov 30 16:09:08 1,2019/10/09 10:20:15,001234567890002,CORRELATION,0,2304,2019/10/09 10:20:15,81.2.69.142,src-user,vsys,cat,4,0,0,0,0,vsys-name,d-name,vsys-id,o-name,o-id,evidence",
+          "outcome": "success",
+          "timezone": "-02:30"
+        },
+        "log": {
+          "level": "4"
+        },
+        "network": {
+          "type": "ipv4"
+        },
+        "observer": {
+          "hostname": "d-name",
+          "product": "PAN-OS",
+          "serial_number": "001234567890002",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "category": "cat",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "device_name": "d-name",
+            "evidence": "evidence",
+            "generated_time": "2019-10-09T10:20:15.000-02:30",
+            "object": {
+              "id": "o-id",
+              "name": "o-name"
+            },
+            "observer": {
+              "serial_number": "001234567890002"
+            },
+            "received_time": "2019-10-09T10:20:15.000-02:30",
+            "severity": "4",
+            "source": {
+              "ip": "81.2.69.142",
+              "user": "src-user"
+            },
+            "sub_type": "0",
+            "type": "CORRELATION",
+            "virtual_sys": "vsys",
+            "vsys_id": "vsys-id",
+            "vsys_name": "vsys-name"
+          }
+        },
+        "related": {
+          "hosts": [
+            "d-name"
+          ],
+          "ip": [
+            "81.2.69.142"
+          ],
+          "user": [
+            "src-user"
+          ]
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "user": {
+            "name": "src-user"
+          }
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "user": {
+          "name": "src-user"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-decryption-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-11-11T15:42:44.845-08:00",
+        "destination": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.144",
+          "nat": {
+            "ip": "81.2.69.144",
+            "port": 20077
+          },
+          "port": 443
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "<14>Nov 30 16:09:33 PA-220 1,2021/11/11 15:42:44,007051000184334,DECRYPTION,0,2561,2021/11/11 15:42:44,81.2.69.145,81.2.69.144,81.2.69.145,81.2.69.144,intrazone-default,,,incomplete,vsys1,LAN,LAN,ethernet1/2,ethernet1/2,,2021/11/11 15:42:44,33288,1,49908,443,49908,20077,0x1400000,tcp,allow,N/A,,,,,731a6a1a-9a62-4a92-a49a-0876025a9436,Server_Hello,Client_Hello,TLS1.2,ECDHE,AES_256_GCM,SHA384,,,Certificate,trusted,Trusted,GlobalProtect,ba67e84495b59512,a6a13e87221733b712ddbd0978da1ffdd69503dfd1f0a86f73d86bf90b743b85,2021/11/11 15:21:28,2022/11/11 15:21:28,V3,2048,9,9,0,0,:::::RSA,com.example.com,com.example.com,,,Received fatal alert CertificateUnknown from client,,,,,,,,2021-11-11T15:42:44.845-08:00,,,,,,,,,,,,,,,,,7028724914890736000,0x0,0,0,0,0,,PA-VM,1,unknown,unknown,unknown,1,,,incomplete,no",
+          "outcome": "failure",
+          "timezone": "-08:00",
+          "type": [
+            "allowed"
+          ]
+        },
+        "labels": {
+          "nat_translated": true,
+          "ssl_decrypted": true
+        },
+        "network": {
+          "application": "incomplete",
+          "community_id": [
+            "1:25YeIgDPUoi6wutrn+CXsDJ9eSY=",
+            "1:GHUcG5su+mGMG9YjB+a66WtuBk0="
+          ],
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "egress": {
+            "interface": {
+              "name": "ethernet1/2"
+            },
+            "zone": "LAN"
+          },
+          "hostname": "PA-VM",
+          "ingress": {
+            "interface": {
+              "name": "ethernet1/2"
+            },
+            "zone": "LAN"
+          },
+          "product": "PAN-OS",
+          "serial_number": "007051000184334",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action": "allow",
+            "action_flags": "0x0",
+            "application": {
+              "category": "unknown",
+              "is_saas": "no",
+              "risk_level": 1,
+              "sub_category": "unknown",
+              "technology": "unknown",
+              "tunneled": "incomplete"
+            },
+            "certificate": {
+              "flags": ":::::RSA"
+            },
+            "chain_status": "Trusted",
+            "config_version": "2561",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "error_message": "Received fatal alert CertificateUnknown from client",
+            "flow_id": "33288",
+            "generated_time": "2021-11-11T15:42:44.000-08:00",
+            "high_resolution_timestamp": "2021-11-11T15:42:44.845-08:00",
+            "hs_stage_c2f": "Server_Hello",
+            "hs_stage_f2s": "Client_Hello",
+            "issuer_common_name": {
+              "length": 9
+            },
+            "logged_time": "2021-11-11T15:42:44.000-08:00",
+            "network": {
+              "nat": {
+                "community_id": "1:GHUcG5su+mGMG9YjB+a66WtuBk0="
+              }
+            },
+            "proxy_type": "GlobalProtect",
+            "received_time": "2021-11-11T15:42:44.000-08:00",
+            "repeat_count": 1,
+            "root_certificate_status": "trusted",
+            "root_common_name": {
+              "length": 0
+            },
+            "ruleset": "intrazone-default",
+            "sequence_number": "7028724914890736000",
+            "server_name_indication": {
+              "length": 0
+            },
+            "sub_type": "0",
+            "subject_common_name": {
+              "length": 9
+            },
+            "tls": {
+              "auth": "SHA384",
+              "error_type": "Certificate",
+              "key_exchange_algorithm": "ECDHE"
+            },
+            "tunnel_type": "N/A",
+            "type": "DECRYPTION",
+            "virtual_sys": "vsys1",
+            "vsys_id": "1"
+          }
+        },
+        "related": {
+          "hash": [
+            "a6a13e87221733b712ddbd0978da1ffdd69503dfd1f0a86f73d86bf90b743b85"
+          ],
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.145",
+            "81.2.69.144"
+          ]
+        },
+        "rule": {
+          "name": "intrazone-default",
+          "uuid": "731a6a1a-9a62-4a92-a49a-0876025a9436"
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.145",
+          "nat": {
+            "ip": "81.2.69.145",
+            "port": 49908
+          },
+          "port": 49908
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "tls": {
+          "cipher": "AES_256_GCM",
+          "client": {
+            "hash": {
+              "sha256": "a6a13e87221733b712ddbd0978da1ffdd69503dfd1f0a86f73d86bf90b743b85"
+            },
+            "not_after": "2022-11-11T15:21:28.000-08:00",
+            "not_before": "2021-11-11T15:21:28.000-08:00",
+            "x509": {
+              "issuer": {
+                "common_name": [
+                  "com.example.com"
+                ]
+              },
+              "public_key_size": 2048,
+              "serial_number": "ba67e84495b59512",
+              "subject": {
+                "common_name": [
+                  "com.example.com"
+                ]
+              },
+              "version_number": "V3"
+            }
+          },
+          "version": "1.2",
+          "version_protocol": "tls"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-decryption-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-11-11T15:42:44.845-08:00",
+        "destination": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.144",
+          "nat": {
+            "ip": "81.2.69.144",
+            "port": 20077
+          },
+          "port": 443
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "<134>1 2022-11-03T13:40:34+01:00 PA-220 1,2021/11/11 15:42:44,007051000184334,DECRYPTION,0,2561,2021/11/11 15:42:44,81.2.69.145,81.2.69.144,81.2.69.145,81.2.69.144,intrazone-default,,,incomplete,vsys1,LAN,LAN,ethernet1/2,ethernet1/2,,2021/11/11 15:42:44,33288,1,49908,443,49908,20077,0x1400000,tcp,allow,N/A,,,,,731a6a1a-9a62-4a92-a49a-0876025a9436,Server_Hello,Client_Hello,TLS1.2,ECDHE,AES_256_GCM,SHA384,,,Certificate,trusted,Trusted,GlobalProtect,ba67e84495b59512,a6a13e87221733b712ddbd0978da1ffdd69503dfd1f0a86f73d86bf90b743b85,2021/11/11 15:21:28,2022/11/11 15:21:28,V3,Unknown,9,9,0,0,:::::RSA,com.example.com,com.example.com,,,Received fatal alert CertificateUnknown from client,,,,,,,,2021-11-11T15:42:44.845-08:00,,,,,,,,,,,,,,,,,7028724914890736000,0x0,0,0,0,0,,PA-VM,1,unknown,unknown,unknown,1,,,incomplete,no",
+          "outcome": "failure",
+          "timezone": "-08:00",
+          "type": [
+            "allowed"
+          ]
+        },
+        "labels": {
+          "nat_translated": true,
+          "ssl_decrypted": true
+        },
+        "network": {
+          "application": "incomplete",
+          "community_id": [
+            "1:25YeIgDPUoi6wutrn+CXsDJ9eSY=",
+            "1:GHUcG5su+mGMG9YjB+a66WtuBk0="
+          ],
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "egress": {
+            "interface": {
+              "name": "ethernet1/2"
+            },
+            "zone": "LAN"
+          },
+          "hostname": "PA-VM",
+          "ingress": {
+            "interface": {
+              "name": "ethernet1/2"
+            },
+            "zone": "LAN"
+          },
+          "product": "PAN-OS",
+          "serial_number": "007051000184334",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action": "allow",
+            "action_flags": "0x0",
+            "application": {
+              "category": "unknown",
+              "is_saas": "no",
+              "risk_level": 1,
+              "sub_category": "unknown",
+              "technology": "unknown",
+              "tunneled": "incomplete"
+            },
+            "certificate": {
+              "flags": ":::::RSA",
+              "raw_size": "Unknown"
+            },
+            "chain_status": "Trusted",
+            "config_version": "2561",
+            "device_group_hierarchy1": "0",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "error_message": "Received fatal alert CertificateUnknown from client",
+            "flow_id": "33288",
+            "generated_time": "2021-11-11T15:42:44.000-08:00",
+            "high_resolution_timestamp": "2021-11-11T15:42:44.845-08:00",
+            "hs_stage_c2f": "Server_Hello",
+            "hs_stage_f2s": "Client_Hello",
+            "issuer_common_name": {
+              "length": 9
+            },
+            "logged_time": "2021-11-11T15:42:44.000-08:00",
+            "network": {
+              "nat": {
+                "community_id": "1:GHUcG5su+mGMG9YjB+a66WtuBk0="
+              }
+            },
+            "proxy_type": "GlobalProtect",
+            "received_time": "2021-11-11T15:42:44.000-08:00",
+            "repeat_count": 1,
+            "root_certificate_status": "trusted",
+            "root_common_name": {
+              "length": 0
+            },
+            "ruleset": "intrazone-default",
+            "sequence_number": "7028724914890736000",
+            "server_name_indication": {
+              "length": 0
+            },
+            "sub_type": "0",
+            "subject_common_name": {
+              "length": 9
+            },
+            "tls": {
+              "auth": "SHA384",
+              "error_type": "Certificate",
+              "key_exchange_algorithm": "ECDHE"
+            },
+            "tunnel_type": "N/A",
+            "type": "DECRYPTION",
+            "virtual_sys": "vsys1",
+            "vsys_id": "1"
+          }
+        },
+        "related": {
+          "hash": [
+            "a6a13e87221733b712ddbd0978da1ffdd69503dfd1f0a86f73d86bf90b743b85"
+          ],
+          "hosts": [
+            "PA-VM"
+          ],
+          "ip": [
+            "81.2.69.145",
+            "81.2.69.144"
+          ]
+        },
+        "rule": {
+          "name": "intrazone-default",
+          "uuid": "731a6a1a-9a62-4a92-a49a-0876025a9436"
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.145",
+          "nat": {
+            "ip": "81.2.69.145",
+            "port": 49908
+          },
+          "port": 49908
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "tls": {
+          "cipher": "AES_256_GCM",
+          "client": {
+            "hash": {
+              "sha256": "a6a13e87221733b712ddbd0978da1ffdd69503dfd1f0a86f73d86bf90b743b85"
+            },
+            "not_after": "2022-11-11T15:21:28.000-08:00",
+            "not_before": "2021-11-11T15:21:28.000-08:00",
+            "x509": {
+              "issuer": {
+                "common_name": [
+                  "com.example.com"
+                ]
+              },
+              "serial_number": "ba67e84495b59512",
+              "subject": {
+                "common_name": [
+                  "com.example.com"
+                ]
+              },
+              "version_number": "V3"
+            }
+          },
+          "version": "1.2",
+          "version_protocol": "tls"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-decryption-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-05-27T05:46:51.539-08:00",
+        "destination": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.144",
+          "nat": {
+            "ip": "81.2.69.144",
+            "port": 0
+          },
+          "port": 9400
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "<14>Nov 30 16:09:33 PA-220 1,2024/05/30 15:42:44,007051000184334,DECRYPTION,0,2561,2024/05/30 15:42:44,81.2.69.145,81.2.69.144,81.2.69.145,81.2.69.144,intrazone-default,,,ssl,vsys1,LAN,PROXY,ae1,ethernet1/5,TEST-Log,2024/05/30 15:46:50,35508943,1,60312,9400,0,0,0x400,tcp,allow,N/A,,,,,731a6a1a-9a62-4a92-a49a-0876025a9436,Unknown,Unknown,TLS1.3,ECDHE,AES_256_GCM,SHA384,SSL Exception Destination Hosts,,None,uninspected,Uninspected,No Decrypt,,,,,V1,0,0,0,0,0,:::::NONE,,,,,,,,,,,,,2024-05-27T15:46:51.539+02:00,,,,,,,,,,,,,,,,,7335860982980205586,0x8000000000000000,12,0,0,0,,TESTFW01,1,encrypted-tunnel,networking,browser-based,4,\\\"used-by-malware,able-to-transfer-file,has-known-vulnerability,tunnel-other-application,pervasive-use\\\",,ssl,no,no",
+          "outcome": "failure",
+          "timezone": "-08:00",
+          "type": [
+            "allowed"
+          ]
+        },
+        "labels": {
+          "decrypted_traffic": true
+        },
+        "network": {
+          "application": "ssl",
+          "community_id": "1:qCIgD9m/NwEUSR7fxRwieKZtcc8=",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "egress": {
+            "interface": {
+              "name": "ethernet1/5"
+            },
+            "zone": "PROXY"
+          },
+          "hostname": "TESTFW01",
+          "ingress": {
+            "interface": {
+              "name": "ae1"
+            },
+            "zone": "LAN"
+          },
+          "product": "PAN-OS",
+          "serial_number": "007051000184334",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action": "allow",
+            "action_flags": "0x8000000000000000",
+            "application": {
+              "category": "networking",
+              "risk_level": 4,
+              "sub_category": "encrypted-tunnel",
+              "technology": "browser-based"
+            },
+            "certificate": {
+              "flags": ":::::NONE"
+            },
+            "chain_status": "Uninspected",
+            "config_version": "2561",
+            "device_group_hierarchy1": "12",
+            "device_group_hierarchy2": "0",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "flow_id": "35508943",
+            "generated_time": "2024-05-30T15:42:44.000-08:00",
+            "high_resolution_timestamp": "2024-05-27T05:46:51.539-08:00",
+            "hs_stage_c2f": "Unknown",
+            "hs_stage_f2s": "Unknown",
+            "issuer_common_name": {
+              "length": 0
+            },
+            "log_profile": "TEST-Log",
+            "logged_time": "2024-05-30T15:46:50.000-08:00",
+            "policy": {
+              "name": "SSL Exception Destination Hosts"
+            },
+            "proxy_type": "No Decrypt",
+            "received_time": "2024-05-30T15:42:44.000-08:00",
+            "repeat_count": 1,
+            "root_certificate_status": "uninspected",
+            "root_common_name": {
+              "length": 0
+            },
+            "ruleset": "intrazone-default",
+            "sequence_number": "7335860982980205586",
+            "server_name_indication": {
+              "length": 0
+            },
+            "sub_type": "0",
+            "subject_common_name": {
+              "length": 0
+            },
+            "tls": {
+              "auth": "SHA384",
+              "error_type": "None",
+              "key_exchange_algorithm": "ECDHE"
+            },
+            "tunnel_type": "N/A",
+            "type": "DECRYPTION",
+            "virtual_sys": "vsys1",
+            "vsys_id": "1"
+          }
+        },
+        "related": {
+          "hosts": [
+            "TESTFW01"
+          ],
+          "ip": [
+            "81.2.69.145",
+            "81.2.69.144"
+          ]
+        },
+        "rule": {
+          "name": "intrazone-default",
+          "uuid": "731a6a1a-9a62-4a92-a49a-0876025a9436"
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.145",
+          "nat": {
+            "ip": "81.2.69.145",
+            "port": 0
+          },
+          "port": 60312
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "tls": {
+          "cipher": "AES_256_GCM",
+          "client": {
+            "x509": {
+              "public_key_size": 0,
+              "version_number": "V1"
+            }
+          },
+          "version": "1.3",
+          "version_protocol": "tls"
+        }
+      }
+    },
+    {
+      "data_stream": "panos",
+      "package": "panw",
+      "source": "test/test-panw-panos-decryption-sample.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-08-19T05:58:18.289-08:00",
+        "destination": {
+          "ip": "10.68.15.198",
+          "port": 8098
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "<14>Aug 19 13:58:18 fw1034.example.io 1,2024/08/19 13:58:18,007951000353454,DECRYPTION,0,2562,2024/08/19 13:58:18,10.46.249.76,10.68.15.198,0.0.0.0,0.0.0.0,SectorProxy Browsing lko-user,,,incomplete,vsys1,interconnect,proxy,ethernet1/2,ethernet1/3,HOST-LOGCOLLECTOR,2024/08/19 13:58:18,886968,1,14620,8098,0,0,0x1000000,tcp,allow,N/A,,,,,89bec869-072f-4d78-9691-ed67ebc08749,Unknown,Unknown,TLS1.3,,,,Decrypt - SOC - my-user,,Protocol,uninspected,Uninspected,Forward,,,,,V1,0,0,0,0,13,:::::NONE,,,,www2.example.com,TLS Handshake Failure. Received fatal alert HandshakeFailure from server,,,,,,,,2024-08-19T13:58:18.289+00:00,,,,,,,,,,,,,,,,,7395705320301543310,0x8000000000000000,850,852,0,0,,fw1034,1,unknown,unknown,unknown,1,,,incomplete,no,no",
+          "outcome": "failure",
+          "timezone": "-08:00",
+          "type": [
+            "allowed"
+          ]
+        },
+        "labels": {
+          "ssl_decrypted": true
+        },
+        "network": {
+          "application": "incomplete",
+          "community_id": "1:v6CpC7JhBowT3JTASj/bcaOVqw0=",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "egress": {
+            "interface": {
+              "name": "ethernet1/3"
+            },
+            "zone": "proxy"
+          },
+          "hostname": "fw1034",
+          "ingress": {
+            "interface": {
+              "name": "ethernet1/2"
+            },
+            "zone": "interconnect"
+          },
+          "product": "PAN-OS",
+          "serial_number": "007951000353454",
+          "type": "firewall",
+          "vendor": "Palo Alto Networks"
+        },
+        "panw": {
+          "panos": {
+            "action": "allow",
+            "action_flags": "0x8000000000000000",
+            "application": {
+              "category": "unknown",
+              "is_saas": "no",
+              "is_sanctioned": "no",
+              "risk_level": 1,
+              "sub_category": "unknown",
+              "technology": "unknown",
+              "tunneled": "incomplete"
+            },
+            "certificate": {
+              "flags": ":::::NONE"
+            },
+            "chain_status": "Uninspected",
+            "config_version": "2562",
+            "device_group_hierarchy1": "850",
+            "device_group_hierarchy2": "852",
+            "device_group_hierarchy3": "0",
+            "device_group_hierarchy4": "0",
+            "error_message": "TLS Handshake Failure. Received fatal alert HandshakeFailure from server",
+            "flow_id": "886968",
+            "generated_time": "2024-08-19T13:58:18.000-08:00",
+            "high_resolution_timestamp": "2024-08-19T05:58:18.289-08:00",
+            "hs_stage_c2f": "Unknown",
+            "hs_stage_f2s": "Unknown",
+            "issuer_common_name": {
+              "length": 0
+            },
+            "log_profile": "HOST-LOGCOLLECTOR",
+            "logged_time": "2024-08-19T13:58:18.000-08:00",
+            "policy": {
+              "name": "Decrypt - SOC - my-user"
+            },
+            "proxy_type": "Forward",
+            "received_time": "2024-08-19T13:58:18.000-08:00",
+            "repeat_count": 1,
+            "root_certificate_status": "uninspected",
+            "root_common_name": {
+              "length": 0
+            },
+            "ruleset": "SectorProxy Browsing lko-user",
+            "sequence_number": "7395705320301543310",
+            "server_name_indication": {
+              "length": 13
+            },
+            "sub_type": "0",
+            "subject_common_name": {
+              "length": 0
+            },
+            "tls": {
+              "error_type": "Protocol"
+            },
+            "tunnel_type": "N/A",
+            "type": "DECRYPTION",
+            "virtual_sys": "vsys1",
+            "vsys_id": "1"
+          }
+        },
+        "related": {
+          "hosts": [
+            "fw1034"
+          ],
+          "ip": [
+            "10.46.249.76",
+            "10.68.15.198"
+          ]
+        },
+        "rule": {
+          "name": "SectorProxy Browsing lko-user",
+          "uuid": "89bec869-072f-4d78-9691-ed67ebc08749"
+        },
+        "source": {
+          "ip": "10.46.249.76",
+          "port": 14620
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "tls": {
+          "client": {
+            "server_name": "www2.example.com",
+            "x509": {
+              "public_key_size": 0,
+              "version_number": "V1"
+            }
+          },
+          "version": "1.3",
+          "version_protocol": "tls"
+        }
+      }
+    }
+  ]
+}

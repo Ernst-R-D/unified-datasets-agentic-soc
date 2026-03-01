@@ -1,0 +1,111 @@
+{
+  "description": "Okta detection rules",
+  "directory": "rules/identity/okta",
+  "rules": [
+    {
+      "filename": "okta_admin_activity_from_proxy_query.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Admin Functions Access Through Proxy\nid: 9058ca8b-f397-4fd1-a9fa-2b7aad4d6309\nstatus: test\ndescription: Detects access to Okta admin functions through proxy.\nreferences:\n    - https://www.beyondtrust.com/blog/entry/okta-support-unit-breach\n    - https://dataconomy.com/2023/10/23/okta-data-breach/\n    - https://blog.cloudflare.com/how-cloudflare-mitigated-yet-another-okta-compromise/\nauthor: Muhammad Faisal @faisalusuf\ndate: 2023-10-25\ntags:\n    - attack.credential-access\nlogsource:\n    service: okta\n    product: okta\ndetection:\n    selection:\n        debugContext.debugData.requestUri|contains: 'admin'\n        securityContext.isProxy: 'true'\n    condition: selection\nfalsepositives:\n    - False positives are expected if administrators access these function through proxy legitimatly. Apply additional filters if necessary\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_admin_role_assigned_to_user_or_group.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Admin Role Assigned to an User or Group\nid: 413d4a81-6c98-4479-9863-014785fd579c\nstatus: test\ndescription: Detects when an the Administrator role is assigned to an user or group.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.privilege-escalation\n    - attack.persistence\n    - attack.t1098.003\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype:\n            - group.privilege.grant\n            - user.account.privilege.grant\n    condition: selection\nfalsepositives:\n    - Administrator roles could be assigned to users or group by other admin users.\n\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_admin_role_assignment_created.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Admin Role Assignment Created\nid: 139bdd4b-9cd7-49ba-a2f4-744d0a8f5d8c\nstatus: test\ndescription: Detects when a new admin role assignment is created. Which could be a sign of privilege escalation or persistence\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Nikita Khalimonenkov\ndate: 2023-01-19\ntags:\n    - attack.persistence\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype: 'iam.resourceset.bindings.add'\n    condition: selection\nfalsepositives:\n    - Legitimate creation of a new admin role assignment\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_api_token_created.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta API Token Created\nid: 19951c21-229d-4ccb-8774-b993c3ff3c5c\nstatus: test\ndescription: Detects when a API token is created\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.persistence\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype: system.api_token.create\n    condition: selection\nfalsepositives:\n    - Legitimate creation of an API token by authorized users\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_api_token_revoked.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta API Token Revoked\nid: cf1dbc6b-6205-41b4-9b88-a83980d2255b\nstatus: test\ndescription: Detects when a API Token is revoked.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype: system.api_token.revoke\n    condition: selection\nfalsepositives:\n    - Unknown\n\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_application_modified_or_deleted.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Application Modified or Deleted\nid: 7899144b-e416-4c28-b0b5-ab8f9e0a541d\nstatus: test\ndescription: Detects when an application is modified or deleted.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype:\n            - application.lifecycle.update\n            - application.lifecycle.delete\n    condition: selection\nfalsepositives:\n    - Unknown\n\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_application_sign_on_policy_modified_or_deleted.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Application Sign-On Policy Modified or Deleted\nid: 8f668cc4-c18e-45fe-ad00-624a981cf88a\nstatus: test\ndescription: Detects when an application Sign-on Policy is modified or deleted.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype:\n            - application.policy.sign_on.update\n            - application.policy.sign_on.rule.delete\n    condition: selection\nfalsepositives:\n    - Unknown\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_fastpass_phishing_detection.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta FastPass Phishing Detection\nid: ee39a9f7-5a79-4b0a-9815-d36b3cf28d3e\nstatus: test\ndescription: Detects when Okta FastPass prevents a known phishing site.\nreferences:\n    - https://sec.okta.com/fastpassphishingdetection\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2023-05-07\ntags:\n    - attack.initial-access\n    - attack.t1566\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        outcome.reason: 'FastPass declined phishing attempt'\n        outcome.result: FAILURE\n        eventtype: user.authentication.auth_via_mfa\n    condition: selection\nfalsepositives:\n    - Unlikely\nlevel: high\n"
+    },
+    {
+      "filename": "okta_identity_provider_created.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Identity Provider Created\nid: 969c7590-8c19-4797-8c1b-23155de6e7ac\nstatus: test\ndescription: Detects when a new identity provider is created for Okta.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection\nauthor: kelnage\ndate: 2023-09-07\ntags:\n    - attack.privilege-escalation\n    - attack.persistence\n    - attack.t1098.001\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype: 'system.idp.lifecycle.create'\n    condition: selection\nfalsepositives:\n    - When an admin creates a new, authorised identity provider.\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_mfa_reset_or_deactivated.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta MFA Reset or Deactivated\nid: 50e068d7-1e6b-4054-87e5-0a592c40c7e0\nstatus: test\ndescription: Detects when an attempt at deactivating  or resetting MFA.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-21\nmodified: 2022-10-09\ntags:\n    - attack.persistence\n    - attack.credential-access\n    - attack.defense-evasion\n    - attack.t1556.006\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype:\n            - user.mfa.factor.deactivate\n            - user.mfa.factor.reset_all\n    condition: selection\nfalsepositives:\n    - If a MFA reset or deactivated was performed by a system administrator.\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_network_zone_deactivated_or_deleted.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Network Zone Deactivated or Deleted\nid: 9f308120-69ed-4506-abde-ac6da81f4310\nstatus: test\ndescription: Detects when an Network Zone is Deactivated or Deleted.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype:\n            - zone.deactivate\n            - zone.delete\n    condition: selection\nfalsepositives:\n    - Unknown\n\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_new_behaviours_admin_console.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta New Admin Console Behaviours\nid: a0b38b70-3cb5-484b-a4eb-c4d8e7bcc0a9\nstatus: test\ndescription: Detects when Okta identifies new activity in the Admin Console.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection\nauthor: kelnage\ndate: 2023-09-07\nmodified: 2024-06-26\ntags:\n    - attack.privilege-escalation\n    - attack.persistence\n    - attack.defense-evasion\n    - attack.initial-access\n    - attack.t1078.004\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection_event:\n        eventtype: 'policy.evaluate_sign_on'\n        target.displayname: 'Okta Admin Console'\n    selection_positive:\n        - debugcontext.debugdata.behaviors|contains: 'POSITIVE'\n        - debugcontext.debugdata.logonlysecuritydata|contains: 'POSITIVE'\n    condition: all of selection_*\nfalsepositives:\n    - When an admin begins using the Admin Console and one of Okta's heuristics incorrectly identifies the behavior as being unusual.\nlevel: high\n"
+    },
+    {
+      "filename": "okta_password_in_alternateid_field.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Potential Okta Password in AlternateID Field\nid: 91b76b84-8589-47aa-9605-c837583b82a9\nstatus: test\ndescription: |\n    Detects when a user has potentially entered their password into the\n    username field, which will cause the password to be retained in log files.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://www.mitiga.io/blog/how-okta-passwords-can-be-compromised-uncovering-a-risk-to-user-data\n    - https://help.okta.com/en-us/Content/Topics/users-groups-profiles/usgp-create-character-restriction.htm\nauthor: kelnage\ndate: 2023-04-03\nmodified: 2023-10-25\ntags:\n    - attack.credential-access\n    - attack.t1552\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        legacyeventtype: 'core.user_auth.login_failed'\n    filter_main:\n        # Okta service account names start with 0oa\n        # Email addresses are the default format for Okta usernames, so attempt\n        # to exclude alternateIds that look like valid emails\n        # If your Okta configuration uses different character restrictions, you\n        # will need to update this regular expression to reflect that or disable the rule for your environment\n        # Possible false negatives are failed login attempts with a password that looks like a valid email address\n        actor.alternateid|re: '(^0oa.*|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,10})'\n    condition: selection and not filter_main\nfalsepositives:\n    - Unlikely\nlevel: high\n"
+    },
+    {
+      "filename": "okta_policy_modified_or_deleted.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Policy Modified or Deleted\nid: 1667a172-ed4c-463c-9969-efd92195319a\nstatus: test\ndescription: Detects when an Okta policy is modified or deleted.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype:\n            - policy.lifecycle.update\n            - policy.lifecycle.delete\n    condition: selection\nfalsepositives:\n    - Okta Policies being modified or deleted may be performed by a system administrator.\n    - Verify whether the user identity, user agent, and/or hostname should be making changes in your environment.\n    - Okta Policies modified or deleted from unfamiliar users should be investigated. If known behavior is causing false positives, it can be exempted from the rule.\nlevel: low\n"
+    },
+    {
+      "filename": "okta_policy_rule_modified_or_deleted.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Policy Rule Modified or Deleted\nid: 0c97c1d3-4057-45c9-b148-1de94b631931\nstatus: test\ndescription: Detects when an Policy Rule is Modified or Deleted.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype:\n            - policy.rule.update\n            - policy.rule.delete\n    condition: selection\nfalsepositives:\n    - Unknown\n\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_security_threat_detected.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Security Threat Detected\nid: 5c82f0b9-3c6d-477f-a318-0e14a1df73e0\nstatus: test\ndescription: Detects when an security threat is detected in Okta.\nreferences:\n    - https://okta.github.io/okta-help/en/prod/Content/Topics/Security/threat-insight/configure-threatinsight-system-log.htm\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.command-and-control\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype: security.threat.detected\n    condition: selection\nfalsepositives:\n    - Unknown\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_suspicious_activity_enduser_report.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Suspicious Activity Reported by End-user\nid: 07e97cc6-aed1-43ae-9081-b3470d2367f1\nstatus: test\ndescription: Detects when an Okta end-user reports activity by their account as being potentially suspicious.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://github.com/okta/workflows-templates/blob/1164f0eb71ce47c9ddc7d850e9ab87b5a2b42333/workflows/suspicious_activity_reported/readme.md\nauthor: kelnage\ndate: 2023-09-07\ntags:\n    - attack.resource-development\n    - attack.t1586.003\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype: 'user.account.report_suspicious_activity_by_enduser'\n    condition: selection\nfalsepositives:\n    - If an end-user incorrectly identifies normal activity as suspicious.\nlevel: high\n"
+    },
+    {
+      "filename": "okta_unauthorized_access_to_app.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta Unauthorized Access to App\nid: 6cc2b61b-d97e-42ef-a9dd-8aa8dc951657\nstatus: test\ndescription: Detects when unauthorized access to app occurs.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        displaymessage: User attempted unauthorized access to app\n    condition: selection\nfalsepositives:\n    - User might of believe that they had access.\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_user_account_locked_out.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta User Account Locked Out\nid: 14701da0-4b0f-4ee6-9c95-2ffb4e73bb9a\nstatus: test\ndescription: Detects when an user account is locked out.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://developer.okta.com/docs/reference/api/event-types/\nauthor: Austin Songer @austinsonger\ndate: 2021-09-12\nmodified: 2022-10-09\ntags:\n    - attack.impact\n    - attack.t1531\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        displaymessage: Max sign in attempts exceeded\n    condition: selection\nfalsepositives:\n    - Unknown\nlevel: medium\n"
+    },
+    {
+      "filename": "okta_user_created.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: New Okta User Created\nid: b6c718dd-8f53-4b9f-98d8-93fdca966969\nstatus: test\ndescription: Detects new user account creation\nauthor: Nasreddine Bencherchali (Nextron Systems)\ndate: 2023-10-25\nreferences:\n    - https://developer.okta.com/docs/reference/api/event-types/\ntags:\n    - attack.credential-access\nlogsource:\n    service: okta\n    product: okta\ndetection:\n    selection:\n        eventtype: 'user.lifecycle.create'\n    condition: selection\nfalsepositives:\n    - Legitimate and authorized user creation\nlevel: informational\n"
+    },
+    {
+      "filename": "okta_user_session_start_via_anonymised_proxy.yml",
+      "directory": "rules/identity/okta",
+      "content": "title: Okta User Session Start Via An Anonymising Proxy Service\nid: bde30855-5c53-4c18-ae90-1ff79ebc9578\nstatus: test\ndescription: Detects when an Okta user session starts where the user is behind an anonymising proxy service.\nreferences:\n    - https://developer.okta.com/docs/reference/api/system-log/\n    - https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection\nauthor: kelnage\ndate: 2023-09-07\ntags:\n    - attack.defense-evasion\n    - attack.t1562.006\nlogsource:\n    product: okta\n    service: okta\ndetection:\n    selection:\n        eventtype: 'user.session.start'\n        securitycontext.isproxy: 'true'\n    condition: selection\nfalsepositives:\n    - If a user requires an anonymising proxy due to valid justifications.\nlevel: high\n"
+    }
+  ]
+}

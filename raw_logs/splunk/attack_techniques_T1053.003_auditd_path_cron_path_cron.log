@@ -1,0 +1,20 @@
+type=CWD msg=audit(11/24/2025 14:48:16.989:109) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:48:16.989:109) : item=0 name=/etc/cron.weekly inode=995 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:48:16.989:108) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:48:16.989:108) : item=0 name=/etc/cron.monthly inode=993 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:48:16.989:107) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:48:16.989:107) : item=0 name=/etc/cron.hourly inode=991 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:48:16.989:106) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:48:16.989:106) : item=0 name=/etc/cron.daily inode=250 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:48:16.989:105) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:48:16.989:105) : item=0 name=/etc/cron.d inode=270 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:24:02.876:327129) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:24:02.876:327129) : item=0 name=/etc/cron.weekly inode=995 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:24:02.875:327128) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:24:02.875:327128) : item=0 name=/etc/cron.monthly inode=993 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:24:02.875:327127) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:24:02.875:327127) : item=0 name=/etc/cron.hourly inode=991 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:24:02.875:327126) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:24:02.875:327126) : item=0 name=/etc/cron.daily inode=250 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/24/2025 14:24:02.875:327125) : cwd=/ 
+type=PATH msg=audit(11/24/2025 14:24:02.875:327125) : item=0 name=/etc/cron.d inode=270 dev=103:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 

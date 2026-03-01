@@ -1,0 +1,2746 @@
+{
+  "package": "snort",
+  "description": "Snort IDS/IPS alert logs",
+  "events": [
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "sample_event": {
+        "@timestamp": "2022-09-05T16:02:55.000-05:00",
+        "agent": {
+          "ephemeral_id": "3ada3cc1-9563-4aa5-880e-585d87fc6adf",
+          "id": "ca0beb8d-9522-4450-8af7-3cb7f3d8c478",
+          "name": "docker-fleet-agent",
+          "type": "filebeat",
+          "version": "8.2.0"
+        },
+        "data_stream": {
+          "dataset": "snort.log",
+          "namespace": "ep",
+          "type": "logs"
+        },
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "elastic_agent": {
+          "id": "ca0beb8d-9522-4450-8af7-3cb7f3d8c478",
+          "snapshot": false,
+          "version": "8.2.0"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "category": [
+            "network"
+          ],
+          "created": "2022-09-05T16:02:55.000-05:00",
+          "dataset": "snort.log",
+          "ingested": "2022-05-09T16:00:09Z",
+          "kind": "alert",
+          "original": "Sep  5 16:02:55 dev snort: [1:1000015:0] Pinging... [Classification: Misc activity] [Priority: 3] {ICMP} 10.50.10.88 -> 175.16.199.1",
+          "severity": 3,
+          "timezone": "-05:00"
+        },
+        "input": {
+          "type": "udp"
+        },
+        "log": {
+          "source": {
+            "address": "172.18.0.4:54924"
+          }
+        },
+        "network": {
+          "community_id": "1:AwywM3uuS+luH6U/hUKtj2x2LWU=",
+          "direction": "outbound",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "name": "dev",
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "process": {
+          "name": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.50.10.88",
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "Misc activity",
+          "description": "Pinging...",
+          "id": "1000015",
+          "version": "0"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "10.50.10.88",
+          "ip": "10.50.10.88"
+        },
+        "tags": [
+          "preserve_original_event",
+          "forwarded",
+          "snort.log"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:45:37.536-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "mac": "00-50-56-9D-A5-BE",
+          "port": 22
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:45:37.536335 ,1,1000006,0,\"TCP connection\",TCP,10.100.20.59,57263,10.100.10.190,22,00:25:90:3A:05:13,00:50:56:9D:A5:BE,0x72,***AP***,0x688F0DFC,0xBC763516,,0x80C,127,0,55665,100,102400,,,,",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:mnJdrIaujYJdP8lXFem/hodYAt0=",
+          "direction": "internal",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.20.59",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "description": "TCP connection",
+          "id": "1000006",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 100
+          },
+          "eth": {
+            "length": 114
+          },
+          "gid": 1,
+          "ip": {
+            "id": 55665,
+            "length": 102400,
+            "tos": 0,
+            "ttl": 127
+          },
+          "tcp": {
+            "ack": 3161863446,
+            "flags": "AP",
+            "seq": 1754205692,
+            "window": 2060
+          }
+        },
+        "source": {
+          "address": "10.100.20.59",
+          "ip": "10.100.20.59",
+          "mac": "00-25-90-3A-05-13",
+          "port": 57263
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:45:37.553-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "mac": "00-50-56-9D-A5-BE",
+          "port": 22
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:45:37.553882 ,1,1000006,0,\"TCP connection\",TCP,10.100.20.59,57263,10.100.10.190,22,00:25:90:3A:05:13,00:50:56:9D:A5:BE,0x72,***AP***,0x688F0E38,0xBC763552,,0x80C,127,0,55666,100,102400,,,,",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:mnJdrIaujYJdP8lXFem/hodYAt0=",
+          "direction": "internal",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.20.59",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "description": "TCP connection",
+          "id": "1000006",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 100
+          },
+          "eth": {
+            "length": 114
+          },
+          "gid": 1,
+          "ip": {
+            "id": 55666,
+            "length": 102400,
+            "tos": 0,
+            "ttl": 127
+          },
+          "tcp": {
+            "ack": 3161863506,
+            "flags": "AP",
+            "seq": 1754205752,
+            "window": 2060
+          }
+        },
+        "source": {
+          "address": "10.100.20.59",
+          "ip": "10.100.20.59",
+          "mac": "00-25-90-3A-05-13",
+          "port": 57263
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:50:40.017-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "mac": "00-50-56-9D-A5-BE",
+          "port": 55475
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:50:40.017935 ,1,1000005,0,\"UDP Connection\",UDP,10.100.10.1,53,10.100.10.190,55475,00:25:90:3A:05:13,00:50:56:9D:A5:BE,0xC1,,,,,,64,0,56094,179,183296,,,,",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:wvunc3EtDmKBjBft1PFlQ2pSLzw=",
+          "direction": "internal",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "description": "UDP Connection",
+          "id": "1000005",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 179
+          },
+          "eth": {
+            "length": 193
+          },
+          "gid": 1,
+          "ip": {
+            "id": 56094,
+            "length": 183296,
+            "tos": 0,
+            "ttl": 64
+          },
+          "tcp": {
+            "flags": ""
+          }
+        },
+        "source": {
+          "address": "10.100.10.1",
+          "ip": "10.100.10.1",
+          "mac": "00-25-90-3A-05-13",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:50:39.947-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "mac": "00-50-56-9D-A5-BE",
+          "port": 55333
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:50:39.947383 ,1,1000005,0,\"UDP Connection\",UDP,10.100.10.1,53,10.100.10.190,55333,00:25:90:3A:05:13,00:50:56:9D:A5:BE,0xB1,,,,,,64,0,26112,163,166912,,,,",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:IcqpMEB/fJpNhZgyJVhx8VHROwY=",
+          "direction": "internal",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "description": "UDP Connection",
+          "id": "1000005",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 163
+          },
+          "eth": {
+            "length": 177
+          },
+          "gid": 1,
+          "ip": {
+            "id": 26112,
+            "length": 166912,
+            "tos": 0,
+            "ttl": 64
+          },
+          "tcp": {
+            "flags": ""
+          }
+        },
+        "source": {
+          "address": "10.100.10.1",
+          "ip": "10.100.10.1",
+          "mac": "00-25-90-3A-05-13",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:50:40.666-05:00",
+        "destination": {
+          "address": "10.100.10.255",
+          "ip": "10.100.10.255",
+          "mac": "FF-FF-FF-FF-FF-FF",
+          "port": 32414
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:50:40.666095 ,1,1000005,0,\"UDP Connection\",UDP,10.100.10.75,55776,10.100.10.255,32414,00:0C:29:B8:43:CE,FF:FF:FF:FF:FF:FF,0x3F,,,,,,64,0,37712,49,50176,,,,",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:NW0wNEOLThLuO4EsoJXFbyp6zII=",
+          "direction": "internal",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.75",
+            "10.100.10.255"
+          ]
+        },
+        "rule": {
+          "description": "UDP Connection",
+          "id": "1000005",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 49
+          },
+          "eth": {
+            "length": 63
+          },
+          "gid": 1,
+          "ip": {
+            "id": 37712,
+            "length": 50176,
+            "tos": 0,
+            "ttl": 64
+          },
+          "tcp": {
+            "flags": ""
+          }
+        },
+        "source": {
+          "address": "10.100.10.75",
+          "ip": "10.100.10.75",
+          "mac": "00-0C-29-B8-43-CE",
+          "port": 55776
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:49:55.900-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "mac": "00-25-90-3A-05-13"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:49:55.900215 ,1,1000004,0,\"Pinging...\",ICMP,10.100.10.190,,175.16.199.1,,00:50:56:9D:A5:BE,00:25:90:3A:05:13,0x62,,,,,,64,0,37607,84,86016,8,0,83,1",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:jEaJsIOzda45Q8FjN0LeZEATihA=",
+          "direction": "outbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.190",
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "description": "Pinging...",
+          "id": "1000004",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 84
+          },
+          "eth": {
+            "length": 98
+          },
+          "gid": 1,
+          "icmp": {
+            "code": 0,
+            "id": 83,
+            "seq": 1,
+            "type": 8
+          },
+          "ip": {
+            "id": 37607,
+            "length": 86016,
+            "tos": 0,
+            "ttl": 64
+          },
+          "tcp": {
+            "flags": ""
+          }
+        },
+        "source": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "mac": "00-50-56-9D-A5-BE"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:49:55.911-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "mac": "00-50-56-9D-A5-BE"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:49:55.911592 ,1,1000004,0,\"Pinging...\",ICMP,175.16.199.1,,10.100.10.190,,00:25:90:3A:05:13,00:50:56:9D:A5:BE,0x62,,,,,,54,0,23522,84,86016,0,0,83,1",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:PsO7nB0G1KDZ1IDLocfXBmcxiaA=",
+          "direction": "inbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "description": "Pinging...",
+          "id": "1000004",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 84
+          },
+          "eth": {
+            "length": 98
+          },
+          "gid": 1,
+          "icmp": {
+            "code": 0,
+            "id": 83,
+            "seq": 1,
+            "type": 0
+          },
+          "ip": {
+            "id": 23522,
+            "length": 86016,
+            "tos": 0,
+            "ttl": 54
+          },
+          "tcp": {
+            "flags": ""
+          }
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "mac": "00-25-90-3A-05-13"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-csv.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:49:56.900-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "mac": "00-25-90-3A-05-13"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:49:56.900997 ,1,1000004,0,\"Pinging...\",ICMP,10.100.10.190,,175.16.199.1,,00:50:56:9D:A5:BE,00:25:90:3A:05:13,0x62,,,,,,64,0,37636,84,86016,8,0,83,2",
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:jEaJsIOzda45Q8FjN0LeZEATihA=",
+          "direction": "outbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.190",
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "description": "Pinging...",
+          "id": "1000004",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 84
+          },
+          "eth": {
+            "length": 98
+          },
+          "gid": 1,
+          "icmp": {
+            "code": 0,
+            "id": 83,
+            "seq": 2,
+            "type": 8
+          },
+          "ip": {
+            "id": 37636,
+            "length": 86016,
+            "tos": 0,
+            "ttl": 64
+          },
+          "tcp": {
+            "flags": ""
+          }
+        },
+        "source": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "mac": "00-50-56-9D-A5-BE"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-05-30T19:09:10.917-05:00",
+        "destination": {
+          "address": "255.255.255.255",
+          "ip": "255.255.255.255",
+          "port": 67
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "05/30-19:09:10.917356  [**] [1:527:8] BAD-TRAFFIC same SRC/DST [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 0.0.0.0:68 -> 255.255.255.255:67",
+          "severity": 2,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:t9O1j0qj71O4wJM7gnaHtgmfev8=",
+          "direction": "external",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "0.0.0.0",
+            "255.255.255.255"
+          ]
+        },
+        "rule": {
+          "category": "Potentially Bad Traffic",
+          "description": "BAD-TRAFFIC same SRC/DST",
+          "id": "527",
+          "version": "8"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "0.0.0.0",
+          "ip": "0.0.0.0",
+          "port": 68
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-05-30T19:09:28.472-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 53
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "05/30-19:09:28.472094  [**] [1:2012811:2] ET DNS DNS Query to a .tk domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 192.168.88.10:1029 -> 175.16.199.1:53",
+          "severity": 2,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:RZ4iVwBzp5juqzQJiu5WebaF9J4=",
+          "direction": "outbound",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "192.168.88.10",
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "Potentially Bad Traffic",
+          "description": "ET DNS DNS Query to a .tk domain - Likely Hostile",
+          "id": "2012811",
+          "version": "2"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "192.168.88.10",
+          "ip": "192.168.88.10",
+          "port": 1029
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-05-30T19:09:10.917-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "05/30-19:09:10.917356  [**] [1:477:3] ICMP Packet [**] [Priority: 0] {ICMP} 175.16.199.1 -> 175.16.199.1",
+          "severity": 0,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:ae//KI+huidgn9Nxeaibd8SUiVA=",
+          "direction": "external",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "description": "ICMP Packet",
+          "id": "477",
+          "version": "3"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-12-30T14:09:21.116-06:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 1900
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "12/30-14:09:21.116402  [**] [1:1917:6] SCAN UPnP service discover attempt [**] [Classification: Detection of a Network Scan] [Priority: 3] {TCP} 192.168.15.10:1035 -> 175.16.199.1:1900",
+          "severity": 3,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:lTRw3g8ZdxItqss80+SSa07uVWc=",
+          "direction": "outbound",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "192.168.15.10",
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "Detection of a Network Scan",
+          "description": "SCAN UPnP service discover attempt",
+          "id": "1917",
+          "version": "6"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "192.168.15.10",
+          "ip": "192.168.15.10",
+          "port": 1035
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-01-21T02:23:42.327-06:00",
+        "destination": {
+          "address": "192.168.115.10",
+          "ip": "192.168.115.10",
+          "port": 1051
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "01/21-02:23:42.327730  [**] [1:2014520:2] ET INFO EXE - Served Attached HTTP [**] [Classification: Misc activity] [Priority: 3] {TCP} 175.16.199.1:80 -> 192.168.115.10:1051",
+          "severity": 3,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:qSaSgRpopkbN/a7ST5y66ztJl8U=",
+          "direction": "inbound",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1",
+            "192.168.115.10"
+          ]
+        },
+        "rule": {
+          "category": "Misc activity",
+          "description": "ET INFO EXE - Served Attached HTTP",
+          "id": "2014520",
+          "version": "2"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 80
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-01-21T02:23:42.208-06:00",
+        "destination": {
+          "address": "192.168.115.10",
+          "ip": "192.168.115.10"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "01/21-02:23:42.208605  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 175.16.199.1 -> 192.168.115.10",
+          "severity": 3,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:EtB/zlC1JmfdF0An9MzN1EDqn7o=",
+          "direction": "inbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1",
+            "192.168.115.10"
+          ]
+        },
+        "rule": {
+          "category": "Misc activity",
+          "description": "ICMP Echo Reply",
+          "id": "408",
+          "version": "5"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:55:02.041-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "port": 54757
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:55:02.041364  [**] [1:1000005:0] UDP Connection [**] [Classification: A Network Trojan was Detected] [Priority: 1] {UDP} 175.16.199.1:53 -> 10.100.10.190:54757",
+          "severity": 1,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:Rj/XwIFirLCUpBLJSDip5ZzpVZY=",
+          "direction": "inbound",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "category": "A Network Trojan was Detected",
+          "description": "UDP Connection",
+          "id": "1000005",
+          "version": "0"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:55:02.118-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "port": 36312
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:55:02.118427  [**] [1:1000005:0] UDP Connection [**] [Classification: A Network Trojan was Detected] [Priority: 1] {UDP} 175.16.199.1:53 -> 10.100.10.190:36312",
+          "severity": 1,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:lFRQEVyjqFCLDyAOzC3sRuoFLkI=",
+          "direction": "inbound",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "category": "A Network Trojan was Detected",
+          "description": "UDP Connection",
+          "id": "1000005",
+          "version": "0"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:54:43.216-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:54:43.216486  [**] [1:1000004:0] Pinging... [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 10.100.10.190 -> 175.16.199.1",
+          "severity": 2,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:jEaJsIOzda45Q8FjN0LeZEATihA=",
+          "direction": "outbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.190",
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "Attempted Information Leak",
+          "description": "Pinging...",
+          "id": "1000004",
+          "version": "0"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-fast.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:54:43.227-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/04-21:54:43.227117  [**] [1:1000004:0] Pinging... [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 175.16.199.1 -> 10.100.10.190",
+          "severity": 2,
+          "timezone": "America/Chicago"
+        },
+        "network": {
+          "community_id": "1:PsO7nB0G1KDZ1IDLocfXBmcxiaA=",
+          "direction": "inbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "category": "Attempted Information Leak",
+          "description": "Pinging...",
+          "id": "1000004",
+          "version": "0"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-full.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:42:42.860-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "port": 22
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "[**] [1:1000006:0] TCP connection [**]\n[Priority: 0] \n09/04-21:42:42.860730 10.100.20.59:57263 -> 10.100.10.190:22\nTCP TTL:127 TOS:0x0 ID:53730 IpLen:20 DgmLen:108 DF\n***AP*** Seq: 0x688E00E4  Ack: 0xBC730BB6  Win: 0x80B  TcpLen: 20\n",
+          "severity": 0,
+          "timezone": "-05:00"
+        },
+        "network": {
+          "community_id": "1:mnJdrIaujYJdP8lXFem/hodYAt0=",
+          "direction": "internal",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.20.59",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "description": "TCP connection",
+          "id": "1000006",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 108
+          },
+          "gid": 1,
+          "ip": {
+            "flags": "DF",
+            "id": 53730,
+            "length": 20,
+            "tos": 0,
+            "ttl": 127
+          },
+          "tcp": {
+            "ack": 3161656246,
+            "flags": "AP",
+            "length": 20,
+            "seq": 1754136804,
+            "window": 2059
+          }
+        },
+        "source": {
+          "address": "10.100.20.59",
+          "ip": "10.100.20.59",
+          "port": 57263
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-full.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:42:42.903-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "port": 22
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "[**] [1:1000006:0] TCP connection [**]\n[Priority: 0] \n09/04-21:42:42.903092 10.100.20.59:57263 -> 10.100.10.190:22\nTCP TTL:127 TOS:0x0 ID:53731 IpLen:20 DgmLen:40 DF\n***A**** Seq: 0x688E0128  Ack: 0xBC730C02  Win: 0x80B  TcpLen: 20\n",
+          "severity": 0,
+          "timezone": "-05:00"
+        },
+        "network": {
+          "community_id": "1:mnJdrIaujYJdP8lXFem/hodYAt0=",
+          "direction": "internal",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.20.59",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "description": "TCP connection",
+          "id": "1000006",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 40
+          },
+          "gid": 1,
+          "ip": {
+            "flags": "DF",
+            "id": 53731,
+            "length": 20,
+            "tos": 0,
+            "ttl": 127
+          },
+          "tcp": {
+            "ack": 3161656322,
+            "flags": "A",
+            "length": 20,
+            "seq": 1754136872,
+            "window": 2059
+          }
+        },
+        "source": {
+          "address": "10.100.20.59",
+          "ip": "10.100.20.59",
+          "port": 57263
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-full.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:53:15.299-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "port": 36635
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "[**] [1:1000005:0] UDP Connection [**]\n[Classification: A Network Trojan was Detected] [Priority: 1] \n09/04-21:53:15.299702 10.100.10.1:53 -> 10.100.10.190:36635\nUDP TTL:64 TOS:0x0 ID:58363 IpLen:20 DgmLen:83\nLen: 55\n",
+          "severity": 1,
+          "timezone": "-05:00"
+        },
+        "network": {
+          "community_id": "1:M7q1/qKDOLyHIWtG7LwCmcINfXQ=",
+          "direction": "internal",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "category": "A Network Trojan was Detected",
+          "description": "UDP Connection",
+          "id": "1000005",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 83
+          },
+          "gid": 1,
+          "ip": {
+            "id": 58363,
+            "length": 20,
+            "tos": 0,
+            "ttl": 64
+          },
+          "udp": {
+            "length": 55
+          }
+        },
+        "source": {
+          "address": "10.100.10.1",
+          "ip": "10.100.10.1",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-full.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:53:15.299-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "[**] [1:1000004:0] Pinging... [**]\n[Classification: Attempted Information Leak] [Priority: 2] \n09/04-21:53:15.299988 10.100.10.190 -> 175.16.199.1\nICMP TTL:64 TOS:0x0 ID:6922 IpLen:20 DgmLen:84 DF\nType:8  Code:0  ID:101   Seq:1  ECHO\n",
+          "severity": 2,
+          "timezone": "-05:00"
+        },
+        "network": {
+          "community_id": "1:jEaJsIOzda45Q8FjN0LeZEATihA=",
+          "direction": "outbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.190",
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "Attempted Information Leak",
+          "description": "Pinging...",
+          "id": "1000004",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 84
+          },
+          "gid": 1,
+          "icmp": {
+            "code": 0,
+            "id": 101,
+            "seq": 1,
+            "type": 8
+          },
+          "ip": {
+            "flags": "DF",
+            "id": 6922,
+            "length": 20,
+            "tos": 0,
+            "ttl": 64
+          }
+        },
+        "source": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-full.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:53:15.301-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "port": 22
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "[**] [1:1000006:0] TCP connection [**]\n[Classification: Potentially Bad Traffic] [Priority: 2] \n09/04-21:53:15.301504 10.100.20.59:57263 -> 10.100.10.190:22\nTCP TTL:127 TOS:0x0 ID:61472 IpLen:20 DgmLen:40 DF\n***A**** Seq: 0x68940D74  Ack: 0xBC811F16  Win: 0x80E  TcpLen: 20\n",
+          "severity": 2,
+          "timezone": "-05:00"
+        },
+        "network": {
+          "community_id": "1:mnJdrIaujYJdP8lXFem/hodYAt0=",
+          "direction": "internal",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.20.59",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "category": "Potentially Bad Traffic",
+          "description": "TCP connection",
+          "id": "1000006",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 40
+          },
+          "gid": 1,
+          "ip": {
+            "flags": "DF",
+            "id": 61472,
+            "length": 20,
+            "tos": 0,
+            "ttl": 127
+          },
+          "tcp": {
+            "ack": 3162578710,
+            "flags": "A",
+            "length": 20,
+            "seq": 1754533236,
+            "window": 2062
+          }
+        },
+        "source": {
+          "address": "10.100.20.59",
+          "ip": "10.100.20.59",
+          "port": 57263
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-full.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:53:15.309-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "[**] [1:1000004:0] Pinging... [**]\n[Classification: Attempted Information Leak] [Priority: 2] \n09/04-21:53:15.309468 175.16.199.1 -> 10.100.10.190\nICMP TTL:114 TOS:0x0 ID:0 IpLen:20 DgmLen:84\nType:0  Code:0  ID:101  Seq:1  ECHO REPLY\n",
+          "severity": 2,
+          "timezone": "-05:00"
+        },
+        "network": {
+          "community_id": "1:PsO7nB0G1KDZ1IDLocfXBmcxiaA=",
+          "direction": "inbound",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "category": "Attempted Information Leak",
+          "description": "Pinging...",
+          "id": "1000004",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 84
+          },
+          "gid": 1,
+          "icmp": {
+            "code": 0,
+            "id": 101,
+            "seq": 1,
+            "type": 0
+          },
+          "ip": {
+            "id": 0,
+            "length": 20,
+            "tos": 0,
+            "ttl": 114
+          }
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-full.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-09-04T21:53:15.358-05:00",
+        "destination": {
+          "address": "10.100.10.190",
+          "ip": "10.100.10.190",
+          "port": 56012
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "[**] [1:1000005:0] UDP Connection [**]\n[Classification: A Network Trojan was Detected] [Priority: 1] \n09/04-21:53:15.358155 10.100.10.1:53 -> 10.100.10.190:56012\nUDP TTL:64 TOS:0x0 ID:33955 IpLen:20 DgmLen:153\nLen: 125",
+          "severity": 1,
+          "timezone": "-05:00"
+        },
+        "network": {
+          "community_id": "1:+L8vYWrVdJH2UDDD4Z31DIDLk6E=",
+          "direction": "internal",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.100.10.1",
+            "10.100.10.190"
+          ]
+        },
+        "rule": {
+          "category": "A Network Trojan was Detected",
+          "description": "UDP Connection",
+          "id": "1000005",
+          "version": "0"
+        },
+        "snort": {
+          "dgm": {
+            "length": 153
+          },
+          "gid": 1,
+          "ip": {
+            "id": 33955,
+            "length": 20,
+            "tos": 0,
+            "ttl": 64
+          },
+          "udp": {
+            "length": 125
+          }
+        },
+        "source": {
+          "address": "10.100.10.1",
+          "ip": "10.100.10.1",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-json.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-12-16T20:33:33.603-06:00",
+        "destination": {
+          "address": "10.10.10.1",
+          "ip": "10.10.10.1",
+          "mac": "52-54-00-1F-8A-1C"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "{\"seconds\":1608147213,\"action\":\"allow\",\"class\":\"none\",\"b64_data\":\"DWHaXwAAAADO0wgAAAAAABAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc=\",\"dir\":\"S2C\",\"dst_addr\":\"10.10.10.1\",\"dst_ap\":\"10.10.10.1:0\",\"eth_dst\":\"52:54:00:1F:8A:1C\",\"eth_len\":98,\"eth_src\":\"52:54:00:70:78:9F\",\"eth_type\":\"0x800\",\"gid\":1,\"icmp_code\":0,\"icmp_id\":5203,\"icmp_seq\":3,\"icmp_type\":0,\"iface\":\"ens3\",\"ip_id\":3006,\"ip_len\":64,\"msg\":\"ICMP Traffic Detected\",\"mpls\":0,\"pkt_gen\":\"raw\",\"pkt_len\":84,\"pkt_num\":8,\"priority\":0,\"proto\":\"ICMP\",\"rev\":0,\"rule\":\"1:10000001:0\",\"service\":\"unknown\",\"sid\":10000001,\"src_addr\":\"10.10.10.88\",\"src_ap\":\"10.10.10.88:0\",\"tos\":0,\"ttl\":64,\"vlan\":0,\"timestamp\":\"12/16-20:33:33.603502\"}",
+          "severity": 0,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "bytes": 84,
+          "community_id": "1:NOMQYgbhDm3hmIIfQYchm6UBEaY=",
+          "direction": "internal",
+          "iana_number": "1",
+          "packets": 8,
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "ens3"
+            }
+          },
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.10.10.88",
+            "10.10.10.1"
+          ]
+        },
+        "rule": {
+          "category": "none",
+          "description": "ICMP Traffic Detected",
+          "id": "10000001",
+          "version": "0"
+        },
+        "snort": {
+          "eth": {
+            "length": 98
+          },
+          "gid": 1,
+          "icmp": {
+            "code": 0,
+            "id": 5203,
+            "seq": 3,
+            "type": 0
+          },
+          "ip": {
+            "id": 3006,
+            "tos": 0,
+            "ttl": 64
+          }
+        },
+        "source": {
+          "address": "10.10.10.88",
+          "ip": "10.10.10.88",
+          "mac": "52-54-00-70-78-9F"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-json.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-11-21T18:01:50.061-06:00",
+        "destination": {
+          "address": "10.11.21.11",
+          "ip": "10.11.21.11",
+          "port": 445
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "{\"seconds\":1574352110,\"action\":\"allow\",\"class\":\"Attempted Administrator Privilege Gain\",\"b64_data\":\"AAAQPP9TTUIvAAAAABgFSAAAyIAtOUGjAkUAAAII6AYACGILDP8AAAACQABAAwD/AAAABAAAEAAAABA8AAEQAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIuNTP7//+kvw/z/i41M/v//g8EE6ZbB/P+LVCQIjUIMi4pU/v//M8jobFb9/4tK/DPI6GJW/f+4/JpIAOmqUv3/zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzItN8OnSwvz/i03wg8EE6TzB/P+LVCQIjUIMi0r4M8joFVb9/7hgm0gA6V1S/f/MzMzMzMzMzMzMzMzMzMzMzMyLRbRQ6CdX/f9Zw4tUJAiNQgyLSrQzyOjdVf3/i0rwM8jo01X9/7iUm0gA6RtS/f/MzMzMzMzMzMzMzMzMzMzMi41M/v//g8EE6UzC/P+LjUz+//+DwQjpMcD8/4tUJAiNQgyLilT+//8zyOiJVf3/i0r8M8jof1X9/7jMm0gA6cdR/f/MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMi41A/v//g8EE6ezB/P+LjUD+//+DwQjp0b/8/4tUJAiNQgyLikj+//8zyOgpVf3/i0r8M8joH1X9/7gInEgA6WdR/f/MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMi03wg8EE6Y/B/P+LTfCDwQjpd7/8/4tUJAiNQgyLSvgzyOjSVP3/uEScSADpGlH9/8zMzMzMzMzMzMzMzMzMzItF7FDo51X9/1nDi0XkUOjcVf3/WcOLVCQIjUIMi0rgM8joklT9/7iAnEgA6dpQ/f/MzMzMzMzMzMzMzMzMzMyLTeyDwQjpD8H8/4tUJAiNQgyLSvQzyOhdVP3/uLScSADppVD9/8zMzMzMzMzMzMyLRZxQ6HdV/f9Zw4tUJAiNQgyLSogzyOgtVP3/i0r8M8joI1T9/7jknEgA6WtQ/f/MzMzMzMzMzMzMzMzMzMzMjU3k6YW//P+NTeTpw7/8/4tUJAiNQgyLirD+//8zyOjlU/3/uFCdSADpLVD9/8zMzMzMzMzMzMzMzMzMzMzMzI1NsOnCv/z/jU3M6XZe/f+NjWz////pr7/8/41NiOljXv3/jY0o////6Zy//P+LVCQIjUIMi4qw/v//M8joh1P9/7iUnUgA6c9P/f/MzMzMzMzMzMzMzMzMzMzMzMzMzItNhOkeXv3/i1QkCI1CDItKjDPI6FBT/f+4ZJ5IAOmYT/3/zMzMzMzMzMzMzMzMzItNhOnuXf3/i1QkCI1CDItKjDPI6CBT/f+4lJ5IAOloT/3/zMzMzMzMzMzMzMzMzIuN6P7//+nIvvz/i1QkCI1CDIuK8P7//zPI6OpS/f+4xJ5IAOkyT/3/zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyLTejpi778/4tUJAiNQgyLSvAzyOiwUv3/uPSeSADp+E79/8zMzMzMzMzMzMzMzMyLVCQIjUIMi4rM/v//M8johVL9/7hQn0gA6c1O/f/MzMzMzMzMzMzMzMzMzMzMzMyLVCQIjUIMi4pk////M8joVVL9/7i8n0gA6Z1O/f/MzMzMzMzMzMzMzMzMzMzMzMyNTdzptb38/41N3Onzvfz/i1QkCI1CDIuKYP7//zPI6BVS/f+4XKBIAOldTv3/zMzMzMzMzMzMzMzMzMzMzMzMjU3Y6fK9/P+LRdSD4AEPhAwAAACDZdT+i00I6dq9/P/Di1QkCI1CDIuKXP///zPI6MRR/f+4nKBIAOkMTv3/zMzMzMzMzMzMzMzMzMzMi1QkCI1CDItK7DPI6JpR/f+4kKJIAOniTf3/i03wg8EE6VM+//+LVCQIjUIMi0rsM8jodFH9/7gEqkgA6bxN/f+LTfDpDEH//4tN8IPBBOlYvfz/i03wg8Eg6U29/P+LTfCDwTzpQr38/4tN8IPBWOk3vfz/i1QkCI1CDItK7DPI6CVR/f+4KKpIAOltTf3/i03w6b1A//+LTfCDwQTpCb38/4tN8IPBIOn+vPz/i03wg8E86fO8/P+LTfCDwVjp6Lz8/4tUJAiNQgyLSuwzyOjWUP3/uHSqSADpHk39/41N1OnFvPz/i1QkCI1CDItKmDPI6LNQ/f+LSvwzyOipUP3/uMiqSADp8Uz9/41N1OmYvPz/i1QkCI1CDItKqDPI6IZQ/f+LSvwzyOh8UP3/uPSqSADpxEz9//91COihUf3/WcOLRfCD4AEPhAwAAACDZfD+jU3U6VG8/P/Di1QkCI1CDIuKXP///zPI6DtQ/f+4MKtIAOmDTP3/jU3U6Sq8/P+LVCQIjUIMi0qcM8joGFD9/4tK/DPI6A5Q/f+4XKtIAOlWTP3/jU3s6aY///+LVCQIjUIMi0rcM8jo60/9/7iYq0gA6TNM/f//dQjoEFH9/1nDi0Xwg+ABD4QMAAAAg2Xw/o1N1OnAu/z/w4tUJAiNQgyLilz///8zyOiqT/3/uPyrSADp8kv9/4tN8OnWJP//i1QkCI1CDItK7DPI6IdP/f+4KKxIAOnPS/3/jU3w6XQf//+LVCQIjUIMi0rsM8joZE/9/7hUrEgA6axL/f+NTezp/D7//4tUJAiNQgyLStwzyOhBT/3/uICsSADpiUv9/4tF8IPgAQ+EDwAAAINl8P6LTeyDwQTpfiD//8OLVCQIjUIMi0roM8joCk/9/7isrEgA6VJL/f+LTfDptVn9/4tUJAiNQgyLSuwzyOjnTv3/uNisSADpL0v9/41N2OnWuvz/i1QkCI1CDItKrDPI6MRO/f+4FK1IAOkMS/3/jU3Y6bO6/P+LVCQIjUIMi0qsM8jooU79/7iYrUgA6elK/f+NTdjpkLr8/4tUJAiNQgyLSqwzyOh+Tv3/uACuSADpxkr9/4tN8OkpWf3/i1QkCI1CDItK7DPI6FtO/f+4WK5IAOmjSv3/jU3w6fM9//+LVCQIjUIMi0rsM8joOE79/7iErkgA6YBK/f+LTfDp0B3//4tUJAiNQgyLSuwzyOgVTv3/uLCuSADpXUr9/4tN8OmtHf//i03wg8EY6fm5/P+LVCQIjUIMi0rsM8jo5039/7jkrkgA6S9K/f+NTfDpfz3///917OgET/3/WcOLVCQIjUIMi0roM8jouk39/7gYr0gA6QJK/f//dfDo3079/1nDi1QkCI1CDItK7DPI6JVN/f+4RK9IAOndSf3/zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw=\",\"dir\":\"C2S\",\"dst_addr\":\"10.11.21.11\",\"dst_ap\":\"10.11.21.11:445\",\"dst_port\":445,\"gid\":1,\"iface\":\"/home/noah/pcaps/pcaps from malware-traffica-analysis.net/2019-11-21-Emotet-epoch-3-with-Trickbot-gtag-mor49-and-spambot-traffic.pcap\",\"msg\":\"OS-WINDOWS Microsoft Windows raw WriteAndX InData pointer adjustment attempt\",\"mpls\":0,\"pkt_gen\":\"stream_tcp\",\"pkt_len\":4160,\"pkt_num\":61571,\"priority\":1,\"proto\":\"TCP\",\"rev\":1,\"rule\":\"1:50626:1\",\"service\":\"netbios-ssn\",\"sid\":50626,\"src_addr\":\"10.11.21.101\",\"src_ap\":\"10.11.21.101:50084\",\"src_port\":50084,\"vlan\":0,\"timestamp\":\"11/21-18:01:50.061909\"}",
+          "severity": 1,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "bytes": 4160,
+          "community_id": "1:S5lsROZyWDa9wtuxT4CyNDzjmGM=",
+          "direction": "internal",
+          "iana_number": "6",
+          "packets": 61571,
+          "protocol": "netbios-ssn",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "/home/noah/pcaps/pcaps from malware-traffica-analysis.net/2019-11-21-Emotet-epoch-3-with-Trickbot-gtag-mor49-and-spambot-traffic.pcap"
+            }
+          },
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "10.11.21.101",
+            "10.11.21.11"
+          ]
+        },
+        "rule": {
+          "category": "Attempted Administrator Privilege Gain",
+          "description": "OS-WINDOWS Microsoft Windows raw WriteAndX InData pointer adjustment attempt",
+          "id": "50626",
+          "version": "1"
+        },
+        "snort": {
+          "gid": 1
+        },
+        "source": {
+          "address": "10.11.21.101",
+          "ip": "10.11.21.101",
+          "port": 50084
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-json.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-01-17T03:03:23.476-06:00",
+        "destination": {
+          "address": "192.168.3.35",
+          "ip": "192.168.3.35",
+          "mac": "00-0C-29-92-E9-86",
+          "port": 1047
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "{\"seconds\":1263690203,\"action\":\"allow\",\"class\":\"none\",\"b64_data\":\"SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBTdW4sIDE3IEphbiAyMDEwIDAxOjAzOjIzIEdNVA0KQ29udGVudC1MZW5ndGg6IDkzDQpDb25uZWN0aW9uOiBLZWVwLUFsaXZlDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbQ0KDQqIUD9i2EiKmsaSRMwz+KykbZuhBHl51gb+ncb3E+k56qaeXYeonZrAin2EYqRNqg40EDHjyzBj2rR+H6RvSHD4CznUGYujs3yybbSPm5ijXksL6/4xUrH2izVXw74=\",\"dir\":\"S2C\",\"dst_addr\":\"192.168.3.35\",\"dst_ap\":\"192.168.3.35:1047\",\"dst_port\":1047,\"eth_dst\":\"00:0C:29:92:E9:86\",\"eth_len\":287,\"eth_src\":\"00:0C:29:B9:39:C3\",\"eth_type\":\"0x800\",\"gid\":119,\"iface\":\"/home/noah/samples//bredolab-sample.pcap\",\"ip_id\":10856,\"ip_len\":253,\"msg\":\"(http_inspect) gzip decompression failed\",\"mpls\":0,\"pkt_gen\":\"raw\",\"pkt_len\":273,\"pkt_num\":1612,\"priority\":3,\"proto\":\"TCP\",\"rev\":1,\"rule\":\"119:217:1\",\"service\":\"http\",\"sid\":217,\"src_addr\":\"89.160.20.114\",\"src_ap\":\"89.160.20.114:80\",\"src_port\":80,\"tcp_ack\":3174915760,\"tcp_flags\":\"***AP***\",\"tcp_len\":20,\"tcp_seq\":4204308887,\"tcp_win\":64903,\"tos\":0,\"ttl\":115,\"vlan\":0,\"timestamp\":\"01/17-03:03:23.476194\"}",
+          "severity": 3,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "bytes": 273,
+          "community_id": "1:De/02XSMKB1hAkZFS02R05gxe3E=",
+          "direction": "inbound",
+          "iana_number": "6",
+          "packets": 1612,
+          "protocol": "http",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "/home/noah/samples//bredolab-sample.pcap"
+            }
+          },
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "89.160.20.114",
+            "192.168.3.35"
+          ]
+        },
+        "rule": {
+          "category": "none",
+          "description": "(http_inspect) gzip decompression failed",
+          "id": "217",
+          "version": "1"
+        },
+        "snort": {
+          "eth": {
+            "length": 287
+          },
+          "gid": 119,
+          "ip": {
+            "id": 10856,
+            "tos": 0,
+            "ttl": 115
+          },
+          "tcp": {
+            "ack": 3174915760,
+            "flags": "AP",
+            "length": 20,
+            "seq": 4204308887,
+            "window": 64903
+          }
+        },
+        "source": {
+          "address": "89.160.20.114",
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.114",
+          "mac": "00-0C-29-B9-39-C3",
+          "port": 80
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-json.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-04-01T09:02:23.126-05:00",
+        "destination": {
+          "address": "255.255.255.255",
+          "ip": "255.255.255.255",
+          "mac": "FF-FF-FF-FF-FF-FF",
+          "port": 68
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "{\"seconds\":1238569343,\"action\":\"allow\",\"class\":\"none\",\"b64_data\":\"AgEGADPfV5sAAAAAAAAAAMCoAWcAAAAAAAAAAAAX8kPA0wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjglNjNQECNgTAqAEBAQT///8AMwQAdqcAAwTAqAEBBghBIAVvQSAFcA8KY2ZsLnJyLmNvbRoCBdT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\",\"dir\":\"C2S\",\"dst_addr\":\"255.255.255.255\",\"dst_ap\":\"255.255.255.255:68\",\"dst_port\":68,\"eth_dst\":\"FF:FF:FF:FF:FF:FF\",\"eth_len\":590,\"eth_src\":\"00:0F:66:80:D2:2A\",\"eth_type\":\"0x800\",\"gid\":116,\"iface\":\"/home/noah/samples//ConfickerB9hrs.pcap\",\"ip_id\":3913,\"ip_len\":556,\"msg\":\"(ipv4) IPv4 packet to broadcast dest address\",\"mpls\":0,\"pkt_gen\":\"raw\",\"pkt_len\":576,\"pkt_num\":689,\"priority\":3,\"proto\":\"UDP\",\"rev\":1,\"rule\":\"116:414:1\",\"service\":\"unknown\",\"sid\":414,\"src_addr\":\"192.168.1.1\",\"src_ap\":\"192.168.1.1:67\",\"src_port\":67,\"tos\":0,\"ttl\":64,\"udp_len\":556,\"vlan\":0,\"timestamp\":\"04/01-09:02:23.126173\"}",
+          "severity": 3,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "bytes": 576,
+          "community_id": "1:RTu96ufLudxAGu4dGf2hzG8lF7w=",
+          "direction": "outbound",
+          "iana_number": "17",
+          "packets": 689,
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "/home/noah/samples//ConfickerB9hrs.pcap"
+            }
+          },
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "192.168.1.1",
+            "255.255.255.255"
+          ]
+        },
+        "rule": {
+          "category": "none",
+          "description": "(ipv4) IPv4 packet to broadcast dest address",
+          "id": "414",
+          "version": "1"
+        },
+        "snort": {
+          "eth": {
+            "length": 590
+          },
+          "gid": 116,
+          "ip": {
+            "id": 3913,
+            "tos": 0,
+            "ttl": 64
+          },
+          "udp": {
+            "length": 556
+          }
+        },
+        "source": {
+          "address": "192.168.1.1",
+          "ip": "192.168.1.1",
+          "mac": "00-0F-66-80-D2-2A",
+          "port": 67
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-json.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2025-03-16T15:11:22.800-05:00",
+        "destination": {
+          "address": "192.168.27.27",
+          "ip": "192.168.27.27",
+          "mac": "00-16-47-9D-F2-C2"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "{\"seconds\":1331903482,\"action\":\"allow\",\"class\":\"none\",\"dir\":\"C2S\",\"dst_addr\":\"192.168.27.27\",\"dst_ap\":\"192.168.27.27:0\",\"eth_dst\":\"00:16:47:9D:F2:C2\",\"eth_len\":64,\"eth_src\":\"BC:AE:C5:9E:F3:B6\",\"eth_type\":\"0x8100\",\"gid\":116,\"icmp_code\":0,\"icmp_id\":17807,\"icmp_seq\":0,\"icmp_type\":8,\"iface\":\"/home/noah/pcaps/maccdc2012_00000.pcap\",\"ip_id\":17433,\"ip_len\":8,\"msg\":\"(icmp4) ICMP ping Nmap\",\"mpls\":0,\"pkt_gen\":\"raw\",\"pkt_len\":28,\"pkt_num\":3217551,\"priority\":3,\"proto\":\"ICMP\",\"rev\":1,\"rule\":\"116:434:1\",\"service\":\"unknown\",\"sid\":434,\"src_addr\":\"192.168.202.110\",\"src_ap\":\"192.168.202.110:0\",\"tos\":0,\"ttl\":40,\"vlan\":120,\"timestamp\":\"03/16-15:11:22.800000\"}",
+          "severity": 3,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "bytes": 28,
+          "community_id": "1:SFVNlWDkKZ3WV2RMphV7s0dUMr0=",
+          "direction": "internal",
+          "iana_number": "1",
+          "packets": 3217551,
+          "transport": "icmp",
+          "type": "ipv4",
+          "vlan": {
+            "id": "120"
+          }
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "/home/noah/pcaps/maccdc2012_00000.pcap"
+            }
+          },
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "192.168.202.110",
+            "192.168.27.27"
+          ]
+        },
+        "rule": {
+          "category": "none",
+          "description": "(icmp4) ICMP ping Nmap",
+          "id": "434",
+          "version": "1"
+        },
+        "snort": {
+          "eth": {
+            "length": 64
+          },
+          "gid": 116,
+          "icmp": {
+            "code": 0,
+            "id": 17807,
+            "seq": 0,
+            "type": 8
+          },
+          "ip": {
+            "id": 17433,
+            "tos": 0,
+            "ttl": 40
+          }
+        },
+        "source": {
+          "address": "192.168.202.110",
+          "ip": "192.168.202.110",
+          "mac": "BC-AE-C5-9E-F3-B6"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-pfsense.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-09-03T12:37:16.428-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 91
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/03/21-12:37:16.428952 ,1,2403488,68499,\"ET CINS Active Threat Intelligence Poor Reputation IP TCP group 95\",TCP,175.16.199.1,36847,175.16.199.1,91,54321,Misc Attack,2,alert,Allow",
+          "severity": 2,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "community_id": "1:QZjg2eWEv0AR1/Sfa6zE1x0jQIg=",
+          "direction": "external",
+          "iana_number": "6",
+          "transport": "tcp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "Misc Attack",
+          "description": "ET CINS Active Threat Intelligence Poor Reputation IP TCP group 95",
+          "id": "2403488",
+          "version": "68499"
+        },
+        "snort": {
+          "gid": 1,
+          "ip": {
+            "id": 54321
+          }
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 36847
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-pfsense.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-09-03T12:56:44.310-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 5060
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/03/21-12:56:44.310212 ,1,2011716,4,\"ET SCAN Sipvicious User-Agent Detected (friendly-scanner)\",UDP,175.16.199.1,5103,175.16.199.1,5060,54925,Attempted Information Leak,2,alert,Allow",
+          "severity": 2,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "community_id": "1:dHh+jdcD2h6T0VDqCQgahOokJmk=",
+          "direction": "external",
+          "iana_number": "17",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "Attempted Information Leak",
+          "description": "ET SCAN Sipvicious User-Agent Detected (friendly-scanner)",
+          "id": "2011716",
+          "version": "4"
+        },
+        "snort": {
+          "gid": 1,
+          "ip": {
+            "id": 54925
+          }
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1",
+          "port": 5103
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "snort",
+      "source": "test/test-log-pfsense.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-09-03T16:29:03.494-05:00",
+        "destination": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "created": "2020-04-28T11:07:58.223Z",
+          "kind": "alert",
+          "original": "09/03/21-16:29:03.494387 ,1,477,3,\"ICMP Packet\",ICMP,175.16.199.1,,175.16.199.1,,40546,,0,alert,Allow",
+          "severity": 0,
+          "timezone": "America/Chicago",
+          "type": [
+            "allowed"
+          ]
+        },
+        "network": {
+          "community_id": "1:ae//KI+huidgn9Nxeaibd8SUiVA=",
+          "direction": "external",
+          "iana_number": "1",
+          "transport": "icmp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "product": "ids",
+          "type": "ids",
+          "vendor": "snort"
+        },
+        "related": {
+          "ip": [
+            "175.16.199.1"
+          ]
+        },
+        "rule": {
+          "category": "",
+          "description": "ICMP Packet",
+          "id": "477",
+          "version": "3"
+        },
+        "snort": {
+          "gid": 1,
+          "ip": {
+            "id": 40546
+          }
+        },
+        "source": {
+          "address": "175.16.199.1",
+          "geo": {
+            "city_name": "Changchun",
+            "continent_name": "Asia",
+            "country_iso_code": "CN",
+            "country_name": "China",
+            "location": {
+              "lat": 43.88,
+              "lon": 125.3228
+            },
+            "region_iso_code": "CN-22",
+            "region_name": "Jilin Sheng"
+          },
+          "ip": "175.16.199.1"
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    }
+  ]
+}

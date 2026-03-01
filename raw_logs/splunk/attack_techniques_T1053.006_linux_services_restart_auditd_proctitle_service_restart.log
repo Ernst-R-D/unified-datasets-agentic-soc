@@ -1,0 +1,127 @@
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.661:154635) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.417:153851) : proctitle=systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.414:153848) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.414:153847) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.413:153844) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.409:153843) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.409:153842) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.409:153841) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.409:153840) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.409:153839) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.406:153834) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.406:153833) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:34:54.397:153832) : proctitle=sudo systemctl restart auditd.service 
+type=PROCTITLE msg=audit(02/20/2025 13:30:45.287:153218) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 13:30:45.286:153217) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.900:148736) : proctitle=sudo systemctl restart auditd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.613:147905) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.562:147899) : proctitle=systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.560:147896) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.559:147895) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.559:147892) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.555:147891) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.555:147890) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.555:147889) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.555:147888) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.555:147887) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.553:147882) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.553:147881) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:37.547:147880) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 13:08:31.100:147826) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.168:147726) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.168:147725) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.095:147720) : proctitle=systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.092:147717) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.092:147716) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.090:147713) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.085:147712) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.085:147711) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.085:147710) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.085:147709) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.085:147708) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.082:147703) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.082:147702) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:08:30.077:147701) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.937:103615) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.911:103611) : proctitle=systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.908:103608) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.907:103607) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.906:103604) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.902:103603) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.902:103602) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.902:103601) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.901:103600) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.901:103599) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.900:103594) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.900:103593) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 13:06:22.895:103592) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:59.005:91161) : proctitle=sudo systemctl restart auditd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.618:90330) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.569:90324) : proctitle=systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.562:90321) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.561:90320) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.557:90317) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.550:90316) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.550:90315) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.550:90314) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.549:90313) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.549:90312) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.545:90307) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.545:90306) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:58.526:90305) : proctitle=sudo systemctl restart osqueryd 
+type=PROCTITLE msg=audit(02/20/2025 10:02:56.656:90276) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.500:90187) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.496:90186) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.422:90181) : proctitle=systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.419:90178) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.419:90177) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.418:90174) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.411:90173) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.411:90172) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.411:90171) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.410:90170) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.410:90169) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.408:90164) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.408:90163) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:02:55.402:90162) : proctitle=sudo systemctl restart sysmon 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.783:44735) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.755:44731) : proctitle=systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.752:44728) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.751:44727) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.750:44724) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.745:44723) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.745:44722) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.745:44721) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.744:44720) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.744:44719) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.743:44714) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.742:44713) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:25.737:44712) : proctitle=sudo systemctl restart atd 
+type=PROCTITLE msg=audit(02/20/2025 10:00:10.632:44193) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 10:00:10.630:44192) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 10:00:01.925:43621) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 10:00:01.924:43620) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:59:53.244:43023) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:59:53.242:43022) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:59:48.500:42734) : proctitle=systemctl --system daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:59:35.415:38497) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:59:35.414:38496) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:59:20.106:37160) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:59:20.105:37159) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:58:51.091:5760) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:58:51.089:5759) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:14:53.835:978) : proctitle=systemctl show SplunkForwarder --property=Type,ExecStart,LoadState,Restart,Delegate,ActiveState 
+type=PROCTITLE msg=audit(02/20/2025 09:14:50.174:721) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/20/2025 09:14:50.173:720) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/19/2025 16:34:22.093:1065) : proctitle=systemctl show SplunkForwarder --property=Type,ExecStart,LoadState,Restart,Delegate,ActiveState 
+type=PROCTITLE msg=audit(02/19/2025 16:34:17.409:784) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/19/2025 16:34:17.408:783) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/19/2025 11:48:16.210:10889) : proctitle=systemctl show SplunkForwarder --property=Type,ExecStart,LoadState,Restart,Delegate,ActiveState 
+type=PROCTITLE msg=audit(02/19/2025 08:58:38.535:1603) : proctitle=systemctl restart snap-core20-2496.mount 
+type=PROCTITLE msg=audit(02/19/2025 08:58:38.522:1602) : proctitle=systemctl --no-reload enable snap-core20-2496.mount 
+type=PROCTITLE msg=audit(02/19/2025 08:58:38.217:1566) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/19/2025 08:53:34.293:1052) : proctitle=systemctl show SplunkForwarder --property=Type,ExecStart,LoadState,Restart,Delegate,ActiveState 
+type=PROCTITLE msg=audit(02/19/2025 08:53:30.917:849) : proctitle=systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/19/2025 08:53:30.915:848) : proctitle=sh -c systemctl daemon-reload 
+type=PROCTITLE msg=audit(02/18/2025 14:29:36.418:4016) : proctitle=systemctl show SplunkForwarder --property=Type,ExecStart,LoadState,Restart,Delegate,ActiveState 
+type=PROCTITLE msg=audit(02/18/2025 14:29:30.813:3975) : proctitle=/usr/bin/systemctl restart SplunkForwarder 

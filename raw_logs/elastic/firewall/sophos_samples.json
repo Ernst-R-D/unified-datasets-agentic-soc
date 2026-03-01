@@ -1,0 +1,5740 @@
+{
+  "package": "sophos",
+  "description": "Sophos XG firewall logs",
+  "events": [
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:00:00.000Z",
+        "agent": {
+          "ephemeral_id": "1c14ef92-e910-4bef-84c4-4ceecac7a048",
+          "id": "60d18e37-b683-4bd5-a0e9-e19bb64cc7bb",
+          "name": "docker-fleet-agent",
+          "type": "filebeat",
+          "version": "8.10.3"
+        },
+        "data_stream": {
+          "dataset": "sophos.utm",
+          "namespace": "ep",
+          "type": "logs"
+        },
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "elastic_agent": {
+          "id": "60d18e37-b683-4bd5-a0e9-e19bb64cc7bb",
+          "snapshot": false,
+          "version": "8.10.3"
+        },
+        "event": {
+          "action": "pass",
+          "agent_id_status": "verified",
+          "category": [
+            "web"
+          ],
+          "dataset": "sophos.utm",
+          "id": "0001",
+          "ingested": "2023-11-19T21:23:10Z",
+          "kind": "event",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "+00:00",
+          "type": [
+            "info"
+          ]
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 311,
+            "id": "0x7fad9e44ac00",
+            "method": "HEAD",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 200
+          }
+        },
+        "input": {
+          "type": "udp"
+        },
+        "log": {
+          "source": {
+            "address": "172.28.0.5:49278"
+          }
+        },
+        "network": {
+          "application": "googplay",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "ad_domain": "example.com",
+            "app_id": "816",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 0,
+            "cached": "0",
+            "category": [
+              "178"
+            ],
+            "categoryname": [
+              "Internet Services"
+            ],
+            "cattime": 200,
+            "content_type": "application/octet-stream",
+            "country": "United States",
+            "dnstime": 5,
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 32181,
+            "name": "http access",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reputation": "trusted",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "sophos-utm",
+          "forwarded"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Other",
+          "original": "Microsoft BITS/7.8"
+        }
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "sample_event": {
+        "@timestamp": "2016-12-02T18:50:20.000Z",
+        "agent": {
+          "ephemeral_id": "244d391d-55cb-405e-baff-e091145a351c",
+          "id": "e756de30-a6b6-437a-8c56-cd75349c61bf",
+          "name": "docker-fleet-agent",
+          "type": "filebeat",
+          "version": "8.10.3"
+        },
+        "data_stream": {
+          "dataset": "sophos.xg",
+          "namespace": "ep",
+          "type": "logs"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "elastic_agent": {
+          "id": "e756de30-a6b6-437a-8c56-cd75349c61bf",
+          "snapshot": false,
+          "version": "8.10.3"
+        },
+        "event": {
+          "action": "alert",
+          "agent_id_status": "verified",
+          "category": [
+            "network"
+          ],
+          "code": "16010",
+          "dataset": "sophos.xg",
+          "ingested": "2023-11-15T05:39:21Z",
+          "kind": "event",
+          "outcome": "success",
+          "severity": 1,
+          "timezone": "GMT"
+        },
+        "host": {
+          "name": "XG230"
+        },
+        "input": {
+          "type": "tcp"
+        },
+        "log": {
+          "level": "alert",
+          "source": {
+            "address": "192.168.32.4:40336"
+          }
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "1234567890123456",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "XG230"
+          ],
+          "ip": [
+            "10.108.108.49"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "action": "Deny",
+            "context_match": "Not",
+            "context_prefix": "blah blah hello ",
+            "context_suffix": " hello blah ",
+            "device": "SFW",
+            "device_name": "SF01V",
+            "dictionary_name": "complicated_Custom",
+            "direction": "in",
+            "file_name": "cgi_echo.pl",
+            "log_component": "Web Content Policy",
+            "log_id": "058420116010",
+            "log_subtype": "Alert",
+            "log_type": "Content Filtering",
+            "site_category": "Information Technology",
+            "timezone": "GMT",
+            "transaction_id": "e4a127f7-a850-477c-920e-a471b38727c1",
+            "user": "gi123456",
+            "website": "ta-web-static-testing.qa. astaro.de"
+          }
+        },
+        "source": {
+          "ip": "10.108.108.49"
+        },
+        "tags": [
+          "sophos-xg",
+          "forwarded"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dhcp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T00:00:04.000Z",
+        "client": {
+          "mac": "04-7B-CB-A1-D2-93"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "dhcpdiscover",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-00:00:04 sophos-test-vm1 dhcpd: DHCPDISCOVER from 04:7b:cb:a1:d2:93 via eth7: unknown client",
+          "provider": "dhcp",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "message": "unknown client",
+        "network": {
+          "protocol": "dhcp",
+          "transport": "udp"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "eth7"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "dhcpd"
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dhcp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T06:50:45.000Z",
+        "client": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129",
+          "mac": "04-7B-CB-A1-D2-93"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "dhcpack",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-06:50:45 sophos-test-vm1 dhcpd: DHCPACK on 89.160.20.129 to 04:7b:cb:a1:d2:93 (CLIENTHOST) via eth1",
+          "provider": "dhcp",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "network": {
+          "protocol": "dhcp",
+          "transport": "udp"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "eth1"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "dhcpd"
+        },
+        "related": {
+          "hosts": [
+            "CLIENTHOST",
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "89.160.20.129"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "client": {
+              "hostname": "CLIENTHOST"
+            }
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dhcp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T03:30:27.000Z",
+        "client": {
+          "mac": "04-7B-CB-A1-D2-93"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "dhcpd-listening",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-03:30:27 sophos-test-vm2 dhcpd: Listening on LPF/eth0/04:7b:cb:a1:d2:93/89.160.20.0/24",
+          "provider": "dhcp",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm2",
+          "name": "sophos-test-vm2"
+        },
+        "network": {
+          "protocol": "dhcp",
+          "transport": "udp"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "eth0"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "dhcpd"
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm2"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "socket": "LPF",
+            "subnet": "89.160.20.0/24"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dhcp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T03:30:27.000Z",
+        "client": {
+          "mac": "04-7B-CB-A1-D2-93"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "dhcpd-sending",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-03:30:27 sophos-test-vm2 dhcpd: Sending on   LPF/eth0/04:7b:cb:a1:d2:93/89.160.20.0/24",
+          "provider": "dhcp",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm2",
+          "name": "sophos-test-vm2"
+        },
+        "network": {
+          "protocol": "dhcp",
+          "transport": "udp"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "eth0"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "dhcpd"
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm2"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "socket": "LPF",
+            "subnet": "89.160.20.0/24"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dns.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T00:00:01.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-00:00:01 sophos-test-vm1 named[7442]: trust-anchor-telemetry '_test-1/IN' from 89.160.20.129",
+          "provider": "dns",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "message": "trust-anchor-telemetry '_test-1/IN' from 89.160.20.129",
+        "network": {
+          "protocol": "dns",
+          "transport": "udp"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "named",
+          "pid": 7442
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dns.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T02:03:58.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-02:03:58 sophos-test-vm1 named[7442]: clients-per-query increased to 15",
+          "provider": "dns",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "message": "clients-per-query increased to 15",
+        "network": {
+          "protocol": "dns",
+          "transport": "udp"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "named",
+          "pid": 7442
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dns.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T07:43:18.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "named-listening",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-07:43:18 sophos-test-vm1 named[7442]: no longer listening on 89.160.20.129#53",
+          "provider": "dns",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "network": {
+          "protocol": "dns",
+          "transport": "udp"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "named",
+          "pid": 7442
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "89.160.20.129"
+          ]
+        },
+        "server": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dns.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T07:43:18.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "named-listening",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-07:43:18 sophos-test-vm1 named[7442]: listening on IPv4 interface wlan1, 89.160.20.129#53",
+          "provider": "dns",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "network": {
+          "protocol": "dns",
+          "transport": "udp",
+          "type": "ipv4"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "wlan1"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "named",
+          "pid": 7442
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "89.160.20.129"
+          ]
+        },
+        "server": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129",
+          "port": 53
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-dns.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T09:12:31.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "2023:04:28-09:12:31 sophos-test-vm1 named[7442]: clients-per-query decreased to 14",
+          "provider": "dns",
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "connection",
+            "protocol"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "message": "clients-per-query decreased to 14",
+        "network": {
+          "protocol": "dns",
+          "transport": "udp"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "named",
+          "pid": 7442
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ]
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:00:00.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "pass",
+          "category": [
+            "web"
+          ],
+          "id": "0001",
+          "kind": "event",
+          "original": "2023:03:08-15:00:00 sophos-test-vm1 httpproxy[6267]: id=\"0001\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"http access\" action=\"pass\" method=\"HEAD\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" user=\"testuser\" group=\"testgroup\" ad_domain=\"example.com\" statuscode=\"200\" cached=\"0\" profile=\"HTTP_Sophos_Profile_1\" filteraction=\"REF_HTTP_ACTION\" size=\"311\" request=\"0x7fad9e44ac00\" url=\"https://myurl.test.com/extension\" referer=\"https://referer.test.com/\" error=\"\" authtime=\"0\" dnstime=\"5\" aptptime=\"0\" cattime=\"200\" avscantime=\"0\" fullreqtime=\"32181\" device=\"0\" auth=\"0\" ua=\"Microsoft BITS/7.8\" exceptions=\"\" category=\"178\" reputation=\"trusted\" categoryname=\"Internet Services\" application=\"googplay\" app-id=\"816\" country=\"United States\" content-type=\"application/octet-stream\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 311,
+            "id": "0x7fad9e44ac00",
+            "method": "HEAD",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 200
+          }
+        },
+        "network": {
+          "application": "googplay",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "ad_domain": "example.com",
+            "app_id": "816",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 0,
+            "cached": "0",
+            "category": [
+              "178"
+            ],
+            "categoryname": [
+              "Internet Services"
+            ],
+            "cattime": 200,
+            "content_type": "application/octet-stream",
+            "country": "United States",
+            "dnstime": 5,
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 32181,
+            "name": "http access",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reputation": "trusted",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Other",
+          "original": "Microsoft BITS/7.8"
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:00:00.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "block-range",
+          "category": [
+            "web"
+          ],
+          "id": "0002",
+          "kind": "event",
+          "original": "2023:03:08-15:00:00 sophos-test-vm1 httpproxy[6267]: id=\"0002\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"web request blocked\" action=\"block\" method=\"GET\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" user=\"testuser\" group=\"testgroup\" ad_domain=\"example.com\" statuscode=\"416\" cached=\"0\" profile=\"HTTP_Sophos_Profile_1\" filteraction=\"REF_HTTP_ACTION\" size=\"311\" request=\"0x7fad9e44ac00\" url=\"https://myurl.test.com/extension\" referer=\"https://referer.test.com/\" error=\"\" authtime=\"0\" dnstime=\"0\" aptptime=\"0\" cattime=\"191\" avscantime=\"0\" fullreqtime=\"50667\" device=\"0\" auth=\"0\" ua=\"Microsoft BITS/7.8\" exceptions=\"\" category=\"178\" reputation=\"trusted\" categoryname=\"Internet Services\" application=\"googplay\" app-id=\"816\" content-type=\"application/octet-stream\" reason=\"range\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 311,
+            "id": "0x7fad9e44ac00",
+            "method": "GET",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 416
+          }
+        },
+        "network": {
+          "application": "googplay",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "action": "block",
+            "ad_domain": "example.com",
+            "app_id": "816",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 0,
+            "cached": "0",
+            "category": [
+              "178"
+            ],
+            "categoryname": [
+              "Internet Services"
+            ],
+            "cattime": 191,
+            "content_type": "application/octet-stream",
+            "dnstime": 0,
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 50667,
+            "name": "web request blocked",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reason": "range",
+            "reputation": "trusted",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Other",
+          "original": "Microsoft BITS/7.8"
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:00:06.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "web"
+          ],
+          "id": "0003",
+          "kind": "event",
+          "original": "2023:03:08-15:00:06 sophos-test-vm1 httpproxy[6267]: id=\"0003\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" request=\"0x7fad90f7ed00\" function=\"fileextension_scan\" file=\"fileextensionscanner.c\" line=\"154\" message=\"error converting file name to utf-8 from x-user-defined: Conversion from character set 'x-user-defined' to 'UTF8' is not supported\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "file": {
+          "name": "fileextensionscanner.c"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "id": "0x7fad90f7ed00"
+          }
+        },
+        "message": "error converting file name to utf-8 from x-user-defined: Conversion from character set 'x-user-defined' to 'UTF8' is not supported",
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "function": "fileextension_scan",
+            "line": "154",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:00:50.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "web"
+          ],
+          "id": "0003",
+          "kind": "event",
+          "original": "2023:03:08-15:00:50 sophos-test-vm1 httpproxy[6267]: id=\"0003\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" request=\"0x7fadb4088d00\" function=\"ssl_raw_read\" file=\"ssl.c\" line=\"1012\" message=\"SSL_ERROR_SYSCALL: ret=-1 error=Broken pipe\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "file": {
+          "name": "ssl.c"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "id": "0x7fadb4088d00"
+          }
+        },
+        "message": "SSL_ERROR_SYSCALL: ret=-1 error=Broken pipe",
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "function": "ssl_raw_read",
+            "line": "1012",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:00:39.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "block-category",
+          "category": [
+            "web"
+          ],
+          "id": "0060",
+          "kind": "event",
+          "original": "2023:03:08-15:00:39 sophos-test-vm1 httpproxy[6267]: id=\"0060\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"web request blocked, forbidden category detected\" action=\"block\" method=\"GET\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" user=\"testuser\" group=\"testgroup\" ad_domain=\"example.com\" statuscode=\"403\" cached=\"0\" profile=\"HTTP_Sophos_Profile_1\" filteraction=\"REF_HTTP_ACTION\" size=\"4764\" request=\"0x7fad933c8b00\" url=\"https://myurl.test.com/extension\" referer=\"https://referer.test.com/\" error=\"\" authtime=\"0\" dnstime=\"249\" aptptime=\"0\" cattime=\"206\" avscantime=\"0\" fullreqtime=\"1499\" device=\"0\" auth=\"0\" ua=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\" exceptions=\"\" country=\"Germany\" category=\"141\" reputation=\"trusted\" categoryname=\"Portal Sites\" application=\"yahoo\" app-id=\"553\" reason=\"category\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 4764,
+            "id": "0x7fad933c8b00",
+            "method": "GET",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 403
+          }
+        },
+        "network": {
+          "application": "yahoo",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "action": "block",
+            "ad_domain": "example.com",
+            "app_id": "553",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 0,
+            "cached": "0",
+            "category": [
+              "141"
+            ],
+            "categoryname": [
+              "Portal Sites"
+            ],
+            "cattime": 206,
+            "country": "Germany",
+            "dnstime": 249,
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 1499,
+            "name": "web request blocked, forbidden category detected",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reason": "category",
+            "reputation": "trusted",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Chrome",
+          "original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+          "os": {
+            "full": "Windows 10",
+            "name": "Windows",
+            "version": "10"
+          },
+          "version": "110.0.0.0"
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:00:50.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "pass",
+          "category": [
+            "web"
+          ],
+          "id": "0001",
+          "kind": "event",
+          "original": "2023:03:08-15:00:50 sophos-test-vm1 httpproxy[6267]: id=\"0001\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"http access\" action=\"pass\" method=\"POST\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" user=\"testuser\" group=\"testgroup\" ad_domain=\"example.com\" statuscode=\"200\" cached=\"0\" profile=\"HTTP_Sophos_Profile_1\" filteraction=\"REF_HTTP_ACTION\" size=\"92\" request=\"0x7fad8b180000\" url=\"https://myurl.test.com/extension\" referer=\"https://referer.test.com/\" error=\"\" authtime=\"0\" dnstime=\"0\" aptptime=\"0\" cattime=\"137\" avscantime=\"3221\" fullreqtime=\"407968\" device=\"0\" auth=\"0\" ua=\"CloudKitWin/57.0.0.0 (Windows/10.0.0.0)\" exceptions=\"\" category=\"170\" reputation=\"trusted\" categoryname=\"Personal Network Storage\" application=\"icloud\" app-id=\"666\" content-type=\"application/x-protobuf\" sandbox=\"-\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 92,
+            "id": "0x7fad8b180000",
+            "method": "POST",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 200
+          }
+        },
+        "network": {
+          "application": "icloud",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "ad_domain": "example.com",
+            "app_id": "666",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 3221,
+            "cached": "0",
+            "category": [
+              "170"
+            ],
+            "categoryname": [
+              "Personal Network Storage"
+            ],
+            "cattime": 137,
+            "content_type": "application/x-protobuf",
+            "dnstime": 0,
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 407968,
+            "name": "http access",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reputation": "trusted",
+            "sandbox": "-",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Other",
+          "original": "CloudKitWin/57.0.0.0 (Windows/10.0.0.0)",
+          "os": {
+            "name": "Windows"
+          }
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:05:47.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "pass",
+          "category": [
+            "web"
+          ],
+          "id": "0001",
+          "kind": "event",
+          "original": "2023:03:08-15:05:47 sophos-test-vm1 httpproxy[6267]: id=\"0001\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"http access\" action=\"pass\" method=\"CONNECT\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" user=\"testuser\" group=\"testgroup\" ad_domain=\"example.com\" statuscode=\"200\" cached=\"0\" profile=\"HTTP_Sophos_Profile_1\" filteraction=\"REF_HTTP_ACTION\" size=\"23229\" request=\"0x7fad93120200\" url=\"https://myurl.test.com/extension\" referer=\"https://referer.test.com/\" error=\"\" authtime=\"0\" dnstime=\"257\" aptptime=\"0\" cattime=\"170\" avscantime=\"0\" fullreqtime=\"8408149\" device=\"0\" auth=\"0\" ua=\"\" exceptions=\"ssl,certcheck,certdate\" category=\"105\" reputation=\"trusted\" categoryname=\"Business\" country=\"Germany\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 23229,
+            "id": "0x7fad93120200",
+            "method": "CONNECT",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 200
+          }
+        },
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "ad_domain": "example.com",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 0,
+            "cached": "0",
+            "category": [
+              "105"
+            ],
+            "categoryname": [
+              "Business"
+            ],
+            "cattime": 170,
+            "country": "Germany",
+            "dnstime": 257,
+            "exceptions": [
+              "ssl",
+              "certcheck",
+              "certdate"
+            ],
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 8408149,
+            "name": "http access",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reputation": "trusted",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Other"
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:08:20.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "warn-category",
+          "category": [
+            "web"
+          ],
+          "id": "0071",
+          "kind": "event",
+          "original": "2023:03:08-15:08:20 sophos-test-vm1 httpproxy[6267]: id=\"0071\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"web request warned, forbidden category detected\" action=\"warn\" method=\"OPTIONS\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" user=\"testuser\" group=\"testgroup\" ad_domain=\"example.com\" statuscode=\"403\" cached=\"0\" profile=\"HTTP_Sophos_Profile_1\" filteraction=\"REF_HTTP_ACTION\" size=\"3783\" request=\"0x7fad9be42000\" url=\"https://myurl.test.com/extension\" referer=\"https://referer.test.com/\" error=\"\" authtime=\"0\" dnstime=\"211\" aptptime=\"0\" cattime=\"149\" avscantime=\"0\" fullreqtime=\"1265\" device=\"0\" auth=\"0\" ua=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\" exceptions=\"\" country=\"Germany\" reason=\"category\" category=\"9998\" reputation=\"unverified\" categoryname=\"Uncategorized\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 3783,
+            "id": "0x7fad9be42000",
+            "method": "OPTIONS",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 403
+          }
+        },
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "action": "warn",
+            "ad_domain": "example.com",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 0,
+            "cached": "0",
+            "category": [
+              "9998"
+            ],
+            "categoryname": [
+              "Uncategorized"
+            ],
+            "cattime": 149,
+            "country": "Germany",
+            "dnstime": 211,
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 1265,
+            "name": "web request warned, forbidden category detected",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reason": "category",
+            "reputation": "unverified",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Chrome",
+          "original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+          "os": {
+            "full": "Windows 10",
+            "name": "Windows",
+            "version": "10"
+          },
+          "version": "110.0.0.0"
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:19:36.000Z",
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "category": [
+            "web"
+          ],
+          "id": "0072",
+          "kind": "event",
+          "original": "2023:03:08-15:19:36 sophos-test-vm1 httpproxy[6267]: id=\"0072\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"Contentfilter warned and proceeded\" url=\"https://myurl.test.com/extension\" srcip=\"67.43.156.2\" category=\"9998\" categoryname=\"Uncategorized\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "category": [
+              "9998"
+            ],
+            "categoryname": [
+              "Uncategorized"
+            ],
+            "name": "Contentfilter warned and proceeded",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-http.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-03-08T15:20:40.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129"
+        },
+        "device": {
+          "id": "0"
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "block-extension",
+          "category": [
+            "web"
+          ],
+          "id": "0064",
+          "kind": "event",
+          "original": "<190>2023:03:08-15:20:40 sophos-test-vm1 httpproxy[6267]: id=\"0064\" severity=\"info\" sys=\"SecureWeb\" sub=\"http\" name=\"web request blocked, forbidden file extension detected\" action=\"block\" method=\"GET\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" user=\"testuser\" group=\"testgroup\" ad_domain=\"example.com\" statuscode=\"403\" cached=\"0\" profile=\"HTTP_Sophos_Profile_1\" filteraction=\"REF_HTTP_ACTION\" size=\"2814\" request=\"0x7fad92a81700\" url=\"https://myurl.test.com/extension\" referer=\"https://referer.test.com/\" error=\"\" authtime=\"0\" dnstime=\"0\" aptptime=\"0\" cattime=\"0\" avscantime=\"0\" fullreqtime=\"638695\" device=\"0\" auth=\"0\" ua=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\" exceptions=\"\" overridecategory=\"1\" overridereputation=\"1\" category=\"105,105,105,105,105\" reputation=\"neutral\" categoryname=\"Business,Business,Business,Business,Business\" application=\"google\" app-id=\"182\" reason=\"extension\" extension=\"com\" filename=\"file1.zw-net.com\"",
+          "provider": "http",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "file": {
+          "name": "file1.zw-net.com"
+        },
+        "group": {
+          "name": "testgroup"
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "http": {
+          "request": {
+            "bytes": 2814,
+            "id": "0x7fad92a81700",
+            "method": "GET",
+            "referrer": "https://referer.test.com/"
+          },
+          "response": {
+            "status_code": 403
+          }
+        },
+        "log": {
+          "syslog": {
+            "facility": {
+              "code": 23,
+              "name": "Local 7"
+            },
+            "priority": 190,
+            "severity": {
+              "code": 6,
+              "name": "Informational"
+            }
+          }
+        },
+        "network": {
+          "application": "google",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "httpproxy",
+          "pid": 6267
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ],
+          "user": [
+            "testuser"
+          ]
+        },
+        "sophos": {
+          "utm": {
+            "action": "block",
+            "ad_domain": "example.com",
+            "app_id": "182",
+            "aptptime": 0,
+            "auth": "0",
+            "authtime": 0,
+            "avscantime": 0,
+            "cached": "0",
+            "category": [
+              "105",
+              "105",
+              "105",
+              "105",
+              "105"
+            ],
+            "categoryname": [
+              "Business",
+              "Business",
+              "Business",
+              "Business",
+              "Business"
+            ],
+            "cattime": 0,
+            "dnstime": 0,
+            "extension": "com",
+            "filteraction": "REF_HTTP_ACTION",
+            "fullreqtime": 638695,
+            "name": "web request blocked, forbidden file extension detected",
+            "overridecategory": "1",
+            "overridereputation": "1",
+            "profile": "HTTP_Sophos_Profile_1",
+            "reason": "extension",
+            "reputation": "neutral",
+            "severity": "info",
+            "sub": "http",
+            "sys": "SecureWeb"
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2"
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "myurl.test.com",
+          "original": "https://myurl.test.com/extension",
+          "path": "/extension",
+          "scheme": "https"
+        },
+        "user": {
+          "name": "testuser"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Chrome",
+          "original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+          "os": {
+            "full": "Windows 10",
+            "name": "Windows",
+            "version": "10"
+          },
+          "version": "110.0.0.0"
+        }
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-packetfilter.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T00:50:54.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129",
+          "mac": "00-11-22-33-44-55",
+          "port": 42181
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "drop",
+          "category": [
+            "network"
+          ],
+          "id": "2021",
+          "kind": "event",
+          "original": "2023:04:28-00:50:54 sophos-test-vm1 ulogd[12511]: id=\"2021\" severity=\"info\" sys=\"SecureNet\" sub=\"packetfilter\" name=\"Packet dropped (GEOIP)\" action=\"drop\" fwrule=\"60019\" initf=\"eth6\" srcmac=\"1a:fc:2b:33:4d:5f\" dstmac=\"00:11:22:33:44:55\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" proto=\"6\" length=\"88\" tos=\"0x00\" prec=\"0x00\" ttl=\"227\" srcport=\"443\" dstport=\"42181\" tcpflags=\"ACK PSH\"",
+          "provider": "packetfilter",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "denied"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "network": {
+          "iana_number": "6"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "eth6"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "ulogd",
+          "pid": 12511
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ]
+        },
+        "rule": {
+          "id": "60019"
+        },
+        "sophos": {
+          "utm": {
+            "length": 88,
+            "name": "Packet dropped (GEOIP)",
+            "prec": "0x00",
+            "severity": "info",
+            "sub": "packetfilter",
+            "sys": "SecureNet",
+            "tcpflags": [
+              "ack",
+              "psh"
+            ],
+            "tos": "0x00",
+            "ttl": 227
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2",
+          "mac": "1A-FC-2B-33-4D-5F",
+          "port": 443
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-packetfilter.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T11:08:04.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129",
+          "mac": "00-11-22-33-44-55",
+          "port": 5060
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "drop",
+          "category": [
+            "network"
+          ],
+          "id": "2001",
+          "kind": "event",
+          "original": "2023:04:28-11:08:04 sophos-test-vm1 ulogd[12511]: id=\"2001\" severity=\"info\" sys=\"SecureNet\" sub=\"packetfilter\" name=\"Packet dropped\" action=\"drop\" fwrule=\"60001\" initf=\"eth6\" mark=\"0x21bd\" app=\"445\" srcmac=\"1a:fc:2b:33:4d:5f\" dstmac=\"00:11:22:33:44:55\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" proto=\"17\" length=\"438\" tos=\"0x00\" prec=\"0x00\" ttl=\"56\" srcport=\"5319\" dstport=\"5060\"",
+          "provider": "packetfilter",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info",
+            "denied"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "network": {
+          "iana_number": "17"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "eth6"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "ulogd",
+          "pid": 12511
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ]
+        },
+        "rule": {
+          "id": "60001"
+        },
+        "sophos": {
+          "utm": {
+            "app_id": "445",
+            "length": 438,
+            "mark": "0x21bd",
+            "name": "Packet dropped",
+            "prec": "0x00",
+            "severity": "info",
+            "sub": "packetfilter",
+            "sys": "SecureNet",
+            "tos": "0x00",
+            "ttl": 56
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2",
+          "mac": "1A-FC-2B-33-4D-5F",
+          "port": 5319
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "utm",
+      "package": "sophos",
+      "source": "test/test-sophos-utm-packetfilter.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2023-04-28T11:28:41.000Z",
+        "destination": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.129",
+          "mac": "00-11-22-33-44-55",
+          "port": 53
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "DNS request",
+          "category": [
+            "network"
+          ],
+          "id": "2014",
+          "kind": "event",
+          "original": "<30>2023:04:28-11:28:41 sophos-test-vm1 ulogd[12511]: id=\"2014\" severity=\"info\" sys=\"SecureNet\" sub=\"packetfilter\" name=\"DNS request\" action=\"DNS request\" fwrule=\"60011\" initf=\"eth7\" srcmac=\"00:50:56:b6:27:aa\" dstmac=\"00:11:22:33:44:55\" srcip=\"67.43.156.2\" dstip=\"89.160.20.129\" proto=\"17\" length=\"75\" tos=\"0x00\" prec=\"0x00\" ttl=\"64\" srcport=\"34200\" dstport=\"53\" ",
+          "provider": "packetfilter",
+          "severity": 6,
+          "timezone": "UTC",
+          "type": [
+            "info"
+          ]
+        },
+        "host": {
+          "hostname": "sophos-test-vm1",
+          "name": "sophos-test-vm1"
+        },
+        "log": {
+          "syslog": {
+            "facility": {
+              "code": 3,
+              "name": "System"
+            },
+            "priority": 30,
+            "severity": {
+              "code": 6,
+              "name": "Informational"
+            }
+          }
+        },
+        "network": {
+          "iana_number": "17"
+        },
+        "observer": {
+          "ingress": {
+            "interface": {
+              "name": "eth7"
+            }
+          },
+          "product": "UTM",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "process": {
+          "name": "ulogd",
+          "pid": 12511
+        },
+        "related": {
+          "hosts": [
+            "sophos-test-vm1"
+          ],
+          "ip": [
+            "67.43.156.2",
+            "89.160.20.129"
+          ]
+        },
+        "rule": {
+          "id": "60011"
+        },
+        "sophos": {
+          "utm": {
+            "length": 75,
+            "name": "DNS request",
+            "prec": "0x00",
+            "severity": "info",
+            "sub": "packetfilter",
+            "sys": "SecureNet",
+            "tos": "0x00",
+            "ttl": 64
+          }
+        },
+        "source": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.2",
+          "mac": "00-50-56-B6-27-AA",
+          "port": 34200
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2017-01-31T18:28:25.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.233.61",
+          "port": 25,
+          "user": {
+            "email": "gaurav2@iview.com"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "gaurav1@iview.com"
+            ]
+          },
+          "subject": "RPD Spam Test: Spam",
+          "to": {
+            "address": [
+              "gaurav2@iview.com"
+            ]
+          }
+        },
+        "event": {
+          "action": "Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "13001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2017-01-31 time=18:28:25 timezone=\"IST\" device_name=\"CR750iNG-XP\" device_id=C44313350024-P29PUA log_id=041107413001 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"gaurav\" av_policy_name=\"Gaurav235\" from_email_address=\"gaurav1@iview.com\" to_email_address=\"gaurav2@iview.com\" email_subject=\"RPD Spam Test: Spam\" mailid=\"c000000b-1485867502\" mailsize=400 spamaction=\"DROP\" reason=\"\" src_domainname=\"iview.com\" dst_domainname=\"\" src_ip=10.198.47.71 src_country_code=R1 dst_ip=10.198.233.61 dst_country_code=R1 protocol=\"TCP\" src_port=22258 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Spam\"",
+          "outcome": "success",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:58l6YYAlS4MiONjMobtnTJYmpWQ=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C44313350024-P29PUA",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "iview.com"
+          ],
+          "ip": [
+            "10.198.47.71",
+            "10.198.233.61"
+          ],
+          "user": [
+            "gaurav1",
+            "gaurav1@iview.com"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "Gaurav235",
+            "device": "SFW",
+            "device_name": "CR750iNG-XP",
+            "dst_country_code": "R1",
+            "email_subject": "RPD Spam Test: Spam",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041107413001",
+            "log_subtype": "Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "c000000b-1485867502",
+            "mailsize": "400",
+            "priority": "Warning",
+            "quarantine_reason": "Spam",
+            "spamaction": "DROP",
+            "src_country_code": "R1",
+            "timezone": "IST",
+            "user_name": "gaurav"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "iview.com",
+          "ip": "10.198.47.71",
+          "port": 22258,
+          "user": {
+            "domain": "iview.com",
+            "email": "gaurav1@iview.com",
+            "name": "gaurav1"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T10:41:29.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.16.204",
+          "port": 25,
+          "user": {
+            "email": "pankhil@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "[SPAM] RPD Spam test: Bulk",
+          "to": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Probable Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "13002",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=10:41:29 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041108413002 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Probable Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"postman\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil@postman.local\" email_subject=\"[SPAM] RPD Spam test: Bulk\" mailid=\"c0000006-1528261885\" mailsize=438 spamaction=\"WARN\" reason=\"Mail detected as PROBABLE SPAM.\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.16.204 dst_country_code=R1 protocol=\"TCP\" src_port=56341 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Spam\"",
+          "outcome": "success",
+          "reason": "Mail detected as PROBABLE SPAM.",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:abMOcgeJH+xBFHn6l4jTehUSlBI=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.16.204"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "postman",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "[SPAM] RPD Spam test: Bulk",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041108413002",
+            "log_subtype": "Probable Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "c0000006-1528261885",
+            "mailsize": "438",
+            "priority": "Warning",
+            "quarantine_reason": "Spam",
+            "spamaction": "WARN",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 56341,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2017-01-31T18:36:22.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.233.61",
+          "port": 25,
+          "user": {
+            "email": "gaurav1@iview.com"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "gaurav2@iview.com"
+            ]
+          },
+          "subject": "EMAIL",
+          "to": {
+            "address": [
+              "gaurav1@iview.com"
+            ]
+          }
+        },
+        "event": {
+          "action": "Clean",
+          "category": [
+            "network"
+          ],
+          "code": "13003",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2017-01-31 time=18:36:22 timezone=\"IST\" device_name=\"CR750iNG-XP\" device_id=C44313350024-P29PUA log_id=041105613003 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Clean\" status=\"\" priority=Information fw_rule_id=0 user_name=\"gaurav\" av_policy_name=\"None\" from_email_address=\"gaurav2@iview.com\" to_email_address=\"gaurav1@iview.com\" email_subject=\"EMAIL\" mailid=\"<5ab27db7-7bac-82e2-ba40-83ce90577c7f@iview.com>\" mailsize=398 spamaction=\"Accept\" reason=\"\" src_domainname=\"iview.com\" dst_domainname=\"\" src_ip=10.198.47.71 src_country_code=R1 dst_ip=10.198.233.61 dst_country_code=R1 protocol=\"TCP\" src_port=22477 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "severity": 6,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "allowed",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:TxMs7HDGo6klbRU54soSJPEvELk=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C44313350024-P29PUA",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "iview.com"
+          ],
+          "ip": [
+            "10.198.47.71",
+            "10.198.233.61"
+          ],
+          "user": [
+            "gaurav2",
+            "gaurav2@iview.com"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "CR750iNG-XP",
+            "dst_country_code": "R1",
+            "email_subject": "EMAIL",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041105613003",
+            "log_subtype": "Clean",
+            "log_type": "Anti-Spam",
+            "mailid": "<5ab27db7-7bac-82e2-ba40-83ce90577c7f@iview.com>",
+            "mailsize": "398",
+            "priority": "Information",
+            "quarantine_reason": "Other",
+            "spamaction": "Accept",
+            "src_country_code": "R1",
+            "timezone": "IST",
+            "user_name": "gaurav"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "iview.com",
+          "ip": "10.198.47.71",
+          "port": 22477,
+          "user": {
+            "domain": "iview.com",
+            "email": "gaurav2@iview.com",
+            "name": "gaurav2"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T11:08:08.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.17.121",
+          "port": 25,
+          "user": {
+            "email": "pankhil@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "Test RBL email",
+          "to": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Probable Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "13004",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=11:08:08 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041108413004 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Probable Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"postman\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil@postman.local\" email_subject=\"Test RBL email\" mailid=\"c0000008-1528263488\" mailsize=433 spamaction=\"DROP\" reason=\"Sender IP address is blacklisted.\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.17.121 dst_country_code=R1 protocol=\"TCP\" src_port=57854 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"RBL\"",
+          "outcome": "success",
+          "reason": "Sender IP address is blacklisted.",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:NvdaEFP3A+xwUrbF32GvYv4ezIE=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.17.121"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "postman",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "Test RBL email",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041108413004",
+            "log_subtype": "Probable Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "c0000008-1528263488",
+            "mailsize": "433",
+            "priority": "Warning",
+            "quarantine_reason": "RBL",
+            "spamaction": "DROP",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 57854,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2017-01-31T18:34:41.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.233.61",
+          "port": 25,
+          "user": {
+            "email": "gaurav2@iview.com"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "gaurav1@iview.com"
+            ]
+          },
+          "subject": "RPD Spam Test: Spam",
+          "to": {
+            "address": [
+              "gaurav2@iview.com"
+            ]
+          }
+        },
+        "event": {
+          "action": "Outbound Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "13005",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2017-01-31 time=18:34:41 timezone=\"IST\" device_name=\"CR750iNG-XP\" device_id=C44313350024-P29PUA log_id=041113413005 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Outbound Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"gaurav\" av_policy_name=\"Gaurav123\" from_email_address=\"gaurav1@iview.com\" to_email_address=\"gaurav2@iview.com\" email_subject=\"RPD Spam Test: Spam\" mailid=\"<a22c9da6-19e5-4764-2836-3f48d7dcc329@iview.com>\" mailsize=405 spamaction=\"Accept\" reason=\"\" src_domainname=\"iview.com\" dst_domainname=\"\" src_ip=10.198.47.71 src_country_code=R1 dst_ip=10.198.233.61 dst_country_code=R1 protocol=\"TCP\" src_port=22420 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Spam\"",
+          "outcome": "success",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:cZ39MftFvT3s1y8vN0AHxj2KZII=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C44313350024-P29PUA",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "iview.com"
+          ],
+          "ip": [
+            "10.198.47.71",
+            "10.198.233.61"
+          ],
+          "user": [
+            "gaurav1",
+            "gaurav1@iview.com"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "Gaurav123",
+            "device": "SFW",
+            "device_name": "CR750iNG-XP",
+            "dst_country_code": "R1",
+            "email_subject": "RPD Spam Test: Spam",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041113413005",
+            "log_subtype": "Outbound Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "<a22c9da6-19e5-4764-2836-3f48d7dcc329@iview.com>",
+            "mailsize": "405",
+            "priority": "Warning",
+            "quarantine_reason": "Spam",
+            "spamaction": "Accept",
+            "src_country_code": "R1",
+            "timezone": "IST",
+            "user_name": "gaurav"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "iview.com",
+          "ip": "10.198.47.71",
+          "port": 22420,
+          "user": {
+            "domain": "iview.com",
+            "email": "gaurav1@iview.com",
+            "name": "gaurav1"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T11:10:11.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 25,
+          "user": {
+            "email": "pankhil1@Postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "RPD Spam test: Bulk",
+          "to": {
+            "address": [
+              "pankhil1@Postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Outbound Probable Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "13006",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=11:10:11 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041114413006 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Outbound Probable Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"rule 8\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil1@Postman.local\" email_subject=\"RPD Spam test: Bulk\" mailid=\"<c63b1eb2-1c17-73ac-fcc3- 20e8831dc3d3@postman.local>\" mailsize=439 spamaction=\"Drop\" reason=\"Mail detected as OUTBOUND PROBABLE SPAM.\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.234.240 dst_country_code=R1 protocol=\"TCP\" src_port=58043 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Spam\"",
+          "outcome": "success",
+          "reason": "Mail detected as OUTBOUND PROBABLE SPAM.",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:4pL1g2Wx0xpVOFsPZ927l+yIPiU=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "rule 8",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "RPD Spam test: Bulk",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041114413006",
+            "log_subtype": "Outbound Probable Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "<c63b1eb2-1c17-73ac-fcc3- 20e8831dc3d3@postman.local>",
+            "mailsize": "439",
+            "priority": "Warning",
+            "quarantine_reason": "Spam",
+            "spamaction": "Drop",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 58043,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T12:50:07.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.17.121",
+          "port": 25,
+          "user": {
+            "email": "pankhil1@Postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "Fwd: TESt",
+          "to": {
+            "address": [
+              "pankhil1@Postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "DLP",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "13009",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=12:50:07 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041121613009 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"DLP\" status=\"\" priority=Information fw_rule_id=0 user_name=\"\" av_policy_name=\"postman\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil1@Postman.local\" email_subject=\"Fwd: TESt\" mailid=\"c0000002-1528269606\" mailsize=5041 spamaction=\"DROP\" reason=\"Email containing confidential data detected. Relevant Data Protection Policy applied.\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.17.121 dst_country_code=R1 protocol=\"TCP\" src_port=60134 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"DLP\"",
+          "outcome": "success",
+          "reason": "Email containing confidential data detected. Relevant Data Protection Policy applied.",
+          "severity": 6,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:a0QO0XDedN9BRtTg60uWTq/zaCQ=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.17.121"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "postman",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "Fwd: TESt",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041121613009",
+            "log_subtype": "DLP",
+            "log_type": "Anti-Spam",
+            "mailid": "c0000002-1528269606",
+            "mailsize": "5041",
+            "priority": "Information",
+            "quarantine_reason": "DLP",
+            "spamaction": "DROP",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 60134,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T12:51:34.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.16.204",
+          "port": 25,
+          "user": {
+            "email": "pankhil1@Postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "[secure:pankhil]",
+          "to": {
+            "address": [
+              "pankhil1@Postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "SPX",
+          "category": [
+            "network"
+          ],
+          "code": "13010",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2018-06-06 time=12:51:34 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041122613010 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"SPX\" status=\"\" priority=Information fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil1@Postman.local\" email_subject=\"[secure:pankhil]\" mailid=\"c0000003-1528269693\" mailsize=442 spamaction=\"Accept\" reason=\"SPX Template of type Specified by Sender successfully applied on Email.\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.16.204 dst_country_code=R1 protocol=\"TCP\" src_port=60298 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "SPX Template of type Specified by Sender successfully applied on Email.",
+          "severity": 6,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "allowed",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:Gh3yGHw3PI8ixdFOiZO3wKa8qrI=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.16.204"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "[secure:pankhil]",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041122613010",
+            "log_subtype": "SPX",
+            "log_type": "Anti-Spam",
+            "mailid": "c0000003-1528269693",
+            "mailsize": "442",
+            "priority": "Information",
+            "quarantine_reason": "Other",
+            "spamaction": "Accept",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 60298,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T12:52:49.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.16.204",
+          "port": 25,
+          "user": {
+            "email": "pankhil1@Postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "Test failed",
+          "to": {
+            "address": [
+              "pankhil1@Postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "SPX",
+          "category": [
+            "network"
+          ],
+          "code": "13011",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2018-06-06 time=12:52:49 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041122613011 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"SPX\" status=\"\" priority=Information fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil1@Postman.local\" email_subject=\"Test failed\" mailid=\"c0000004-1528269769\" mailsize=431 spamaction=\"REJECT\" reason=\"Email could not be SPX- encrypted because password was not found in the Email subject.\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.16.204 dst_country_code=R1 protocol=\"TCP\" src_port=60305 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Email could not be SPX- encrypted because password was not found in the Email subject.",
+          "severity": 6,
+          "timezone": "Asia/Kolkata"
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:o9GcBl2rXdCj4Z5eJViWo5SqDbE=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.16.204"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "Test failed",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041122613011",
+            "log_subtype": "SPX",
+            "log_type": "Anti-Spam",
+            "mailid": "c0000004-1528269769",
+            "mailsize": "431",
+            "priority": "Information",
+            "quarantine_reason": "Other",
+            "spamaction": "REJECT",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 60305,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T12:53:39.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.17.121",
+          "port": 25
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "Dos",
+          "category": [
+            "intrusion_detection",
+            "network"
+          ],
+          "code": "13012",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=12:53:39 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041123413012 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Dos\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"\" to_email_address=\"\" email_subject=\"\" mailid=\"\" mailsize=0 spamaction=\"TMPREJECT\" reason=\"SMTP DoS\" src_domainname=\"\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.17.121 dst_country_code=R1 protocol=\"TCP\" src_port=60392 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "SMTP DoS",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:kePcBIa66amVdXctNnMv73KAlD8=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.17.121"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041123413012",
+            "log_subtype": "Dos",
+            "log_type": "Anti-Spam",
+            "mailsize": "0",
+            "priority": "Warning",
+            "quarantine_reason": "Other",
+            "spamaction": "TMPREJECT",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "ip": "10.198.16.121",
+          "port": 60392
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2017-01-31T15:46:45.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.233.61",
+          "port": 25,
+          "user": {
+            "email": "gaurav1@iview.com"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "gaurav2@iview.com"
+            ]
+          },
+          "subject": "GP235",
+          "to": {
+            "address": [
+              "gaurav1@iview.com"
+            ]
+          }
+        },
+        "event": {
+          "action": "Allowed",
+          "category": [
+            "network"
+          ],
+          "code": "13013",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2017-01-31 time=15:46:45 timezone=\"IST\" device_name=\"CR750iNG-XP\" device_id=C44313350024-P29PUA log_id=041101613013 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Allowed\" status=\"\" priority=Information fw_rule_id=0 user_name=\"gaurav\" av_policy_name=\"Gaurav235\" from_email_address=\"gaurav2@iview.com\" to_email_address=\"gaurav1@iview.com\" email_subject=\"GP235\" mailid=\"c000000a-1485857789\" mailsize=391 spamaction=\"SANDSTORM ALLOW\" reason=\"Mail is marked Clean by Sophos Sandstorm.\" src_domainname=\"iview.com\" dst_domainname=\"\" src_ip=10.198.47.71 src_country_code=R1 dst_ip=10.198.233.61 dst_country_code=R1 protocol=\"TCP\" src_port=11255 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Mail is marked Clean by Sophos Sandstorm.",
+          "severity": 6,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "allowed",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:is/QwrkxpayBwGh5R1/esrSbZ3A=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C44313350024-P29PUA",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "iview.com"
+          ],
+          "ip": [
+            "10.198.47.71",
+            "10.198.233.61"
+          ],
+          "user": [
+            "gaurav2",
+            "gaurav2@iview.com"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "Gaurav235",
+            "device": "SFW",
+            "device_name": "CR750iNG-XP",
+            "dst_country_code": "R1",
+            "email_subject": "GP235",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041101613013",
+            "log_subtype": "Allowed",
+            "log_type": "Anti-Spam",
+            "mailid": "c000000a-1485857789",
+            "mailsize": "391",
+            "priority": "Information",
+            "quarantine_reason": "Other",
+            "spamaction": "SANDSTORM ALLOW",
+            "src_country_code": "R1",
+            "timezone": "IST",
+            "user_name": "gaurav"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "iview.com",
+          "ip": "10.198.47.71",
+          "port": 11255,
+          "user": {
+            "domain": "iview.com",
+            "email": "gaurav2@iview.com",
+            "name": "gaurav2"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T12:56:53.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.17.121",
+          "port": 25,
+          "user": {
+            "email": "pankhil@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil1@postman.local"
+            ]
+          },
+          "subject": "Fwd: test sand",
+          "to": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Denied",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "13014",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=12:56:53 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041102413014 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Denied\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"postman\" from_email_address=\"pankhil1@postman.local\" to_email_address=\"pankhil@postman.local\" email_subject=\"Fwd: test sand\" mailid=\"c0000008-1528270010\" mailsize=419835 spamaction=\"DROP\" reason=\"Email is marked Malicious by Sophos Sandstorm.\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.17.121 dst_country_code=R1 protocol=\"TCP\" src_port=60608 dst_port=25 sent_bytes=0 recv_bytes=0",
+          "outcome": "success",
+          "reason": "Email is marked Malicious by Sophos Sandstorm.",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:s4oqzO6RVrUrT4HCROvCsRxyngM=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.17.121"
+          ],
+          "user": [
+            "pankhil1",
+            "pankhil1@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "postman",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "Fwd: test sand",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041102413014",
+            "log_subtype": "Denied",
+            "log_type": "Anti-Spam",
+            "mailid": "c0000008-1528270010",
+            "mailsize": "419835",
+            "priority": "Warning",
+            "spamaction": "DROP",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 60608,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil1@postman.local",
+            "name": "pankhil1"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2017-01-31T18:31:11.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.233.61",
+          "port": 110,
+          "user": {
+            "email": "gaurav2@iview. com"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "gaurav1@iview.com"
+            ]
+          },
+          "subject": "RPD Spam Test: Spam",
+          "to": {
+            "address": [
+              "gaurav2@iview. com"
+            ]
+          }
+        },
+        "event": {
+          "action": "Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "14001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2017-01-31 time=18:31:11 timezone=\"IST\" device_name=\"CR750iNG-XP\" device_id=C44313350024-P29PUA log_id=041207414001 log_type=\"Anti-Spam\" log_component=\"POP3\" log_subtype=\"Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"gaurav\" av_policy_name=\"GauravPatel\" from_email_address=\"gaurav1@iview.com\" to_email_address=\"gaurav2@iview. com\" email_subject=\"RPD Spam Test: Spam\" mailid=\"<2a2dd5d4-1a30-617b-27b1-7961ad07cf07@iview.com>\" mailsize=574 spamaction=\"Accept\" reason=\"\" src_domainname=\"iview.com\" dst_domainname=\"iview.com\" src_ip=10.198.47.71 src_country_code=R1 dst_ip=10.198.233.61 dst_country_code=R1 protocol=\"TCP\" src_port=22333 dst_port=110 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:E/1TIGuzeeJuVhq04jui66hWf/Q=",
+          "protocol": "pop3",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C44313350024-P29PUA",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "iview.com"
+          ],
+          "ip": [
+            "10.198.47.71",
+            "10.198.233.61"
+          ],
+          "user": [
+            "gaurav1",
+            "gaurav1@iview.com"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "GauravPatel",
+            "device": "SFW",
+            "device_name": "CR750iNG-XP",
+            "dst_country_code": "R1",
+            "dst_domainname": "iview.com",
+            "email_subject": "RPD Spam Test: Spam",
+            "fw_rule_id": "0",
+            "log_component": "POP3",
+            "log_id": "041207414001",
+            "log_subtype": "Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "<2a2dd5d4-1a30-617b-27b1-7961ad07cf07@iview.com>",
+            "mailsize": "574",
+            "priority": "Warning",
+            "quarantine_reason": "Other",
+            "spamaction": "Accept",
+            "src_country_code": "R1",
+            "timezone": "IST",
+            "user_name": "gaurav"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "iview.com",
+          "ip": "10.198.47.71",
+          "port": 22333,
+          "user": {
+            "domain": "iview.com",
+            "email": "gaurav1@iview.com",
+            "name": "gaurav1"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T12:59:01.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 995,
+          "user": {
+            "email": "pankhil@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "RPD Spam test: Bulk",
+          "to": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Probable Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "14002",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=12:59:01 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=046108414002 log_type=\"Anti-Spam\" log_component=\"POPS\" log_subtype=\"Probable Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"pop8\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil@postman.local\" email_subject=\"RPD Spam test: Bulk\" mailid=\"<13c3aad0-82c0-11d8-c9e1-3c0ea4f8708b@postman.local>\" mailsize=0 spamaction=\"Change Subject\" reason=\"Mail detected as PROBABLE SPAM\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code= dst_ip=10.198.234.240 dst_country_code= protocol=\"TCP\" src_port=60742 dst_port=995 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Mail detected as PROBABLE SPAM",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:oUKghgmwrhA1Xw2ZUaHjKH6Pay0=",
+          "protocol": "pop3s",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "pop8",
+            "device": "SFW",
+            "device_name": "SG430",
+            "email_subject": "RPD Spam test: Bulk",
+            "fw_rule_id": "0",
+            "log_component": "POPS",
+            "log_id": "046108414002",
+            "log_subtype": "Probable Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "<13c3aad0-82c0-11d8-c9e1-3c0ea4f8708b@postman.local>",
+            "mailsize": "0",
+            "priority": "Warning",
+            "quarantine_reason": "Other",
+            "spamaction": "Change Subject",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 60742,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T13:00:34.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 995,
+          "user": {
+            "email": "pankhil@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "Test clean",
+          "to": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Clean",
+          "category": [
+            "network"
+          ],
+          "code": "14003",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2018-06-06 time=13:00:34 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=046105614003 log_type=\"Anti-Spam\" log_component=\"POPS\" log_subtype=\"Clean\" status=\"\" priority=Information fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil@postman.local\" email_subject=\"Test clean\" mailid=\"<b4ac9385-437d-7cd1-1089-ef09fb3066fa@postman.local>\" mailsize=0 spamaction=\"Accept\" reason=\"Mail is Clean\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code= dst_ip=10.198.234.240 dst_country_code= protocol=\"TCP\" src_port=60757 dst_port=995 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Mail is Clean",
+          "severity": 6,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "allowed",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:DuidWxTTdSsPRBFLr5t708mTGNU=",
+          "protocol": "pop3s",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "email_subject": "Test clean",
+            "fw_rule_id": "0",
+            "log_component": "POPS",
+            "log_id": "046105614003",
+            "log_subtype": "Clean",
+            "log_type": "Anti-Spam",
+            "mailid": "<b4ac9385-437d-7cd1-1089-ef09fb3066fa@postman.local>",
+            "mailsize": "0",
+            "priority": "Information",
+            "quarantine_reason": "Other",
+            "spamaction": "Accept",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 60757,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T13:01:42.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 993,
+          "user": {
+            "email": "ganga@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "RPD Spam test: Spam",
+          "to": {
+            "address": [
+              "ganga@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "15001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=13:01:42 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=046207415001 log_type=\"Anti-Spam\" log_component=\"IMAPS\" log_subtype=\"Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"ganga@postman.local\" email_subject=\"RPD Spam test: Spam\" mailid=\"<6da55e70-8d61-63fb-df41-35fdf36e94d8@postman.local>\" mailsize=0 spamaction=\"Accept\" reason=\"Mail detected as SPAM\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code= dst_ip=10.198.234.240 dst_country_code= protocol=\"TCP\" src_port=58595 dst_port=993 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Mail detected as SPAM",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:n/9oJCh3spT9n+qgYjYhXd5cipE=",
+          "protocol": "imaps",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "email_subject": "RPD Spam test: Spam",
+            "fw_rule_id": "0",
+            "log_component": "IMAPS",
+            "log_id": "046207415001",
+            "log_subtype": "Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "<6da55e70-8d61-63fb-df41-35fdf36e94d8@postman.local>",
+            "mailsize": "0",
+            "priority": "Warning",
+            "quarantine_reason": "Other",
+            "spamaction": "Accept",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 58595,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T13:02:54.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 993,
+          "user": {
+            "email": "ganga@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "RPD Spam test: Bulk",
+          "to": {
+            "address": [
+              "ganga@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Probable Spam",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "15002",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=13:02:54 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=046208415002 log_type=\"Anti-Spam\" log_component=\"IMAPS\" log_subtype=\"Probable Spam\" status=\"\" priority=Warning fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"ganga@postman.local\" email_subject=\"RPD Spam test: Bulk\" mailid=\"<0a09a814-f3b6-35cc-c94e-1807dab742fc@postman.local>\" mailsize=0 spamaction=\"Accept\" reason=\"Mail detected as PROBABLE SPAM\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code= dst_ip=10.198.234.240 dst_country_code= protocol=\"TCP\" src_port=58595 dst_port=993 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Mail detected as PROBABLE SPAM",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:n/9oJCh3spT9n+qgYjYhXd5cipE=",
+          "protocol": "imaps",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "email_subject": "RPD Spam test: Bulk",
+            "fw_rule_id": "0",
+            "log_component": "IMAPS",
+            "log_id": "046208415002",
+            "log_subtype": "Probable Spam",
+            "log_type": "Anti-Spam",
+            "mailid": "<0a09a814-f3b6-35cc-c94e-1807dab742fc@postman.local>",
+            "mailsize": "0",
+            "priority": "Warning",
+            "quarantine_reason": "Other",
+            "spamaction": "Accept",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 58595,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T13:03:58.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 993,
+          "user": {
+            "email": "ganga@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "Clean email",
+          "to": {
+            "address": [
+              "ganga@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Clean",
+          "category": [
+            "network"
+          ],
+          "code": "15003",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2018-06-06 time=13:03:58 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=046205615003 log_type=\"Anti-Spam\" log_component=\"IMAPS\" log_subtype=\"Clean\" status=\"\" priority=Information fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"ganga@postman.local\" email_subject=\"Clean email\" mailid=\"<3b542388-7bca-5b43-79e6-e21fcd709d8f@postman.local>\" mailsize=0 spamaction=\"Accept\" reason=\"Mail is Clean\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code= dst_ip=10.198.234.240 dst_country_code= protocol=\"TCP\" src_port=58595 dst_port=993 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Mail is Clean",
+          "severity": 6,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "allowed",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:n/9oJCh3spT9n+qgYjYhXd5cipE=",
+          "protocol": "imaps",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "email_subject": "Clean email",
+            "fw_rule_id": "0",
+            "log_component": "IMAPS",
+            "log_id": "046205615003",
+            "log_subtype": "Clean",
+            "log_type": "Anti-Spam",
+            "mailid": "<3b542388-7bca-5b43-79e6-e21fcd709d8f@postman.local>",
+            "mailsize": "0",
+            "priority": "Information",
+            "quarantine_reason": "Other",
+            "spamaction": "Accept",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 58595,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-spam.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-05T19:11:26.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.16.204",
+          "port": 25,
+          "user": {
+            "email": "pankhil@Postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "dd",
+          "to": {
+            "address": [
+              "pankhil@Postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Allowed",
+          "category": [
+            "network"
+          ],
+          "code": "18035",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2018-06-05 time=19:11:26 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=041101618035 log_type=\"Anti-Spam\" log_component=\"SMTP\" log_subtype=\"Allowed\" status=\"\" priority=Information fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil@Postman.local\" email_subject=\"dd\" mailid=\"c0000005-1528206082\" mailsize=421 spamaction=\"DELIVERED\" reason=\"Email has been delivered to recipient(s).\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.16.204 dst_country_code=R1 protocol=\"TCP\" src_port=61636 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "reason": "Email has been delivered to recipient(s).",
+          "severity": 6,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "allowed",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:w7128i0i0NX5CvQ/yBHqcVXh0Io=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.16.204"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "email_subject": "dd",
+            "fw_rule_id": "0",
+            "log_component": "SMTP",
+            "log_id": "041101618035",
+            "log_subtype": "Allowed",
+            "log_type": "Anti-Spam",
+            "mailid": "c0000005-1528206082",
+            "mailsize": "421",
+            "priority": "Information",
+            "quarantine_reason": "Other",
+            "spamaction": "DELIVERED",
+            "src_country_code": "R1",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 61636,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-virus-ftp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-21T19:50:23.000+02:00",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.8.142.181",
+          "port": 21
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "Virus",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "09001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-21 time=19:50:23 timezone=\"CEST\" device_name=\"SF01V\" device_id=SFDemo-2df0960 log_id=031006209001 log_type=\"Anti-Virus\" log_component=\"FTP\" log_subtype=\"Virus\" priority=Critical fw_rule_id=0 user_name=\"\" virus=\"EICAR-AV-Test\" FTP_url=\"/var/www//home/ftp-user/ta_test_file_1ta-cl1-46\" FTP_direction=\"Upload\" filename=\"/home/ftp-user/ta_test_file_1ta-cl1-46\" file_size=0 file_path=\"/var/www//home/ftp-user/ta_test_file_1ta-cl1-46\" ftpcommand=\"STOR\" src_ip=10.146.13.49 src_country_code=R1 dst_ip=10.8.142.181 dst_country_code=R1 protocol=\"TCP\" src_port=39910 dst_port=21 dstdomain=\"\" sent_bytes=0 recv_bytes=0",
+          "outcome": "success",
+          "severity": 2,
+          "timezone": "Etc/GMT-2",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "file": {
+          "directory": "/var/www//home/ftp-user/ta_test_file_1ta-cl1-46",
+          "name": "/home/ftp-user/ta_test_file_1ta-cl1-46",
+          "size": 0
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:pEAtCi2v+cfDLsHaWvO82/Ahn0k=",
+          "protocol": "ftp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "SFDemo-2df0960",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local"
+          ],
+          "ip": [
+            "10.146.13.49",
+            "10.8.142.181"
+          ]
+        },
+        "rule": {
+          "id": "0"
+        },
+        "sophos": {
+          "xg": {
+            "device": "SFW",
+            "device_name": "SF01V",
+            "dst_country_code": "R1",
+            "ftp_direction": "Upload",
+            "ftp_url": "/var/www//home/ftp-user/ta_test_file_1ta-cl1-46",
+            "ftpcommand": "STOR",
+            "log_component": "FTP",
+            "log_id": "031006209001",
+            "log_subtype": "Virus",
+            "log_type": "Anti-Virus",
+            "priority": "Critical",
+            "src_country_code": "R1",
+            "timezone": "CEST",
+            "virus": "EICAR-AV-Test"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "ip": "10.146.13.49",
+          "port": 39910
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-virus-ftp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-21T19:50:48.000+02:00",
+        "destination": {
+          "bytes": 19926248,
+          "domain": "example.com",
+          "ip": "10.8.142.181",
+          "port": 21
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "Allowed",
+          "category": [
+            "network"
+          ],
+          "code": "09002",
+          "kind": "event",
+          "original": "device=\"SFW\" date=2018-06-21 time=19:50:48 timezone=\"CEST\" device_name=\"SF01V\" device_id=SFDemo-2df0960 log_id=031001609002 log_type=\"Anti-Virus\" log_component=\"FTP\" log_subtype=\"Allowed\" priority=Information fw_rule_id=0 user_name=\"\" virus=\"\" FTP_url=\"/var/www//home/ftp-user/ta_test_file_1ta-cl1-46\" FTP_direction=\"Download\" filename=\"/home/ftp-user/ta_test_file_1ta-cl1-46\" file_size=19926248 file_path=\"/var/www//home/ftp-user/ta_test_file_1ta-cl1-46\" ftpcommand=\"RETR\" src_ip=10.146.13.49 src_country_code= dst_ip=10.8.142.181 dst_country_code= protocol=\"TCP\" src_port=39936 dst_port=21 dstdomain=\"example.com\" sent_bytes=0 recv_bytes=19926248",
+          "outcome": "success",
+          "severity": 6,
+          "timezone": "Etc/GMT-2",
+          "type": [
+            "allowed",
+            "connection"
+          ]
+        },
+        "file": {
+          "directory": "/var/www//home/ftp-user/ta_test_file_1ta-cl1-46",
+          "name": "/home/ftp-user/ta_test_file_1ta-cl1-46",
+          "size": 19926248
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "bytes": 19926248,
+          "community_id": "1:hUeUw/6dIhcWCOgAeWChZiMq1qA=",
+          "protocol": "ftp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "SFDemo-2df0960",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "example.com"
+          ],
+          "ip": [
+            "10.146.13.49",
+            "10.8.142.181"
+          ]
+        },
+        "rule": {
+          "id": "0"
+        },
+        "sophos": {
+          "xg": {
+            "device": "SFW",
+            "device_name": "SF01V",
+            "ftp_direction": "Download",
+            "ftp_url": "/var/www//home/ftp-user/ta_test_file_1ta-cl1-46",
+            "ftpcommand": "RETR",
+            "log_component": "FTP",
+            "log_id": "031001609002",
+            "log_subtype": "Allowed",
+            "log_type": "Anti-Virus",
+            "priority": "Information",
+            "timezone": "CEST"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "ip": "10.146.13.49",
+          "port": 39936
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-virus-smtp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T10:44:40.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.17.121",
+          "port": 25,
+          "user": {
+            "email": "pankhil@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "virus infected message",
+          "to": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Virus",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "10001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=10:44:40 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=031106210001 log_type=\"Anti-Virus\" log_component=\"SMTP\" log_subtype=\"Virus\" status=\"\" priority=Critical fw_rule_id=0 user_name=\"\" av_policy_name=\"postman\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil@postman.local\" subject=\"virus infected message\" mailid=\"c0000007-1528262079\" mailsize=2064 virus=\"EICAR-AV-Test\" filename=\"\" quarantine=\"\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.17.121 dst_country_code=R1 protocol=\"TCP\" src_port=56428 dst_port=25 sent_bytes=0 recv_bytes=0 quarantine_reason=\" Infected\"",
+          "outcome": "success",
+          "severity": 2,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:/s4RRYmRyH8lqMULh9n00Z6AVA8=",
+          "protocol": "smtp",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.17.121"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "rule": {
+          "id": "0"
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "postman",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "log_component": "SMTP",
+            "log_id": "031106210001",
+            "log_subtype": "Virus",
+            "log_type": "Anti-Virus",
+            "mailid": "c0000007-1528262079",
+            "mailsize": "2064",
+            "priority": "Critical",
+            "quarantine_reason": " Infected",
+            "src_country_code": "R1",
+            "subject": "virus infected message",
+            "timezone": "IST",
+            "virus": "EICAR-AV-Test"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 56428,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-virus-smtp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T10:51:29.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 995,
+          "user": {
+            "email": "pankhil@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "EICAR",
+          "to": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Virus",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "11001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=10:51:29 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=036106211001 log_type=\"Anti-Virus\" log_component=\"POPS\" log_subtype=\"Virus\" status=\"\" priority=Critical fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"pankhil@postman.local\" subject=\"EICAR\" mailid=\"<a5c35e4b-1198-d0eb-0763-c0d5af3c817e@postman.local>\" mailsize=0 virus=\"EICAR-AV-Test\" filename=\"\" quarantine=\"\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.234.240 dst_country_code=R1 protocol=\"TCP\" src_port=56653 dst_port=995 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "severity": 2,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:miDZMZyHzg1ArtBIc4N8695JaWk=",
+          "protocol": "pop3s",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "rule": {
+          "id": "0"
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "log_component": "POPS",
+            "log_id": "036106211001",
+            "log_subtype": "Virus",
+            "log_type": "Anti-Virus",
+            "mailid": "<a5c35e4b-1198-d0eb-0763-c0d5af3c817e@postman.local>",
+            "mailsize": "0",
+            "priority": "Critical",
+            "quarantine_reason": "Other",
+            "src_country_code": "R1",
+            "subject": "EICAR",
+            "timezone": "IST",
+            "virus": "EICAR-AV-Test"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 56653,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-virus-smtp.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-06T10:58:29.000+05:30",
+        "destination": {
+          "bytes": 0,
+          "ip": "10.198.234.240",
+          "port": 993,
+          "user": {
+            "email": "ganga@postman.local"
+          }
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "email": {
+          "from": {
+            "address": [
+              "pankhil@postman.local"
+            ]
+          },
+          "subject": "EICAR test email",
+          "to": {
+            "address": [
+              "ganga@postman.local"
+            ]
+          }
+        },
+        "event": {
+          "action": "Virus",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "12001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-06 time=10:58:29 timezone=\"IST\" device_name=\"SG430\" device_id=S4000806149EE49 log_id=036206212001 log_type=\"Anti-Virus\" log_component=\"IMAPS\" log_subtype=\"Virus\" status=\"\" priority=Critical fw_rule_id=0 user_name=\"\" av_policy_name=\"None\" from_email_address=\"pankhil@postman.local\" to_email_address=\"ganga@postman.local\" subject=\"EICAR test email\" mailid=\"<2ca37b7c-e93a-743a-99c4-a0796f0bbb79@postman.local>\" mailsize=0 virus=\"EICAR-AV- Test\" filename=\"\" quarantine=\"\" src_domainname=\"postman.local\" dst_domainname=\"\" src_ip=10.198.16.121 src_country_code=R1 dst_ip=10.198.234.240 dst_country_code=R1 protocol=\"TCP\" src_port=56632 dst_port=993 sent_bytes=0 recv_bytes=0 quarantine_reason=\"Other\"",
+          "outcome": "success",
+          "severity": 2,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "bytes": 0,
+          "community_id": "1:brG0+fyFYq1h9huQh5nQ8cHjL5E=",
+          "protocol": "imaps",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "S4000806149EE49",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "postman.local"
+          ],
+          "ip": [
+            "10.198.16.121",
+            "10.198.234.240"
+          ],
+          "user": [
+            "pankhil",
+            "pankhil@postman.local"
+          ]
+        },
+        "rule": {
+          "id": "0"
+        },
+        "sophos": {
+          "xg": {
+            "av_policy_name": "None",
+            "device": "SFW",
+            "device_name": "SG430",
+            "dst_country_code": "R1",
+            "log_component": "IMAPS",
+            "log_id": "036206212001",
+            "log_subtype": "Virus",
+            "log_type": "Anti-Virus",
+            "mailid": "<2ca37b7c-e93a-743a-99c4-a0796f0bbb79@postman.local>",
+            "mailsize": "0",
+            "priority": "Critical",
+            "quarantine_reason": "Other",
+            "src_country_code": "R1",
+            "subject": "EICAR test email",
+            "timezone": "IST",
+            "virus": "EICAR-AV- Test"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "domain": "postman.local",
+          "ip": "10.198.16.121",
+          "port": 56632,
+          "user": {
+            "domain": "postman.local",
+            "email": "pankhil@postman.local",
+            "name": "pankhil"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ]
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-virus-web.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2016-12-02T18:48:18.000Z",
+        "destination": {
+          "as": {
+            "number": 209
+          },
+          "bytes": 353,
+          "geo": {
+            "city_name": "Milton",
+            "continent_name": "North America",
+            "country_iso_code": "US",
+            "country_name": "United States",
+            "location": {
+              "lat": 47.2513,
+              "lon": -122.3149
+            },
+            "region_iso_code": "US-WA",
+            "region_name": "Washington"
+          },
+          "ip": "216.160.83.61",
+          "port": 443
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "Virus",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "08001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2016-12-02 time=18:48:18 timezone=\"GMT\" device_name=\"SFVUNL\" device_id=C01001K234RXPA1 log_id=034806208001 log_type=\"Anti-Virus\" log_component=\"HTTPS\" log_subtype=\"Virus\" priority=Critical fw_rule_id=2 user_name=\"rich\" iap=13 virus=\"EICAR-AV-Test\" url=\"https://secure.eicar.org/eicar.com\" domainname=\"secure.eicar.org\" src_ip=192.168.73.220 src_country_code=R1 dst_ip=216.160.83.61 dst_country_code=DEU protocol=\"TCP\" src_port=51499 dst_port=443 sent_bytes=0 recv_bytes=353",
+          "outcome": "success",
+          "severity": 2,
+          "timezone": "GMT",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "bytes": 353,
+          "community_id": "1:pXQp5es2PyNVnMf24vl407J45fs=",
+          "protocol": "https",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C01001K234RXPA1",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "secure.eicar.org"
+          ],
+          "ip": [
+            "192.168.73.220",
+            "216.160.83.61"
+          ],
+          "user": [
+            "rich"
+          ]
+        },
+        "rule": {
+          "id": "2"
+        },
+        "sophos": {
+          "xg": {
+            "device": "SFW",
+            "device_name": "SFVUNL",
+            "dst_country_code": "DEU",
+            "iap": "13",
+            "log_component": "HTTPS",
+            "log_id": "034806208001",
+            "log_subtype": "Virus",
+            "log_type": "Anti-Virus",
+            "priority": "Critical",
+            "src_country_code": "R1",
+            "timezone": "GMT",
+            "virus": "EICAR-AV-Test"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "ip": "192.168.73.220",
+          "port": 51499,
+          "user": {
+            "name": "rich"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "secure.eicar.org",
+          "extension": "com",
+          "full": "https://secure.eicar.org/eicar.com",
+          "original": "https://secure.eicar.org/eicar.com",
+          "path": "/eicar.com",
+          "scheme": "https"
+        }
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-anti-virus-web.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2016-12-02T18:57:57.000Z",
+        "destination": {
+          "bytes": 1594715,
+          "ip": "192.168.73.220",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "Virus",
+          "category": [
+            "malware",
+            "network"
+          ],
+          "code": "08001",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2016-12-02 time=18:57:57 timezone=\"GMT\" device_name=\"SFVUNL\" device_id=C01001K234RXPA1 log_id=030906208001 log_type=\"Anti-Virus\" log_component=\"HTTP\" log_subtype=\"Virus\" priority=Critical fw_rule_id=0 user_name=\"rich\" iap=13 virus=\"Sandstorm\" url=\"http://floater.baldrys.ca/badb.exe\" domainname=\"floater.baldrys.ca\" src_ip=192.168.73.220 src_country_code=R1 dst_ip=192.168.73.220 dst_country_code=R1 protocol=\"TCP\" src_port=54110 dst_port=80 sent_bytes=0 recv_bytes=1594715",
+          "outcome": "success",
+          "severity": 2,
+          "timezone": "GMT",
+          "type": [
+            "info",
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "bytes": 1594715,
+          "community_id": "1:4ao/YhRCSn5/cM88NdWtPMdl8U8=",
+          "protocol": "http",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C01001K234RXPA1",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local",
+            "floater.baldrys.ca"
+          ],
+          "ip": [
+            "192.168.73.220"
+          ],
+          "user": [
+            "rich"
+          ]
+        },
+        "rule": {
+          "id": "0"
+        },
+        "sophos": {
+          "xg": {
+            "device": "SFW",
+            "device_name": "SFVUNL",
+            "dst_country_code": "R1",
+            "iap": "13",
+            "log_component": "HTTP",
+            "log_id": "030906208001",
+            "log_subtype": "Virus",
+            "log_type": "Anti-Virus",
+            "priority": "Critical",
+            "src_country_code": "R1",
+            "timezone": "GMT",
+            "virus": "Sandstorm"
+          }
+        },
+        "source": {
+          "bytes": 0,
+          "ip": "192.168.73.220",
+          "port": 54110,
+          "user": {
+            "name": "rich"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "domain": "floater.baldrys.ca",
+          "extension": "exe",
+          "full": "http://floater.baldrys.ca/badb.exe",
+          "original": "http://floater.baldrys.ca/badb.exe",
+          "path": "/badb.exe",
+          "scheme": "http"
+        }
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-atp-firewall.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-06-05T08:49:00.000+01:00",
+        "destination": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.193",
+          "port": 0
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "alert",
+          "category": [
+            "intrusion_detection",
+            "network"
+          ],
+          "code": "18009",
+          "id": "C7E26E6F-0097-4EA2-89DE-C31C40636CB2",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2018-06-05 time=08:49:00 timezone=\"BST\" device_name=\"XG310\" device_id=C30006T22TGR89B log_id=086320518009 log_type=\"ATP\" log_component=\"Firewall\" log_subtype=\"Alert\" priority=Notice user_name=\"\" protocol=\" ICMP\" src_port=0 dst_port=0 sourceip=10.198.32.89 destinationip=81.2.69.193 url=81.2.69.193 threatname=C2/Generic-A eventid=C7E26E6F-0097-4EA2-89DE-C31C40636CB2 eventtype=\"Standard\" login_user=\"\" process_user=\"\" ep_uuid= execution_path=\"\"",
+          "outcome": "success",
+          "severity": 5,
+          "timezone": "Etc/GMT-1",
+          "type": [
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "notification"
+        },
+        "network": {
+          "transport": " icmp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C30006T22TGR89B",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local"
+          ],
+          "ip": [
+            "10.198.32.89",
+            "81.2.69.193"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "device": "SFW",
+            "device_name": "XG310",
+            "eventtype": "Standard",
+            "log_component": "Firewall",
+            "log_id": "086320518009",
+            "log_subtype": "Alert",
+            "log_type": "ATP",
+            "priority": "Notice",
+            "threatname": "C2/Generic-A",
+            "timezone": "BST"
+          }
+        },
+        "source": {
+          "ip": "10.198.32.89",
+          "port": 0
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "original": "81.2.69.193"
+        }
+      }
+    },
+    {
+      "data_stream": "xg",
+      "package": "sophos",
+      "source": "test/test-sophos-18-5-atp-firewall.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2017-01-31T18:44:31.000+05:30",
+        "destination": {
+          "as": {
+            "number": 35908
+          },
+          "geo": {
+            "continent_name": "Asia",
+            "country_iso_code": "BT",
+            "country_name": "Bhutan",
+            "location": {
+              "lat": 27.5,
+              "lon": 90.5
+            }
+          },
+          "ip": "67.43.156.12",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.17.0"
+        },
+        "event": {
+          "action": "drop",
+          "category": [
+            "intrusion_detection",
+            "network"
+          ],
+          "code": "18010",
+          "id": "C366ACFB-7A6F-4870-B359-A6CFDA8C85F7",
+          "kind": "alert",
+          "original": "device=\"SFW\" date=2017-01-31 time=18:44:31 timezone=\"IST\" device_name=\"CR750iNG-XP\" device_id=C44313350024-P29PUA log_id=086304418010 log_type=\"ATP\" log_component=\"Firewall\" log_subtype=\"Drop\" priority=Warning user_name=\"gaurav\" protocol=\"TCP\" src_port=22623 dst_port=80 sourceip=10.198.47.71 destinationip=67.43.156.12 url=67.43.156.12 threatname=C2 /Generic-A eventid=C366ACFB-7A6F-4870-B359-A6CFDA8C85F7 eventtype=\"Standard\" login_user=\"\" process_user=\"\" ep_uuid= execution_path=\"\"",
+          "outcome": "success",
+          "severity": 4,
+          "timezone": "Asia/Kolkata",
+          "type": [
+            "denied",
+            "connection"
+          ]
+        },
+        "host": {
+          "name": "defaulttest.local"
+        },
+        "log": {
+          "level": "warning"
+        },
+        "network": {
+          "community_id": "1:nB9nte3WRkewayDVwPW2FGsg5L0=",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "XG",
+          "serial_number": "C44313350024-P29PUA",
+          "type": "firewall",
+          "vendor": "Sophos"
+        },
+        "related": {
+          "hosts": [
+            "defaulttest.local"
+          ],
+          "ip": [
+            "10.198.47.71",
+            "67.43.156.12"
+          ],
+          "user": [
+            "gaurav"
+          ]
+        },
+        "sophos": {
+          "xg": {
+            "device": "SFW",
+            "device_name": "CR750iNG-XP",
+            "eventtype": "Standard",
+            "log_component": "Firewall",
+            "log_id": "086304418010",
+            "log_subtype": "Drop",
+            "log_type": "ATP",
+            "priority": "Warning",
+            "threatname": "C2 /Generic-A",
+            "timezone": "IST"
+          }
+        },
+        "source": {
+          "ip": "10.198.47.71",
+          "port": 22623,
+          "user": {
+            "name": "gaurav"
+          }
+        },
+        "tags": [
+          "preserve_original_event"
+        ],
+        "url": {
+          "original": "67.43.156.12"
+        }
+      }
+    }
+  ]
+}

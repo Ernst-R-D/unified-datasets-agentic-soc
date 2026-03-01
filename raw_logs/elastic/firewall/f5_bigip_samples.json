@@ -1,0 +1,2960 @@
+{
+  "package": "f5_bigip",
+  "description": "F5 BIG-IP LTM/ASM logs",
+  "events": [
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "sample_event": {
+        "@timestamp": "2018-11-19T22:34:40.000Z",
+        "agent": {
+          "ephemeral_id": "3099a106-bbe7-493d-8276-649af083fc0a",
+          "id": "3693530a-b7dc-4d5b-859d-50eaf05e6612",
+          "name": "elastic-agent-53456",
+          "type": "filebeat",
+          "version": "8.16.5"
+        },
+        "client": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 49804
+        },
+        "data_stream": {
+          "dataset": "f5_bigip.log",
+          "namespace": "62205",
+          "type": "logs"
+        },
+        "destination": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "elastic_agent": {
+          "id": "3693530a-b7dc-4d5b-859d-50eaf05e6612",
+          "snapshot": false,
+          "version": "8.16.5"
+        },
+        "event": {
+          "agent_id_status": "verified",
+          "category": [
+            "network"
+          ],
+          "dataset": "f5_bigip.log",
+          "ingested": "2025-10-28T12:38:26Z",
+          "kind": "alert",
+          "original": "{\"application\":\"app.app\",\"attack_type\":\"Detection Evasion\",\"blocking_exception_reason\":\"test\",\"captcha_result\":\"not_received\",\"date_time\":\"2018-11-19 22:34:40\",\"dest_ip\":\"81.2.69.142\",\"dest_port\":\"80\",\"device_id\":\"12bdca32\",\"fragment\":\"test_Fragment\",\"geo_location\":\"US\",\"hostname\":\"hostname\",\"http_class_name\":\"/Common/abc/test\",\"ip_address_intelligence\":\"host1\",\"ip_client\":\"81.2.69.142\",\"management_ip_address\":\"81.2.69.142\",\"management_ip_address_2\":\"81.2.69.144\",\"method\":\"GET\",\"policy_apply_date\":\"2018-11-19 22:17:57\",\"policy_name\":\"/Common/abc\",\"protocol\":\"HTTP\",\"query_string\":\"name=abc\",\"request\":\"GET /admin/.\",\"request_status\":\"blocked\",\"response_code\":\"0\",\"route_domain\":\"example.com\",\"session_id\":\"abc123abcd\",\"severity\":\"Critical\",\"sig_ids\":\"abc12bcd\",\"sig_names\":\"Sig_Name\",\"src_port\":\"49804\",\"staged_sig_ids\":\"abc23121bc\",\"staged_sig_names\":\"test_name\",\"staged_threat_campaign_names\":\"test\",\"sub_violations\":\"Evasion technique detected:Directory traversals\",\"support_id\":\"123456789\",\"telemetryEventCategory\":\"ASM\",\"tenant\":\"Common\",\"threat_campaign_names\":\"threat\",\"uri\":\"/directory/file\",\"username\":\"test User\",\"violation_rating\":\"3\",\"violations\":\"Evasion technique detected\",\"virus_name\":\"test Virus\",\"web_application_name\":\"/Common/abc\",\"websocket_direction\":\"test\",\"websocket_message_type\":\"test\",\"x_forwarded_for_header_value\":\"81.2.69.144\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "application": {
+              "name": "app.app"
+            },
+            "attack": {
+              "type": "Detection Evasion"
+            },
+            "blocking_exception_reason": "test",
+            "captcha_result": "not_received",
+            "client": {
+              "ip": "81.2.69.142"
+            },
+            "date_time": "2018-11-19T22:34:40.000Z",
+            "dest": {
+              "ip": "81.2.69.142",
+              "port": 80
+            },
+            "device": {
+              "id": "12bdca32"
+            },
+            "fragment": "test_Fragment",
+            "geo": {
+              "location": "US"
+            },
+            "hostname": "hostname",
+            "http": {
+              "class_name": "/Common/abc/test"
+            },
+            "ip_address_intelligence": "host1",
+            "management": {
+              "ip_address": "81.2.69.142",
+              "ip_address_2": "81.2.69.144"
+            },
+            "method": "GET",
+            "policy": {
+              "apply_date": "2018-11-19T22:17:57.000Z",
+              "name": "/Common/abc"
+            },
+            "protocol": "HTTP",
+            "query": {
+              "string": "name=abc"
+            },
+            "request": {
+              "detail": "GET /admin/.",
+              "status": "blocked"
+            },
+            "response": {
+              "code": 0
+            },
+            "route_domain": "example.com",
+            "session": {
+              "id": "abc123abcd"
+            },
+            "severity": {
+              "name": "Critical"
+            },
+            "sig": {
+              "ids": "abc12bcd",
+              "names": "Sig_Name"
+            },
+            "src": {
+              "port": 49804
+            },
+            "staged": {
+              "sig": {
+                "ids": "abc23121bc",
+                "names": "test_name"
+              },
+              "threat_campaign_names": "test"
+            },
+            "sub_violations": "Evasion technique detected:Directory traversals",
+            "support": {
+              "id": "123456789"
+            },
+            "telemetry": {
+              "event": {
+                "category": "ASM"
+              }
+            },
+            "tenant": "Common",
+            "threat_campaign_names": "threat",
+            "uri": "/directory/file",
+            "username": "test User",
+            "violation": {
+              "rating": 3
+            },
+            "violations": "Evasion technique detected",
+            "virus_name": "test Virus",
+            "web_application_name": "/Common/abc",
+            "websocket": {
+              "direction": "test",
+              "message_type": "test"
+            },
+            "x_forwarded_for_header_value": [
+              "81.2.69.144"
+            ]
+          }
+        },
+        "host": {
+          "geo": {
+            "country_iso_code": "US"
+          },
+          "id": "12bdca32",
+          "name": "hostname"
+        },
+        "http": {
+          "request": {
+            "method": "GET"
+          }
+        },
+        "input": {
+          "type": "http_endpoint"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "application": "app.app",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "Application Security Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname",
+            "12bdca32"
+          ],
+          "ip": [
+            "81.2.69.142",
+            "81.2.69.144"
+          ],
+          "user": [
+            "test User"
+          ]
+        },
+        "server": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 80
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 49804
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields",
+          "forwarded",
+          "f5_bigip-log"
+        ],
+        "user": {
+          "name": "test User"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-afm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-12-17T22:46:04.000Z",
+        "client": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.128",
+          "port": 62204
+        },
+        "destination": {
+          "as": {
+            "number": 209
+          },
+          "domain": "host1",
+          "geo": {
+            "city_name": "Milton",
+            "continent_name": "North America",
+            "country_iso_code": "US",
+            "country_name": "United States",
+            "location": {
+              "lat": 47.2513,
+              "lon": -122.3149
+            },
+            "region_iso_code": "US-WA",
+            "region_name": "Washington"
+          },
+          "ip": "216.160.83.56",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "Reject",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"acl_policy_name\":\"/policy/test\",\"acl_policy_type\":\"Enforced\",\"acl_rule_name\":\"ping\",\"action\":\"Reject\",\"hostname\":\"example.com\",\"bigip_mgmt_ip\":\"89.160.20.128\",\"context_name\":\"/Common/test/app\",\"context_type\":\"Virtual Server\",\"date_time\":\"Dec 17 2018 22:46:04\",\"dest_fqdn\":\"host1\",\"dest_ip\":\"216.160.83.56\",\"dst_geo\":\"dst_geo\",\"dest_port\":\"80\",\"device_product\":\"Device_Module\",\"device_vendor\":\"Device_Vendor\",\"device_version\":\"1.2.1.2.0.3.1\",\"drop_reason\":\"Policy\",\"errdefs_msgno\":\"1212121212\",\"errdefs_msg_name\":\"Network Event\",\"flow_id\":\"1234567\",\"ip_protocol\":\"TCP\",\"severity\":\"8\",\"partition_name\":\"Common\",\"route_domain\":\"example.com\",\"sa_translation_pool\":\"SA pool\",\"sa_translation_type\":\"SA type\",\"source_fqdn\":\"host\",\"source_ip\":\"89.160.20.128\",\"src_geo\":\"src_geo\",\"source_port\":\"62204\",\"source_user\":\"Test\",\"source_user_group\":\" user group\",\"translated_dest_ip\":\"216.160.83.56\",\"translated_dest_port\":\"80\",\"translated_ip_protocol\":\"tcp\",\"translated_route_domain\":\"example.com\",\"translated_source_ip\":\"89.160.20.128\",\"translated_source_port\":\"9090\",\"translated_vlan\":\"test\",\"vlan\":\"/Common/external\",\"send_to_vs\":\"Test vs\",\"tenant\":\"Common\",\"application\":\"app.app\",\"telemetryEventCategory\":\"AFM\"}",
+          "severity": 8,
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "acl": {
+              "policy": {
+                "name": "/policy/test",
+                "type": "Enforced"
+              },
+              "rule": {
+                "name": "ping"
+              }
+            },
+            "action": "Reject",
+            "application": {
+              "name": "app.app"
+            },
+            "context": {
+              "name": "/Common/test/app",
+              "type": "Virtual Server"
+            },
+            "date_time": "2018-12-17T22:46:04.000Z",
+            "dest": {
+              "fqdn": "host1",
+              "ip": "216.160.83.56",
+              "port": 80
+            },
+            "device": {
+              "product": "Device_Module",
+              "vendor": "Device_Vendor",
+              "version": "1.2.1.2.0.3.1"
+            },
+            "drop_reason": "Policy",
+            "dst": {
+              "geo": "dst_geo"
+            },
+            "errdefs": {
+              "msg_name": "Network Event",
+              "msgno": "1212121212"
+            },
+            "flow": {
+              "id": "1234567"
+            },
+            "hostname": "example.com",
+            "ip_protocol": "TCP",
+            "mgmt_ip": "89.160.20.128",
+            "partition_name": "Common",
+            "route_domain": "example.com",
+            "sa_translation": {
+              "pool": "SA pool",
+              "type": "SA type"
+            },
+            "send_to_vs": "Test vs",
+            "severity": {
+              "code": 8
+            },
+            "source": {
+              "fqdn": "host",
+              "ip": "89.160.20.128",
+              "port": 62204,
+              "user": "Test",
+              "user_group": " user group"
+            },
+            "src": {
+              "geo": "src_geo"
+            },
+            "telemetry": {
+              "event": {
+                "category": "AFM"
+              }
+            },
+            "tenant": "Common",
+            "translated": {
+              "dest": {
+                "ip": "216.160.83.56",
+                "port": 80
+              },
+              "ip_protocol": "tcp",
+              "route_domain": "example.com",
+              "source": {
+                "ip": "89.160.20.128",
+                "port": 9090
+              },
+              "vlan": "test"
+            },
+            "vlan": "/Common/external"
+          }
+        },
+        "host": {
+          "name": "example.com"
+        },
+        "network": {
+          "application": "app.app",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "Advanced Firewall Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "example.com",
+            "host1",
+            "host"
+          ],
+          "ip": [
+            "216.160.83.56",
+            "89.160.20.128"
+          ],
+          "user": [
+            "Test"
+          ]
+        },
+        "server": {
+          "as": {
+            "number": 209
+          },
+          "geo": {
+            "city_name": "Milton",
+            "continent_name": "North America",
+            "country_iso_code": "US",
+            "country_name": "United States",
+            "location": {
+              "lat": 47.2513,
+              "lon": -122.3149
+            },
+            "region_iso_code": "US-WA",
+            "region_name": "Washington"
+          },
+          "ip": "216.160.83.56",
+          "port": 80
+        },
+        "source": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "domain": "host",
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.128",
+          "port": 62204,
+          "user": {
+            "group": {
+              "name": " user group"
+            },
+            "name": "Test"
+          }
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-afm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-11-16T15:08:22.000Z",
+        "client": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.128",
+          "port": 62204
+        },
+        "destination": {
+          "as": {
+            "number": 209
+          },
+          "domain": "host1",
+          "geo": {
+            "city_name": "Milton",
+            "continent_name": "North America",
+            "country_iso_code": "US",
+            "country_name": "United States",
+            "location": {
+              "lat": 47.2513,
+              "lon": -122.3149
+            },
+            "region_iso_code": "US-WA",
+            "region_name": "Washington"
+          },
+          "ip": "216.160.83.56",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "Reject",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"acl_policy_name\":\"/policy/test\",\"acl_policy_type\":\"Enforced\",\"acl_rule_name\":\"ping\",\"action\":\"Reject\",\"hostname\":\"example.com\",\"bigip_mgmt_ip\":\"89.160.20.128\",\"context_name\":\"/Common/test/app\",\"context_type\":\"Virtual Server\",\"date_time\":\"2021-11-16T15:08:22.000Z\",\"dest_fqdn\":\"host1\",\"dest_ip\":\"216.160.83.56\",\"dst_geo\":\"dst_geo\",\"dest_port\":\"80\",\"device_product\":\" Device Module\",\"device_vendor\":\"Device_Vendor\",\"device_version\":\"1.2.1.2.0.3.1\",\"drop_reason\":\"Policy\",\"errdefs_msgno\":\"1212121212\",\"errdefs_msg_name\":\"Network Event\",\"flow_id\":\"1234567\",\"ip_protocol\":\"TCP\",\"severity\":\"8\",\"partition_name\":\"Common\",\"route_domain\":\"example.com\",\"sa_translation_pool\":\"SA pool\",\"sa_translation_type\":\"SA type\",\"source_fqdn\":\"host\",\"source_ip\":\"89.160.20.128\",\"src_geo\":\"src_geo\",\"source_port\":\"62204\",\"source_user\":\"Test\",\"source_user_group\":\"user group\",\"translated_dest_ip\":\"216.160.83.56\",\"translated_dest_port\":\"80\",\"translated_ip_protocol\":\"tcp\",\"translated_route_domain\":\"example.com\",\"translated_source_ip\":\"89.160.20.128\",\"translated_source_port\":\"9090\",\"translated_vlan\":\"test\",\"vlan\":\"/Common/external\",\"send_to_vs\":\"Test vs\",\"tenant\":\"Common\",\"acl_rule_uuid\":\"abc32bca123\",\"dest_ipint_categories\":\"No-lookup\",\"dest_vlan\":\"/common/test\",\"src_zone\":\"src_zone\",\"dest_zone\":\"dest_zone\",\"source_ipint_categories\":\"No-lookup\",\"application\":\"app.app\",\"telemetryEventCategory\":\"AFM\"}",
+          "severity": 8,
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "acl": {
+              "policy": {
+                "name": "/policy/test",
+                "type": "Enforced"
+              },
+              "rule": {
+                "name": "ping",
+                "uuid": "abc32bca123"
+              }
+            },
+            "action": "Reject",
+            "application": {
+              "name": "app.app"
+            },
+            "context": {
+              "name": "/Common/test/app",
+              "type": "Virtual Server"
+            },
+            "date_time": "2021-11-16T15:08:22.000Z",
+            "dest": {
+              "fqdn": "host1",
+              "ip": "216.160.83.56",
+              "ipint_categories": "No-lookup",
+              "port": 80,
+              "vlan": "/common/test",
+              "zone": "dest_zone"
+            },
+            "device": {
+              "product": " Device Module",
+              "vendor": "Device_Vendor",
+              "version": "1.2.1.2.0.3.1"
+            },
+            "drop_reason": "Policy",
+            "dst": {
+              "geo": "dst_geo"
+            },
+            "errdefs": {
+              "msg_name": "Network Event",
+              "msgno": "1212121212"
+            },
+            "flow": {
+              "id": "1234567"
+            },
+            "hostname": "example.com",
+            "ip_protocol": "TCP",
+            "mgmt_ip": "89.160.20.128",
+            "partition_name": "Common",
+            "route_domain": "example.com",
+            "sa_translation": {
+              "pool": "SA pool",
+              "type": "SA type"
+            },
+            "send_to_vs": "Test vs",
+            "severity": {
+              "code": 8
+            },
+            "source": {
+              "fqdn": "host",
+              "ip": "89.160.20.128",
+              "ipint_categories": "No-lookup",
+              "port": 62204,
+              "user": "Test",
+              "user_group": "user group"
+            },
+            "src": {
+              "geo": "src_geo",
+              "zone": "src_zone"
+            },
+            "telemetry": {
+              "event": {
+                "category": "AFM"
+              }
+            },
+            "tenant": "Common",
+            "translated": {
+              "dest": {
+                "ip": "216.160.83.56",
+                "port": 80
+              },
+              "ip_protocol": "tcp",
+              "route_domain": "example.com",
+              "source": {
+                "ip": "89.160.20.128",
+                "port": 9090
+              },
+              "vlan": "test"
+            },
+            "vlan": "/Common/external"
+          }
+        },
+        "host": {
+          "name": "example.com"
+        },
+        "network": {
+          "application": "app.app",
+          "transport": "tcp"
+        },
+        "observer": {
+          "product": "Advanced Firewall Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "example.com",
+            "host1",
+            "host"
+          ],
+          "ip": [
+            "216.160.83.56",
+            "89.160.20.128"
+          ],
+          "user": [
+            "Test"
+          ]
+        },
+        "server": {
+          "as": {
+            "number": 209
+          },
+          "geo": {
+            "city_name": "Milton",
+            "continent_name": "North America",
+            "country_iso_code": "US",
+            "country_name": "United States",
+            "location": {
+              "lat": 47.2513,
+              "lon": -122.3149
+            },
+            "region_iso_code": "US-WA",
+            "region_name": "Washington"
+          },
+          "ip": "216.160.83.56",
+          "port": 80
+        },
+        "source": {
+          "as": {
+            "number": 29518,
+            "organization": {
+              "name": "Bredband2 AB"
+            }
+          },
+          "domain": "host",
+          "geo": {
+            "city_name": "Linköping",
+            "continent_name": "Europe",
+            "country_iso_code": "SE",
+            "country_name": "Sweden",
+            "location": {
+              "lat": 58.4167,
+              "lon": 15.6167
+            },
+            "region_iso_code": "SE-E",
+            "region_name": "Östergötland County"
+          },
+          "ip": "89.160.20.128",
+          "port": 62204,
+          "user": {
+            "group": {
+              "name": "user group"
+            },
+            "name": "Test"
+          }
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-apm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2020-12-03T22:10:07.783Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"example.com\",\"errdefs_msgno\":\"01490102:5:\",\"partition_name\":\"Common\",\"session_id\":\"acb12bdc\",\"Access_Profile\":\"/Common/test/abc\",\"Partition\":\"Common\",\"Session_Id\":\"ab32cda23\",\"Access_Policy_Result\":\"Logon_Deny\",\"tenant\":\"Common\",\"application\":\"Test application\",\"telemetryEventCategory\":\"APM\",\"f5telemetry_timestamp\":\"2020-12-03T22:10:07.783Z\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "access": {
+              "policy_result": "Logon_Deny",
+              "profile": "/Common/test/abc"
+            },
+            "application": {
+              "name": "Test application"
+            },
+            "errdefs": {
+              "msgno": "01490102:5:"
+            },
+            "hostname": "example.com",
+            "partition": "Common",
+            "partition_name": "Common",
+            "session": {
+              "id": [
+                "acb12bdc",
+                "ab32cda23"
+              ]
+            },
+            "telemetry": {
+              "event": {
+                "category": "APM"
+              },
+              "timestamp": "2020-12-03T22:10:07.783Z"
+            },
+            "tenant": "Common"
+          }
+        },
+        "host": {
+          "name": "example.com"
+        },
+        "network": {
+          "application": "test application"
+        },
+        "observer": {
+          "product": "Application Performance Monitoring",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "example.com"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-apm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2021-10-01T08:00:03.319Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"example.com\",\"errdefs_msgno\":\"01490511:5:\",\"partition_name\":\"/Common\",\"session_id\":\"ab32cdba231\",\"Access_Profile\":\"/Common/abc\",\"Partition\":\"/Common\",\"Session_ID\":\"ab231bcda\",\"Max_concurrent_Users\":\"2\",\"telemetryEventCategory\":\"APM\",\"f5telemetry_timestamp\":\"2021-10-01T08:00:03.319Z\",\"tenant\":\"Common\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "access": {
+              "profile": "/Common/abc"
+            },
+            "concurrent": {
+              "users": {
+                "max": 2
+              }
+            },
+            "errdefs": {
+              "msgno": "01490511:5:"
+            },
+            "hostname": "example.com",
+            "partition": "/Common",
+            "partition_name": "/Common",
+            "session": {
+              "id": [
+                "ab32cdba231",
+                "ab231bcda"
+              ]
+            },
+            "telemetry": {
+              "event": {
+                "category": "APM"
+              },
+              "timestamp": "2021-10-01T08:00:03.319Z"
+            },
+            "tenant": "Common"
+          }
+        },
+        "host": {
+          "name": "example.com"
+        },
+        "observer": {
+          "product": "Application Performance Monitoring",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "example.com"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-apm.log-expected.json",
+      "sample_event": {
+        "client": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.144"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"Bytes_In\":\"12\",\"Bytes_Out\":\"0\",\"User_Agent\":\"Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1\",\"Client_IP\":\"81.2.69.144\",\"Continent\":\"Asia\",\"Country\":\"India\",\"Listener\":\"test_listener\",\"Reputation\":\"test_reputation\",\"State\":\"test\",\"Virtual_IP\":\"81.2.69.192\",\"telemetryEventCategory\":\"APM\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "bytes": {
+              "in": 12,
+              "out": 0
+            },
+            "client": {
+              "ip": "81.2.69.144"
+            },
+            "continent": "Asia",
+            "country": "India",
+            "listener": "test_listener",
+            "reputation": "test_reputation",
+            "state": "test",
+            "telemetry": {
+              "event": {
+                "category": "APM"
+              }
+            },
+            "user": {
+              "agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1"
+            },
+            "virtual": {
+              "ip": "81.2.69.192"
+            }
+          }
+        },
+        "host": {
+          "geo": {
+            "continent_name": "Asia",
+            "country_name": "India"
+          }
+        },
+        "network": {
+          "bytes": 12,
+          "direction": "ingress"
+        },
+        "observer": {
+          "product": "Application Performance Monitoring",
+          "vendor": "F5"
+        },
+        "related": {
+          "ip": [
+            "81.2.69.144",
+            "81.2.69.192"
+          ]
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.144"
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "user_agent": {
+          "device": {
+            "name": "iPhone"
+          },
+          "name": "Mobile Safari",
+          "original": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1",
+          "os": {
+            "full": "iOS 12.1",
+            "name": "iOS",
+            "version": "12.1"
+          },
+          "version": "12.0"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-apm.log-expected.json",
+      "sample_event": {
+        "client": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.144"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"Bytes_In\":\"12\",\"Bytes_Out\":\"0\",\"User_Agent\":\"SonyEricssonK750i%2FR1CA%20Browser%2FSEMC-Browser%2F4.2%20Profile%2FMIDP-2.0%20Configuration%2FCLDC-1.1\",\"Client_IP\":\"81.2.69.144\",\"Continent\":\"Asia\",\"Country\":\"India\",\"Listener\":\"test_listener\",\"Reputation\":\"test_reputation\",\"State\":\"test\",\"Virtual_IP\":\"81.2.69.192\",\"telemetryEventCategory\":\"APM\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "bytes": {
+              "in": 12,
+              "out": 0
+            },
+            "client": {
+              "ip": "81.2.69.144"
+            },
+            "continent": "Asia",
+            "country": "India",
+            "listener": "test_listener",
+            "reputation": "test_reputation",
+            "state": "test",
+            "telemetry": {
+              "event": {
+                "category": "APM"
+              }
+            },
+            "user": {
+              "agent": "SonyEricssonK750i/R1CA Browser/SEMC-Browser/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1"
+            },
+            "virtual": {
+              "ip": "81.2.69.192"
+            }
+          }
+        },
+        "host": {
+          "geo": {
+            "continent_name": "Asia",
+            "country_name": "India"
+          }
+        },
+        "network": {
+          "bytes": 12,
+          "direction": "ingress"
+        },
+        "observer": {
+          "product": "Application Performance Monitoring",
+          "vendor": "F5"
+        },
+        "related": {
+          "ip": [
+            "81.2.69.144",
+            "81.2.69.192"
+          ]
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.144"
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "user_agent": {
+          "device": {
+            "name": "Ericsson K750i"
+          },
+          "name": "SEMC-Browser",
+          "original": "SonyEricssonK750i/R1CA Browser/SEMC-Browser/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+          "version": "4.2"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-asm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-11-19T22:34:40.000Z",
+        "client": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 49804
+        },
+        "destination": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "alert",
+          "original": "{\"hostname\":\"hostname\",\"management_ip_address\":\"81.2.69.142\",\"management_ip_address_2\":\"81.2.69.144\",\"http_class_name\":\"/Common/abc/test\",\"web_application_name\":\"/Common/abc\",\"policy_name\":\"/Common/abc\",\"policy_apply_date\":\"2018-11-19 22:17:57\",\"violations\":\"Evasion technique detected\",\"support_id\":\"123456789\",\"request_status\":\"blocked\",\"response_code\":\"0\",\"ip_client\":\"81.2.69.142\",\"route_domain\":\"example.com\",\"method\":\"GET\",\"protocol\":\"HTTP\",\"query_string\":\"(u0026(|(sAMAccountName=johndo)(UserPrincipleName=Johndo@))(!(userAccountControl:1.2.840....:=2)))\",\"x_forwarded_for_header_value\":\"81.2.69.144\",\"sig_ids\":\"abc12bcd\",\"sig_names\":\"abc\",\"date_time\":\"2018-11-19 22:34:40\",\"severity\":\"Critical\",\"attack_type\":\"Detection Evasion\",\"geo_location\":\"US\",\"ip_address_intelligence\":\"host1\",\"username\":\"Test User\",\"session_id\":\"abc123abcd\",\"src_port\":\"49804\",\"dest_port\":\"80\",\"dest_ip\":\"81.2.69.142\",\"sub_violations\":\"Evasion technique detected:Directory traversals\",\"virus_name\":\"Test Virus\",\"violation_rating\":\"3\",\"websocket_direction\":\"Test\",\"websocket_message_type\":\"test\",\"device_id\":\"12bdca32\",\"staged_sig_ids\":\"abc23121bc\",\"staged_sig_names\":\"test_name\",\"threat_campaign_names\":\"campaign name\",\"staged_threat_campaign_names\":\"test\",\"blocking_exception_reason\":\"test\",\"captcha_result\":\"not_received\",\"uri\":\"/directory/file\",\"fragment\":\"Fragment\",\"request\":\"GET /auth/realms/c_simple/protocol/openid-connect/certs HTTP/1.1\\r\\nHost: itbqa.gent.be\\r\\nUser-Agent: Drupal/10.1.5 (+https://www.drupal.org/) GuzzleHttp/7\\r\\nAccept: application/json\\r\\nX-Forwarded-For: 10.10.10.10\\r\\n\\r\\n\",\"tenant\":\"Common\",\"application\":\"app.app\",\"telemetryEventCategory\":\"ASM\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "application": {
+              "name": "app.app"
+            },
+            "attack": {
+              "type": "Detection Evasion"
+            },
+            "blocking_exception_reason": "test",
+            "captcha_result": "not_received",
+            "client": {
+              "ip": "81.2.69.142"
+            },
+            "date_time": "2018-11-19T22:34:40.000Z",
+            "dest": {
+              "ip": "81.2.69.142",
+              "port": 80
+            },
+            "device": {
+              "id": "12bdca32"
+            },
+            "fragment": "Fragment",
+            "geo": {
+              "location": "US"
+            },
+            "hostname": "hostname",
+            "http": {
+              "class_name": "/Common/abc/test"
+            },
+            "ip_address_intelligence": "host1",
+            "management": {
+              "ip_address": "81.2.69.142",
+              "ip_address_2": "81.2.69.144"
+            },
+            "method": "GET",
+            "policy": {
+              "apply_date": "2018-11-19T22:17:57.000Z",
+              "name": "/Common/abc"
+            },
+            "protocol": "HTTP",
+            "query": {
+              "sam_account_name": "johndo",
+              "string": "(u0026(|(sAMAccountName=johndo)(UserPrincipleName=Johndo@))(!(userAccountControl:1.2.840....:=2)))",
+              "user_principle_name": "Johndo@"
+            },
+            "request": {
+              "accept": "application/json",
+              "detail": "GET /auth/realms/c_simple/protocol/openid-connect/certs HTTP/1.1\r\nHost: itbqa.gent.be\r\nUser-Agent: Drupal/10.1.5 (+https://www.drupal.org/) GuzzleHttp/7\r\nAccept: application/json\r\nX-Forwarded-For: 10.10.10.10\r\n\r\n",
+              "host": "itbqa.gent.be",
+              "method": "GET",
+              "path": "/auth/realms/c_simple/protocol/openid-connect/certs",
+              "protocol": "HTTP/1.1",
+              "status": "blocked",
+              "user_agent": "Drupal/10.1.5 (+https://www.drupal.org/) GuzzleHttp/7",
+              "x_forwarded_for": "10.10.10.10"
+            },
+            "response": {
+              "code": 0
+            },
+            "route_domain": "example.com",
+            "session": {
+              "id": "abc123abcd"
+            },
+            "severity": {
+              "name": "Critical"
+            },
+            "sig": {
+              "ids": "abc12bcd",
+              "names": "abc"
+            },
+            "src": {
+              "port": 49804
+            },
+            "staged": {
+              "sig": {
+                "ids": "abc23121bc",
+                "names": "test_name"
+              },
+              "threat_campaign_names": "test"
+            },
+            "sub_violations": "Evasion technique detected:Directory traversals",
+            "support": {
+              "id": "123456789"
+            },
+            "telemetry": {
+              "event": {
+                "category": "ASM"
+              }
+            },
+            "tenant": "Common",
+            "threat_campaign_names": "campaign name",
+            "uri": "/directory/file",
+            "username": "Test User",
+            "violation": {
+              "rating": 3
+            },
+            "violations": "Evasion technique detected",
+            "virus_name": "Test Virus",
+            "web_application_name": "/Common/abc",
+            "websocket": {
+              "direction": "Test",
+              "message_type": "test"
+            },
+            "x_forwarded_for_header_value": [
+              "81.2.69.144"
+            ]
+          }
+        },
+        "host": {
+          "geo": {
+            "country_iso_code": "US"
+          },
+          "id": "12bdca32",
+          "name": "hostname"
+        },
+        "http": {
+          "request": {
+            "method": "GET"
+          },
+          "version": "1.1"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "application": "app.app",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "Application Security Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname",
+            "12bdca32",
+            "itbqa.gent.be"
+          ],
+          "ip": [
+            "81.2.69.142",
+            "81.2.69.144",
+            "10.10.10.10"
+          ],
+          "user": [
+            "Test User",
+            "johndo"
+          ]
+        },
+        "server": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 80
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 49804
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "url": {
+          "domain": "itbqa.gent.be",
+          "original": "http://itbqa.gent.be/auth/realms/c_simple/protocol/openid-connect/certs",
+          "path": "/auth/realms/c_simple/protocol/openid-connect/certs",
+          "scheme": "http"
+        },
+        "user": {
+          "name": "Test User"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Other",
+          "original": "Drupal/10.1.5 (+https://www.drupal.org/) GuzzleHttp/7"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-asm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-11-19T22:34:40.000Z",
+        "client": {
+          "ip": "192.168.0.1",
+          "port": 49804
+        },
+        "destination": {
+          "ip": "10.0.2.10",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "alert",
+          "original": "{\"hostname\":\"hostname\",\"management_ip_address\":\"10.0.1.4\",\"management_ip_address_2\":\"\",\"http_class_name\":\"/Common/app.app/app_policy\",\"web_application_name\":\"/Common/app.app/app_policy\",\"policy_name\":\"/Common/app.app/app_policy\",\"policy_apply_date\":\"2018-11-19 22:17:57\",\"violations\":\"Evasion technique detected\",\"support_id\":\"1730614276869062795\",\"request_status\":\"blocked\",\"response_code\":\"0\",\"ip_client\":\"192.168.0.1\",\"route_domain\":\"0\",\"method\":\"GET\",\"protocol\":\"HTTP\",\"query_string\":\"\",\"x_forwarded_for_header_value\":\"192.168.0.1\",\"sig_ids\":\"\",\"sig_names\":\"\",\"date_time\":\"2018-11-19 22:34:40\",\"severity\":\"Critical\",\"attack_type\":\"Detection Evasion,Path Traversal\",\"geo_location\":\"US\",\"ip_address_intelligence\":\"N/A\",\"username\":\"N/A\",\"session_id\":\"f609d8a924419638\",\"src_port\":\"49804\",\"dest_port\":\"80\",\"dest_ip\":\"10.0.2.10\",\"sub_violations\":\"Evasion technique detected:Directory traversals\",\"virus_name\":\"N/A\",\"violation_rating\":\"3\",\"websocket_direction\":\"N/A\",\"websocket_message_type\":\"N/A\",\"device_id\":\"N/A\",\"staged_sig_ids\":\"\",\"staged_sig_names\":\"\",\"threat_campaign_names\":\"\",\"staged_threat_campaign_names\":\"\",\"blocking_exception_reason\":\"N/A\",\"captcha_result\":\"not_received\",\"uri\":\"/directory/file\",\"fragment\":\"\",\"request\":\"GET /admin/..%2F..%2F..%2Fdirectory/file HTTP/1.0\\\\r\\\\nHost: host.westus.cloudapp.azure.com\\\\r\\\\nConnection: keep-alive\\\\r\\\\nCache-Control: max-age\",\"tenant\":\"Common\",\"application\":\"app.app\",\"telemetryEventCategory\":\"ASM\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "application": {
+              "name": "app.app"
+            },
+            "attack": {
+              "type": "Detection Evasion,Path Traversal"
+            },
+            "captcha_result": "not_received",
+            "client": {
+              "ip": "192.168.0.1"
+            },
+            "date_time": "2018-11-19T22:34:40.000Z",
+            "dest": {
+              "ip": "10.0.2.10",
+              "port": 80
+            },
+            "geo": {
+              "location": "US"
+            },
+            "hostname": "hostname",
+            "http": {
+              "class_name": "/Common/app.app/app_policy"
+            },
+            "management": {
+              "ip_address": "10.0.1.4"
+            },
+            "method": "GET",
+            "policy": {
+              "apply_date": "2018-11-19T22:17:57.000Z",
+              "name": "/Common/app.app/app_policy"
+            },
+            "protocol": "HTTP",
+            "request": {
+              "cache_control": "max-age",
+              "connection": "keep-alive",
+              "detail": "GET /admin/..%2F..%2F..%2Fdirectory/file HTTP/1.0\\r\\nHost: host.westus.cloudapp.azure.com\\r\\nConnection: keep-alive\\r\\nCache-Control: max-age",
+              "host": "host.westus.cloudapp.azure.com",
+              "method": "GET",
+              "path": "/admin/..%2F..%2F..%2Fdirectory/file",
+              "protocol": "HTTP/1.0",
+              "status": "blocked"
+            },
+            "response": {
+              "code": 0
+            },
+            "route_domain": "0",
+            "session": {
+              "id": "f609d8a924419638"
+            },
+            "severity": {
+              "name": "Critical"
+            },
+            "src": {
+              "port": 49804
+            },
+            "sub_violations": "Evasion technique detected:Directory traversals",
+            "support": {
+              "id": "1730614276869062795"
+            },
+            "telemetry": {
+              "event": {
+                "category": "ASM"
+              }
+            },
+            "tenant": "Common",
+            "uri": "/directory/file",
+            "violation": {
+              "rating": 3
+            },
+            "violations": "Evasion technique detected",
+            "web_application_name": "/Common/app.app/app_policy",
+            "x_forwarded_for_header_value": [
+              "192.168.0.1"
+            ]
+          }
+        },
+        "host": {
+          "geo": {
+            "country_iso_code": "US"
+          },
+          "name": "hostname"
+        },
+        "http": {
+          "request": {
+            "method": "GET"
+          },
+          "version": "1.0"
+        },
+        "log": {
+          "level": "critical"
+        },
+        "network": {
+          "application": "app.app",
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "Application Security Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname",
+            "host.westus.cloudapp.azure.com"
+          ],
+          "ip": [
+            "192.168.0.1",
+            "10.0.2.10",
+            "10.0.1.4"
+          ]
+        },
+        "server": {
+          "ip": "10.0.2.10",
+          "port": 80
+        },
+        "source": {
+          "ip": "192.168.0.1",
+          "port": 49804
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "url": {
+          "domain": "host.westus.cloudapp.azure.com",
+          "original": "http://host.westus.cloudapp.azure.com/admin/..%2F..%2F..%2Fdirectory/file",
+          "path": "/admin/../../../directory/file",
+          "scheme": "http"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-asm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-11-19T22:34:40.000Z",
+        "client": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 49744
+        },
+        "destination": {
+          "ip": "10.160.77.77",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"attack_type\":\"Test Attack\",\"date_time\":\"2018-11-19 22:34:40\",\"dest_ip\":\"10.160.77.77\",\"dest_port\":\"80\",\"geo_info\":\"info\",\"headers\":\"Host: 231213\",\"http_class\":\"/Common/Test\",\"ip_addr_intelli\":\"host1\",\"ip_client\":\"81.2.69.142\",\"ip_route_domain\":\"example.com\",\"is_trunct\":\"no\",\"manage_ip_addr\":\"81.2.69.142\",\"method\":\"POST\",\"policy_apply_date\":\"2021-09-30 02:51:31\",\"policy_name\":\"/Common/Test\",\"protocol\":\"HTTP\",\"query_string\":\"\",\"req\":\"POST /login.php HTTP/1.1\\\\r\\\\nHost: 81.2.69.142\",\"req_status\":\"passed\",\"resp\":\"HTTP/1.1 302 Found\\\\r\\\\nDate: Tue, 05 Oct 2021 17:30:14 \",\"resp_code\":\"302\",\"route_domain\":\"example.com\",\"session_id\":\"ab32bda123\",\"severity\":\"Informational\",\"sig_ids\":\"1abcd23bdc\",\"sig_names\":\"test\",\"src_port\":\"49744\",\"sub_violates\":\"Sub-violation\",\"support_id\":\"5438760667957952540\",\"unit_host\":\"hostname\",\"uri\":\"/login.php\",\"username\":\"Test User\",\"violate_details\":\"This is a details.\",\"violate_rate\":\"0\",\"violations\":\"deny\",\"virus_name\":\"abcd\",\"x_fwd_hdr_val\":\"test\",\"telemetryEventCategory\":\"ASM\",\"hostname\":\"localhost.localdomain\",\"tenant\":\"Common\",\"microservice\": \"N/A\",\"response\": \"Response logging disabled\",\"sig_cves\": \"N/A\",\"staged_sig_cves\": \"N/A\",\"tap_event_id\": \"N/A\",\"tap_vid\": \"N/A\",\"vs_name\": \"/Common/Server1_DVWA\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "attack": {
+              "type": "Test Attack"
+            },
+            "client": {
+              "ip": "81.2.69.142"
+            },
+            "date_time": "2018-11-19T22:34:40.000Z",
+            "dest": {
+              "ip": "10.160.77.77",
+              "port": 80
+            },
+            "geo": {
+              "info": "info"
+            },
+            "headers": "Host: 231213",
+            "hostname": "localhost.localdomain",
+            "ip_route_domain": "example.com",
+            "is_trunct": "no",
+            "method": "POST",
+            "policy": {
+              "apply_date": "2021-09-30T02:51:31.000Z",
+              "name": "/Common/Test"
+            },
+            "protocol": "HTTP",
+            "resp": "HTTP/1.1 302 Found\\r\\nDate: Tue, 05 Oct 2021 17:30:14 ",
+            "response": {
+              "value": "Response logging disabled"
+            },
+            "route_domain": "example.com",
+            "session": {
+              "id": "ab32bda123"
+            },
+            "severity": {
+              "name": "Informational"
+            },
+            "sig": {
+              "ids": "1abcd23bdc",
+              "names": "test"
+            },
+            "src": {
+              "port": 49744
+            },
+            "support": {
+              "id": "5438760667957952540"
+            },
+            "telemetry": {
+              "event": {
+                "category": "ASM"
+              }
+            },
+            "tenant": "Common",
+            "unit_host": "hostname",
+            "uri": "/login.php",
+            "username": "Test User",
+            "violate_details": "This is a details.",
+            "violations": "deny",
+            "virus_name": "abcd",
+            "vs_name": "/Common/Server1_DVWA"
+          }
+        },
+        "host": {
+          "name": "localhost.localdomain"
+        },
+        "http": {
+          "request": {
+            "method": "POST"
+          }
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "Application Security Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "localhost.localdomain",
+            "example.com",
+            "hostname"
+          ],
+          "ip": [
+            "81.2.69.142",
+            "10.160.77.77"
+          ],
+          "user": [
+            "Test User"
+          ]
+        },
+        "server": {
+          "ip": "10.160.77.77",
+          "port": 80
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 49744
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "user": {
+          "name": "Test User"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-asm.log-expected.json",
+      "sample_event": {
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"compression_method\":\"test_method\",\"client_type\":\"test_client\",\"conviction_traps\":\"test\",\"credential_stuffing_lookup_result\":\"pass\",\"enforced_by\":\"test\",\"enforcement_action\":\"test_action\",\"epoch_time\":\"1665576701\",\"ip_with_route_domain\":\"example.com\",\"is_truncated\":\"\",\"likely_false_positive_sig_ids\":\"12345678\",\"login_result\":\"success\",\"mobile_application_name\":\"test_application\",\"mobile_application_version\":\"test1.1\",\"operation_id\":\"12345\",\"password_hash_prefix\":\"test\",\"protocol_info\":\"test_info\",\"sig_set_names\":\"test_sig_name\",\"slot_number\":\"1234\",\"staged_sig_set_names\":\"test_staged_sig_name\",\"tap_requested_actions\":\"test_tap_action\",\"tap_sent_token\":\"20334\",\"tap_transaction_id\":\"12345\",\"unit_hostname\":\"hostname\",\"violation_details\":\"test_detail\",\"telemetryEventCategory\":\"ASM\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "client": {
+              "type": "test_client"
+            },
+            "compression_method": "test_method",
+            "conviction_traps": "test",
+            "credential_stuffing_lookup_result": "pass",
+            "enforced_by": "test",
+            "enforcement_action": "test_action",
+            "epoch_time": "2022-10-12T12:11:41.000Z",
+            "ip_with_route_domain": "example.com",
+            "likely_false_positive_sig_ids": "12345678",
+            "login_result": "success",
+            "mobile_application": {
+              "name": "test_application",
+              "version": "test1.1"
+            },
+            "operation": {
+              "id": "12345"
+            },
+            "password_hash_prefix": "test",
+            "protocol_info": "test_info",
+            "sig": {
+              "set_names": "test_sig_name"
+            },
+            "slot": {
+              "number": 1234
+            },
+            "staged": {
+              "sig": {
+                "set_names": "test_staged_sig_name"
+              }
+            },
+            "tap": {
+              "requested_actions": "test_tap_action",
+              "sent_token": 20334,
+              "transaction_id": "12345"
+            },
+            "telemetry": {
+              "event": {
+                "category": "ASM"
+              }
+            },
+            "unit_hostname": "hostname",
+            "violation": {
+              "details": "test_detail"
+            }
+          }
+        },
+        "observer": {
+          "product": "Application Security Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "example.com",
+            "hostname"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-asm.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2024-08-06T10:03:36.000Z",
+        "client": {
+          "ip": "10.43.24.23",
+          "port": 50668
+        },
+        "destination": {
+          "ip": "10.30.4.56",
+          "port": 443
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"attack_type\":\"N/A\",\"blocking_exception_reason\":\"N/A\",\"captcha_result\":\"not_received\",\"date_time\":\"2024-08-06T10:03:36.000Z\",\"dest_ip\":\"10.30.4.56\",\"dest_port\":\"443\",\"device_id\":\"N/A\",\"fragment\":\"\",\"geo_location\":\"N/A\",\"hostname\":\"f5qa\",\"http_class_name\":\"/Common/asmpolicy_lampqa\",\"ip_address_intelligence\":\"N/A\",\"ip_client\":\"10.43.24.23\",\"management_ip_address\":\"10.52.34.33\",\"management_ip_address_2\":\"N/A\",\"method\":\"HEAD\",\"microservice\":\"N/A\",\"originalRawData\":\"<134>Aug  6 12:03:36 f5qa ASM:unit_hostname=\\\"f5qa\\\",management_ip_address=\\\"10.52.34.33\\\",management_ip_address_2=\\\"N/A\\\",http_class_name=\\\"/Common/asmpolicy_lampqa\\\",web_application_name=\\\"/Common/asmpolicy_lampqa\\\",policy_name=\\\"/Common/asmpolicy_lampqa\\\",policy_apply_date=\\\"2024-07-02 16:43:55\\\",violations=\\\"N/A\\\",support_id=\\\"5410866668007843666\\\",request_status=\\\"passed\\\",response_code=\\\"200\\\",ip_client=\\\"10.43.24.23\\\",route_domain=\\\"0\\\",method=\\\"HEAD\\\",protocol=\\\"HTTPS\\\",query_string=\\\"\\\",x_forwarded_for_header_value=\\\"10.43.24.23, 10.43.24.23\\\",sig_ids=\\\"N/A\\\",sig_names=\\\"N/A\\\",date_time=\\\"2024-08-06 12:03:36\\\",severity=\\\"Informational\\\",attack_type=\\\"N/A\\\",geo_location=\\\"N/A\\\",ip_address_intelligence=\\\"N/A\\\",username=\\\"N/A\\\",session_id=\\\"7a60af492530220b\\\",src_port=\\\"50668\\\",dest_port=\\\"443\\\",dest_ip=\\\"10.30.4.56\\\",sub_violations=\\\"N/A\\\",virus_name=\\\"N/A\\\",violation_rating=\\\"0\\\",websocket_direction=\\\"N/A\\\",websocket_message_type=\\\"N/A\\\",device_id=\\\"N/A\\\",staged_sig_ids=\\\"\\\",staged_sig_names=\\\"\\\",threat_campaign_names=\\\"N/A\\\",staged_threat_campaign_names=\\\"N/A\\\",blocking_exception_reason=\\\"N/A\\\",captcha_result=\\\"not_received\\\",microservice=\\\"N/A\\\",tap_event_id=\\\"N/A\\\",tap_vid=\\\"N/A\\\",vs_name=\\\"/Common/vs_externalqa13_443\\\",sig_cves=\\\"N/A\\\",staged_sig_cves=\\\"N/A\\\",uri=\\\"/repository/maven-public/io/netty/netty-codec-haproxy/4.1.110.Final/netty-codec-haproxy-4.1.110.Final.jar\\\",fragment=\\\"\\\",request=\\\"HEAD /repository/maven-public/io/netty/netty-codec-haproxy/4.1.110.Final/netty-codec-haproxy-4.1.110.Final.jar HTTP/1.1\\\\r\\\\nCache-Control: no-cache, no-store\\\\r\\\\nPragma: no-cache\\\\r\\\\nHost: domain.gent\\\\r\\\\nConnection: Keep-Alive\\\\r\\\\nUser-Agent: Apache-Maven/3.9.7 (Java 17.0.12; Windows 11 10.0)\\\\r\\\\nAccept-Encoding: gzip,deflate\\\\r\\\\nAuthorization: Basic dc2VydmljZWZhY3Rvcnk6TE1YaHZwRUxhRjJodEFScWFQkkk=\\\\r\\\\nX-Forwarded-For: 10.43.24.23, 10.43.24.23\\\\r\\\\nX-Forwarded-Proto: https\\\\r\\\\n\\\\r\\\\n\\\",response=\\\"Response logging disabled\\\"\",\"policy_apply_date\":\"2024-07-02 16:43:55\",\"policy_name\":\"/Common/asmpolicy_lampqa\",\"protocol\":\"HTTPS\",\"query_string\":\"\",\"request\":\"HEAD /repository/maven-public/io/netty/netty-codec-haproxy/4.1.110.Final/netty-codec-haproxy-4.1.110.Final.jar HTTP/1.1\\\\r\\\\nCache-Control: no-cache, no-store\\\\r\\\\nPragma: no-cache\\\\r\\\\nHost: domain.gent\\\\r\\\\nConnection: Keep-Alive\\\\r\\\\nUser-Agent: Apache-Maven/3.9.7 (Java 17.0.12; Windows 11 10.0)\\\\r\\\\nAccept-Encoding: gzip,deflate\\\\r\\\\nAuthorization: Basic dc2VydmljZWZhY3Rvcnk6TE1YaHZwRUxhRjJodEFScWFQkkk=\\\\r\\\\nX-Forwarded-For: 10.43.24.23, 10.43.24.24\\\\r\\\\nX-Forwarded-Proto: https\\\\r\\\\n\\\\r\\\\n\",\"request_status\":\"passed\",\"response\":\"Response logging disabled\",\"response_code\":\"200\",\"route_domain\":\"0\",\"session_id\":\"7a60af492530220b\",\"severity\":\"Informational\",\"sig_cves\":\"N/A\",\"sig_ids\":\"N/A\",\"sig_names\":\"N/A\",\"src_port\":\"50668\",\"staged_sig_cves\":\"N/A\",\"staged_sig_ids\":\"\",\"staged_sig_names\":\"\",\"staged_threat_campaign_names\":\"N/A\",\"sub_violations\":\"N/A\",\"support_id\":\"5410868666607846666\",\"tap_event_id\":\"N/A\",\"tap_vid\":\"N/A\",\"telemetryEventCategory\":\"ASM\",\"tenant\":\"Common\",\"threat_campaign_names\":\"N/A\",\"uri\":\"/repository/maven-public/io/netty/netty-codec-haproxy/4.1.110.Final/netty-codec-haproxy-4.1.110.Final.jar\",\"username\":\"N/A\",\"violation_rating\":\"0\",\"violations\":\"N/A\",\"virus_name\":\"N/A\",\"vs_name\":\"/Common/vs_externalqa13_443\",\"web_application_name\":\"/Common/asmpolicy_lampqa\",\"websocket_direction\":\"N/A\",\"websocket_message_type\":\"N/A\",\"x_forwarded_for_header_value\":\"10.43.24.23, 10.43.24.24\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "captcha_result": "not_received",
+            "client": {
+              "ip": "10.43.24.23"
+            },
+            "date_time": "2024-08-06T10:03:36.000Z",
+            "dest": {
+              "ip": "10.30.4.56",
+              "port": 443
+            },
+            "hostname": "f5qa",
+            "http": {
+              "class_name": "/Common/asmpolicy_lampqa"
+            },
+            "management": {
+              "ip_address": "10.52.34.33"
+            },
+            "method": "HEAD",
+            "policy": {
+              "apply_date": "2024-07-02T16:43:55.000Z",
+              "name": "/Common/asmpolicy_lampqa"
+            },
+            "protocol": "HTTPS",
+            "request": {
+              "detail": "HEAD /repository/maven-public/io/netty/netty-codec-haproxy/4.1.110.Final/netty-codec-haproxy-4.1.110.Final.jar HTTP/1.1\\r\\nCache-Control: no-cache, no-store\\r\\nPragma: no-cache\\r\\nHost: domain.gent\\r\\nConnection: Keep-Alive\\r\\nUser-Agent: Apache-Maven/3.9.7 (Java 17.0.12; Windows 11 10.0)\\r\\nAccept-Encoding: gzip,deflate\\r\\nAuthorization: Basic dc2VydmljZWZhY3Rvcnk6TE1YaHZwRUxhRjJodEFScWFQkkk=\\r\\nX-Forwarded-For: 10.43.24.23, 10.43.24.24\\r\\nX-Forwarded-Proto: https\\r\\n\\r\\n",
+              "status": "passed"
+            },
+            "response": {
+              "code": 200,
+              "value": "Response logging disabled"
+            },
+            "route_domain": "0",
+            "session": {
+              "id": "7a60af492530220b"
+            },
+            "severity": {
+              "name": "Informational"
+            },
+            "src": {
+              "port": 50668
+            },
+            "support": {
+              "id": "5410868666607846666"
+            },
+            "telemetry": {
+              "event": {
+                "category": "ASM"
+              }
+            },
+            "tenant": "Common",
+            "uri": "/repository/maven-public/io/netty/netty-codec-haproxy/4.1.110.Final/netty-codec-haproxy-4.1.110.Final.jar",
+            "violation": {
+              "rating": 0
+            },
+            "vs_name": "/Common/vs_externalqa13_443",
+            "web_application_name": "/Common/asmpolicy_lampqa",
+            "x_forwarded_for_header_value": [
+              "10.43.24.23",
+              "10.43.24.24"
+            ]
+          }
+        },
+        "host": {
+          "name": "f5qa"
+        },
+        "http": {
+          "request": {
+            "method": "HEAD"
+          }
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "protocol": "https"
+        },
+        "observer": {
+          "product": "Application Security Module",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "f5qa"
+          ],
+          "ip": [
+            "10.43.24.23",
+            "10.30.4.56",
+            "10.52.34.33",
+            "10.43.24.24"
+          ]
+        },
+        "server": {
+          "ip": "10.30.4.56",
+          "port": 443
+        },
+        "source": {
+          "ip": "10.43.24.23",
+          "port": 50668
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-avr.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2019-04-29T22:36:00.000Z",
+        "client": {
+          "ip": "81.2.69.142"
+        },
+        "destination": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 80
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"hostname\",\"SlotId\":\"0\",\"errdefs_msgno\":\"22282245\",\"Entity\":\"OffboxAll\",\"Module\":\"http\",\"AVRProfileName\":\"/Common/abc\",\"AggrInterval\":\"30\",\"EOCTimestamp\":\"1556577360\",\"HitCount\":\"678\",\"ApplicationName\":\"abc.app\",\"VSName\":\"/Common/abc\",\"POOLIP\":\"81.2.69.142\",\"POOLIPRouteDomain\":\"example.com\",\"POOLPort\":\"80\",\"URL\":\"/\",\"ResponseCode\":\"200\",\"BrowserName\":\"N/A\",\"OsName\":\"Test\",\"ClientIP\":\"81.2.69.142\",\"ClientIPRouteDomain\":\"example.com\",\"SubnetName\":\"test\",\"SubnetIP\":\"81.2.69.144\",\"SubnetRouteDomain\":\"example.com\",\"DeviceId\":\"ab4b3cd23acdb1\",\"GeoCode\":\"N/A\",\"Method\":\"GET\",\"UserAgent\":\"USER_AGENT\",\"TPSMax\":\"23\",\"ClientLatencyHitCount\":\"0\",\"ClientLatencyMax\":\"0\",\"ClientLatencyTotal\":\"0\",\"ServerLatencyMax\":\"5\",\"ServerLatencyMin\":\"1\",\"ServerLatencyTotal\":\"314\",\"ThroughputReqMaxPerSec\":\"14136\",\"ThroughputReqTotalPerInterval\":\"50172\",\"ThroughputRespMaxPerSec\":\"1458672\",\"ThroughputRespTotalPerInterval\":\"5175174\",\"UserSessionsNewTotal\":\"10901\",\"ServerHitcount\":\"678\",\"ApplicationResponseTime\":\"48\",\"MaxApplicationResponseTime\":\"4\",\"MinApplicationResponseTime\":\"1\",\"SosApplicationResponseTime\":\"84\",\"ClientTtfbHitcount\":\"678\",\"ClientTtfb\":\"922\",\"MaxClientTtfb\":\"15\",\"MinClientTtfb\":\"1\",\"SosClientTtfb\":\"1986\",\"ClientSideNetworkLatency\":\"69\",\"MaxClientSideNetworkLatency\":\"1\",\"MinClientSideNetworkLatency\":\"1\",\"SosClientSideNetworkLatency\":\"1\",\"ServerSideNetworkLatency\":\"950\",\"MaxServerSideNetworkLatency\":\"13\",\"MinServerSideNetworkLatency\":\"1\",\"SosServerSideNetworkLatency\":\"1794\",\"RequestDurationHitcount\":\"678\",\"RequestDuration\":\"0\",\"MaxRequestDuration\":\"0\",\"MinRequestDuration\":\"0\",\"SosRequestDuration\":\"0\",\"ResponseDurationHitcount\":\"678\",\"ResponseDuration\":\"157\",\"MaxResponseDuration\":\"3\",\"MinResponseDuration\":\"0\",\"SosResponseDuration\":\"173\",\"LatencyHistogram\":\"0,2,4,7,12,22,40,74,136,252,465,858,1585,2929,5412,10001,300000|635,38,5,0,0,0,0,0,0,0,0,0,0,0,0,0\",\"telemetryEventCategory\":\"AVR\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "aggr_interval": 30,
+            "application": {
+              "response": {
+                "max_time": 4,
+                "min_time": 1,
+                "time": 48
+              }
+            },
+            "application_name": "abc.app",
+            "client": {
+              "ip": "81.2.69.142",
+              "ip_route_domain": "example.com",
+              "latency": {
+                "hit_count": 0,
+                "max": 0,
+                "total": 0
+              }
+            },
+            "client_side": {
+              "network": {
+                "latency": 69,
+                "max_latency": 1,
+                "min_latency": 1
+              }
+            },
+            "client_ttfb": {
+              "hit_count": 678,
+              "max": 15,
+              "min": 1,
+              "value": 922
+            },
+            "device": {
+              "id": "ab4b3cd23acdb1"
+            },
+            "entity": "OffboxAll",
+            "eoc": {
+              "timestamp": "2019-04-29T22:36:00.000Z"
+            },
+            "errdefs": {
+              "msgno": "22282245"
+            },
+            "hit_count": 678,
+            "hostname": "hostname",
+            "latency_histogram": "0,2,4,7,12,22,40,74,136,252,465,858,1585,2929,5412,10001,300000|635,38,5,0,0,0,0,0,0,0,0,0,0,0,0,0",
+            "method": "GET",
+            "module": "http",
+            "osname": "Test",
+            "pool": {
+              "ip": "81.2.69.142",
+              "ip_route_domain": "example.com",
+              "port": 80
+            },
+            "profile": {
+              "name": "/Common/abc"
+            },
+            "request": {
+              "duration": 0,
+              "duration_hit_count": 678,
+              "max_duration": 0,
+              "min_duration": 0
+            },
+            "response": {
+              "code": 200,
+              "duration": 157,
+              "duration_hit_count": 678,
+              "max_duration": 3,
+              "min_duration": 0
+            },
+            "server": {
+              "hit_count": 678,
+              "latency": {
+                "max": 5,
+                "min": 1,
+                "total": 314
+              }
+            },
+            "server_side": {
+              "network": {
+                "latency": 950,
+                "max_latency": 13,
+                "min_latency": 1
+              }
+            },
+            "slot": {
+              "id": "0"
+            },
+            "sos": {
+              "application_response_time": 84,
+              "client_side_network_latency": 1,
+              "client_ttfb": 1986,
+              "request_duration": 0,
+              "response_duration": 173,
+              "server_side_network_latency": 1794
+            },
+            "subnet": {
+              "ip": "81.2.69.144",
+              "name": "test",
+              "route_domain": "example.com"
+            },
+            "telemetry": {
+              "event": {
+                "category": "AVR"
+              }
+            },
+            "throughput": {
+              "req_per_interval": {
+                "total": 50172
+              },
+              "req_per_sec": {
+                "max": 14136
+              },
+              "resp_per_interval": {
+                "total": 5175174
+              },
+              "resp_per_sec": {
+                "max": 1458672
+              }
+            },
+            "tps": {
+              "max": 23.0
+            },
+            "url": "/",
+            "user": {
+              "agent": "USER_AGENT",
+              "sessions": {
+                "new_total": 10901
+              }
+            },
+            "vs_name": "/Common/abc"
+          }
+        },
+        "host": {
+          "id": "ab4b3cd23acdb1",
+          "name": "hostname",
+          "os": {
+            "name": "Test"
+          }
+        },
+        "http": {
+          "request": {
+            "method": "GET"
+          },
+          "response": {
+            "status_code": 200
+          }
+        },
+        "observer": {
+          "product": "Application Visibility and Reporting",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname",
+            "ab4b3cd23acdb1",
+            "example.com"
+          ],
+          "ip": [
+            "81.2.69.142",
+            "81.2.69.144"
+          ]
+        },
+        "server": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142",
+          "port": 80
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "url": {
+          "original": "/",
+          "path": "/"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Other",
+          "original": "USER_AGENT"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-avr.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2019-04-29T23:03:00.000Z",
+        "client": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          }
+        },
+        "dns": {
+          "question": {
+            "name": "example.com",
+            "type": "A"
+          }
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"hostname\",\"SlotId\":\"0\",\"errdefs_msgno\":\"22282300\",\"Entity\":\"DNS\",\"ObjectTagsList\":\"List Tag\",\"AggrInterval\":\"30\",\"EOCTimestamp\":\"1556578980\",\"HitCount\":\"4\",\"ApplicationName\":\"Unassigned\",\"VSName\":\"/Common/abc\",\"DosProfileName\":\"<no-profile>\",\"AttackId\":\"0\",\"QueryType\":\"A\",\"QueryName\":\"example.com\",\"SourceIP\":\"81.2.69.142\",\"SourceIpRouteDomain\":\"example.com\",\"CountryCode\":\"IN\",\"TransactionOutcome\":\"Valid\",\"AttackVectorName\":\"Not attacked\",\"AttackTriggerName\":\"Not attacked\",\"AttackMitigationName\":\"Not attacked\",\"IsInternalActivity\":\"0\",\"IsAttackingIp\":\"0\",\"telemetryEventCategory\":\"AVR\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "aggr_interval": 30,
+            "application_name": "Unassigned",
+            "attack": {
+              "id": "0",
+              "mitigation_name": "Not attacked",
+              "trigger_name": "Not attacked",
+              "vector_name": "Not attacked"
+            },
+            "country_code": "IN",
+            "dos": {
+              "profile_name": "<no-profile>"
+            },
+            "entity": "DNS",
+            "eoc": {
+              "timestamp": "2019-04-29T23:03:00.000Z"
+            },
+            "errdefs": {
+              "msgno": "22282300"
+            },
+            "hit_count": 4,
+            "hostname": "hostname",
+            "is_attacking_ip": false,
+            "is_internal_activity": false,
+            "object_tags_list": "List Tag",
+            "query": {
+              "name": "example.com",
+              "type": "A"
+            },
+            "slot": {
+              "id": "0"
+            },
+            "source": {
+              "ip": "81.2.69.142",
+              "ip_route_domain": "example.com"
+            },
+            "telemetry": {
+              "event": {
+                "category": "AVR"
+              }
+            },
+            "transaction_outcome": "Valid",
+            "vs_name": "/Common/abc"
+          }
+        },
+        "host": {
+          "geo": {
+            "country_iso_code": "IN"
+          },
+          "name": "hostname"
+        },
+        "observer": {
+          "product": "Application Visibility and Reporting",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname",
+            "example.com"
+          ],
+          "ip": [
+            "81.2.69.142"
+          ]
+        },
+        "source": {
+          "geo": {
+            "city_name": "London",
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "country_name": "United Kingdom",
+            "location": {
+              "lat": 51.5142,
+              "lon": -0.0931
+            },
+            "region_iso_code": "GB-ENG",
+            "region_name": "England"
+          },
+          "ip": "81.2.69.142"
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-avr.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2019-04-30T02:28:00.000Z",
+        "client": {
+          "ip": "81.2.69.142"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "action": "Legal",
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"hostname\",\"globalBigiqConf\":\"Test_config\",\"ObjectTagsList\":\"List Tag\",\"SlotId\":\"0\",\"errdefs_msgno\":\"22282308\",\"Entity\":\"test\",\"AggrInterval\":\"30\",\"EOCTimestamp\":\"1556591280\",\"HitCount\":\"1\",\"ApplicationName\":\"abc.app\",\"VSName\":\"/Common/abc\",\"Policy\":\"/Common/abc\",\"Action\":\"Legal\",\"Severity\":\"Informational\",\"ViolationRating\":\"2\",\"NetworkProtocol\":\"HTTP\",\"ClientIP\":\"81.2.69.142\",\"ClientIPRouteDomain\":\"example.com\",\"DeviceId\":\"ab3b2dcab12b3c\",\"IPReputation\":\"N/A\",\"GeoCountry\":\"IN\",\"UserName\":\"test\",\"SessionID\":\"1234567890\",\"URL\":\"/test\",\"ResponseCode\":\"200\",\"Method\":\"GET\",\"IsMobileDevice\":\"0\",\"DosMobileAppClientType\":\"Uncategorized\",\"DosMobileAppVersion\":\"1.1\",\"DosMobileAppDisplayName\":\"display_name\",\"telemetryEventCategory\":\"AVR\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "action": "Legal",
+            "aggr_interval": 30,
+            "application_name": "abc.app",
+            "client": {
+              "ip": "81.2.69.142",
+              "ip_route_domain": "example.com"
+            },
+            "device": {
+              "id": "ab3b2dcab12b3c"
+            },
+            "dos": {
+              "mobile_app": {
+                "client_type": "Uncategorized",
+                "display_name": "display_name",
+                "version": "1.1"
+              }
+            },
+            "entity": "test",
+            "eoc": {
+              "timestamp": "2019-04-30T02:28:00.000Z"
+            },
+            "errdefs": {
+              "msgno": "22282308"
+            },
+            "geo": {
+              "country": "IN"
+            },
+            "global_bigiq_conf": "Test_config",
+            "hit_count": 1,
+            "hostname": "hostname",
+            "is_mobile_device": false,
+            "method": "GET",
+            "network": {
+              "protocol": "HTTP"
+            },
+            "object_tags_list": "List Tag",
+            "policy": {
+              "name": "/Common/abc"
+            },
+            "response": {
+              "code": 200
+            },
+            "session": {
+              "id": "1234567890"
+            },
+            "severity": {
+              "name": "Informational"
+            },
+            "slot": {
+              "id": "0"
+            },
+            "telemetry": {
+              "event": {
+                "category": "AVR"
+              }
+            },
+            "url": "/test",
+            "user": {
+              "name": "test"
+            },
+            "violation": {
+              "rating": 2
+            },
+            "vs_name": "/Common/abc"
+          }
+        },
+        "host": {
+          "geo": {
+            "country_name": "IN"
+          },
+          "id": "ab3b2dcab12b3c",
+          "name": "hostname"
+        },
+        "http": {
+          "request": {
+            "method": "GET"
+          },
+          "response": {
+            "status_code": 200
+          }
+        },
+        "log": {
+          "level": "informational"
+        },
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "Application Visibility and Reporting",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname",
+            "ab3b2dcab12b3c",
+            "example.com"
+          ],
+          "ip": [
+            "81.2.69.142"
+          ],
+          "user": [
+            "test"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "url": {
+          "original": "/test",
+          "path": "/test"
+        },
+        "user": {
+          "name": "test"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-avr.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2019-04-30T02:52:00.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"hostname\",\"SlotId\":\"0\",\"errdefs_msgno\":\"1234567890\",\"STAT_SRC\":\"TMSTAT\",\"Entity\":\"AfmDosStat\",\"EOCTimestamp\":\"1556592720\",\"AggrInterval\":\"30\",\"HitCount\":\"3\",\"VSName\":\"Device\",\"AttackVectorName\":\"TCP option type\",\"DosProfileName\":\"/Common/abc\",\"AttackType\":\"Device\",\"globalBigiqConf\":\"N/A\",\"AttackCount\":\"0\",\"TotalEvents\":\"0\",\"SoftwareDrops\":\"0\",\"HardwareDrops\":\"0\",\"BadActorEvents\":\"0\",\"BadActorDrops\":\"0\",\"WLEvents\":\"0\",\"AvgDetection\":\"0\",\"MinMitigation\":\"0\",\"MaxMitigation\":\"4294967295\",\"AvgBadActorDetection\":\"0\",\"MinBadActorMitigation\":\"0\",\"MaxBadActorMitigation\":\"4294967295\",\"telemetryEventCategory\":\"AVR\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "aggr_interval": 30,
+            "attack": {
+              "count": 0,
+              "type": "Device",
+              "vector_name": "TCP option type"
+            },
+            "bad_actor": {
+              "detection": {
+                "avg": 0
+              },
+              "drops": 0,
+              "events": 0,
+              "mitigation": {
+                "max": 4294967295,
+                "min": 0
+              }
+            },
+            "detection": {
+              "avg": 0
+            },
+            "dos": {
+              "profile_name": "/Common/abc"
+            },
+            "entity": "AfmDosStat",
+            "eoc": {
+              "timestamp": "2019-04-30T02:52:00.000Z"
+            },
+            "errdefs": {
+              "msgno": "1234567890"
+            },
+            "events": {
+              "total": 0
+            },
+            "hardware_drops": 0,
+            "hit_count": 3,
+            "hostname": "hostname",
+            "mitigation": {
+              "max": 4294967295,
+              "min": 0
+            },
+            "slot": {
+              "id": "0"
+            },
+            "software_drops": 0,
+            "stat_src": "TMSTAT",
+            "telemetry": {
+              "event": {
+                "category": "AVR"
+              }
+            },
+            "vs_name": "Device",
+            "wl_events": 0
+          }
+        },
+        "host": {
+          "name": "hostname"
+        },
+        "observer": {
+          "product": "Application Visibility and Reporting",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-avr.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2019-04-30T02:00:30.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"hostname\",\"SlotId\":\"0\",\"errdefs_msgno\":\"1234567\",\"STAT_SRC\":\"TMSTAT\",\"Entity\":\"TcpStat\",\"EOCTimestamp\":\"1556589630\",\"AggrInterval\":\"30\",\"HitCount\":\"3\",\"tcp_prof\":\"/Common/test\",\"vip\":\"/Common/test\",\"globalBigiqConf\":\"N/A\",\"ObjectTagsList\":\"N/A\",\"active_conns\":\"0\",\"max_active_conns\":\"0\",\"accepts\":\"0\",\"accept_fails\":\"0\",\"new_conns\":\"0\",\"failed_conns\":\"0\",\"expired_conns\":\"0\",\"abandoned_conns\":\"0\",\"rxrst\":\"0\",\"rxbadsum\":\"0\",\"rxbadseg\":\"0\",\"rxooseg\":\"0\",\"rxcookie\":\"0\",\"rxbad_cookie\":\"0\",\"hw_cookie_valid\":\"0\",\"syncacheover\":\"0\",\"txrexmits\":\"0\",\"sndpack\":\"0\",\"tenant\":\"Common\",\"application\":\"abc.app\",\"telemetryEventCategory\":\"AVR\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "abandoned_conns": 0,
+            "accept_fails": 0,
+            "accepts": 0,
+            "active_conns": 0.0,
+            "aggr_interval": 30,
+            "application": {
+              "name": "abc.app"
+            },
+            "entity": "TcpStat",
+            "eoc": {
+              "timestamp": "2019-04-30T02:00:30.000Z"
+            },
+            "errdefs": {
+              "msgno": "1234567"
+            },
+            "expired_conns": 0,
+            "failed_conns": 0,
+            "hit_count": 3,
+            "hostname": "hostname",
+            "hw": {
+              "cookie_valid": 0
+            },
+            "max_active_conns": 0,
+            "new_conns": 0,
+            "rxbad_cookie": 0,
+            "rxbadseg": 0,
+            "rxbadsum": 0,
+            "rxcookie": 0,
+            "rxooseg": 0,
+            "rxrst": 0,
+            "slot": {
+              "id": "0"
+            },
+            "sndpack": 0,
+            "stat_src": "TMSTAT",
+            "syncacheover": 0,
+            "tcp_prof": "/Common/test",
+            "telemetry": {
+              "event": {
+                "category": "AVR"
+              }
+            },
+            "tenant": "Common",
+            "txrexmits": 0,
+            "vip": "/Common/test"
+          }
+        },
+        "host": {
+          "name": "hostname"
+        },
+        "network": {
+          "application": "abc.app"
+        },
+        "observer": {
+          "product": "Application Visibility and Reporting",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-avr.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2019-04-18T07:22:30.000Z",
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "event": {
+          "category": [
+            "network"
+          ],
+          "kind": "event",
+          "original": "{\"hostname\":\"hostname\",\"errdefs_msgno\":\"1234567\",\"Entity\":\"SystemMonitor\",\"AggrInterval\":\"30\",\"EOCTimestamp\":\"1555572150\",\"HitCount\":\"1\",\"SlotId\":\"0\",\"CpuHealth\":\"54\",\"AvgCpu\":\"5487\",\"AvgCpuDataPlane\":\"0\",\"AvgCpuControlPlane\":\"0\",\"AvgCpuAnalysisPlane\":\"0\",\"MaxCpu\":\"5487\",\"MemoryHealth\":\"53\",\"AvgMemory\":\"5343\",\"ThroughputHealth\":\"0\",\"TotalBytes\":\"0\",\"AvgThroughput\":\"0\",\"ConcurrentConnectionsHealth\":\"0\",\"AvgConcurrentConnections\":\"0\",\"MaxConcurrentConnections\":\"0\",\"telemetryEventCategory\":\"AVR\"}",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "aggr_interval": 30,
+            "bytes": {
+              "total": 0
+            },
+            "concurrent": {
+              "connections": {
+                "avg": 0,
+                "health": 0,
+                "max": 0
+              }
+            },
+            "cpu": {
+              "analysis_plane": {
+                "avg": 0
+              },
+              "avg": 5487,
+              "control_plane": {
+                "avg": 0
+              },
+              "data_plane": {
+                "avg": 0
+              },
+              "health": 54
+            },
+            "entity": "SystemMonitor",
+            "eoc": {
+              "timestamp": "2019-04-18T07:22:30.000Z"
+            },
+            "errdefs": {
+              "msgno": "1234567"
+            },
+            "hit_count": 1,
+            "hostname": "hostname",
+            "memory": {
+              "avg": 5343,
+              "health": 53
+            },
+            "slot": {
+              "id": "0"
+            },
+            "telemetry": {
+              "event": {
+                "category": "AVR"
+              }
+            },
+            "throughput": {
+              "avg": 0,
+              "health": 0
+            }
+          }
+        },
+        "host": {
+          "name": "hostname"
+        },
+        "observer": {
+          "product": "Application Visibility and Reporting",
+          "vendor": "F5"
+        },
+        "related": {
+          "hosts": [
+            "hostname"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-dos-and-bot.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2018-04-15T18:32:36.000Z",
+        "client": {
+          "ip": "192.168.10.10",
+          "port": 54389
+        },
+        "destination": {
+          "ip": "10.10.10.10",
+          "port": 80
+        },
+        "device": {
+          "id": "4734097073bff"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "error": {
+          "id": "23003147"
+        },
+        "event": {
+          "action": "undetermined",
+          "category": [
+            "network"
+          ],
+          "created": "2018-04-15T11:30:26.000Z",
+          "kind": "alert",
+          "original": "hostname=\"asm.example.com\",bigip_mgmt_ip=\"10.10.100.100\",bigip_mgmt_ip2=\"::\",client_ip=\"192.168.10.10\",client_ip_geo_location=\"NA\",client_port=\"54389\",client_request_uri=\"/test/picture.jpg\",configuration_date_time=\"Apr 15 2018 11:30:26\",context_name=\"/Common/v1\",context_type=\"Virtual Server\",dest_ip=\"10.10.10.10\",dest_port=\"80\",device_product=\"Application Security Module\",device_vendor=\"F5\",device_version=\"no_pgo x86_64 padc TMM Version 0.0.0.0.0.0\",errdefs_msgno=\"23003147\",http_method=\"GET\",http_protocol_indication=\"HTTP\",route_domain=\"0\",timestamp=\"Apr 15 2018 18:32:36\",virtual_server_name=\"/Common/v1\",device_id=\"4734097073bff\",request_date_time=\"Apr 15 2018 11:32:36\",profile_name=\"/Common/bot-defense\",support_id=\"3161892955527053449\",request_status=\"illegal\",action=\"undetermined\",reason=\"\",previous_action=\"NA\",previous_support_id=\"3161892955527053433\",previous_request_date_time=\"Apr 15 2018 11:32:36\",bot_signature=\"\",bot_signature_category=\"\",bot_name=\"Presenting as CHROME\",session_id=\"8549049561352296353\",class=\"Suspicious Browser\",anomaly_categories=\"Suspicious Browsers and Extensions\",anomalies=\"Suspicious HTTP Headers Presence or Order\",additional_bot_signatures=\"\",micro_service_name=\"\",micro_service_type=\"N/A\",micro_service_matched_wildcard_url=\"\",configured_mitigation_action=\"CAPTCHA\",configured_mitigation_action_reason=\"/Common/Suspicious HTTP Headers Presence or Order\",actual_mitigation_action=\"Alarm\",actual_mitigation_action_reason=\"CAPTCHA valid\",browser_configured_verification_action=\"Verify after Access (Blocking)\",browser_actual_verification_action=\"Challenge-Free Verification\",browser_actual_verification_action_reason=\"URL Not Qualified for Injection\",captcha_status=\"Correct CAPTCHA Challenge Answer\",browser_verification_status=\"None\",device_id_status=\"Device ID Is Valid\",device_id_action=\"None\",previous_initiated_action=\"HTTP 307 redirect to the same domain\",previous_initiated_action_status=\"Valid\",classification_reason=\"NA\",client_type=\"Browser\",application_display_name=\"\",application_version=\"\",mobile_in_emulation_mode=\"NA\",os_name=\"NA\",jailbroken_or_rooted_device=\"NA\",imei=\"NA\",human_behaviour=\"NA\",http_request=\"GET /test/picture.jpg HTTP/1.1\\r\\nHost: 10.10.10.10\\r\\nConnection: keep-alive\\r\\nPragma: no-cache\\r\\nCache-Control: no-cache\\r\\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36\\r\\nAccept: image/webp,image/apng,image/*,*/*;q=0.8\\r\\nReferer: http://10.10.10.20/test.php\\r\\nAccept-Encoding: gzip, deflate\\r\\nAccept-Language: en-US,en;q=0.9\\r\\nCookie: TSPD_101_R0=08d4cb6559ab20004e07e455224b442635febc4bfd400cf12348476d6c5348915bbd05a9456945e9086f640741142800b55a0e04163a367ba2782565a133955ee09ead23f9b0c84da482a1191ca53624a2bfd23b83d58590; TSe82ee8e4076=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35732267060629f224f65324567ec0fcca30ba086a800c2b09e800cfb30067be291566a1e2d84c768dc6e536ac52c9a4de7165f17a887228eb0eb6089982af41b9283d6ba32bed2da397ca38d3a89a7d88bdf9cee3702abe62bd541be5fef1261da1bb9cc67809a40b7b4279a3c5d7ceb92135042c03803e96aeb3f1df4a0dae85eeb28a90bf29eb5ff89c4e28a057e98d280e2d7029d90848b9ffdff469863790a706a1236fdf21ee05a2a3090745d09f144d9a5b41f94bd82f0b705f87786113ad42a8060b47be91fe00da527a4766c19bd055212d902114be23d1d5851552a609c62b8b423276bd6fe7f6f03554ca79e141402add2f17fe0055e1d1c4b98f9178c3; TSe82ee8e4077=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35732267060629f22325678b5d7ec0fcca30ba086a800c2b17180019367ecd339e5ecdf1ed0f21e443c527622b755de5e5970d;TSPD_101_DID=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35443267060629f224f65aab5d7ec0fcca30ba086a800c2b06380042193d5e0ebcc52ddeac6779552cfb347b37163f8c670444e3afe3cdefbc44b886970c27c4ac8a943279d5558fea9a6ca6c141054ddf8c5e; TSe82ee8e4073=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35733908670629f224f65aab5d7ec0fcca30ba086a800c2b021800ee042b654fbac3e9108ae78264b721a99e4d973e35aa4c3c:086a800c2b0c1800bf61079db313f0ffd28df8c27561a3f0db295765d2bd1313;TS0f9815ea027=08d4cb6559ab200041b71ae213e47cf5a8c7b1c26a79c7ff49295e7142f62c14234568b32def3a7a0800d6fc831128001535352e47895a92b8278e1c9306950f50771797c8ede03b81af7d940f5afc272cb77365117040b9\\r\\n\\r\\n\"",
+          "start": "2018-04-15T11:32:36.000Z",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "action": "undetermined",
+            "actual_mitigation_action": {
+              "reason": "CAPTCHA valid",
+              "value": "Alarm"
+            },
+            "anomalies": "Suspicious HTTP Headers Presence or Order",
+            "anomaly_categories": "Suspicious Browsers and Extensions",
+            "bigip_management": {
+              "ip": "10.10.100.100",
+              "ip2": "::"
+            },
+            "bot_name": "Presenting as CHROME",
+            "browser_actual_verification_action": {
+              "reason": "URL Not Qualified for Injection",
+              "value": "Challenge-Free Verification"
+            },
+            "browser_configured_verification_action": "Verify after Access (Blocking)",
+            "browser_verification_status": "None",
+            "captcha_status": "Correct CAPTCHA Challenge Answer",
+            "class": "Suspicious Browser",
+            "client": {
+              "ip": "192.168.10.10",
+              "port": 54389,
+              "request_uri": "/test/picture.jpg",
+              "type": "Browser"
+            },
+            "configuration_date_time": "2018-04-15T11:30:26.000Z",
+            "configured_mitigation_action": {
+              "reason": "/Common/Suspicious HTTP Headers Presence or Order",
+              "value": "CAPTCHA"
+            },
+            "context": {
+              "name": "/Common/v1",
+              "type": "Virtual Server"
+            },
+            "destination": {
+              "ip": "10.10.10.10",
+              "port": 80
+            },
+            "device": {
+              "id": "4734097073bff",
+              "product": "Application Security Module",
+              "vendor": "F5",
+              "version": "no_pgo x86_64 padc TMM Version 0.0.0.0.0.0"
+            },
+            "device_id": {
+              "action": "None",
+              "status": "Device ID Is Valid"
+            },
+            "errdefs": {
+              "msgno": "23003147"
+            },
+            "hostname": "asm.example.com",
+            "http": {
+              "cache_control": "no-cache",
+              "connection": "keep-alive",
+              "host": "10.10.10.10",
+              "method": "GET",
+              "other_headers": "Accept: image/webp,image/apng,image/*,*/*;q=0.8",
+              "path": "/test/picture.jpg",
+              "pragma": "no-cache",
+              "protocol_indication": "HTTP",
+              "request": "GET /test/picture.jpg HTTP/1.1\\r\\nHost: 10.10.10.10\\r\\nConnection: keep-alive\\r\\nPragma: no-cache\\r\\nCache-Control: no-cache\\r\\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36\\r\\nAccept: image/webp,image/apng,image/*,*/*;q=0.8\\r\\nReferer: http://10.10.10.20/test.php\\r\\nAccept-Encoding: gzip, deflate\\r\\nAccept-Language: en-US,en;q=0.9\\r\\nCookie: TSPD_101_R0=08d4cb6559ab20004e07e455224b442635febc4bfd400cf12348476d6c5348915bbd05a9456945e9086f640741142800b55a0e04163a367ba2782565a133955ee09ead23f9b0c84da482a1191ca53624a2bfd23b83d58590; TSe82ee8e4076=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35732267060629f224f65324567ec0fcca30ba086a800c2b09e800cfb30067be291566a1e2d84c768dc6e536ac52c9a4de7165f17a887228eb0eb6089982af41b9283d6ba32bed2da397ca38d3a89a7d88bdf9cee3702abe62bd541be5fef1261da1bb9cc67809a40b7b4279a3c5d7ceb92135042c03803e96aeb3f1df4a0dae85eeb28a90bf29eb5ff89c4e28a057e98d280e2d7029d90848b9ffdff469863790a706a1236fdf21ee05a2a3090745d09f144d9a5b41f94bd82f0b705f87786113ad42a8060b47be91fe00da527a4766c19bd055212d902114be23d1d5851552a609c62b8b423276bd6fe7f6f03554ca79e141402add2f17fe0055e1d1c4b98f9178c3; TSe82ee8e4077=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35732267060629f22325678b5d7ec0fcca30ba086a800c2b17180019367ecd339e5ecdf1ed0f21e443c527622b755de5e5970d;TSPD_101_DID=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35443267060629f224f65aab5d7ec0fcca30ba086a800c2b06380042193d5e0ebcc52ddeac6779552cfb347b37163f8c670444e3afe3cdefbc44b886970c27c4ac8a943279d5558fea9a6ca6c141054ddf8c5e; TSe82ee8e4073=08d4cb6559ab2800647a6b8f5174fa4d117dc35be98cfad9b381201bbf35733908670629f224f65aab5d7ec0fcca30ba086a800c2b021800ee042b654fbac3e9108ae78264b721a99e4d973e35aa4c3c:086a800c2b0c1800bf61079db313f0ffd28df8c27561a3f0db295765d2bd1313;TS0f9815ea027=08d4cb6559ab200041b71ae213e47cf5a8c7b1c26a79c7ff49295e7142f62c14234568b32def3a7a0800d6fc831128001535352e47895a92b8278e1c9306950f50771797c8ede03b81af7d940f5afc272cb77365117040b9\\r\\n\\r\\n",
+              "request_host": "10.10.10.10",
+              "user_agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36",
+              "version": "HTTP/1.1"
+            },
+            "previous": {
+              "initiated_action": {
+                "status": "Valid",
+                "value": "HTTP 307 redirect to the same domain"
+              },
+              "request_date_time": "2018-04-15T11:32:36.000Z",
+              "support_id": "3161892955527053433"
+            },
+            "profile_name": "/Common/bot-defense",
+            "request": {
+              "date_time": "2018-04-15T11:32:36.000Z",
+              "status": "illegal"
+            },
+            "route_domain": "0",
+            "session": {
+              "id": "8549049561352296353"
+            },
+            "support": {
+              "id": "3161892955527053449"
+            },
+            "timestamp": "2018-04-15T18:32:36.000Z",
+            "virtual_server_name": "/Common/v1"
+          }
+        },
+        "host": {
+          "hostname": "asm.example.com",
+          "ip": [
+            "10.10.100.100",
+            "::"
+          ]
+        },
+        "http": {
+          "request": {
+            "method": "GET"
+          },
+          "version": "1.1"
+        },
+        "network": {
+          "protocol": "http"
+        },
+        "observer": {
+          "product": "Application Security Module",
+          "vendor": "F5",
+          "version": "no_pgo x86_64 padc TMM Version 0.0.0.0.0.0"
+        },
+        "related": {
+          "hosts": [
+            "asm.example.com"
+          ],
+          "ip": [
+            "10.10.100.100",
+            "::",
+            "192.168.10.10",
+            "10.10.10.10"
+          ]
+        },
+        "server": {
+          "ip": "10.10.10.10",
+          "port": 80
+        },
+        "source": {
+          "ip": "192.168.10.10",
+          "port": 54389
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ],
+        "url": {
+          "path": "/test/picture.jpg"
+        },
+        "user_agent": {
+          "device": {
+            "name": "Other"
+          },
+          "name": "Chrome",
+          "original": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36",
+          "os": {
+            "full": "Windows 7",
+            "name": "Windows",
+            "version": "7"
+          },
+          "version": "65.0.3325.181"
+        }
+      }
+    },
+    {
+      "data_stream": "log",
+      "package": "f5_bigip",
+      "source": "test/test-pipeline-bigip-dos-and-bot.log-expected.json",
+      "sample_event": {
+        "@timestamp": "2016-11-23T07:03:22.000Z",
+        "device": {
+          "id": "test"
+        },
+        "ecs": {
+          "version": "8.11.0"
+        },
+        "error": {
+          "id": "23003140"
+        },
+        "event": {
+          "action": "blocking",
+          "category": [
+            "network"
+          ],
+          "created": "2016-11-23T02:03:02.000Z",
+          "id": "0",
+          "kind": "alert",
+          "original": "action=Blocking;hostname=ziv-45-196.f5net.com;bigip_mgmt_ip=10.10.10.10;client_ip_geo_location=N/A;client_request_uri=N/A;configuration_date_time=Nov 23 2016 02:03:02;context_name=/Common/v1;context_type=Virtual Server;date_time=Nov 23 2016 02:03:22;device_product=ASM;device_vendor=F5;device_version=13.0.0;device_blade=0;dos_attack_detection_mode=TPS Increased;dos_attack_event=Suspicious entity;dos_attack_id=2843816221;dos_attack_latency=test;dos_attack_name=DOS L7 attack;dos_attack_tps=4 tps;dos_baseline_latency=test;dos_baseline_tps=4 tps;dos_baseline_traffic_percent=test;dos_current_traffic_percent=test;dos_dropped_requests_count=12;dos_incoming_requests_count=27;dos_mitigation_action=Source IP-Based Rate Limiting;dos_mitigation_reason=Abnormal volume;errdefs_msgno=23003140;errdefs_msg_name=Application DoS Event;severity=3;partition_name=Common;profile_name=/Common/dos;reported_entity_type=Source IP;source_ip=10.10.10.10;timestamp=Nov 23 2016 07:03:22;device_id=test;event_id=0;dos_detection_threshold=1 tps;dos_mitigate_to_threshold=1 tps;dos_detection_condition=Absolute Manual Threshold;",
+          "severity": 3,
+          "start": "2016-11-23T02:03:22.000Z",
+          "type": [
+            "info"
+          ]
+        },
+        "f5_bigip": {
+          "log": {
+            "action": "Blocking",
+            "bigip_management": {
+              "ip": "10.10.10.10"
+            },
+            "configuration_date_time": "2016-11-23T02:03:02.000Z",
+            "context": {
+              "name": "/Common/v1",
+              "type": "Virtual Server"
+            },
+            "date_time": "2016-11-23T02:03:22.000Z",
+            "device": {
+              "blade": "0",
+              "id": "test",
+              "product": "ASM",
+              "vendor": "F5",
+              "version": "13.0.0"
+            },
+            "dos": {
+              "attack": {
+                "detection_mode": "TPS Increased",
+                "event": "Suspicious entity",
+                "id": "2843816221",
+                "latency": "test",
+                "name": "DOS L7 attack",
+                "tps": "4 tps"
+              },
+              "baseline": {
+                "latency": "test",
+                "tps": "4 tps",
+                "traffic_percent": "test"
+              },
+              "current_traffic_percent": "test",
+              "dropped_requests_count": 12,
+              "incoming_requests_count": 27
+            },
+            "dos_detection": {
+              "condition": "Absolute Manual Threshold",
+              "threshold": "1 tps"
+            },
+            "dos_mitigate_to_threshold": "1 tps",
+            "dos_mitigation": {
+              "action": "Source IP-Based Rate Limiting",
+              "reason": "Abnormal volume"
+            },
+            "errdefs": {
+              "msg_name": "Application DoS Event",
+              "msgno": "23003140"
+            },
+            "event": {
+              "id": "0"
+            },
+            "hostname": "ziv-45-196.f5net.com",
+            "partition_name": "Common",
+            "profile_name": "/Common/dos",
+            "reported_entity_type": "Source IP",
+            "severity": {
+              "code": 3
+            },
+            "source": {
+              "ip": "10.10.10.10"
+            },
+            "timestamp": "2016-11-23T07:03:22.000Z"
+          }
+        },
+        "host": {
+          "hostname": "ziv-45-196.f5net.com",
+          "ip": [
+            "10.10.10.10"
+          ]
+        },
+        "observer": {
+          "product": "ASM",
+          "vendor": "F5",
+          "version": "13.0.0"
+        },
+        "related": {
+          "hosts": [
+            "ziv-45-196.f5net.com"
+          ],
+          "ip": [
+            "10.10.10.10"
+          ]
+        },
+        "source": {
+          "ip": [
+            "10.10.10.10"
+          ]
+        },
+        "tags": [
+          "preserve_original_event",
+          "preserve_duplicate_custom_fields"
+        ]
+      }
+    }
+  ]
+}

