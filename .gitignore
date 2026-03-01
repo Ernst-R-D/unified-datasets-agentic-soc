@@ -1,6 +1,12 @@
 # Data files (too large for git, re-generate with parse_all.py)
-datasets/parsed/
+datasets/normal/
+datasets/attacks/
+datasets/siem_logs/
 datasets/normal_logs/
+datasets/parsed/
+*.jsonl
+*.gz
+*.evtx
 
 # OS
 .DS_Store
