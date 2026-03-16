@@ -1,0 +1,6 @@
+﻿SOURCE: https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html
+DOWNLOADED_UTC: 2026-03-10T10:53:52.7934682+05:30
+STATUS: download_failed
+ERROR: The remote server returned an error: (403) Forbidden.
+
+Please add licensed/manual content for this framework pack.

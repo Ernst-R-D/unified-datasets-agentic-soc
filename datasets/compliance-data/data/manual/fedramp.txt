@@ -1,0 +1,5 @@
+SOURCE: normalized_from_fedramp.txt
+NORMALIZED_UTC: 2026-03-10T05:36:43.539918+00:00
+FRAMEWORK: fedramp
+
+RULE-0001 | NORMALIZED_UTC: 2026-03-10T05:35:43.402543+00:00 FRAMEWORK: fedramp RULE-0001 | NTC-0008: Initial Outcome from RFC-0023 Rev5 Program Certifications (No Sponsor Required) March 3rd, 2026 Public Notice Published a public notice with the initial outcome of RFC-0022 Leveraging External Frameworks.

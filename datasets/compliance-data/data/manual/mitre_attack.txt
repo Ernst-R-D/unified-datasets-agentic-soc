@@ -1,0 +1,7 @@
+SOURCE: normalized_from_mitre_attack.txt
+NORMALIZED_UTC: 2026-03-10T05:36:43.536069+00:00
+FRAMEWORK: mitre_attack
+
+RULE-0001 | NORMALIZED_UTC: 2026-03-10T05:35:43.399377+00:00 FRAMEWORK: mitre_attack RULE-0001 | is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations.
+RULE-0002 | RULE-0002 | The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.
+RULE-0003 | RULE-0003 | by bringing communities together to develop more effective cybersecurity.

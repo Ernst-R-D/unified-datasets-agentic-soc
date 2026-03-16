@@ -1,0 +1,37 @@
+{
+  "input_file": "C:\\Users\\FF642BR\\compliance-agent\\data\\processed\\compliance_agent_schema_t5_train.jsonl",
+  "output_prefix": "compliance_event_status_t5_100k",
+  "records_in": 4958,
+  "records_out": 100000,
+  "requested_target_rows": 100000,
+  "status_distribution": {
+    "COMPLIANT": 50000,
+    "NON_COMPLIANT": 50000
+  },
+  "split_counts": {
+    "train": 97000,
+    "val": 1000,
+    "test": 2000
+  },
+  "framework_counts": {
+    "hipaa": 6767,
+    "mitre_attack": 19454,
+    "fedramp": 17649,
+    "nist_800_53": 20049,
+    "gdpr": 5162,
+    "cis_benchmarks": 12005,
+    "iso_27001": 5026,
+    "pci_dss": 4051,
+    "cmmc": 1873,
+    "ccpa": 3679,
+    "nist_csf": 4225,
+    "soc2": 60
+  },
+  "outputs": [
+    "data/processed/compliance_event_status_t5_100k.jsonl",
+    "data/processed/compliance_event_status_t5_100k_train.jsonl",
+    "data/processed/compliance_event_status_t5_100k_val.jsonl",
+    "data/processed/compliance_event_status_t5_100k_test.jsonl",
+    "data/processed/compliance_event_status_t5_100k_report.json"
+  ]
+}

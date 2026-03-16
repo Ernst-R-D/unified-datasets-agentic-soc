@@ -1,0 +1,15 @@
+SOURCE: normalized_from_cmmc.txt
+NORMALIZED_UTC: 2026-03-10T05:36:43.550909+00:00
+FRAMEWORK: cmmc
+
+RULE-0001 | ﻿ eCFR :: 32 CFR Part 170 -- Cybersecurity Maturity Model Certification (CMMC) Program Site Feedback You are using an unsupported browser &times;
+RULE-0002 | fishing or 1 CFR 1.1)" data-suggestions-target="nonModalInput" name="cfr[reference]" id="suggestion"> placeholder#suggestions"> placeholder#suggestions"> Title 32 —National Defense Subtitle A —Department of Defense Chapter I —Office of the Secretary of Defense Subchapter G —Defense Contracting Part 170 Previous Next Top Table of Contents Enhanced Content - Table of Contents Part 170 Cybersecurity Maturity Model Certification (CMMC) Program 170.1 – 170.24 Subpart A General Information.
+RULE-0003 | Subpart B Government Roles and Responsibilities.
+RULE-0004 | Subpart C CMMC Assessment and Certification Ecosystem.
+RULE-0005 | § 170.9 CMMC Third-Party Assessment Organizations (C3PAOs).
+RULE-0006 | Subpart D Key Elements of the CMMC Program 170.14 – 170.24 § 170.14 CMMC Model.
+RULE-0007 | § 170.15 CMMC Level 1 self-assessment and affirmation requirements.
+RULE-0008 | § 170.16 CMMC Level 2 self-assessment and affirmation requirements.
+RULE-0009 | § 170.17 CMMC Level 2 certification assessment and affirmation requirements.
+RULE-0010 | § 170.18 CMMC Level 3 certification assessment and affirmation requirements.
+RULE-0011 | § 170.21 Plan of Action and Milestones requirements.

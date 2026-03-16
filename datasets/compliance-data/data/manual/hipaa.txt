@@ -1,0 +1,12 @@
+SOURCE: normalized_from_hipaa.txt
+NORMALIZED_UTC: 2026-03-10T05:36:43.467025+00:00
+FRAMEWORK: hipaa
+
+RULE-0001 | ﻿ eCFR :: 45 CFR Part 164 Subpart C -- Security Standards for the Protection of Electronic Protected Health Information Site Feedback You are using an unsupported browser &times;
+RULE-0002 | fishing or 1 CFR 1.1)" data-suggestions-target="nonModalInput" name="cfr[reference]" id="suggestion"> placeholder#suggestions"> placeholder#suggestions"> Title 45 —Public Welfare Subtitle A —Department of Health and Human Services Subchapter C —Administrative Data Standards and Related Requirements Part 164 —Security and Privacy Subpart C Previous Next Top Table of Contents Enhanced Content - Table of Contents Subpart C Security Standards for the Protection of Electronic Protected Health Information 164.302 – 164.318 § 164.302 Applicability.
+RULE-0003 | § 164.306 Security standards: General rules.
+RULE-0004 | § 164.308 Administrative safeguards.
+RULE-0005 | § 164.314 Organizational requirements.
+RULE-0006 | § 164.316 Policies and procedures and documentation requirements.
+RULE-0007 | § 164.318 Compliance dates for the initial implementation of the security standards.
+RULE-0008 | Appendix A to Subpart C of Part 164 Security Standards: Matrix Enhanced Content - Table of Contents Details Enhanced Content - Details URL https://www.ecfr.gov/current/title-45/part-164/subpart-C Citation 45 CFR Part 164 Subpart C Agency Department of Health and Human Services Part 164 Authority: 42 U.S.C.

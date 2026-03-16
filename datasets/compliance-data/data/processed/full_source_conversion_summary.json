@@ -1,0 +1,47 @@
+{
+  "total_controls": 5977,
+  "multitask_records": 5977,
+  "t5_records": 5977,
+  "framework_counts": {
+    "ccpa": 213,
+    "cis_benchmarks": 1074,
+    "cmmc": 181,
+    "fedramp": 890,
+    "gdpr": 304,
+    "hipaa": 517,
+    "iso_27001": 251,
+    "mitre_attack": 976,
+    "nist_800_53": 1016,
+    "nist_csf": 216,
+    "pci_dss": 336,
+    "soc2": 3
+  },
+  "missing_frameworks": [],
+  "source_counts": {
+    "nist_800_53_rev5_catalog.json": 1016,
+    "nist_csf_v11_core.xlsx": 108,
+    "ISO_27001_2022_mapping_of_controls_with_the_2013_revision.xlsx": 207,
+    "cis_aws_benchmark_pdfs": 987,
+    "hipaa_parts_160_162_164": 511,
+    "cmmc_32cfr_part170.html": 170,
+    "gdpr_eurlex_32016R0679.html": 289,
+    "ccpa_leginfo_1798_100_199.txt": 159,
+    "mitre_attack_enterprise.json": 973,
+    "fedramp_rev5_baselines": 889,
+    "manual::hipaa.txt": 6,
+    "manual::pci_dss.txt": 337,
+    "manual::iso_27001.txt": 44,
+    "manual::soc2.txt": 3,
+    "manual::gdpr.txt": 15,
+    "manual::ccpa.txt": 54,
+    "manual::cis_benchmarks.txt": 87,
+    "manual::mitre_attack.txt": 3,
+    "manual::fedramp.txt": 1,
+    "manual::cmmc.txt": 11,
+    "manual::nist_csf.txt": 108
+  },
+  "outputs": [
+    "data/processed/compliance_multitask.jsonl",
+    "data/processed/compliance_t5.jsonl"
+  ]
+}
